@@ -48,6 +48,8 @@ public class DialogInformacionUsuario extends javax.swing.JDialog {
         lblVereda = new javax.swing.JLabel();
         lblMunicipio = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
+        lblCabezasDeGanado = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -137,6 +139,16 @@ public class DialogInformacionUsuario extends javax.swing.JDialog {
         jLabel17.setText("Información de la finca");
         jLabel17.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(51, 51, 51)));
 
+        lblCabezasDeGanado.setFont(new java.awt.Font("Segoe UI Semibold", 0, 20)); // NOI18N
+        lblCabezasDeGanado.setForeground(new java.awt.Color(0, 0, 0));
+        lblCabezasDeGanado.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblCabezasDeGanado.setText("50");
+
+        jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel9.setText("Cabezas de ganado:");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -176,7 +188,11 @@ public class DialogInformacionUsuario extends javax.swing.JDialog {
                         .addGroup(jPanel1Layout.createSequentialGroup()
                             .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(6, 6, 6)
-                            .addComponent(lblVereda, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(lblVereda, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(lblCabezasDeGanado, javax.swing.GroupLayout.PREFERRED_SIZE, 353, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(2, 2, 2))
         );
         jPanel1Layout.setVerticalGroup(
@@ -203,6 +219,12 @@ public class DialogInformacionUsuario extends javax.swing.JDialog {
                         .addComponent(jLabel4))
                     .addComponent(lblCorreo))
                 .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(2, 2, 2)
+                        .addComponent(jLabel9))
+                    .addComponent(lblCabezasDeGanado))
+                .addGap(18, 18, 18)
                 .addComponent(jLabel17)
                 .addGap(30, 30, 30)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -224,7 +246,7 @@ public class DialogInformacionUsuario extends javax.swing.JDialog {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblVereda))
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -305,6 +327,15 @@ public class DialogInformacionUsuario extends javax.swing.JDialog {
     public void setLblVereda(String vereda) {
         this.lblVereda.setText(vereda);
     }
+
+    public void setLblCabezasDeGanado(String cabezasDeGanado) {
+        this.lblCabezasDeGanado.setText(cabezasDeGanado);
+    }
+
+    
+    
+    
+
     
     
 
@@ -318,7 +349,9 @@ public class DialogInformacionUsuario extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel lblCabezasDeGanado;
     private javax.swing.JLabel lblCorreo;
     private javax.swing.JLabel lblDepartamento;
     private javax.swing.JLabel lblFinca;

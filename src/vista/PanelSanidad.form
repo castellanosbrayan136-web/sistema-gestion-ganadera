@@ -177,7 +177,7 @@
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/Imagenes/folder/icons8-ganado-32_1.png"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Historial sanitario"/>
+                <Property name="text" type="java.lang.String" value="Gesti&#xf3;n sanidad"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
                     <MatteColorBorder bottom="1" left="10" right="1" top="1"/>

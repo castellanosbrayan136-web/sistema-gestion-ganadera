@@ -13,7 +13,6 @@ import controlador.ControladorRegistrarGanado;
 import controlador.ControladorRegistrarTratamiento;
 import controlador.ControladorSanidad;
 import java.awt.BorderLayout;
-import javax.swing.JFrame;
 import javax.swing.JPanel;
 import modelo.DepartamentoDAO;
 import modelo.Usuario;
@@ -132,17 +131,21 @@ public class ScreenManager {
         dialogInformacionUsuario.setLocationRelativeTo(vistaPrincipal);
         dialogInformacionUsuario.setTitle("Información de usuario");
         
-        new ControladorInformacionUsuario(dialogInformacionUsuario, usuario);
+        new ControladorInformacionUsuario(dialogInformacionUsuario, usuario, vacaDAO);
         
         dialogInformacionUsuario.setVisible(true);
     }
     
     public static void cambiarPaneles(JPanel panelVacio, JPanel panelAIntercambiar, int ancho, int largo) {
+        panelVacio.setSize(ancho,largo);
         panelAIntercambiar.setSize(ancho,largo);
         panelVacio.removeAll();
         panelVacio.add(panelAIntercambiar, BorderLayout.CENTER);
         panelVacio.revalidate();
         panelVacio.repaint();
+        panelAIntercambiar.revalidate();
+        panelAIntercambiar.repaint();
+        
     }
     
     

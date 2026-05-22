@@ -9,7 +9,7 @@
     },
     "razaPadre": "Nelore",
     "razaMadre": "Romosinuano",
-    "estado": "Produciendo",
+    "estado": "Vendido",
     "descripcion": "Gran productora\nVaca de buena calidad\nVaca de color rojo\nTiene lineas pardas\nsiu",
     "numeroIdentificador": "#7453",
     "peso": 23.0,
@@ -18,32 +18,20 @@
   },
   {
     "codigoInterno": "002",
-    "nombre": "Lola",
+    "nombre": "Lolafdasasasasasasasasasasasasasasas",
     "fechaNacimiento": {
       "year": 2020,
       "month": 5,
       "day": 7
     },
-    "razaPadre": "Ayrshire",
-    "razaMadre": "Ayrshire",
+    "razaPadre": "Romosinuano",
+    "razaMadre": "Pardo Suizo",
     "estado": "Produciendo",
     "descripcion": "Vaca negra con manchas blancas",
     "numeroIdentificador": "675",
     "peso": 150.0,
     "dueño": "f",
-    "historialTratamientos": [
-      {
-        "tipo": "INSEMINACION",
-        "medicamento": "Ninguno",
-        "dosis": "1 Pajilla",
-        "fecha": {
-          "year": 2025,
-          "month": 1,
-          "day": 2
-        },
-        "observaciones": "Ninguna"
-      }
-    ]
+    "historialTratamientos": []
   },
   {
     "codigoInterno": "001",
@@ -55,11 +43,39 @@
     },
     "razaPadre": "Gyr",
     "razaMadre": "Gyr",
-    "estado": "Activo",
+    "estado": "Muerto",
     "descripcion": "Vaca roja con lineas negras\nexelente productora\nvalio 5millones",
     "numeroIdentificador": "#1233",
     "peso": 234.0,
     "dueño": "Brayan C",
     "historialTratamientos": []
+  },
+  {
+    "codigoInterno": "002",
+    "nombre": "Pirinola",
+    "fechaNacimiento": {
+      "year": 2022,
+      "month": 7,
+      "day": 20
+    },
+    "razaPadre": "Holstein",
+    "razaMadre": "Ayrshire",
+    "estado": "Produciendo",
+    "descripcion": "vaca negra con manchas blancas",
+    "numeroIdentificador": "No se registro numero identificador.",
+    "dueño": "Brayan C",
+    "historialTratamientos": [
+      {
+        "tipo": "CONTROL REPRODUCTIVO",
+        "medicamento": "niguno",
+        "dosis": "ninguna",
+        "fecha": {
+          "year": 2026,
+          "month": 5,
+          "day": 20
+        },
+        "observaciones": "Se llevo al toro"
+      }
+    ]
   }
 ]

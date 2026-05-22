@@ -92,13 +92,13 @@ public class PanelGanado extends javax.swing.JPanel {
         btnListaGanado.setIconTextGap(15);
         panelSideBar1.add(btnListaGanado, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 260, 248, 60));
 
-        panelVacio.setBackground(new java.awt.Color(102, 102, 102));
+        panelVacio.setBackground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout panelVacioLayout = new javax.swing.GroupLayout(panelVacio);
         panelVacio.setLayout(panelVacioLayout);
         panelVacioLayout.setHorizontalGroup(
             panelVacioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 860, Short.MAX_VALUE)
+            .addGap(0, 883, Short.MAX_VALUE)
         );
         panelVacioLayout.setVerticalGroup(
             panelVacioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -113,7 +113,7 @@ public class PanelGanado extends javax.swing.JPanel {
                 .addComponent(panelSideBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(panelVacio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(29, 29, 29))
+                .addContainerGap())
         );
         backgroundLayout.setVerticalGroup(
             backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

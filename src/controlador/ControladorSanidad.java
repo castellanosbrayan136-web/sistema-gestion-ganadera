@@ -17,6 +17,7 @@ public class ControladorSanidad implements ActionListener {
     public ControladorSanidad(PanelSanidad panelSanidad, Usuario usuario) {
         this.panelSanidad = panelSanidad;
         this.usuario = usuario;
+        ScreenManager.cambiarAPanelRegistrarTratamiento(panelSanidad, usuario);
         activarEventos();
     }
     

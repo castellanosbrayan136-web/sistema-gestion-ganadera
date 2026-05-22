@@ -120,6 +120,10 @@ public class ControladorGestionarGanado implements KeyListener, ActionListener {
         Object[] fila = new Object[5];
         
         for (Vaca vaca : vacaDAO.retornarListaVacasPorUsuario(usuario.getNombreDeUsuario())) {
+            if (vaca.getEstado().equals("Enfermo") || vaca.getEstado().equals("Vendido")) {
+                continue;
+            }
+            
             int edad = LocalDate.now().getYear() - vaca.getFechaNacimiento().getYear();
             String raza = vaca.getRazaMadre() + " " + vaca.getRazaPadre();
             fila[0] = vaca.getCodigoInterno();

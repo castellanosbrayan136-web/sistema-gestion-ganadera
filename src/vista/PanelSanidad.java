@@ -84,7 +84,7 @@ public class PanelSanidad extends javax.swing.JPanel {
         btnHistorialSanitario.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btnHistorialSanitario.setForeground(new java.awt.Color(255, 255, 255));
         btnHistorialSanitario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/folder/icons8-ganado-32_1.png"))); // NOI18N
-        btnHistorialSanitario.setText("Historial sanitario");
+        btnHistorialSanitario.setText("Gestión sanidad");
         btnHistorialSanitario.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
         btnHistorialSanitario.setBorderPainted(false);
         btnHistorialSanitario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));

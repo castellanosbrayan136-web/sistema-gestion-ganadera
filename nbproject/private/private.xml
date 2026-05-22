@@ -4,12 +4,17 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/vista/DialogInformacionUsuario.java</file>
-            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/modelo/Usuario.java</file>
-            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/app/Main.java</file>
-            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/controlador/ControladorInformacionUsuario.java</file>
+            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/vista/PanelGestionarGanado.java</file>
+            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/vista/PanelGanado.java</file>
+            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/vista/PanelSanidad.java</file>
+            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/controlador/ControladorSanidad.java</file>
+            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/controlador/ControladorGestionarGanado.java</file>
+            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/vista/PanelRegistrarGanado.java</file>
+            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/vista/DialogEdicionGanado.java</file>
+            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/controlador/ControdalorEdicionGanado.java</file>
+            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/vista/PanelGestionSanidad.java</file>
+            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/vista/PanelRegistrarTratamiento.java</file>
             <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/vista/ScreenManager.java</file>
-            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/controlador/ControladorPrincipal.java</file>
-            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/vista/VistaPrincipal.java</file>
         </group>
     </open-files>
 </project-private>
