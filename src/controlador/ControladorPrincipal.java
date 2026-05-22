@@ -53,6 +53,7 @@ public class ControladorPrincipal implements ActionListener {
         vistaPrincipal.getBtnFinanzas().addActionListener(this);
         vistaPrincipal.getBtnReportes().addActionListener(this);
         vistaPrincipal.getBtnSalir().addActionListener(this);
+        vistaPrincipal.getLblUsuario().addActionListener(this);
     }
     
     @Override
@@ -79,6 +80,8 @@ public class ControladorPrincipal implements ActionListener {
             JOptionPane.showMessageDialog(vistaPrincipal, mensajeVersion);
         } else if (e.getSource() == vistaPrincipal.getBtnReportes()) {
             JOptionPane.showMessageDialog(vistaPrincipal, mensajeVersion);
+        } else if (e.getSource() == vistaPrincipal.getLblUsuario()) {
+            ScreenManager.abrirDialogInformacionUsuario(vistaPrincipal, usuario);
         } else if (e.getSource() == vistaPrincipal.getBtnSalir()) {
             System.exit(0);
         } 

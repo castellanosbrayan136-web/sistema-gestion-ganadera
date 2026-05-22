@@ -3,14 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/vista/PanelRegistrarTratamiento.java</file>
-            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/vista/DialogEdicionGanado.java</file>
+            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/vista/DialogInformacionUsuario.java</file>
+            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/modelo/Usuario.java</file>
+            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/app/Main.java</file>
+            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/controlador/ControladorInformacionUsuario.java</file>
+            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/vista/ScreenManager.java</file>
+            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/controlador/ControladorPrincipal.java</file>
             <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/vista/VistaPrincipal.java</file>
-            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/vista/PanelGanado.java</file>
-            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/modelo/VacaDAO.java</file>
-            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/controlador/ControdalorEdicionGanado.java</file>
-            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/vista/PanelListaGanado.java</file>
-            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/vista/PanelRegistrarGanado.java</file>
         </group>
     </open-files>
 </project-private>

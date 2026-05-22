@@ -7,6 +7,7 @@ import controlador.ControladorCrearCuenta;
 import controlador.ControladorGanado;
 import controlador.ControladorIniciarSesion;
 import controlador.ControladorGestionarGanado;
+import controlador.ControladorInformacionUsuario;
 import controlador.ControladorPrincipal;
 import controlador.ControladorRegistrarGanado;
 import controlador.ControladorRegistrarTratamiento;
@@ -124,6 +125,16 @@ public class ScreenManager {
         new controlador.ControdalorEdicionGanado(vistaPrincipal, dialogEdicionGanado, vacaDAO, vaca);
         
         dialogEdicionGanado.setVisible(true);
+    }
+    
+    public static void abrirDialogInformacionUsuario(VistaPrincipal vistaPrincipal, Usuario usuario) {
+        DialogInformacionUsuario dialogInformacionUsuario = new DialogInformacionUsuario(vistaPrincipal, true);
+        dialogInformacionUsuario.setLocationRelativeTo(vistaPrincipal);
+        dialogInformacionUsuario.setTitle("Información de usuario");
+        
+        new ControladorInformacionUsuario(dialogInformacionUsuario, usuario);
+        
+        dialogInformacionUsuario.setVisible(true);
     }
     
     public static void cambiarPaneles(JPanel panelVacio, JPanel panelAIntercambiar, int ancho, int largo) {

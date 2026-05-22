@@ -26,6 +26,22 @@ public class Usuario {
     public String getContraseña() {
         return contraseña;
     }
+
+    public String getNombresYApellidos() {
+        return nombresYApellidos;
+    }
+
+    public String getCorreoElectronico() {
+        return correoElectronico;
+    }
+
+    public String getNombreDeLafinca() {
+        return nombreDeLafinca;
+    }
+
+    public Ubicacion getUbicacion() {
+        return ubicacion;
+    }
     
     
 }

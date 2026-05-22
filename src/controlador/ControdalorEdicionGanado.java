@@ -65,7 +65,7 @@ public class ControdalorEdicionGanado implements ActionListener {
         
         for (String estado : estados) {
             if (estado.equals(vaca.getEstado())) {
-                break;
+                continue;
             }
             dialogEdicionGanado.getJcbEstado().addItem(estado);
         }

@@ -44,5 +44,22 @@
         "observaciones": "Ninguna"
       }
     ]
+  },
+  {
+    "codigoInterno": "001",
+    "nombre": "Lola",
+    "fechaNacimiento": {
+      "year": 2020,
+      "month": 2,
+      "day": 29
+    },
+    "razaPadre": "Gyr",
+    "razaMadre": "Gyr",
+    "estado": "Activo",
+    "descripcion": "Vaca roja con lineas negras\nexelente productora\nvalio 5millones",
+    "numeroIdentificador": "#1233",
+    "peso": 234.0,
+    "dueño": "Brayan C",
+    "historialTratamientos": []
   }
 ]
