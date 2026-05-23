@@ -196,4 +196,15 @@ public class VacaDAO {
         }
         return false;
     }
+    
+    public boolean registrarProduccion(RegistroProduccion produccion, Vaca vacaARegistrar) {
+        for (Vaca vaca : listaVacas) {
+            if (vaca.getCodigoInterno().equals(vacaARegistrar.getCodigoInterno()) && vaca.getDueño().equals(vacaARegistrar.getDueño())) {
+                vaca.getRegistroProducciones().add(produccion);
+                guardarDatos();
+                return true;
+            }
+        }
+        return false;
+    }
 }

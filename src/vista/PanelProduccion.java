@@ -4,6 +4,9 @@
  */
 package vista;
 
+import javax.swing.JButton;
+import javax.swing.JPanel;
+
 /**
  *
  * @author Brayan C
@@ -28,11 +31,10 @@ public class PanelProduccion extends javax.swing.JPanel {
 
         background = new javax.swing.JPanel();
         panelSideBar1 = new javax.swing.JPanel();
-        btnEditarRegistro = new javax.swing.JButton();
         btnRegistrarProduccion = new javax.swing.JButton();
         jblProduccion = new javax.swing.JLabel();
         panelLinea = new javax.swing.JPanel();
-        btnHistorialProduccion = new javax.swing.JButton();
+        btnGestionProduccion = new javax.swing.JButton();
         panelVacio = new javax.swing.JPanel();
 
         background.setBackground(new java.awt.Color(255, 255, 255));
@@ -41,18 +43,6 @@ public class PanelProduccion extends javax.swing.JPanel {
         panelSideBar1.setForeground(new java.awt.Color(46, 125, 50));
         panelSideBar1.setPreferredSize(new java.awt.Dimension(270, 892));
         panelSideBar1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        btnEditarRegistro.setBackground(new java.awt.Color(55, 72, 95));
-        btnEditarRegistro.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        btnEditarRegistro.setForeground(new java.awt.Color(255, 255, 255));
-        btnEditarRegistro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/folder/icons8-toro-32.png"))); // NOI18N
-        btnEditarRegistro.setText("Editar registro");
-        btnEditarRegistro.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
-        btnEditarRegistro.setBorderPainted(false);
-        btnEditarRegistro.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnEditarRegistro.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        btnEditarRegistro.setIconTextGap(15);
-        panelSideBar1.add(btnEditarRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 320, 250, 60));
 
         btnRegistrarProduccion.setBackground(new java.awt.Color(55, 72, 95));
         btnRegistrarProduccion.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -90,17 +80,17 @@ public class PanelProduccion extends javax.swing.JPanel {
 
         panelSideBar1.add(panelLinea, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 120, 200, 3));
 
-        btnHistorialProduccion.setBackground(new java.awt.Color(55, 72, 95));
-        btnHistorialProduccion.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        btnHistorialProduccion.setForeground(new java.awt.Color(255, 255, 255));
-        btnHistorialProduccion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/folder/icons8-ganado-32_1.png"))); // NOI18N
-        btnHistorialProduccion.setText("Historial producción");
-        btnHistorialProduccion.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
-        btnHistorialProduccion.setBorderPainted(false);
-        btnHistorialProduccion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnHistorialProduccion.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        btnHistorialProduccion.setIconTextGap(15);
-        panelSideBar1.add(btnHistorialProduccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 260, 248, 60));
+        btnGestionProduccion.setBackground(new java.awt.Color(55, 72, 95));
+        btnGestionProduccion.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnGestionProduccion.setForeground(new java.awt.Color(255, 255, 255));
+        btnGestionProduccion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/folder/icons8-ganado-32_1.png"))); // NOI18N
+        btnGestionProduccion.setText("Gestion producción");
+        btnGestionProduccion.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
+        btnGestionProduccion.setBorderPainted(false);
+        btnGestionProduccion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnGestionProduccion.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btnGestionProduccion.setIconTextGap(15);
+        panelSideBar1.add(btnGestionProduccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 260, 248, 60));
 
         panelVacio.setBackground(new java.awt.Color(102, 102, 102));
 
@@ -147,11 +137,22 @@ public class PanelProduccion extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    public JButton getBtnGestionProduccion() {
+        return btnGestionProduccion;
+    }
+
+    public JButton getBtnRegistrarProduccion() {
+        return btnRegistrarProduccion;
+    }
+
+    public JPanel getPanelVacio() {
+        return panelVacio;
+    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel background;
-    private javax.swing.JButton btnEditarRegistro;
-    private javax.swing.JButton btnHistorialProduccion;
+    private javax.swing.JButton btnGestionProduccion;
     private javax.swing.JButton btnRegistrarProduccion;
     private javax.swing.JLabel jblProduccion;
     private javax.swing.JPanel panelLinea;

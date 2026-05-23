@@ -11,8 +11,10 @@ import controlador.ControladorIniciarSesion;
 import controlador.ControladorGestionarGanado;
 import controlador.ControladorInformacionUsuario;
 import controlador.ControladorPrincipal;
+import controlador.ControladorProduccion;
 import controlador.ControladorRegistrarGanado;
 import controlador.ControladorRegistrarTratamiento;
+import controlador.ControladorRegistroProduccion;
 import controlador.ControladorSanidad;
 import java.awt.BorderLayout;
 import javax.swing.JPanel;
@@ -142,10 +144,11 @@ public class ScreenManager {
     
     public static void cambiarAPanelGestionSanidad(Usuario usuario, PanelSanidad panelSanidad, VistaPrincipal vistaPrincipal ) {
         PanelGestionSanidad panelGestionSanidad = new PanelGestionSanidad();
+        PanelRegistrarProduccion p = new PanelRegistrarProduccion();
         
         new ControladorGestionSanidad(panelGestionSanidad, usuario, vacaDAO, vistaPrincipal);
         
-        cambiarPaneles(panelSanidad.getPanelVacio(), panelGestionSanidad, 860, 764);
+        cambiarPaneles(panelSanidad.getPanelVacio(), p, 860, 764);
     }
     
     public static void abrirDialogEdicionTratamiento(VistaPrincipal vistaPrincipal, Vaca vaca, TratamientoVeterinario tratamiento) {
@@ -155,6 +158,20 @@ public class ScreenManager {
         new ControladorEdicionTratamiento(dialogEdicionTratamiento, tratamiento, vacaDAO, vaca);
         
         dialogEdicionTratamiento.setVisible(true);
+    }
+    
+    public static void cambiarAPanelProduccion(VistaPrincipal vistaPrincipal, Usuario usuario) {
+        PanelProduccion panelProduccion = new PanelProduccion();
+        
+        new ControladorProduccion(panelProduccion, usuario, vistaPrincipal);
+        
+        cambiarPaneles(vistaPrincipal.getPanelVacio(), panelProduccion, 1128, 778);
+    }
+    
+    public static void cambiarAPanelRegistrarProduccion(Usuario usuario) {
+        PanelRegistrarProduccion panelRegistrarProduccion = new PanelRegistrarProduccion();
+        
+        new ControladorRegistroProduccion(panelRegistrarProduccion, vacaDAO, usuario);
     }
     
     public static void cambiarPaneles(JPanel panelVacio, JPanel panelAIntercambiar, int ancho, int largo) {

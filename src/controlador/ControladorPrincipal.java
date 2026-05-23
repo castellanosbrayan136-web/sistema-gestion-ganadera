@@ -73,7 +73,9 @@ public class ControladorPrincipal implements ActionListener {
             vistaPrincipal.getBtnSanidad().setBackground(botonActivo);
             ScreenManager.cambiarAPanelSanidad(vistaPrincipal, usuario);
         }else if (e.getSource() == vistaPrincipal.getBtnProduccion()) {
-            JOptionPane.showMessageDialog(vistaPrincipal, mensajeVersion);
+            reiniciarColorDeBoton();
+            vistaPrincipal.getBtnProduccion().setBackground(botonActivo);
+            ScreenManager.cambiarAPanelProduccion(vistaPrincipal, usuario);
         } else if (e.getSource() == vistaPrincipal.getBtnFinanzas()) {
             JOptionPane.showMessageDialog(vistaPrincipal, mensajeVersion);
         } else if (e.getSource() == vistaPrincipal.getBtnClientes()) {

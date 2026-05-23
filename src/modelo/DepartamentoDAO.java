@@ -43,11 +43,6 @@ public class DepartamentoDAO {
         return departamentosColombia;
     }
     
-    @Override
-    public String toString() {
-        return "DepartamentoDAO{" + "ruta=" + ruta + ", gson=" + gson + ", departamentosColombia=" + departamentosColombia + '}';
-    }
-    
     public void imprimir() {
         for (Departamento departamento : departamentosColombia) {
             System.out.println(departamento);

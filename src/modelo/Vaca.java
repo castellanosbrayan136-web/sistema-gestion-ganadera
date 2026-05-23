@@ -19,9 +19,11 @@ public class Vaca {
     private Double peso;
     private String dueño;
     private List<TratamientoVeterinario> historialTratamientos;
+    private List<RegistroProduccion> registroProducciones;
 
     public Vaca(String nombre, LocalDate fechaNacimiento, String razaPadre, String razaMadre, String estado,String descripcion, String numeroIdentificador, Double peso, String dueño) {
         this.historialTratamientos = new ArrayList<>();
+        this.registroProducciones = new ArrayList<>();
         this.codigoInterno = "0";
         this.nombre = nombre;
         this.fechaNacimiento = fechaNacimiento;
@@ -39,9 +41,6 @@ public class Vaca {
         this.codigoInterno = codigoInterno;
         
     }
-    
-    
-
     public String getCodigoInterno() {
         return codigoInterno;
     }
@@ -93,8 +92,10 @@ public class Vaca {
     public void setHistorialTratamientos(TratamientoVeterinario tratamiento) {
         this.historialTratamientos.add(tratamiento);
     }
-    
-    
+
+    public List<RegistroProduccion> getRegistroProducciones() {
+        return registroProducciones;
+    }
 
     @Override
     public String toString() {
