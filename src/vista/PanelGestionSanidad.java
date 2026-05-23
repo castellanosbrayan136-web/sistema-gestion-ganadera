@@ -4,6 +4,10 @@
  */
 package vista;
 
+import javax.swing.JComboBox;
+import javax.swing.JTable;
+import modelo.Vaca;
+
 /**
  *
  * @author Brayan C
@@ -29,94 +33,121 @@ public class PanelGestionSanidad extends javax.swing.JPanel {
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tablaSanidad = new javax.swing.JTable();
-        txtFiltroPorNombre = new javax.swing.JTextField();
         jblBuscarPorNombre = new javax.swing.JLabel();
         jblSanidad = new javax.swing.JLabel();
         jblInstrucciones = new javax.swing.JLabel();
-        btnVerInformacion = new javax.swing.JButton();
-        btnBuscar = new javax.swing.JButton();
-        btnEditar = new javax.swing.JButton();
+        jcbAnimal = new javax.swing.JComboBox<>();
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         tablaSanidad.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "Codigo", "Animal", "Estado", "Tratamiento", "Fecha"
+                "Id ", "Tratamiento", "Medicamento", "Dosis", "Fecha"
             }
         ) {
             Class[] types = new Class [] {
                 java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class
             };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false
+            };
 
             public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
             }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
         });
         jScrollPane1.setViewportView(tablaSanidad);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 190, 848, 532));
-
-        txtFiltroPorNombre.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jPanel1.add(txtFiltroPorNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 137, 282, -1));
-
-        jblBuscarPorNombre.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jblBuscarPorNombre.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jblBuscarPorNombre.setForeground(new java.awt.Color(0, 0, 0));
-        jblBuscarPorNombre.setText("Buscar por nombre");
+        jblBuscarPorNombre.setText("Selecciona para ver el historial");
         jblBuscarPorNombre.setIconTextGap(10);
-        jPanel1.add(jblBuscarPorNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 111, 282, -1));
 
         jblSanidad.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         jblSanidad.setForeground(new java.awt.Color(0, 0, 0));
         jblSanidad.setText("Sanidad");
-        jPanel1.add(jblSanidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 401, 49));
 
+        jblInstrucciones.setBackground(new java.awt.Color(51, 51, 51));
         jblInstrucciones.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jblInstrucciones.setForeground(new java.awt.Color(0, 0, 0));
-        jblInstrucciones.setText("Da clik sobre un animal para ver informacion completa fo editar");
-        jPanel1.add(jblInstrucciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 69, 455, -1));
+        jblInstrucciones.setForeground(new java.awt.Color(102, 102, 102));
+        jblInstrucciones.setText("Doble clik sobre un registro para ver informacion completa o editar");
 
-        btnVerInformacion.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        btnVerInformacion.setText("Ver información");
-        btnVerInformacion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel1.add(btnVerInformacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 130, 170, 50));
+        jcbAnimal.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jcbAnimal.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        btnBuscar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        btnBuscar.setText("Buscar");
-        btnBuscar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel1.add(btnBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 130, 170, 50));
-
-        btnEditar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        btnEditar.setText("Editar");
-        btnEditar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel1.add(btnEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 130, 170, 50));
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addComponent(jblSanidad, javax.swing.GroupLayout.PREFERRED_SIZE, 401, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addComponent(jblBuscarPorNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addComponent(jcbAnimal, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 848, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jblInstrucciones, javax.swing.GroupLayout.PREFERRED_SIZE, 455, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addComponent(jblSanidad, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jblInstrucciones)
+                .addGap(19, 19, 19)
+                .addComponent(jblBuscarPorNombre)
+                .addGap(10, 10, 10)
+                .addComponent(jcbAnimal, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(14, 14, 14)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 532, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 868, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 734, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    public JTable getTablaSanidad() {
+        return tablaSanidad;
+    }
+
+    public Vaca getAnimal() {
+        return (Vaca) jcbAnimal.getSelectedItem();
+    }
+
+    public JComboBox<Vaca> getJcbAnimal() {
+        return jcbAnimal;
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnBuscar;
-    private javax.swing.JButton btnEditar;
-    private javax.swing.JButton btnVerInformacion;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel jblBuscarPorNombre;
     private javax.swing.JLabel jblInstrucciones;
     private javax.swing.JLabel jblSanidad;
+    private javax.swing.JComboBox<Vaca> jcbAnimal;
     private javax.swing.JTable tablaSanidad;
-    private javax.swing.JTextField txtFiltroPorNombre;
     // End of variables declaration//GEN-END:variables
 }

@@ -4,7 +4,9 @@ package vista;
 
 import controlador.ControladorAutenticacion;
 import controlador.ControladorCrearCuenta;
+import controlador.ControladorEdicionTratamiento;
 import controlador.ControladorGanado;
+import controlador.ControladorGestionSanidad;
 import controlador.ControladorIniciarSesion;
 import controlador.ControladorGestionarGanado;
 import controlador.ControladorInformacionUsuario;
@@ -15,6 +17,7 @@ import controlador.ControladorSanidad;
 import java.awt.BorderLayout;
 import javax.swing.JPanel;
 import modelo.DepartamentoDAO;
+import modelo.TratamientoVeterinario;
 import modelo.Usuario;
 import modelo.UsuarioDAO;
 import modelo.Vaca;
@@ -104,7 +107,7 @@ public class ScreenManager {
     public static void cambiarAPanelSanidad(VistaPrincipal vistaPrincipal, Usuario usuario) {
         PanelSanidad panelSanidad = new PanelSanidad();
         
-        new ControladorSanidad(panelSanidad, usuario);
+        new ControladorSanidad(panelSanidad, usuario, vistaPrincipal);
         
         cambiarPaneles(vistaPrincipal.getPanelVacio(), panelSanidad, 1128, 778);
     }
@@ -120,6 +123,7 @@ public class ScreenManager {
     public static void abrirDialogEdicionGanado(VistaPrincipal vistaPrincipal, Vaca vaca) {
         DialogEdicionGanado dialogEdicionGanado = new DialogEdicionGanado(vistaPrincipal, true);
         dialogEdicionGanado.setLocationRelativeTo(vistaPrincipal);
+        dialogEdicionGanado.setSize(590,775);
         
         new controlador.ControdalorEdicionGanado(vistaPrincipal, dialogEdicionGanado, vacaDAO, vaca);
         
@@ -136,6 +140,23 @@ public class ScreenManager {
         dialogInformacionUsuario.setVisible(true);
     }
     
+    public static void cambiarAPanelGestionSanidad(Usuario usuario, PanelSanidad panelSanidad, VistaPrincipal vistaPrincipal ) {
+        PanelGestionSanidad panelGestionSanidad = new PanelGestionSanidad();
+        
+        new ControladorGestionSanidad(panelGestionSanidad, usuario, vacaDAO, vistaPrincipal);
+        
+        cambiarPaneles(panelSanidad.getPanelVacio(), panelGestionSanidad, 860, 764);
+    }
+    
+    public static void abrirDialogEdicionTratamiento(VistaPrincipal vistaPrincipal, Vaca vaca, TratamientoVeterinario tratamiento) {
+        DialogEdicionTratamiento dialogEdicionTratamiento = new DialogEdicionTratamiento(vistaPrincipal, true);
+        dialogEdicionTratamiento.setLocationRelativeTo(vistaPrincipal);
+        
+        new ControladorEdicionTratamiento(dialogEdicionTratamiento, tratamiento, vacaDAO, vaca);
+        
+        dialogEdicionTratamiento.setVisible(true);
+    }
+    
     public static void cambiarPaneles(JPanel panelVacio, JPanel panelAIntercambiar, int ancho, int largo) {
         panelVacio.setSize(ancho,largo);
         panelAIntercambiar.setSize(ancho,largo);
@@ -145,8 +166,5 @@ public class ScreenManager {
         panelVacio.repaint();
         panelAIntercambiar.revalidate();
         panelAIntercambiar.repaint();
-        
     }
-    
-    
 }

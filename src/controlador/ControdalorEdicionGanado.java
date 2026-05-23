@@ -36,12 +36,9 @@ public class ControdalorEdicionGanado implements ActionListener {
     }
     
     public void llenarDatos() {
-        String dia = String.valueOf(vaca.getFechaNacimiento().getDayOfMonth());
-        String mes = String.valueOf(vaca.getFechaNacimiento().getMonthValue());
-        String year = String.valueOf(vaca.getFechaNacimiento().getYear());
         
         dialogEdicionGanado.setLblCodigoInterno(vaca.getCodigoInterno());
-        dialogEdicionGanado.setLblFechaNacimiento(dia, mes, year);
+        dialogEdicionGanado.setLblFechaNacimiento(vaca.getFechaNacimiento().toString());
         dialogEdicionGanado.setTxtNombre(vaca.getNombre());
         dialogEdicionGanado.getJcbEstado().addItem(vaca.getEstado());
         dialogEdicionGanado.getJcbRazaMadre().addItem(vaca.getRazaMadre());

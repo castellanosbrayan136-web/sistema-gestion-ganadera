@@ -34,5 +34,17 @@
       "vereda": "f"
     },
     "contraseña": "f"
+  },
+  {
+    "nombresYApellidos": "Brayan C",
+    "nombreDeUsuario": "Brayan C",
+    "correoElectronico": "fasd",
+    "nombreDeLafinca": "fads",
+    "ubicacion": {
+      "departamento": "Departamento",
+      "municipio": "Municipio",
+      "vereda": "fasd"
+    },
+    "contraseña": "fdsa"
   }
 ]

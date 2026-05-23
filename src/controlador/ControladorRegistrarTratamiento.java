@@ -57,7 +57,7 @@ public class ControladorRegistrarTratamiento implements ActionListener {
         
         LocalDate fecha = LocalDate.of(year, mes, dia);
         
-        return new TratamientoVeterinario(panelRegistrarTratamiento.getAnimalAAplicar(), panelRegistrarTratamiento.getTipoTratamiento(), panelRegistrarTratamiento.getMedicamento(), panelRegistrarTratamiento.getDosis(), fecha, panelRegistrarTratamiento.getObservaciones());
+        return new TratamientoVeterinario(panelRegistrarTratamiento.getTipoTratamiento(), panelRegistrarTratamiento.getMedicamento(), panelRegistrarTratamiento.getDosis(), fecha, panelRegistrarTratamiento.getObservaciones(), panelRegistrarTratamiento.getId());
     }
 
     public void llenarAñosYMeses() {

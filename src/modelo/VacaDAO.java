@@ -145,6 +145,34 @@ public class VacaDAO {
         return false;
     }
     
+    public boolean editarTratamiento(Vaca vacaAEditarTratamiento, TratamientoVeterinario tratamientoAEditar) {
+        for (Vaca vaca : listaVacas) {
+            if (vaca.getCodigoInterno().equals(vacaAEditarTratamiento.getCodigoInterno()) && vaca.getDueño().equals(vacaAEditarTratamiento.getDueño())) {
+                for (int i = 0; i < vaca.getHistorialTratamientos().size();i++) {
+                    if (vaca.getHistorialTratamientos().get(i).getId().equals(tratamientoAEditar.getId())) {
+                        vaca.getHistorialTratamientos().set(i, tratamientoAEditar);
+                        guardarDatos();
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
+    }
+    
+    public TratamientoVeterinario retorntarTratamientoPorIdYVaca(Vaca vacaAEditar, String IdTratamiento) {
+        for (Vaca vaca : listaVacas) {
+            if (vaca.getCodigoInterno().equals(vacaAEditar.getCodigoInterno()) && vaca.getDueño().equals(vacaAEditar.getDueño())) {
+                for (TratamientoVeterinario tratamiento : vaca.getHistorialTratamientos()) {
+                    if (tratamiento.getId().equals(IdTratamiento)) {
+                        return tratamiento;
+                    }
+                }
+            }
+        }
+        return null;
+    }
+    
     public boolean editarGanado(Vaca vaca) {
         if (vaca != null) {
             for (int i = 0; i < listaVacas.size();i++) {
@@ -153,6 +181,17 @@ public class VacaDAO {
                     guardarDatos();
                     return true;
                 }
+            }
+        }
+        return false;
+    }
+    
+    public boolean eliminarRegistroTratamiento(Vaca vacaAEditar, String IdTratamiento) {
+        for (Vaca vaca : listaVacas) {
+            if (vaca.getCodigoInterno().equals(vacaAEditar.getCodigoInterno()) && vaca.getDueño().equals(vacaAEditar.getDueño())) {
+                boolean eliminado = vaca.getHistorialTratamientos().removeIf(tratamiento -> tratamiento.getId().equals(IdTratamiento));
+                guardarDatos();
+                return eliminado;
             }
         }
         return false;

@@ -21,10 +21,7 @@
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <Component id="panelRegistrarGanado" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-          </Group>
+          <Component id="panelRegistrarGanado" alignment="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -39,123 +36,118 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                  <Component id="jblTitle" max="32767" attributes="0"/>
-                  <EmptySpace min="-2" pref="415" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" alignment="0" attributes="0">
-                  <Component id="jblAnimalAAplicar" max="32767" attributes="0"/>
-                  <EmptySpace min="-2" pref="236" max="-2" attributes="0"/>
-                  <Component id="jblDosis" min="-2" pref="251" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="118" max="-2" attributes="0"/>
-              </Group>
               <Group type="102" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jblMedicamento" alignment="0" min="-2" pref="300" max="-2" attributes="0"/>
-                      <Component id="jblMensajeRazas" alignment="0" min="-2" pref="322" max="-2" attributes="0"/>
-                      <Component id="jblMensajeEstadoProduccion" alignment="0" min="-2" pref="316" max="-2" attributes="0"/>
-                      <Component id="btnRegistrar" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
-                      <Component id="txtMedicamento" alignment="0" min="-2" pref="316" max="-2" attributes="0"/>
+                      <Component id="jblId" min="-2" pref="316" max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <Component id="txtId" min="-2" pref="316" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="243" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="txtDosis" min="-2" pref="205" max="-2" attributes="0"/>
+                              <Component id="jblDosis" alignment="0" min="-2" pref="205" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
-              <Group type="102" alignment="1" attributes="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jblMensajeNombre" max="32767" attributes="0"/>
-                                  <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jblFechaTratamiento" pref="487" max="32767" attributes="0"/>
-                                  <EmptySpace min="26" pref="26" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="jcbAño" min="-2" pref="95" max="-2" attributes="0"/>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="jcbMes" min="-2" pref="92" max="-2" attributes="0"/>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="jcbDia" min="-2" pref="98" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Component id="jblTipoDeTratamiento" alignment="0" min="-2" pref="300" max="-2" attributes="0"/>
-                                      <Component id="jblMensajeFecha" alignment="0" min="-2" pref="316" max="-2" attributes="0"/>
-                                      <Component id="jcbTipoTratamiento" alignment="0" min="-2" pref="146" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              <Group type="102" alignment="0" attributes="0">
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Component id="jblObservaciones" alignment="1" min="-2" pref="302" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jblMensajeNombre" min="-2" pref="316" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Component id="jcbAño" min="-2" pref="95" max="-2" attributes="0"/>
+                              <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
+                              <Component id="jcbMes" min="-2" pref="92" max="-2" attributes="0"/>
+                              <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
+                              <Component id="jcbDia" min="-2" pref="98" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="jblMensajeFecha" min="-2" pref="316" max="-2" attributes="0"/>
+                          <Component id="jblTipoDeTratamiento" min="-2" pref="300" max="-2" attributes="0"/>
+                          <Component id="jblMensajeRazas" min="-2" pref="322" max="-2" attributes="0"/>
+                          <Component id="jblMedicamento" min="-2" pref="300" max="-2" attributes="0"/>
+                          <Component id="txtMedicamento" min="-2" pref="316" max="-2" attributes="0"/>
+                          <Component id="jblMensajeEstadoProduccion" min="-2" pref="316" max="-2" attributes="0"/>
+                          <Component id="btnRegistrar" min="-2" pref="200" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jblTitle" min="-2" pref="634" max="-2" attributes="0"/>
+                                  <Component id="jblAnimalAAplicar" min="-2" pref="310" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace min="-2" pref="169" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="jcbAnimalAAplicar" min="-2" pref="140" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jcbAnimalAAplicar" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
+                                  <Component id="jblMensajeNombre1" alignment="0" min="-2" pref="314" max="-2" attributes="0"/>
+                                  <Component id="jblFechaTratamiento" alignment="0" min="-2" pref="487" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
+                              <Component id="jScrollPane1" min="-2" pref="302" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="jcbTipoTratamiento" alignment="0" min="-2" pref="192" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jblObservaciones" alignment="0" min="-2" pref="251" max="-2" attributes="0"/>
-                      <Component id="txtDosis" alignment="0" min="-2" pref="195" max="-2" attributes="0"/>
-                      <Component id="txtObservaciones" min="-2" pref="355" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                  <EmptySpace min="0" pref="123" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
+              <Group type="102" attributes="0">
                   <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                   <Component id="jblTitle" min="-2" pref="46" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jblAnimalAAplicar" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
+                      <Component id="jblId" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
                       <Component id="jblDosis" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jcbAnimalAAplicar" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
+                      <Component id="txtId" alignment="3" min="-2" pref="46" max="-2" attributes="0"/>
                       <Component id="txtDosis" alignment="3" min="-2" pref="46" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jblMensajeNombre" min="-2" pref="25" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                          <Component id="jblFechaTratamiento" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jcbAño" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
-                              <Component id="jcbMes" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
-                              <Component id="jcbDia" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" max="-2" attributes="0"/>
-                          <Component id="jblMensajeFecha" min="-2" pref="25" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                          <Component id="jblTipoDeTratamiento" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jcbTipoTratamiento" min="-2" pref="50" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jblMensajeRazas" min="-2" pref="25" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                          <Component id="jblMedicamento" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                          <Component id="txtMedicamento" min="-2" pref="46" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jblMensajeEstadoProduccion" min="-2" pref="25" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
-                          <Component id="jblObservaciones" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="txtObservaciones" min="-2" pref="46" max="-2" attributes="0"/>
-                      </Group>
+                  <EmptySpace min="4" pref="4" max="-2" attributes="0"/>
+                  <Component id="jblMensajeNombre" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jblAnimalAAplicar" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
+                      <Component id="jblObservaciones" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Component id="jcbAnimalAAplicar" min="-2" pref="50" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jblMensajeNombre1" min="-2" pref="16" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jblFechaTratamiento" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="jcbAño" min="-2" pref="45" max="-2" attributes="0"/>
+                      <Component id="jcbMes" min="-2" pref="45" max="-2" attributes="0"/>
+                      <Component id="jcbDia" min="-2" pref="45" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                  <Component id="jblMensajeFecha" min="-2" pref="16" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                  <Component id="jblTipoDeTratamiento" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                  <Component id="jcbTipoTratamiento" min="-2" pref="50" max="-2" attributes="0"/>
+                  <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                  <Component id="jblMensajeRazas" min="-2" pref="16" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                  <Component id="jblMedicamento" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                  <Component id="txtMedicamento" min="-2" pref="46" max="-2" attributes="0"/>
+                  <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                  <Component id="jblMensajeEstadoProduccion" min="-2" pref="16" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
                   <Component id="btnRegistrar" min="-2" pref="70" max="-2" attributes="0"/>
-                  <EmptySpace pref="76" max="32767" attributes="0"/>
+                  <EmptySpace pref="20" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -208,6 +200,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="33" green="0" red="cc" type="rgb"/>
             </Property>
+            <Property name="text" type="java.lang.String" value="&#xa;"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jblMensajeFecha">
@@ -410,16 +403,6 @@
             <Property name="text" type="java.lang.String" value="Observaciones"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtObservaciones">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Segoe UI" size="20" style="0"/>
-            </Property>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtObservacionesActionPerformed"/>
-          </Events>
-        </Component>
         <Component class="javax.swing.JLabel" name="jblMedicamento">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -432,6 +415,52 @@
               <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Medicamento"/>
+          </Properties>
+        </Component>
+        <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTextArea" name="txtObservaciones">
+              <Properties>
+                <Property name="columns" type="int" value="20"/>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="16" style="0"/>
+                </Property>
+                <Property name="rows" type="int" value="5"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Component class="javax.swing.JLabel" name="jblId">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="18" style="0"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="0" green="0" red="0" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Id del tratamiento"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="txtId">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="20" style="0"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jblMensajeNombre1">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="12" style="1"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="33" green="0" red="cc" type="rgb"/>
+            </Property>
           </Properties>
         </Component>
       </SubComponents>

@@ -8,15 +8,19 @@ import java.awt.event.ActionListener;
 import modelo.Usuario;
 import vista.PanelSanidad;
 import vista.ScreenManager;
+import vista.VistaPrincipal;
 
 
 public class ControladorSanidad implements ActionListener {
+    private VistaPrincipal vistaPrincipal;
     private PanelSanidad panelSanidad;
     private Usuario usuario;
 
-    public ControladorSanidad(PanelSanidad panelSanidad, Usuario usuario) {
+    public ControladorSanidad(PanelSanidad panelSanidad, Usuario usuario, VistaPrincipal vistaPrincipal) {
         this.panelSanidad = panelSanidad;
         this.usuario = usuario;
+        this.vistaPrincipal = vistaPrincipal;
+        panelSanidad.getBtnRegistrarTratamiento().setBackground(new Color(93, 122, 163));
         ScreenManager.cambiarAPanelRegistrarTratamiento(panelSanidad, usuario);
         activarEventos();
     }
@@ -36,6 +40,7 @@ public class ControladorSanidad implements ActionListener {
         } else if (e.getSource() == panelSanidad.getBtnHistorialSanitario()) {
             reiniciarColoresDeBotones();
             panelSanidad.getBtnHistorialSanitario().setBackground(botonActivo);
+            ScreenManager.cambiarAPanelGestionSanidad(usuario, panelSanidad, vistaPrincipal);
         }
     }
     

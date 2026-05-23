@@ -11,10 +11,11 @@
             <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/controlador/ControladorGestionarGanado.java</file>
             <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/vista/PanelRegistrarGanado.java</file>
             <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/vista/DialogEdicionGanado.java</file>
-            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/controlador/ControdalorEdicionGanado.java</file>
             <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/vista/PanelGestionSanidad.java</file>
-            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/vista/PanelRegistrarTratamiento.java</file>
-            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/vista/ScreenManager.java</file>
+            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/modelo/TratamientoVeterinario.java</file>
+            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/modelo/VacaDAO.java</file>
+            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/modelo/Vaca.java</file>
+            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/controlador/ControladorGestionSanidad.java</file>
         </group>
     </open-files>
 </project-private>

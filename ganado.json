@@ -77,5 +77,22 @@
         "observaciones": "Se llevo al toro"
       }
     ]
+  },
+  {
+    "codigoInterno": "003",
+    "nombre": "f",
+    "fechaNacimiento": {
+      "year": 2024,
+      "month": 4,
+      "day": 4
+    },
+    "razaPadre": "Nelore",
+    "razaMadre": "Nelore",
+    "estado": "Gestación",
+    "descripcion": "ff",
+    "numeroIdentificador": "ff",
+    "peso": 34.0,
+    "dueño": "f",
+    "historialTratamientos": []
   }
 ]
