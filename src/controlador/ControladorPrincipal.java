@@ -94,6 +94,7 @@ public class ControladorPrincipal implements ActionListener {
         vistaPrincipal.getBtnInicio().setBackground(azulGris);
         vistaPrincipal.getBtnGanado().setBackground(azulGris);
         vistaPrincipal.getBtnSanidad().setBackground(azulGris);
+        vistaPrincipal.getBtnProduccion().setBackground(azulGris);
     }
     
     public void cargarInformacionDeInicio() {

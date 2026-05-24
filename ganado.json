@@ -1,98 +1,96 @@
 [
   {
     "codigoInterno": "001",
-    "nombre": "Julieta",
-    "fechaNacimiento": {
-      "year": 2025,
-      "month": 2,
-      "day": 4
-    },
-    "razaPadre": "Nelore",
-    "razaMadre": "Romosinuano",
-    "estado": "Vendido",
-    "descripcion": "Gran productora\nVaca de buena calidad\nVaca de color rojo\nTiene lineas pardas\nsiu",
-    "numeroIdentificador": "#7453",
-    "peso": 23.0,
-    "dueño": "f",
-    "historialTratamientos": []
-  },
-  {
-    "codigoInterno": "002",
-    "nombre": "Lolafdasasasasasasasasasasasasasasas",
-    "fechaNacimiento": {
-      "year": 2020,
-      "month": 5,
-      "day": 7
-    },
-    "razaPadre": "Romosinuano",
-    "razaMadre": "Pardo Suizo",
-    "estado": "Produciendo",
-    "descripcion": "Vaca negra con manchas blancas",
-    "numeroIdentificador": "675",
-    "peso": 150.0,
-    "dueño": "f",
-    "historialTratamientos": []
-  },
-  {
-    "codigoInterno": "001",
     "nombre": "Lola",
     "fechaNacimiento": {
-      "year": 2020,
-      "month": 2,
-      "day": 29
+      "year": 2024,
+      "month": 1,
+      "day": 12
     },
-    "razaPadre": "Gyr",
-    "razaMadre": "Gyr",
-    "estado": "Muerto",
-    "descripcion": "Vaca roja con lineas negras\nexelente productora\nvalio 5millones",
-    "numeroIdentificador": "#1233",
-    "peso": 234.0,
-    "dueño": "Brayan C",
-    "historialTratamientos": []
-  },
-  {
-    "codigoInterno": "002",
-    "nombre": "Pirinola",
-    "fechaNacimiento": {
-      "year": 2022,
-      "month": 7,
-      "day": 20
-    },
-    "razaPadre": "Holstein",
-    "razaMadre": "Ayrshire",
+    "razaPadre": "Jersey",
+    "razaMadre": "Jersey",
     "estado": "Produciendo",
-    "descripcion": "vaca negra con manchas blancas",
-    "numeroIdentificador": "No se registro numero identificador.",
-    "dueño": "Brayan C",
+    "descripcion": "Vaca roja con lineas negras\nexelente productora",
+    "numeroIdentificador": "#432",
+    "peso": 300.0,
+    "dueño": "f",
     "historialTratamientos": [
       {
-        "tipo": "CONTROL REPRODUCTIVO",
-        "medicamento": "niguno",
-        "dosis": "ninguna",
+        "id": "123",
+        "tipo": "VITAMINIZACION",
+        "medicamento": "Vitaminas g",
+        "dosis": "5 pastillas",
+        "fecha": {
+          "year": 2026,
+          "month": 3,
+          "day": 12
+        },
+        "observaciones": "Se las tomo con agua"
+      },
+      {
+        "id": "123",
+        "tipo": "VACUNACION",
+        "medicamento": "Vacuna contra la fieberea autosa",
+        "dosis": "10ml",
         "fecha": {
           "year": 2026,
           "month": 5,
-          "day": 20
+          "day": 10
         },
-        "observaciones": "Se llevo al toro"
+        "observaciones": "Molesto mucho para aplicarle la vacuna\nProbablemente le salgan ronchas\n"
+      }
+    ],
+    "registroProducciones": [
+      {
+        "id": "0",
+        "cantidadLitros": 12,
+        "jornada": "Tarde",
+        "fecha": {
+          "year": 2026,
+          "month": 2,
+          "day": 16
+        }
+      },
+      {
+        "id": "0",
+        "cantidadLitros": 12,
+        "jornada": "Mañana",
+        "fecha": {
+          "year": 2026,
+          "month": 5,
+          "day": 23
+        }
+      },
+      {
+        "id": "0",
+        "cantidadLitros": 8,
+        "jornada": "Tarde",
+        "fecha": {
+          "year": 2026,
+          "month": 5,
+          "day": 23
+        }
+      },
+      {
+        "id": "0",
+        "cantidadLitros": 13,
+        "jornada": "Mañana",
+        "fecha": {
+          "year": 2026,
+          "month": 5,
+          "day": 22
+        }
+      },
+      {
+        "id": "0",
+        "cantidadLitros": 9,
+        "jornada": "Tarde",
+        "fecha": {
+          "year": 2026,
+          "month": 5,
+          "day": 22
+        }
       }
     ]
-  },
-  {
-    "codigoInterno": "003",
-    "nombre": "f",
-    "fechaNacimiento": {
-      "year": 2024,
-      "month": 4,
-      "day": 4
-    },
-    "razaPadre": "Nelore",
-    "razaMadre": "Nelore",
-    "estado": "Gestación",
-    "descripcion": "ff",
-    "numeroIdentificador": "ff",
-    "peso": 34.0,
-    "dueño": "f",
-    "historialTratamientos": []
   }
 ]

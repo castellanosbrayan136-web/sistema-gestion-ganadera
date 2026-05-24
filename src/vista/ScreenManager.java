@@ -144,11 +144,10 @@ public class ScreenManager {
     
     public static void cambiarAPanelGestionSanidad(Usuario usuario, PanelSanidad panelSanidad, VistaPrincipal vistaPrincipal ) {
         PanelGestionSanidad panelGestionSanidad = new PanelGestionSanidad();
-        PanelRegistrarProduccion p = new PanelRegistrarProduccion();
         
         new ControladorGestionSanidad(panelGestionSanidad, usuario, vacaDAO, vistaPrincipal);
         
-        cambiarPaneles(panelSanidad.getPanelVacio(), p, 860, 764);
+        cambiarPaneles(panelSanidad.getPanelVacio(), panelGestionSanidad, 860, 764);
     }
     
     public static void abrirDialogEdicionTratamiento(VistaPrincipal vistaPrincipal, Vaca vaca, TratamientoVeterinario tratamiento) {
@@ -168,10 +167,12 @@ public class ScreenManager {
         cambiarPaneles(vistaPrincipal.getPanelVacio(), panelProduccion, 1128, 778);
     }
     
-    public static void cambiarAPanelRegistrarProduccion(Usuario usuario) {
+    public static void cambiarAPanelRegistrarProduccion(Usuario usuario, PanelProduccion panelProduccion) {
         PanelRegistrarProduccion panelRegistrarProduccion = new PanelRegistrarProduccion();
         
         new ControladorRegistroProduccion(panelRegistrarProduccion, vacaDAO, usuario);
+        
+        cambiarPaneles(panelProduccion.getPanelVacio(), panelRegistrarProduccion, 860, 764);
     }
     
     public static void cambiarPaneles(JPanel panelVacio, JPanel panelAIntercambiar, int ancho, int largo) {
