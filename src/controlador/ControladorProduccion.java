@@ -40,6 +40,7 @@ public class ControladorProduccion implements ActionListener {
         } else if (e.getSource() == panelProduccion.getBtnGestionProduccion()) {
             reiniciarColoresDeBotones();
             panelProduccion.getBtnGestionProduccion().setBackground(botonActivo);
+            ScreenManager.cambiarAPanelGestionProduccion(vistaPrincipal, usuario, panelProduccion);
         }
     }
     

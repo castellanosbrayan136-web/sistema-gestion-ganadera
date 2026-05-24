@@ -1,13 +1,13 @@
 [
   {
     "codigoInterno": "001",
-    "nombre": "Julia",
+    "nombre": "Julieta",
     "fechaNacimiento": {
-      "year": 2025,
-      "month": 3,
+      "year": 2023,
+      "month": 5,
       "day": 5
     },
-    "razaPadre": "Holstein",
+    "razaPadre": "Jersey",
     "razaMadre": "Jersey",
     "estado": "Produciendo",
     "descripcion": "No hay descripcion.",
@@ -21,17 +21,8 @@
           "month": 5,
           "day": 24
         },
-        "litrosMañana": 16,
-        "litrosTarde": 10
-      },
-      {
-        "fecha": {
-          "year": 2026,
-          "month": 4,
-          "day": 1
-        },
-        "litrosMañana": 8,
-        "litrosTarde": 13
+        "litrosMañana": 10,
+        "litrosTarde": 8
       }
     ]
   }

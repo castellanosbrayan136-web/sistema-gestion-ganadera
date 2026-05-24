@@ -17,6 +17,12 @@ public class RegistroProduccion {
         this.fecha = fecha;
     }
 
+    public RegistroProduccion(LocalDate fecha, Integer litrosMañana, Integer litrosTarde) {
+        this.fecha = fecha;
+        this.litrosMañana = litrosMañana;
+        this.litrosTarde = litrosTarde;
+    }
+    
     public Integer getLitrosMañana() {
         return litrosMañana;
     }

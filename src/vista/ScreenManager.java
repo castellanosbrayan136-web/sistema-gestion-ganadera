@@ -5,7 +5,9 @@ package vista;
 import controlador.ControladorAutenticacion;
 import controlador.ControladorCrearCuenta;
 import controlador.ControladorEdicionTratamiento;
+import controlador.ControladorEditarProduccion;
 import controlador.ControladorGanado;
+import controlador.ControladorGestionProduccion;
 import controlador.ControladorGestionSanidad;
 import controlador.ControladorIniciarSesion;
 import controlador.ControladorGestionarGanado;
@@ -19,6 +21,7 @@ import controlador.ControladorSanidad;
 import java.awt.BorderLayout;
 import javax.swing.JPanel;
 import modelo.DepartamentoDAO;
+import modelo.RegistroProduccion;
 import modelo.TratamientoVeterinario;
 import modelo.Usuario;
 import modelo.UsuarioDAO;
@@ -173,6 +176,24 @@ public class ScreenManager {
         new ControladorRegistroProduccion(panelRegistrarProduccion, vacaDAO, usuario);
         
         cambiarPaneles(panelProduccion.getPanelVacio(), panelRegistrarProduccion, 860, 764);
+    }
+    
+    public static void cambiarAPanelGestionProduccion(VistaPrincipal vistaPrincipal, Usuario usuario, PanelProduccion panelProduccion) {
+        PanelGestionProduccion panelGestionProduccion = new PanelGestionProduccion();
+        
+        new ControladorGestionProduccion(vistaPrincipal, panelGestionProduccion, usuario, vacaDAO);
+        
+        cambiarPaneles(panelProduccion.getPanelVacio(), panelGestionProduccion, 860, 764);
+    }
+    
+    public static void abrirDialogEdicionProduccion(VistaPrincipal vistaPrincipal, RegistroProduccion registroProduccion, Vaca vaca) {
+        DialogEdicionProduccion dialogEdicionProduccion = new DialogEdicionProduccion(vistaPrincipal, true);
+        dialogEdicionProduccion.setLocationRelativeTo(vistaPrincipal);
+        dialogEdicionProduccion.setTitle("Editar registro.");
+        
+        new ControladorEditarProduccion(dialogEdicionProduccion, vistaPrincipal, vacaDAO, registroProduccion, vaca);
+        
+        dialogEdicionProduccion.setVisible(true);
     }
     
     public static void cambiarPaneles(JPanel panelVacio, JPanel panelAIntercambiar, int ancho, int largo) {

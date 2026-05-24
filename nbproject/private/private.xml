@@ -32,6 +32,9 @@
             <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/controlador/ControladorGanado.java</file>
             <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/controlador/ControladorGestionProduccion.java</file>
             <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/vista/PanelGestionProduccion.java</file>
+            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/vista/DialogEdicionProduccion.java</file>
+            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/controlador/ControladorEditarProduccion.java</file>
+            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/vista/PanelMostrarEstadisticas.java</file>
         </group>
     </open-files>
 </project-private>
