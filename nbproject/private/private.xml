@@ -24,14 +24,14 @@
             <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/modelo/DepartamentoDAO.java</file>
             <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/modelo/UbicacionDAO.java</file>
             <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/modelo/RegistroProduccion.java</file>
-            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/modelo/Vaca.java</file>
             <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/vista/PanelRegistrarProduccion.java</file>
-            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/app/Main.java</file>
             <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/controlador/ControladorRegistroProduccion.java</file>
             <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/vista/PanelProduccion.java</file>
             <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/controlador/ControladorPrincipal.java</file>
             <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/controlador/ControladorProduccion.java</file>
             <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/controlador/ControladorGanado.java</file>
+            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/controlador/ControladorGestionProduccion.java</file>
+            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/vista/PanelGestionProduccion.java</file>
         </group>
     </open-files>
 </project-private>

@@ -12,12 +12,12 @@ import modelo.Vaca;
  *
  * @author Brayan C
  */
-public class PanelGestionSanidad extends javax.swing.JPanel {
+public class PanelGestionProduccion extends javax.swing.JPanel {
 
     /**
-     * Creates new form PanelGestionSanidad
+     * Creates new form PanelGestionProduccion
      */
-    public PanelGestionSanidad() {
+    public PanelGestionProduccion() {
         initComponents();
     }
 
@@ -32,7 +32,7 @@ public class PanelGestionSanidad extends javax.swing.JPanel {
 
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tablaSanidad = new javax.swing.JTable();
+        tablaProduccion = new javax.swing.JTable();
         jblBuscarPorNombre = new javax.swing.JLabel();
         jblSanidad = new javax.swing.JLabel();
         jblInstrucciones = new javax.swing.JLabel();
@@ -40,12 +40,12 @@ public class PanelGestionSanidad extends javax.swing.JPanel {
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-        tablaSanidad.setModel(new javax.swing.table.DefaultTableModel(
+        tablaProduccion.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "Id ", "Tratamiento", "Medicamento", "Dosis", "Fecha"
+                "Id ", "Mañana", "Tarde", "Total", "Fecha"
             }
         ) {
             Class[] types = new Class [] {
@@ -63,7 +63,7 @@ public class PanelGestionSanidad extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(tablaSanidad);
+        jScrollPane1.setViewportView(tablaProduccion);
 
         jblBuscarPorNombre.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jblBuscarPorNombre.setForeground(new java.awt.Color(0, 0, 0));
@@ -72,7 +72,7 @@ public class PanelGestionSanidad extends javax.swing.JPanel {
 
         jblSanidad.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         jblSanidad.setForeground(new java.awt.Color(0, 0, 0));
-        jblSanidad.setText("Sanidad");
+        jblSanidad.setText("Producción");
 
         jblInstrucciones.setBackground(new java.awt.Color(51, 51, 51));
         jblInstrucciones.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -129,18 +129,15 @@ public class PanelGestionSanidad extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    public JTable getTablaSanidad() {
-        return tablaSanidad;
-    }
-
-    public Vaca getAnimal() {
-        return (Vaca) jcbAnimal.getSelectedItem();
-    }
-
     public JComboBox<Vaca> getJcbAnimal() {
         return jcbAnimal;
     }
 
+    public JTable getTablaProduccion() {
+        return tablaProduccion;
+    }
+
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
@@ -148,6 +145,6 @@ public class PanelGestionSanidad extends javax.swing.JPanel {
     private javax.swing.JLabel jblInstrucciones;
     private javax.swing.JLabel jblSanidad;
     private javax.swing.JComboBox<Vaca> jcbAnimal;
-    private javax.swing.JTable tablaSanidad;
+    private javax.swing.JTable tablaProduccion;
     // End of variables declaration//GEN-END:variables
 }

@@ -1,95 +1,37 @@
 [
   {
     "codigoInterno": "001",
-    "nombre": "Lola",
+    "nombre": "Julia",
     "fechaNacimiento": {
-      "year": 2024,
-      "month": 1,
-      "day": 12
+      "year": 2025,
+      "month": 3,
+      "day": 5
     },
-    "razaPadre": "Jersey",
+    "razaPadre": "Holstein",
     "razaMadre": "Jersey",
     "estado": "Produciendo",
-    "descripcion": "Vaca roja con lineas negras\nexelente productora",
-    "numeroIdentificador": "#432",
-    "peso": 300.0,
+    "descripcion": "No hay descripcion.",
+    "numeroIdentificador": "No se registro numero identificador.",
     "dueño": "f",
-    "historialTratamientos": [
-      {
-        "id": "123",
-        "tipo": "VITAMINIZACION",
-        "medicamento": "Vitaminas g",
-        "dosis": "5 pastillas",
-        "fecha": {
-          "year": 2026,
-          "month": 3,
-          "day": 12
-        },
-        "observaciones": "Se las tomo con agua"
-      },
-      {
-        "id": "123",
-        "tipo": "VACUNACION",
-        "medicamento": "Vacuna contra la fieberea autosa",
-        "dosis": "10ml",
-        "fecha": {
-          "year": 2026,
-          "month": 5,
-          "day": 10
-        },
-        "observaciones": "Molesto mucho para aplicarle la vacuna\nProbablemente le salgan ronchas\n"
-      }
-    ],
+    "historialTratamientos": [],
     "registroProducciones": [
       {
-        "id": "0",
-        "cantidadLitros": 12,
-        "jornada": "Tarde",
-        "fecha": {
-          "year": 2026,
-          "month": 2,
-          "day": 16
-        }
-      },
-      {
-        "id": "0",
-        "cantidadLitros": 12,
-        "jornada": "Mañana",
         "fecha": {
           "year": 2026,
           "month": 5,
-          "day": 23
-        }
+          "day": 24
+        },
+        "litrosMañana": 16,
+        "litrosTarde": 10
       },
       {
-        "id": "0",
-        "cantidadLitros": 8,
-        "jornada": "Tarde",
         "fecha": {
           "year": 2026,
-          "month": 5,
-          "day": 23
-        }
-      },
-      {
-        "id": "0",
-        "cantidadLitros": 13,
-        "jornada": "Mañana",
-        "fecha": {
-          "year": 2026,
-          "month": 5,
-          "day": 22
-        }
-      },
-      {
-        "id": "0",
-        "cantidadLitros": 9,
-        "jornada": "Tarde",
-        "fecha": {
-          "year": 2026,
-          "month": 5,
-          "day": 22
-        }
+          "month": 4,
+          "day": 1
+        },
+        "litrosMañana": 8,
+        "litrosTarde": 13
       }
     ]
   }

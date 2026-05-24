@@ -242,8 +242,8 @@ public class PanelRegistrarProduccion extends javax.swing.JPanel {
         return jcbMes;
     }
 
-    public JSpinner getSpinLitros() {
-        return spinLitros;
+    public Integer getLitros() {
+        return (Integer) spinLitros.getValue();
     }
 
     

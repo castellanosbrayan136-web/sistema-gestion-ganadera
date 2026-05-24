@@ -6,31 +6,41 @@ import java.time.LocalDate;
 
 
 public class RegistroProduccion {
-    private String id;
-    private int cantidadLitros;
-    private String jornada;
     private LocalDate fecha;
+    private Integer litrosMañana;
+    private Integer litrosTarde;
 
-    public RegistroProduccion(int cantidadLitros, String jornada, LocalDate fecha) {
-        this.id = "0";
-        this.cantidadLitros = cantidadLitros;
-        this.jornada = jornada;
+
+    public RegistroProduccion(LocalDate fecha) {
+        this.litrosMañana = null;
+        this.litrosTarde = null;
         this.fecha = fecha;
     }
+
+    public Integer getLitrosMañana() {
+        return litrosMañana;
+    }
+
+    public Integer getLitrosTarde() {
+        return litrosTarde;
+    }
     
-    public String getId() {
-        return id;
-    }
-
-    public int getCantidadLitros() {
-        return cantidadLitros;
-    }
-
-    public String getJornada() {
-        return jornada;
-    }
-
+    
     public LocalDate getFecha() {
         return fecha;
     }
+
+    public void setLitrosMañana(int litrosMañana) {
+        if (litrosMañana >= 0) {
+            this.litrosMañana = litrosMañana;
+        }
+    }
+
+    public void setLitrosTarde(int litrosTarde) {
+        if (litrosTarde >= 0) {
+            this.litrosTarde = litrosTarde;
+        }
+    }
+    
+    
 }

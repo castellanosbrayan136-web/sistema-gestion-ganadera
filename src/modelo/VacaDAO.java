@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.io.Reader;
 import java.io.Writer;
 import java.lang.reflect.Type;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -207,4 +208,32 @@ public class VacaDAO {
         }
         return false;
     }
+    
+    public boolean editarProduccion(Vaca vacaAEditar, RegistroProduccion registroProduccion) {
+        for (Vaca vaca : listaVacas) {
+            if (vaca.getCodigoInterno().equals(vacaAEditar.getCodigoInterno()) && vaca.getDueño().equals(vacaAEditar.getDueño())) {
+                for (int i = 0; i < vaca.getRegistroProducciones().size() ;i++) {
+                    if (vaca.getRegistroProducciones().get(i).getFecha().equals(registroProduccion.getFecha())) {
+                        vaca.getRegistroProducciones().set(i, registroProduccion);
+                        guardarDatos();
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
+    }
+        
+        public RegistroProduccion retornarRegistroProduccionPorFecha(Vaca vacaABuscar, LocalDate fecha) {
+            for (Vaca vaca :listaVacas) {
+                if (vaca.getCodigoInterno().equals(vacaABuscar.getCodigoInterno()) && vaca.getDueño().equals(vacaABuscar.getDueño())) {
+                    for (RegistroProduccion registro : vaca.getRegistroProducciones()) {
+                        if (registro.getFecha().equals(fecha)) {
+                            return registro;
+                        }
+                    }
+                }
+            }
+            return null;
+        }
 }
