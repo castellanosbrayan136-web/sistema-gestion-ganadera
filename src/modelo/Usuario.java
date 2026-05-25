@@ -51,6 +51,4 @@ public class Usuario {
     public Ubicacion getUbicacion() {
         return ubicacion;
     }
-    
-    
 }

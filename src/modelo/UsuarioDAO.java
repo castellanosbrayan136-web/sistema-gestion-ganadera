@@ -54,9 +54,7 @@ public class UsuarioDAO {
     }
     
     public boolean registrar(Usuario usuario) {
-        if (usuario == null) {
-            return false;
-        }
+        if (usuario == null) return false;
         
         usuarios.add(usuario);
         guardarDatos();
