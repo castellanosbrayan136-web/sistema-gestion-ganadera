@@ -67,7 +67,61 @@
           "day": 23
         },
         "litrosMañana": 12
+      },
+      {
+        "fecha": {
+          "year": 2026,
+          "month": 5,
+          "day": 25
+        },
+        "litrosMañana": 16,
+        "litrosTarde": 9
       }
     ]
+  },
+  {
+    "codigoInterno": "002",
+    "nombre": "Panela",
+    "fechaNacimiento": {
+      "year": 2023,
+      "month": 3,
+      "day": 4
+    },
+    "razaPadre": "Pardo Suizo",
+    "razaMadre": "Brangus",
+    "estado": "Produciendo",
+    "descripcion": "No hay descripcion.",
+    "numeroIdentificador": "No se registro numero identificador.",
+    "dueño": "f",
+    "historialTratamientos": [],
+    "registroProducciones": [
+      {
+        "fecha": {
+          "year": 2026,
+          "month": 5,
+          "day": 25
+        },
+        "litrosMañana": 0,
+        "litrosTarde": 0
+      }
+    ]
+  },
+  {
+    "codigoInterno": "003",
+    "nombre": "Lolala",
+    "fechaNacimiento": {
+      "year": 2022,
+      "month": 4,
+      "day": 3
+    },
+    "razaPadre": "Jersey",
+    "razaMadre": "Jersey",
+    "estado": "Produciendo",
+    "descripcion": "No hay descripcion.",
+    "numeroIdentificador": "#213",
+    "peso": 400.0,
+    "dueño": "f",
+    "historialTratamientos": [],
+    "registroProducciones": []
   }
 ]

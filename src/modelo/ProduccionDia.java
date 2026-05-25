@@ -13,7 +13,7 @@ public class ProduccionDia {
         this.fecha = fecha;
         this.litrosTotales = litrosTotales;
     }
-
+    
     public LocalDate getFecha() {
         return fecha;
     }

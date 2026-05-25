@@ -4,6 +4,8 @@
  */
 package vista;
 
+import javax.swing.JLabel;
+import javax.swing.JList;
 import javax.swing.JPanel;
 
 /**
@@ -207,6 +209,26 @@ public class PanelInicio extends javax.swing.JPanel {
 
     public JPanel getPanelGrafico() {
         return panelGrafico;
+    }
+
+    public void setJblPromedio15Dias(String promedio15Dias) {
+        this.jblPromedio15Dias.setText(promedio15Dias);
+    }
+
+    public void setJblRegistroTotalHoy(String registroTotalHoy) {
+        this.jblRegistroTotalHoy.setText(registroTotalHoy);
+    }
+
+    public void setJblVacaMenorProduccion(String vacaMenorProduccion) {
+        this.jblVacaMenorProduccion.setText(vacaMenorProduccion);
+    }
+
+    public void setJblPromedioVacaHoy(String promedioVacaHoy) {
+        this.jblPromedioVacaHoy.setText(promedioVacaHoy);
+    }
+
+    public JList<String> getListAlertas() {
+        return listAlertas;
     }
     
     

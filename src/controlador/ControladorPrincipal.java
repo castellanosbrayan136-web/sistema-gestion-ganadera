@@ -64,6 +64,7 @@ public class ControladorPrincipal implements ActionListener {
             reiniciarColorDeBoton();
             vistaPrincipal.getBtnInicio().setBackground(botonActivo);
             ScreenManager.cambiarAPanelInicio(vistaPrincipal, usuario);
+            
         } else if (e.getSource() == vistaPrincipal.getBtnGanado()) {
             reiniciarColorDeBoton();
             vistaPrincipal.getBtnGanado().setBackground(botonActivo);

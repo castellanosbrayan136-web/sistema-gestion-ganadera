@@ -46,5 +46,17 @@
       "vereda": "fasd"
     },
     "contraseña": "fdsa"
+  },
+  {
+    "nombresYApellidos": "h",
+    "nombreDeUsuario": "h",
+    "correoElectronico": "h",
+    "nombreDeLafinca": "h",
+    "ubicacion": {
+      "departamento": "Chocó",
+      "municipio": "Cértegui",
+      "vereda": "fds"
+    },
+    "contraseña": "h"
   }
 ]
