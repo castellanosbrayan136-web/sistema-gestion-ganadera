@@ -13,7 +13,7 @@ import java.util.Map;
 import javax.swing.DefaultListCellRenderer;
 import javax.swing.DefaultListModel;
 import modelo.ProduccionDia;
-import modelo.RegistroProduccion;
+import modelo.Produccion;
 import modelo.Usuario;
 import modelo.Vaca;
 import modelo.VacaDAO;
@@ -52,7 +52,7 @@ public class ControladorInicio {
 
         for (Vaca vaca : vacaDAO.retornarListaVacasPorUsuario(usuario.getNombreDeUsuario())) {
 
-            for (RegistroProduccion produccion : vaca.getRegistroProducciones()) {
+            for (Produccion produccion : vaca.getRegistroProducciones()) {
                 
                 int litrosManana = produccion.getLitrosMañana() != null ? produccion.getLitrosMañana() : 0;
                 int litrosTarde = produccion.getLitrosTarde() != null ? produccion.getLitrosTarde() : 0;
@@ -128,7 +128,7 @@ public class ControladorInicio {
         
         for (Vaca vaca : vacaDAO.retornarListaVacasPorUsuario(usuario.getNombreDeUsuario())) {
 
-        RegistroProduccion produccionHoy = vacaDAO.retornarRegistroProduccionPorFecha(vaca, fechaHoy);
+        Produccion produccionHoy = vacaDAO.retornarRegistroProduccionPorFecha(vaca, fechaHoy);
 
         if (produccionHoy == null) {
             continue;
@@ -171,7 +171,7 @@ public class ControladorInicio {
         List<Integer> produccionPorVacaHoy = new ArrayList<>();
         
         for (Vaca vaca : vacaDAO.retornarListaVacasPorUsuario(usuario.getNombreDeUsuario())) {
-            RegistroProduccion produccionHoy = vacaDAO.retornarRegistroProduccionPorFecha(vaca, fechaHoy);
+            Produccion produccionHoy = vacaDAO.retornarRegistroProduccionPorFecha(vaca, fechaHoy);
             
             if (produccionHoy == null) {
                 continue;
@@ -205,7 +205,7 @@ public class ControladorInicio {
         int acumulador = 0;
         
         for (Vaca vaca : vacaDAO.retornarListaVacasPorUsuario(usuario.getNombreDeUsuario())) {
-            RegistroProduccion produccionHoy = vacaDAO.retornarRegistroProduccionPorFecha(vaca, fechaHoy);
+            Produccion produccionHoy = vacaDAO.retornarRegistroProduccionPorFecha(vaca, fechaHoy);
             
             if (produccionHoy == null) {
                 continue;
@@ -233,7 +233,7 @@ public class ControladorInicio {
     public void alertasRegistrosHoy() {
         LocalDate fechaHoy = LocalDate.now();
         for (Vaca vaca : vacaDAO.retornarListaVacasPorUsuario(usuario.getNombreDeUsuario())) {
-            RegistroProduccion produccionHoy = vacaDAO.retornarRegistroProduccionPorFecha(vaca, fechaHoy);
+            Produccion produccionHoy = vacaDAO.retornarRegistroProduccionPorFecha(vaca, fechaHoy);
             if (produccionHoy == null) {
                 String alerta = "No has hecho registro hoy para: " + vaca;
                 alertas.add(alerta);

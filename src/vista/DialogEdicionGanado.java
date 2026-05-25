@@ -37,27 +37,27 @@ public class DialogEdicionGanado extends javax.swing.JDialog {
 
         panelRegistrarGanado = new javax.swing.JPanel();
         jblTituloPanel = new javax.swing.JLabel();
-        jblRazasConforman = new javax.swing.JLabel();
-        jcbEstado = new javax.swing.JComboBox<>();
-        jcbRazaMadre = new javax.swing.JComboBox<>();
-        jcbRazaPadre = new javax.swing.JComboBox<>();
+        lblRazaMadre = new javax.swing.JLabel();
+        cmbEstado = new javax.swing.JComboBox<>();
+        cmbRazaMadre = new javax.swing.JComboBox<>();
+        cmbRazaPadre = new javax.swing.JComboBox<>();
         btnConfirmar = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        lblNombre = new javax.swing.JLabel();
         txtNombre = new javax.swing.JTextField();
-        jblRazasConforman1 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        txtNumeroIdentificador = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        txtPeso = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        txtDescripcion = new javax.swing.JTextArea();
-        btnCancelar = new javax.swing.JButton();
-        lblCodigoInterno = new javax.swing.JLabel();
+        lblEstado = new javax.swing.JLabel();
+        lblCodigo = new javax.swing.JLabel();
         lblFechaNacimiento = new javax.swing.JLabel();
-        jblRazasConforman2 = new javax.swing.JLabel();
+        txtNumeroIdentificador = new javax.swing.JTextField();
+        lblNumeroIdentificador = new javax.swing.JLabel();
+        txtPeso = new javax.swing.JTextField();
+        lblPeso = new javax.swing.JLabel();
+        lblDescripcion = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        txtAreaDescripcion = new javax.swing.JTextArea();
+        btnCancelar = new javax.swing.JButton();
+        lblValorCodigo = new javax.swing.JLabel();
+        lblValorFechaNacimiento = new javax.swing.JLabel();
+        lblRazaPadre = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -68,84 +68,84 @@ public class DialogEdicionGanado extends javax.swing.JDialog {
         jblTituloPanel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jblTituloPanel.setText("Editar ganado");
 
-        jblRazasConforman.setBackground(new java.awt.Color(0, 0, 0));
-        jblRazasConforman.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jblRazasConforman.setForeground(new java.awt.Color(0, 0, 0));
-        jblRazasConforman.setText("Raza madre:");
+        lblRazaMadre.setBackground(new java.awt.Color(0, 0, 0));
+        lblRazaMadre.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblRazaMadre.setForeground(new java.awt.Color(0, 0, 0));
+        lblRazaMadre.setText("Raza madre:");
 
-        jcbEstado.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jcbEstado.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        cmbEstado.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        cmbEstado.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        jcbRazaMadre.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jcbRazaMadre.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jcbRazaMadre.setMaximumSize(new java.awt.Dimension(138, 50));
-        jcbRazaMadre.setMinimumSize(new java.awt.Dimension(137, 49));
+        cmbRazaMadre.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        cmbRazaMadre.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        cmbRazaMadre.setMaximumSize(new java.awt.Dimension(138, 50));
+        cmbRazaMadre.setMinimumSize(new java.awt.Dimension(137, 49));
 
-        jcbRazaPadre.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jcbRazaPadre.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jcbRazaPadre.setMaximumSize(new java.awt.Dimension(138, 50));
-        jcbRazaPadre.setMinimumSize(new java.awt.Dimension(137, 49));
+        cmbRazaPadre.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        cmbRazaPadre.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        cmbRazaPadre.setMaximumSize(new java.awt.Dimension(138, 50));
+        cmbRazaPadre.setMinimumSize(new java.awt.Dimension(137, 49));
 
         btnConfirmar.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         btnConfirmar.setText("CONFIRMAR");
         btnConfirmar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel1.setText("Nombre del animal: ");
+        lblNombre.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblNombre.setForeground(new java.awt.Color(0, 0, 0));
+        lblNombre.setText("Nombre:");
 
         txtNombre.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
 
-        jblRazasConforman1.setBackground(new java.awt.Color(0, 0, 0));
-        jblRazasConforman1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jblRazasConforman1.setForeground(new java.awt.Color(0, 0, 0));
-        jblRazasConforman1.setText("Estado de producción: ");
+        lblEstado.setBackground(new java.awt.Color(0, 0, 0));
+        lblEstado.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblEstado.setForeground(new java.awt.Color(0, 0, 0));
+        lblEstado.setText("Estado:");
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel5.setText("Código: ");
+        lblCodigo.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblCodigo.setForeground(new java.awt.Color(0, 0, 0));
+        lblCodigo.setText("Código: ");
 
-        jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel6.setText("Fecha de nacimiento:");
+        lblFechaNacimiento.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblFechaNacimiento.setForeground(new java.awt.Color(0, 0, 0));
+        lblFechaNacimiento.setText("Fecha de nacimiento:");
 
         txtNumeroIdentificador.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel2.setText("Número identificador: ");
+        lblNumeroIdentificador.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblNumeroIdentificador.setForeground(new java.awt.Color(0, 0, 0));
+        lblNumeroIdentificador.setText("Identificador:");
 
         txtPeso.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel3.setText("Peso(Kg): ");
+        lblPeso.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblPeso.setForeground(new java.awt.Color(0, 0, 0));
+        lblPeso.setText("Peso(Kg): ");
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel4.setText("Descripción:");
+        lblDescripcion.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblDescripcion.setForeground(new java.awt.Color(0, 0, 0));
+        lblDescripcion.setText("Descripción:");
 
-        txtDescripcion.setColumns(20);
-        txtDescripcion.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        txtDescripcion.setRows(5);
-        jScrollPane1.setViewportView(txtDescripcion);
+        txtAreaDescripcion.setColumns(20);
+        txtAreaDescripcion.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        txtAreaDescripcion.setRows(5);
+        jScrollPane1.setViewportView(txtAreaDescripcion);
 
         btnCancelar.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         btnCancelar.setText("CANCELAR");
         btnCancelar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        lblCodigoInterno.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
-        lblCodigoInterno.setForeground(new java.awt.Color(0, 0, 0));
-        lblCodigoInterno.setText("001");
+        lblValorCodigo.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
+        lblValorCodigo.setForeground(new java.awt.Color(0, 0, 0));
+        lblValorCodigo.setText("001");
 
-        lblFechaNacimiento.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
-        lblFechaNacimiento.setForeground(new java.awt.Color(0, 0, 0));
-        lblFechaNacimiento.setText("4/3/23");
+        lblValorFechaNacimiento.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
+        lblValorFechaNacimiento.setForeground(new java.awt.Color(0, 0, 0));
+        lblValorFechaNacimiento.setText("4/3/23");
 
-        jblRazasConforman2.setBackground(new java.awt.Color(0, 0, 0));
-        jblRazasConforman2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jblRazasConforman2.setForeground(new java.awt.Color(0, 0, 0));
-        jblRazasConforman2.setText("Raza padre:");
+        lblRazaPadre.setBackground(new java.awt.Color(0, 0, 0));
+        lblRazaPadre.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblRazaPadre.setForeground(new java.awt.Color(0, 0, 0));
+        lblRazaPadre.setText("Raza padre:");
 
         javax.swing.GroupLayout panelRegistrarGanadoLayout = new javax.swing.GroupLayout(panelRegistrarGanado);
         panelRegistrarGanado.setLayout(panelRegistrarGanadoLayout);
@@ -159,34 +159,34 @@ public class DialogEdicionGanado extends javax.swing.JDialog {
                         .addComponent(btnConfirmar, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(btnCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jblTituloPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 509, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(panelRegistrarGanadoLayout.createSequentialGroup()
-                        .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jblRazasConforman1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jblRazasConforman, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(lblDescripcion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(lblPeso, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(lblNumeroIdentificador, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(lblFechaNacimiento, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(lblEstado, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(lblNombre, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(lblRazaMadre, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(lblCodigo, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(lblRazaPadre, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(lblFechaNacimiento, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(lblCodigoInterno, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(txtPeso)
-                            .addComponent(txtNumeroIdentificador)
-                            .addComponent(txtNombre)
-                            .addGroup(panelRegistrarGanadoLayout.createSequentialGroup()
-                                .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jcbEstado, 0, 200, Short.MAX_VALUE)
-                                    .addComponent(jcbRazaMadre, 0, 200, Short.MAX_VALUE))
-                                .addGap(140, 140, 140))
-                            .addComponent(jScrollPane1)))
-                    .addGroup(panelRegistrarGanadoLayout.createSequentialGroup()
-                        .addComponent(jblRazasConforman2, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jcbRazaPadre, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jblTituloPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 509, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(cmbRazaPadre, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(lblValorFechaNacimiento, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(lblValorCodigo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(txtPeso)
+                                .addComponent(txtNumeroIdentificador)
+                                .addComponent(txtNombre)
+                                .addGroup(panelRegistrarGanadoLayout.createSequentialGroup()
+                                    .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(cmbEstado, 0, 200, Short.MAX_VALUE)
+                                        .addComponent(cmbRazaMadre, 0, 200, Short.MAX_VALUE))
+                                    .addGap(140, 140, 140))
+                                .addComponent(jScrollPane1)))))
                 .addContainerGap(20, Short.MAX_VALUE))
         );
         panelRegistrarGanadoLayout.setVerticalGroup(
@@ -196,40 +196,40 @@ public class DialogEdicionGanado extends javax.swing.JDialog {
                 .addComponent(jblTituloPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblCodigoInterno, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblValorCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblFechaNacimiento, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblFechaNacimiento, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblValorFechaNacimiento, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jblRazasConforman, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jcbRazaMadre, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblRazaMadre, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cmbRazaMadre, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jblRazasConforman2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jcbRazaPadre, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblRazaPadre, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cmbRazaPadre, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jblRazasConforman1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jcbEstado, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblEstado, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cmbEstado, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblNumeroIdentificador, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtNumeroIdentificador, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblPeso, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtPeso, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(10, 10, 10)
                 .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jScrollPane1)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(lblDescripcion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnConfirmar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -289,19 +289,19 @@ public class DialogEdicionGanado extends javax.swing.JDialog {
     }
 
     public JComboBox<String> getJcbEstado() {
-        return jcbEstado;
+        return cmbEstado;
     }
 
     public JComboBox<String> getJcbRazaMadre() {
-        return jcbRazaMadre;
+        return cmbRazaMadre;
     }
 
     public JComboBox<String> getJcbRazaPadre() {
-        return jcbRazaPadre;
+        return cmbRazaPadre;
     }
 
     public String getDescripcion() {
-        return txtDescripcion.getText();
+        return txtAreaDescripcion.getText();
     }
 
     public String getNombre() {
@@ -317,15 +317,15 @@ public class DialogEdicionGanado extends javax.swing.JDialog {
     }
 
     public void setLblCodigoInterno(String codigoInterno) {
-        this.lblCodigoInterno.setText(codigoInterno);
+        this.lblValorCodigo.setText(codigoInterno);
     }
 
     public void setLblFechaNacimiento(String fecha) {
-        this.lblFechaNacimiento.setText(fecha);
+        this.lblValorFechaNacimiento.setText(fecha);
     }
 
     public void setTxtDescripcion(String txtDescripcion) {
-        this.txtDescripcion.setText(txtDescripcion);
+        this.txtAreaDescripcion.setText(txtDescripcion);
     }
 
     public void setTxtNombre(String txtNombre) {
@@ -359,24 +359,24 @@ public class DialogEdicionGanado extends javax.swing.JDialog {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCancelar;
     private javax.swing.JButton btnConfirmar;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
+    private javax.swing.JComboBox<String> cmbEstado;
+    private javax.swing.JComboBox<String> cmbRazaMadre;
+    private javax.swing.JComboBox<String> cmbRazaPadre;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel jblRazasConforman;
-    private javax.swing.JLabel jblRazasConforman1;
-    private javax.swing.JLabel jblRazasConforman2;
     private javax.swing.JLabel jblTituloPanel;
-    private javax.swing.JComboBox<String> jcbEstado;
-    private javax.swing.JComboBox<String> jcbRazaMadre;
-    private javax.swing.JComboBox<String> jcbRazaPadre;
-    private javax.swing.JLabel lblCodigoInterno;
+    private javax.swing.JLabel lblCodigo;
+    private javax.swing.JLabel lblDescripcion;
+    private javax.swing.JLabel lblEstado;
     private javax.swing.JLabel lblFechaNacimiento;
+    private javax.swing.JLabel lblNombre;
+    private javax.swing.JLabel lblNumeroIdentificador;
+    private javax.swing.JLabel lblPeso;
+    private javax.swing.JLabel lblRazaMadre;
+    private javax.swing.JLabel lblRazaPadre;
+    private javax.swing.JLabel lblValorCodigo;
+    private javax.swing.JLabel lblValorFechaNacimiento;
     private javax.swing.JPanel panelRegistrarGanado;
-    private javax.swing.JTextArea txtDescripcion;
+    private javax.swing.JTextArea txtAreaDescripcion;
     private javax.swing.JTextField txtNombre;
     private javax.swing.JTextField txtNumeroIdentificador;
     private javax.swing.JTextField txtPeso;

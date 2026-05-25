@@ -10,7 +10,7 @@ import java.time.YearMonth;
 import java.time.format.TextStyle;
 import java.util.Locale;
 import javax.swing.JOptionPane;
-import modelo.RegistroProduccion;
+import modelo.Produccion;
 import modelo.Usuario;
 import modelo.Vaca;
 import modelo.VacaDAO;
@@ -41,13 +41,13 @@ public class ControladorRegistroProduccion implements ActionListener {
         llenarComboVacas();
     }
     
-    private RegistroProduccion verificarProduccion() {
+    private Produccion verificarProduccion() {
         LocalDate fecha = leerFechaSeleccionada();
         
-        RegistroProduccion produccion = vacaDAO.retornarRegistroProduccionPorFecha(leerVacaSeleccionada(), fecha);
+        Produccion produccion = vacaDAO.retornarRegistroProduccionPorFecha(leerVacaSeleccionada(), fecha);
         
         if (produccion == null) {
-            return new RegistroProduccion(fecha);
+            return new Produccion(fecha);
         } else {
             return produccion;
         }
@@ -130,7 +130,7 @@ public class ControladorRegistroProduccion implements ActionListener {
         String jornada = leerJornadaSeleccionada();
         Integer litros = leerLitrosIngresados();
         
-        RegistroProduccion produccion = verificarProduccion();
+        Produccion produccion = verificarProduccion();
         
         if (jornada.equals("Mañana")) {
            if (produccion.getLitrosTarde() == null && produccion.getLitrosMañana() == null) {

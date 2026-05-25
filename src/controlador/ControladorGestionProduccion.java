@@ -15,7 +15,7 @@ import javax.swing.SwingConstants;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.JTableHeader;
-import modelo.RegistroProduccion;
+import modelo.Produccion;
 import modelo.Usuario;
 import modelo.Vaca;
 import modelo.VacaDAO;
@@ -123,7 +123,7 @@ public class ControladorGestionProduccion implements ActionListener, MouseListen
         
         Object[] fila = new Object[4];
         
-        for (RegistroProduccion produccion : retornarVacaSeleccionada().getRegistroProducciones()) {
+        for (Produccion produccion : retornarVacaSeleccionada().getRegistroProducciones()) {
             int litrosManana = produccion.getLitrosMañana() != null ? produccion.getLitrosMañana() : 0;
             int litrosTarde = produccion.getLitrosTarde() != null ? produccion.getLitrosTarde() : 0;
             
@@ -135,7 +135,7 @@ public class ControladorGestionProduccion implements ActionListener, MouseListen
         }
     }
     
-    public RegistroProduccion obtenerRegistroProduccionSeleccionado() {
+    public Produccion obtenerRegistroProduccionSeleccionado() {
         JTable tabla = panelGestionProduccion.getTablaProduccion();
         
         int filaSeleccionada = tabla.getSelectedRow();

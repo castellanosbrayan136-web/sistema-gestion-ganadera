@@ -52,40 +52,41 @@
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="btnCancelar" min="-2" pref="180" max="-2" attributes="0"/>
                       </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                              <Component id="jLabel4" max="32767" attributes="0"/>
-                              <Component id="jLabel3" max="32767" attributes="0"/>
-                              <Component id="jLabel2" max="32767" attributes="0"/>
-                              <Component id="jLabel6" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jblRazasConforman1" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jLabel1" max="32767" attributes="0"/>
-                              <Component id="jblRazasConforman" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jLabel5" alignment="0" max="32767" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="lblFechaNacimiento" alignment="0" max="32767" attributes="0"/>
-                              <Component id="lblCodigoInterno" alignment="0" max="32767" attributes="0"/>
-                              <Component id="txtPeso" alignment="0" max="32767" attributes="0"/>
-                              <Component id="txtNumeroIdentificador" alignment="0" max="32767" attributes="0"/>
-                              <Component id="txtNombre" alignment="0" max="32767" attributes="0"/>
-                              <Group type="102" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jcbEstado" pref="200" max="32767" attributes="0"/>
-                                      <Component id="jcbRazaMadre" pref="200" max="32767" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="140" pref="140" max="-2" attributes="0"/>
-                              </Group>
-                              <Component id="jScrollPane1" alignment="0" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="jblRazasConforman2" min="-2" pref="187" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jcbRazaPadre" min="-2" pref="200" max="-2" attributes="0"/>
-                      </Group>
                       <Component id="jblTituloPanel" alignment="0" min="-2" pref="509" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                  <Component id="lblDescripcion" max="32767" attributes="0"/>
+                                  <Component id="lblPeso" max="32767" attributes="0"/>
+                                  <Component id="lblNumeroIdentificador" max="32767" attributes="0"/>
+                                  <Component id="lblFechaNacimiento" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="lblEstado" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="lblNombre" max="32767" attributes="0"/>
+                                  <Component id="lblRazaMadre" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="lblCodigo" alignment="0" max="32767" attributes="0"/>
+                              </Group>
+                              <Component id="lblRazaPadre" alignment="0" min="-2" pref="187" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="cmbRazaPadre" min="-2" pref="203" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="lblValorFechaNacimiento" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="lblValorCodigo" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="txtPeso" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="txtNumeroIdentificador" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="txtNombre" alignment="0" max="32767" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="cmbEstado" pref="200" max="32767" attributes="0"/>
+                                          <Component id="cmbRazaMadre" pref="200" max="32767" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="140" pref="140" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="jScrollPane1" alignment="0" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
                   </Group>
                   <EmptySpace pref="20" max="32767" attributes="0"/>
               </Group>
@@ -98,48 +99,48 @@
                   <Component id="jblTituloPanel" min="-2" pref="46" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel5" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
-                      <Component id="lblCodigoInterno" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
+                      <Component id="lblCodigo" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
+                      <Component id="lblValorCodigo" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel6" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
                       <Component id="lblFechaNacimiento" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
+                      <Component id="lblValorFechaNacimiento" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel1" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
+                      <Component id="lblNombre" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
                       <Component id="txtNombre" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jblRazasConforman" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
-                      <Component id="jcbRazaMadre" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
+                      <Component id="lblRazaMadre" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
+                      <Component id="cmbRazaMadre" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jblRazasConforman2" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
-                      <Component id="jcbRazaPadre" alignment="3" max="-2" attributes="0"/>
+                      <Component id="lblRazaPadre" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
+                      <Component id="cmbRazaPadre" alignment="3" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jblRazasConforman1" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
-                      <Component id="jcbEstado" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
+                      <Component id="lblEstado" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
+                      <Component id="cmbEstado" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel2" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
+                      <Component id="lblNumeroIdentificador" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
                       <Component id="txtNumeroIdentificador" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel3" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
+                      <Component id="lblPeso" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
                       <Component id="txtPeso" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                       <Component id="jScrollPane1" max="32767" attributes="0"/>
-                      <Component id="jLabel4" max="32767" attributes="0"/>
+                      <Component id="lblDescripcion" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -164,7 +165,7 @@
             <Property name="text" type="java.lang.String" value="Editar ganado"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jblRazasConforman">
+        <Component class="javax.swing.JLabel" name="lblRazaMadre">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="0" type="rgb"/>
@@ -178,7 +179,7 @@
             <Property name="text" type="java.lang.String" value="Raza madre:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JComboBox" name="jcbEstado">
+        <Component class="javax.swing.JComboBox" name="cmbEstado">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="18" style="0"/>
@@ -194,7 +195,7 @@
             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JComboBox" name="jcbRazaMadre">
+        <Component class="javax.swing.JComboBox" name="cmbRazaMadre">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="18" style="0"/>
@@ -216,7 +217,7 @@
             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JComboBox" name="jcbRazaPadre">
+        <Component class="javax.swing.JComboBox" name="cmbRazaPadre">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="18" style="0"/>
@@ -249,7 +250,7 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel1">
+        <Component class="javax.swing.JLabel" name="lblNombre">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="18" style="0"/>
@@ -257,7 +258,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Nombre del animal: "/>
+            <Property name="text" type="java.lang.String" value="Nombre:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtNombre">
@@ -267,7 +268,7 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jblRazasConforman1">
+        <Component class="javax.swing.JLabel" name="lblEstado">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="0" type="rgb"/>
@@ -278,10 +279,10 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Estado de producci&#xf3;n: "/>
+            <Property name="text" type="java.lang.String" value="Estado:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel5">
+        <Component class="javax.swing.JLabel" name="lblCodigo">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="18" style="0"/>
@@ -292,7 +293,7 @@
             <Property name="text" type="java.lang.String" value="C&#xf3;digo: "/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel6">
+        <Component class="javax.swing.JLabel" name="lblFechaNacimiento">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="18" style="0"/>
@@ -310,7 +311,7 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel2">
+        <Component class="javax.swing.JLabel" name="lblNumeroIdentificador">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="18" style="0"/>
@@ -318,7 +319,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="N&#xfa;mero identificador: "/>
+            <Property name="text" type="java.lang.String" value="Identificador:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtPeso">
@@ -328,7 +329,7 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel3">
+        <Component class="javax.swing.JLabel" name="lblPeso">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="18" style="0"/>
@@ -339,7 +340,7 @@
             <Property name="text" type="java.lang.String" value="Peso(Kg): "/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel4">
+        <Component class="javax.swing.JLabel" name="lblDescripcion">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="18" style="0"/>
@@ -357,7 +358,7 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JTextArea" name="txtDescripcion">
+            <Component class="javax.swing.JTextArea" name="txtAreaDescripcion">
               <Properties>
                 <Property name="columns" type="int" value="20"/>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -379,7 +380,7 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="lblCodigoInterno">
+        <Component class="javax.swing.JLabel" name="lblValorCodigo">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="20" style="0"/>
@@ -390,7 +391,7 @@
             <Property name="text" type="java.lang.String" value="001"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="lblFechaNacimiento">
+        <Component class="javax.swing.JLabel" name="lblValorFechaNacimiento">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="20" style="0"/>
@@ -401,7 +402,7 @@
             <Property name="text" type="java.lang.String" value="4/3/23"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jblRazasConforman2">
+        <Component class="javax.swing.JLabel" name="lblRazaPadre">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="0" type="rgb"/>

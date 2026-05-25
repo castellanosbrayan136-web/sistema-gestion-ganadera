@@ -5,19 +5,19 @@ package modelo;
 import java.time.LocalDate;
 
 
-public class RegistroProduccion {
+public class Produccion {
     private LocalDate fecha;
     private Integer litrosMañana;
     private Integer litrosTarde;
 
 
-    public RegistroProduccion(LocalDate fecha) {
+    public Produccion(LocalDate fecha) {
         this.litrosMañana = null;
         this.litrosTarde = null;
         this.fecha = fecha;
     }
 
-    public RegistroProduccion(LocalDate fecha, Integer litrosMañana, Integer litrosTarde) {
+    public Produccion(LocalDate fecha, Integer litrosMañana, Integer litrosTarde) {
         this.fecha = fecha;
         this.litrosMañana = litrosMañana;
         this.litrosTarde = litrosTarde;

@@ -15,14 +15,15 @@ import java.lang.reflect.Type;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 
 public class VacaDAO {
     private final Gson gson;
     private final String ruta;
     private final List<Vaca> listaVacas;
-    private List<String> listaRazas;
-    private String rutaRazas;
+    private final List<String> listaRazas;
+    private final String rutaRazas;
 
     public VacaDAO() {
         this.gson = new GsonBuilder().setPrettyPrinting().create();
@@ -57,7 +58,7 @@ public class VacaDAO {
         }
     }
     
-    public List<String> cargarListadoDeRazas() {
+    private List<String> cargarListadoDeRazas() {
         File archivo = new File(rutaRazas);
         
         try (Reader lector = new FileReader(archivo)) {
@@ -70,55 +71,40 @@ public class VacaDAO {
         }
     }
     
-    private String generarCodigoInterno(int codigoCorrespondiente) {
-        
-        if (codigoCorrespondiente < 10) {
-            return "00" + String.valueOf(codigoCorrespondiente);
-        } else if (codigoCorrespondiente < 100) {
-            return "0" + String.valueOf(codigoCorrespondiente);
-        } else {
-            return String.valueOf(codigoCorrespondiente);
-        }
-    }
-    
-    public boolean registrar(Vaca bovino) {
+    public boolean addVaca(Vaca bovino) {
         if (bovino == null) {
             return false;
         }
-        
-        bovino.setCodigoInterno(generarCodigoInterno(retornarCantidadDeAnimalesPorUsuario(bovino.getDueño())));
-        
         listaVacas.add(bovino);
         guardarDatos();
         return true;
     }
     
-    public List<Vaca> retornarListaVacasPorUsuario(String usuario) {
+    public List<Vaca> getVacasPorIdPropietario(UUID idUsuario) {
         List<Vaca> lista = new ArrayList<>();
+        
         for (Vaca vaca : listaVacas) {
-            if (vaca.getDueño().equals(usuario)) {
+            if (vaca.getIdPropietario().equals(idUsuario)) {
                 lista.add(vaca);
             }
         }
         return lista;
     }
     
-    public int retornarCantidadDeAnimalesPorUsuario(String nombreUsuario) {
-        List<Vaca> lista = retornarListaVacasPorUsuario(nombreUsuario);
+    public int getCantidadDeAnimalesPorIdPropietario(UUID idUsuario) {
+        List<Vaca> lista = getVacasPorIdPropietario(idUsuario);
         
         return lista.size() + 1;
     }
     
-    public List<String> retornarListadoDeRazas() {
+    public List<String> getListaRazas() {
         return listaRazas;
     }
     
-    public List<Vaca> filtrarVacasPorCoincidencia(String usuario, String nombreVaca) {
-        List<Vaca> listaPorDueño = retornarListaVacasPorUsuario(usuario);
-        
+    public List<Vaca> filtrarVacasPorCoincidencia(UUID idUsuario, String nombreVaca) {
         List<Vaca> listaFiltrada = new ArrayList<>();
         
-        for (Vaca vaca : listaPorDueño) {
+        for (Vaca vaca : getVacasPorIdPropietario(idUsuario)) {
             if (vaca.getNombre().startsWith(nombreVaca)) {
                 listaFiltrada.add(vaca);
             }
@@ -126,19 +112,19 @@ public class VacaDAO {
         return listaFiltrada;
     }
     
-    public Vaca buscarVacaPorCodigoYpropietario(String codigo, String nombrePropietario) {
+    public Vaca getVacaPorId(UUID idVaca, UUID idUsuario) {
         for (Vaca vaca : listaVacas) {
-            if (vaca.getCodigoInterno().equals(codigo) && vaca.getDueño().equals(nombrePropietario)) {
+            if (vaca.getIdInterno().equals(idVaca) && vaca.getIdPropietario().equals(idUsuario)) {
                 return vaca;
             }
         }
         return null;
     }
     
-    public boolean registrarTratamiento(Vaca vacaTratada,TratamientoVeterinario tratamiento) {
+    public boolean addTratamiento(Vaca vacaTratada, TratamientoVeterinario tratamientoHecho) {
         for (Vaca vaca : listaVacas) {
-            if (vaca.getCodigoInterno().equals(vacaTratada.getCodigoInterno()) && vaca.getNombre().equals(vacaTratada.getNombre())) {
-                vaca.setHistorialTratamientos(tratamiento);
+            if (vaca.getIdInterno().equals(vacaTratada.getIdInterno())) {
+                vaca.getHistorialTratamientos().add(tratamientoHecho);
                 guardarDatos();
                 return true;
             }
@@ -146,11 +132,13 @@ public class VacaDAO {
         return false;
     }
     
-    public boolean editarTratamiento(Vaca vacaAEditarTratamiento, TratamientoVeterinario tratamientoAEditar) {
+    public boolean updateTratamiento(Vaca vacaAEditar, TratamientoVeterinario tratamientoAEditar) {
+        if (vacaAEditar == null || tratamientoAEditar == null) return false;
+        
         for (Vaca vaca : listaVacas) {
-            if (vaca.getCodigoInterno().equals(vacaAEditarTratamiento.getCodigoInterno()) && vaca.getDueño().equals(vacaAEditarTratamiento.getDueño())) {
-                for (int i = 0; i < vaca.getHistorialTratamientos().size();i++) {
-                    if (vaca.getHistorialTratamientos().get(i).getId().equals(tratamientoAEditar.getId())) {
+            if (vaca.getIdInterno().equals(vacaAEditar.getIdInterno())) {
+                for (int i = 0 ; i < vaca.getHistorialTratamientos().size() ; i++) {
+                    if (vaca.getHistorialTratamientos().get(i).getIdInterno().equals(tratamientoAEditar.getIdInterno())) {
                         vaca.getHistorialTratamientos().set(i, tratamientoAEditar);
                         guardarDatos();
                         return true;
@@ -161,11 +149,11 @@ public class VacaDAO {
         return false;
     }
     
-    public TratamientoVeterinario retorntarTratamientoPorIdYVaca(Vaca vacaAEditar, String IdTratamiento) {
+    public TratamientoVeterinario getTratamientoDeVacaPorId(UUID idVaca, UUID idTratamiento) {
         for (Vaca vaca : listaVacas) {
-            if (vaca.getCodigoInterno().equals(vacaAEditar.getCodigoInterno()) && vaca.getDueño().equals(vacaAEditar.getDueño())) {
+            if (vaca.getIdInterno().equals(idVaca)) {
                 for (TratamientoVeterinario tratamiento : vaca.getHistorialTratamientos()) {
-                    if (tratamiento.getId().equals(IdTratamiento)) {
+                    if (tratamiento.getIdInterno().equals(idTratamiento)) {
                         return tratamiento;
                     }
                 }
@@ -174,23 +162,24 @@ public class VacaDAO {
         return null;
     }
     
-    public boolean editarGanado(Vaca vaca) {
-        if (vaca != null) {
-            for (int i = 0; i < listaVacas.size();i++) {
-                if (listaVacas.get(i).getCodigoInterno().equals(vaca.getCodigoInterno()) && listaVacas.get(i).getDueño().equals(vaca.getDueño())) {
-                    listaVacas.set(i, vaca);
-                    guardarDatos();
-                    return true;
-                }
+    public boolean updateVaca(Vaca vaca) {
+        if (vaca == null) return false; 
+        
+        for (int i = 0 ; i < listaVacas.size() ; i++) {
+            if (listaVacas.get(i).getIdInterno().equals(vaca.getIdInterno())) {
+                listaVacas.set(i, vaca);
+                guardarDatos();
+                return true;
             }
         }
         return false;
     }
     
-    public boolean eliminarRegistroTratamiento(Vaca vacaAEditar, String IdTratamiento) {
+    public boolean deleteTratamientoPorId(UUID idVaca, UUID IdTratamiento) {
         for (Vaca vaca : listaVacas) {
-            if (vaca.getCodigoInterno().equals(vacaAEditar.getCodigoInterno()) && vaca.getDueño().equals(vacaAEditar.getDueño())) {
-                boolean eliminado = vaca.getHistorialTratamientos().removeIf(tratamiento -> tratamiento.getId().equals(IdTratamiento));
+            if (vaca.getIdInterno().equals(idVaca)) {
+                boolean eliminado = vaca.getHistorialTratamientos().removeIf(
+                        tratamiento -> tratamiento.getIdInterno().equals(IdTratamiento));
                 guardarDatos();
                 return eliminado;
             }
@@ -198,9 +187,9 @@ public class VacaDAO {
         return false;
     }
     
-    public boolean registrarProduccion(RegistroProduccion produccion, Vaca vacaARegistrar) {
+    public boolean addProduccion(Produccion produccion, UUID Idvaca) {
         for (Vaca vaca : listaVacas) {
-            if (vaca.getCodigoInterno().equals(vacaARegistrar.getCodigoInterno()) && vaca.getDueño().equals(vacaARegistrar.getDueño())) {
+            if (vaca.getIdInterno().equals(Idvaca)) {
                 vaca.getRegistroProducciones().add(produccion);
                 guardarDatos();
                 return true;
@@ -209,12 +198,12 @@ public class VacaDAO {
         return false;
     }
     
-    public boolean editarProduccion(Vaca vacaAEditar, RegistroProduccion registroProduccion) {
+    public boolean updateProduccion(UUID idVaca, Produccion produccion) {
         for (Vaca vaca : listaVacas) {
-            if (vaca.getCodigoInterno().equals(vacaAEditar.getCodigoInterno()) && vaca.getDueño().equals(vacaAEditar.getDueño())) {
-                for (int i = 0; i < vaca.getRegistroProducciones().size() ;i++) {
-                    if (vaca.getRegistroProducciones().get(i).getFecha().equals(registroProduccion.getFecha())) {
-                        vaca.getRegistroProducciones().set(i, registroProduccion);
+            if (vaca.getIdInterno().equals(idVaca)) {
+                for (int i = 0 ; i < vaca.getRegistroProducciones().size() ; i++) {
+                    if (vaca.getRegistroProducciones().get(i).getFecha().equals(produccion.getFecha())) {
+                        vaca.getRegistroProducciones().set(i, produccion);
                         guardarDatos();
                         return true;
                     }
@@ -224,16 +213,16 @@ public class VacaDAO {
         return false;
     }
         
-        public RegistroProduccion retornarRegistroProduccionPorFecha(Vaca vacaABuscar, LocalDate fecha) {
-            for (Vaca vaca :listaVacas) {
-                if (vaca.getCodigoInterno().equals(vacaABuscar.getCodigoInterno()) && vaca.getDueño().equals(vacaABuscar.getDueño())) {
-                    for (RegistroProduccion registro : vaca.getRegistroProducciones()) {
-                        if (registro.getFecha().equals(fecha)) {
-                            return registro;
-                        }
+    public Produccion getProduccionPorFecha(UUID IdVaca, LocalDate fecha) {
+        for (Vaca vaca :listaVacas) {
+            if (vaca.getIdInterno().equals(IdVaca)) {
+                for (Produccion produccion : vaca.getRegistroProducciones()) {
+                    if (produccion.getFecha().equals(fecha)) {
+                        return produccion;
                     }
                 }
             }
-            return null;
         }
+        return null;
+    }
 }

@@ -22,7 +22,7 @@ import controlador.ControladorSanidad;
 import java.awt.BorderLayout;
 import javax.swing.JPanel;
 import modelo.DepartamentoDAO;
-import modelo.RegistroProduccion;
+import modelo.Produccion;
 import modelo.TratamientoVeterinario;
 import modelo.Usuario;
 import modelo.UsuarioDAO;
@@ -189,7 +189,7 @@ public class ScreenManager {
         cambiarPaneles(panelProduccion.getPanelVacio(), panelGestionProduccion, 860, 764);
     }
     
-    public static void abrirDialogEdicionProduccion(VistaPrincipal vistaPrincipal, RegistroProduccion registroProduccion, Vaca vaca) {
+    public static void abrirDialogEdicionProduccion(VistaPrincipal vistaPrincipal, Produccion registroProduccion, Vaca vaca) {
         DialogEdicionProduccion dialogEdicionProduccion = new DialogEdicionProduccion(vistaPrincipal, true);
         dialogEdicionProduccion.setLocationRelativeTo(vistaPrincipal);
         dialogEdicionProduccion.setTitle("Editar registro.");

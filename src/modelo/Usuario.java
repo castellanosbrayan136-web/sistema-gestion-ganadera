@@ -2,15 +2,20 @@ package modelo;
 
 //@autor: Brayan C
 
+import java.util.UUID;
+
+
 public class Usuario {
-    private String nombresYApellidos;
-    private String nombreDeUsuario;
-    private String correoElectronico;
-    private String nombreDeLafinca;
-    private Ubicacion ubicacion;
-    private String contraseña;
+    private final UUID idInterno;
+    private final String nombresYApellidos;
+    private final String nombreDeUsuario;
+    private final String correoElectronico;
+    private final String nombreDeLafinca;
+    private final Ubicacion ubicacion;
+    private final String contraseña;
 
     public Usuario(String nombresYApellidos, String nombreDeUsuario, String correoElectronico, String nombreDeLafinca, Ubicacion ubicacion, String contraseña) {
+        this.idInterno = UUID.randomUUID();
         this.nombresYApellidos = nombresYApellidos;
         this.nombreDeUsuario = nombreDeUsuario;
         this.correoElectronico = correoElectronico;
@@ -19,6 +24,10 @@ public class Usuario {
         this.contraseña = contraseña;
     }
 
+    public UUID getIdInterno() {
+        return idInterno;
+    }
+    
     public String getNombreDeUsuario() {
         return nombreDeUsuario;
     }
