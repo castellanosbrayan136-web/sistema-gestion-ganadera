@@ -21,6 +21,4 @@ public class ProduccionDia {
     public Integer getLitrosTotales() {
         return litrosTotales;
     }
-    
-    
 }

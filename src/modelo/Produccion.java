@@ -6,21 +6,14 @@ import java.time.LocalDate;
 
 
 public class Produccion {
-    private LocalDate fecha;
+    private final LocalDate fecha;
     private Integer litrosMañana;
     private Integer litrosTarde;
-
-
+    
     public Produccion(LocalDate fecha) {
         this.litrosMañana = null;
         this.litrosTarde = null;
         this.fecha = fecha;
-    }
-
-    public Produccion(LocalDate fecha, Integer litrosMañana, Integer litrosTarde) {
-        this.fecha = fecha;
-        this.litrosMañana = litrosMañana;
-        this.litrosTarde = litrosTarde;
     }
     
     public Integer getLitrosMañana() {
@@ -30,7 +23,6 @@ public class Produccion {
     public Integer getLitrosTarde() {
         return litrosTarde;
     }
-    
     
     public LocalDate getFecha() {
         return fecha;

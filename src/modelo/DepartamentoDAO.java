@@ -2,7 +2,6 @@ package modelo;
 
 //@autor: Brayan C
 
-import com.formdev.flatlaf.json.Json;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
@@ -41,11 +40,5 @@ public class DepartamentoDAO {
     
     public List<Departamento> retornarDepartamentos() {
         return departamentosColombia;
-    }
-    
-    public void imprimir() {
-        for (Departamento departamento : departamentosColombia) {
-            System.out.println(departamento);
-        }
     }
 }

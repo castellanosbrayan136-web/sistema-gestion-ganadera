@@ -7,13 +7,13 @@ import java.util.UUID;
 
 
 public class TratamientoVeterinario {
-    private UUID idInterno;
-    private String identificador;
-    private String tipo;
-    private String medicamento;
-    private String dosis;
-    private LocalDate fecha;
-    private String observaciones;
+    private final UUID idInterno;
+    private final String identificador;
+    private final String tipo;
+    private final String medicamento;
+    private final String dosis;
+    private final LocalDate fecha;
+    private final String observaciones;
 
     public TratamientoVeterinario(String tipo, String medicamento, String dosis, LocalDate fecha, String observaciones, String identificador) {
         this.idInterno = UUID.randomUUID();

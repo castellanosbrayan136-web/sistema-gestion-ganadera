@@ -33,11 +33,4 @@ public class Departamento {
     public void setMunicipios(List<String> ciudades) {
         this.ciudades = ciudades;
     }
-
-    @Override
-    public String toString() {
-        return "Departamento{" + "id=" + id + ", departamento=" + departamento + ", municipios=" + ciudades + '}';
-    }
-    
-    
 }
