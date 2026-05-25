@@ -48,10 +48,13 @@ public class ControladorEditarProduccion implements ActionListener {
     }
     
     public void llenarDatos() {
+        int litrosManana = registroProduccion.getLitrosMañana() != null ? registroProduccion.getLitrosMañana() : 0;
+        int litrosTarde = registroProduccion.getLitrosTarde() != null ? registroProduccion.getLitrosTarde() : 0;
+        
         dialogEdicionProduccion.setJblFechaRegistro(registroProduccion.getFecha());
         dialogEdicionProduccion.setJblVaca(vaca);
-        dialogEdicionProduccion.setSpinMañana(registroProduccion.getLitrosMañana());
-        dialogEdicionProduccion.setSpinTarde(registroProduccion.getLitrosTarde());
+        dialogEdicionProduccion.setSpinMañana(litrosManana);
+        dialogEdicionProduccion.setSpinTarde(litrosTarde);
     }
     
     @Override

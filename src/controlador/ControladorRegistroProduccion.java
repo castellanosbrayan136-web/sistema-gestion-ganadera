@@ -120,6 +120,10 @@ public class ControladorRegistroProduccion implements ActionListener {
         }
     }
         
+        private void mostrarMensaje() {
+            JOptionPane.showMessageDialog(panelRegistroProduccion, "Registro exitoso.");
+        }
+        
     private void registrarProduccion() {
         Vaca vacaARealizarRegistro = leerVacaSeleccionada();
         LocalDate fecha = leerFechaSeleccionada();
@@ -132,9 +136,11 @@ public class ControladorRegistroProduccion implements ActionListener {
            if (produccion.getLitrosTarde() == null && produccion.getLitrosMañana() == null) {
                 produccion.setLitrosMañana(litros);
                 vacaDAO.registrarProduccion(produccion, vacaARealizarRegistro);
+                mostrarMensaje();
             } else if (produccion.getLitrosTarde() != null && produccion.getLitrosMañana() == null) {
                produccion.setLitrosMañana(litros);
                vacaDAO.editarProduccion(vacaARealizarRegistro, produccion);
+               mostrarMensaje();
            } else {
                 JOptionPane.showMessageDialog(panelRegistroProduccion, "Ya hiciste registro para la manana de este dia.");
             }
@@ -144,9 +150,11 @@ public class ControladorRegistroProduccion implements ActionListener {
             if (produccion.getLitrosTarde() == null && produccion.getLitrosMañana() == null) {
                 produccion.setLitrosTarde(litros);
                 vacaDAO.registrarProduccion(produccion, vacaARealizarRegistro);
+                mostrarMensaje();
             } else if (produccion.getLitrosTarde() == null && produccion.getLitrosMañana() != null) {
                 produccion.setLitrosTarde(litros);
                 vacaDAO.editarProduccion(vacaARealizarRegistro, produccion);
+                mostrarMensaje();
             } else {
                 JOptionPane.showMessageDialog(panelRegistroProduccion, "Ya hiciste registro para la tarde de este dia.");
             }

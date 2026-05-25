@@ -63,7 +63,7 @@ public class ControladorPrincipal implements ActionListener {
         if (e.getSource() == vistaPrincipal.getBtnInicio()) {
             reiniciarColorDeBoton();
             vistaPrincipal.getBtnInicio().setBackground(botonActivo);
-            ScreenManager.cambiarAPanelInicio(vistaPrincipal);
+            ScreenManager.cambiarAPanelInicio(vistaPrincipal, usuario);
         } else if (e.getSource() == vistaPrincipal.getBtnGanado()) {
             reiniciarColorDeBoton();
             vistaPrincipal.getBtnGanado().setBackground(botonActivo);
@@ -98,7 +98,7 @@ public class ControladorPrincipal implements ActionListener {
     }
     
     public void cargarInformacionDeInicio() {
-        ScreenManager.cambiarAPanelInicio(vistaPrincipal);
+        ScreenManager.cambiarAPanelInicio(vistaPrincipal, usuario);
         vistaPrincipal.getBtnInicio().setBackground(new Color(70, 90, 120));
         
         String diaDeLaSemana = LocalDate.now().getDayOfWeek().getDisplayName(TextStyle.FULL, new Locale("es", "ES"));

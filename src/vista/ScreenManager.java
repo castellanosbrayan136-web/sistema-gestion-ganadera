@@ -12,6 +12,7 @@ import controlador.ControladorGestionSanidad;
 import controlador.ControladorIniciarSesion;
 import controlador.ControladorGestionarGanado;
 import controlador.ControladorInformacionUsuario;
+import controlador.ControladorInicio;
 import controlador.ControladorPrincipal;
 import controlador.ControladorProduccion;
 import controlador.ControladorRegistrarGanado;
@@ -79,10 +80,12 @@ public class ScreenManager {
         vistaPrincipal.dispose();
     }
     
-    public static void cambiarAPanelInicio(VistaPrincipal vistaPrincipal) {
+    public static void cambiarAPanelInicio(VistaPrincipal vistaPrincipal, Usuario usuario) {
         PanelInicio panelInicio = new PanelInicio();
         
-        cambiarPaneles(vistaPrincipal.getPanelVacio(), panelInicio, 1114, 778);
+        new ControladorInicio(panelInicio, usuario, vacaDAO);
+        
+        cambiarPaneles(vistaPrincipal.getPanelVacio(), panelInicio, 1128, 778);
     }
     
     public static void cambiarAPanelGanado(VistaPrincipal vistaPrincipal, Usuario usuario) {
@@ -197,13 +200,12 @@ public class ScreenManager {
     }
     
     public static void cambiarPaneles(JPanel panelVacio, JPanel panelAIntercambiar, int ancho, int largo) {
-        panelVacio.setSize(ancho,largo);
         panelAIntercambiar.setSize(ancho,largo);
+        panelAIntercambiar.setLocation(0, 0);
+        
         panelVacio.removeAll();
         panelVacio.add(panelAIntercambiar, BorderLayout.CENTER);
         panelVacio.revalidate();
         panelVacio.repaint();
-        panelAIntercambiar.revalidate();
-        panelAIntercambiar.repaint();
     }
 }

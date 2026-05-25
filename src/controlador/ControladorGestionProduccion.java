@@ -124,10 +124,13 @@ public class ControladorGestionProduccion implements ActionListener, MouseListen
         Object[] fila = new Object[4];
         
         for (RegistroProduccion produccion : retornarVacaSeleccionada().getRegistroProducciones()) {
+            int litrosManana = produccion.getLitrosMañana() != null ? produccion.getLitrosMañana() : 0;
+            int litrosTarde = produccion.getLitrosTarde() != null ? produccion.getLitrosTarde() : 0;
+            
             fila[0] = produccion.getFecha();
-            fila[1] = produccion.getLitrosMañana();
-            fila[2] = produccion.getLitrosTarde();
-            fila[3] = produccion.getLitrosMañana() + produccion.getLitrosTarde();
+            fila[1] = litrosManana;
+            fila[2] = litrosTarde;
+            fila[3] = litrosManana + litrosTarde;
             modeloTabla.addRow(fila);
         }
     }

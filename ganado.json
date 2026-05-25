@@ -23,6 +23,50 @@
         },
         "litrosMañana": 10,
         "litrosTarde": 8
+      },
+      {
+        "fecha": {
+          "year": 2026,
+          "month": 5,
+          "day": 14
+        },
+        "litrosMañana": 10,
+        "litrosTarde": 10
+      },
+      {
+        "fecha": {
+          "year": 2026,
+          "month": 5,
+          "day": 13
+        },
+        "litrosMañana": 10,
+        "litrosTarde": 6
+      },
+      {
+        "fecha": {
+          "year": 2026,
+          "month": 5,
+          "day": 12
+        },
+        "litrosMañana": 13,
+        "litrosTarde": 10
+      },
+      {
+        "fecha": {
+          "year": 2026,
+          "month": 1,
+          "day": 2
+        },
+        "litrosMañana": 34,
+        "litrosTarde": 3
+      },
+      {
+        "fecha": {
+          "year": 2026,
+          "month": 5,
+          "day": 23
+        },
+        "litrosMañana": 12
       }
     ]
   }
