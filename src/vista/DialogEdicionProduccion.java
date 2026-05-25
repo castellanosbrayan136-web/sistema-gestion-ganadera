@@ -6,7 +6,6 @@ package vista;
 
 import java.time.LocalDate;
 import javax.swing.JButton;
-import javax.swing.JLabel;
 import javax.swing.JSpinner;
 import modelo.Vaca;
 
@@ -35,126 +34,126 @@ public class DialogEdicionProduccion extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        panelRegistrarGanado = new javax.swing.JPanel();
-        jblTituloPanel = new javax.swing.JLabel();
+        background = new javax.swing.JPanel();
+        lblTituloPanel = new javax.swing.JLabel();
         btnGuardar = new javax.swing.JButton();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        lblFechaRegistro = new javax.swing.JLabel();
+        lblMañana = new javax.swing.JLabel();
+        lblTarde = new javax.swing.JLabel();
         btnCancelar = new javax.swing.JButton();
-        jblFechaRegistro = new javax.swing.JLabel();
-        spinMañana = new javax.swing.JSpinner();
-        spinTarde = new javax.swing.JSpinner();
-        jLabel7 = new javax.swing.JLabel();
-        jblVaca = new javax.swing.JLabel();
+        lblValorFechaRegistro = new javax.swing.JLabel();
+        spnMañana = new javax.swing.JSpinner();
+        spiTarde = new javax.swing.JSpinner();
+        lblVaca = new javax.swing.JLabel();
+        lblValorVaca = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        panelRegistrarGanado.setBackground(new java.awt.Color(245, 245, 245));
+        background.setBackground(new java.awt.Color(245, 245, 245));
 
-        jblTituloPanel.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jblTituloPanel.setForeground(new java.awt.Color(0, 0, 0));
-        jblTituloPanel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jblTituloPanel.setText("Editar registro");
+        lblTituloPanel.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        lblTituloPanel.setForeground(new java.awt.Color(0, 0, 0));
+        lblTituloPanel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblTituloPanel.setText("Editar registro");
 
         btnGuardar.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         btnGuardar.setText("GUARDAR");
         btnGuardar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel6.setText("Fecha del registro:");
+        lblFechaRegistro.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblFechaRegistro.setForeground(new java.awt.Color(0, 0, 0));
+        lblFechaRegistro.setText("Fecha del registro:");
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel2.setText("Mañana:");
+        lblMañana.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblMañana.setForeground(new java.awt.Color(0, 0, 0));
+        lblMañana.setText("Mañana:");
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel3.setText("Tarde:");
+        lblTarde.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblTarde.setForeground(new java.awt.Color(0, 0, 0));
+        lblTarde.setText("Tarde:");
 
         btnCancelar.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         btnCancelar.setText("CANCELAR");
         btnCancelar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        jblFechaRegistro.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
-        jblFechaRegistro.setForeground(new java.awt.Color(0, 0, 0));
-        jblFechaRegistro.setText("4/3/23");
+        lblValorFechaRegistro.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
+        lblValorFechaRegistro.setForeground(new java.awt.Color(0, 0, 0));
+        lblValorFechaRegistro.setText("4/3/23");
 
-        spinMañana.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
-        spinMañana.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
+        spnMañana.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
+        spnMañana.setModel(new javax.swing.SpinnerNumberModel());
 
-        spinTarde.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
-        spinTarde.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
+        spiTarde.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
+        spiTarde.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
 
-        jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel7.setText("Vaca:");
+        lblVaca.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblVaca.setForeground(new java.awt.Color(0, 0, 0));
+        lblVaca.setText("Vaca:");
 
-        jblVaca.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
-        jblVaca.setForeground(new java.awt.Color(0, 0, 0));
-        jblVaca.setText("001 - Julieta Maria");
+        lblValorVaca.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
+        lblValorVaca.setForeground(new java.awt.Color(0, 0, 0));
+        lblValorVaca.setText("001 - Julieta Maria");
 
-        javax.swing.GroupLayout panelRegistrarGanadoLayout = new javax.swing.GroupLayout(panelRegistrarGanado);
-        panelRegistrarGanado.setLayout(panelRegistrarGanadoLayout);
-        panelRegistrarGanadoLayout.setHorizontalGroup(
-            panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelRegistrarGanadoLayout.createSequentialGroup()
-                .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelRegistrarGanadoLayout.createSequentialGroup()
+        javax.swing.GroupLayout backgroundLayout = new javax.swing.GroupLayout(background);
+        background.setLayout(backgroundLayout);
+        backgroundLayout.setHorizontalGroup(
+            backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(backgroundLayout.createSequentialGroup()
+                .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(backgroundLayout.createSequentialGroup()
                         .addGap(6, 6, 6)
-                        .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(panelRegistrarGanadoLayout.createSequentialGroup()
-                                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(backgroundLayout.createSequentialGroup()
+                                .addComponent(lblFechaRegistro, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(jblFechaRegistro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(panelRegistrarGanadoLayout.createSequentialGroup()
-                                .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jblTituloPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 337, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(panelRegistrarGanadoLayout.createSequentialGroup()
+                                .addComponent(lblValorFechaRegistro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(backgroundLayout.createSequentialGroup()
+                                .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblTituloPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 337, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(backgroundLayout.createSequentialGroup()
                                         .addComponent(btnGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(btnCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGap(0, 16, Short.MAX_VALUE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelRegistrarGanadoLayout.createSequentialGroup()
-                                .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 161, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, backgroundLayout.createSequentialGroup()
+                                .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(lblTarde, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(lblMañana, javax.swing.GroupLayout.DEFAULT_SIZE, 161, Short.MAX_VALUE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(spinMañana, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(spinTarde, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(spnMañana, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(spiTarde, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(42, 42, 42))))
-                    .addGroup(panelRegistrarGanadoLayout.createSequentialGroup()
+                    .addGroup(backgroundLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lblVaca, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jblVaca, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(lblValorVaca, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
         );
-        panelRegistrarGanadoLayout.setVerticalGroup(
-            panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelRegistrarGanadoLayout.createSequentialGroup()
+        backgroundLayout.setVerticalGroup(
+            backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(backgroundLayout.createSequentialGroup()
                 .addGap(6, 6, 6)
-                .addComponent(jblTituloPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblTituloPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(13, 13, 13)
-                .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jblVaca, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblVaca, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblValorVaca, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(6, 6, 6)
-                .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jblFechaRegistro, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblFechaRegistro, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblValorFechaRegistro, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(spinMañana, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblMañana, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(spnMañana, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(spinTarde, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblTarde, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(spiTarde, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -164,11 +163,11 @@ public class DialogEdicionProduccion extends javax.swing.JDialog {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelRegistrarGanado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(background, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelRegistrarGanado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(background, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -220,60 +219,49 @@ public class DialogEdicionProduccion extends javax.swing.JDialog {
     }
 
     public Integer getLitrosMañana() {
-        try {
-            return (Integer) spinMañana.getValue();
-        } catch (NumberFormatException e) {
-            return null;
-        }
+        return (Integer) spnMañana.getValue();
     }
 
     public Integer getLitrosTarde() {
-        try {
-            return (Integer) spinTarde.getValue();
-        } catch (NumberFormatException e) {
-            return null;
-        }
+        return (Integer) spiTarde.getValue();
     }
 
     public JSpinner getSpinMañana() {
-        return spinMañana;
+        return spnMañana;
     }
 
     public JSpinner getSpinTarde() {
-        return spinTarde;
+        return spiTarde;
     }
 
-    public void setJblFechaRegistro(LocalDate fechaRegistro) {
-        this.jblFechaRegistro.setText(String.valueOf(fechaRegistro));
+    public void setLblFechaRegistro(LocalDate fechaRegistro) {
+        this.lblValorFechaRegistro.setText(String.valueOf(fechaRegistro));
     }
 
-    public void setJblVaca(Vaca vaca) {
-        this.jblVaca.setText(String.valueOf(vaca));
+    public void setLblVaca(Vaca vaca) {
+        this.lblValorVaca.setText(String.valueOf(vaca));
     }
 
-    public void setSpinMañana(Integer litrosMañana) {
-        this.spinMañana.setValue(litrosMañana);
+    public void setSpnMañana(Integer litrosMañana) {
+        this.spnMañana.setValue(litrosMañana);
     }
 
-    public void setSpinTarde(Integer litrosTarde) {
-        this.spinTarde.setValue(litrosTarde);
+    public void setSpnTarde(Integer litrosTarde) {
+        this.spiTarde.setValue(litrosTarde);
     }
-    
-    
-
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel background;
     private javax.swing.JButton btnCancelar;
     private javax.swing.JButton btnGuardar;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jblFechaRegistro;
-    private javax.swing.JLabel jblTituloPanel;
-    private javax.swing.JLabel jblVaca;
-    private javax.swing.JPanel panelRegistrarGanado;
-    private javax.swing.JSpinner spinMañana;
-    private javax.swing.JSpinner spinTarde;
+    private javax.swing.JLabel lblFechaRegistro;
+    private javax.swing.JLabel lblMañana;
+    private javax.swing.JLabel lblTarde;
+    private javax.swing.JLabel lblTituloPanel;
+    private javax.swing.JLabel lblVaca;
+    private javax.swing.JLabel lblValorFechaRegistro;
+    private javax.swing.JLabel lblValorVaca;
+    private javax.swing.JSpinner spiTarde;
+    private javax.swing.JSpinner spnMañana;
     // End of variables declaration//GEN-END:variables
 }

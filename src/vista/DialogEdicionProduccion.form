@@ -23,17 +23,17 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="panelRegistrarGanado" alignment="0" min="-2" max="-2" attributes="0"/>
+          <Component id="background" alignment="0" min="-2" max="-2" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="panelRegistrarGanado" alignment="0" max="32767" attributes="0"/>
+          <Component id="background" alignment="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Container class="javax.swing.JPanel" name="panelRegistrarGanado">
+    <Container class="javax.swing.JPanel" name="background">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="f5" green="f5" red="f5" type="rgb"/>
@@ -49,13 +49,13 @@
                           <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jLabel6" min="-2" pref="155" max="-2" attributes="0"/>
+                                  <Component id="lblFechaRegistro" min="-2" pref="155" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="jblFechaRegistro" max="32767" attributes="0"/>
+                                  <Component id="lblValorFechaRegistro" max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jblTituloPanel" alignment="0" min="-2" pref="337" max="-2" attributes="0"/>
+                                      <Component id="lblTituloPanel" alignment="0" min="-2" pref="337" max="-2" attributes="0"/>
                                       <Group type="102" alignment="0" attributes="0">
                                           <Component id="btnGuardar" min="-2" pref="160" max="-2" attributes="0"/>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -66,13 +66,13 @@
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="jLabel3" max="32767" attributes="0"/>
-                                      <Component id="jLabel2" pref="161" max="32767" attributes="0"/>
+                                      <Component id="lblTarde" max="32767" attributes="0"/>
+                                      <Component id="lblMañana" pref="161" max="32767" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="spinMañana" min="-2" pref="138" max="-2" attributes="0"/>
-                                      <Component id="spinTarde" alignment="0" min="-2" pref="138" max="-2" attributes="0"/>
+                                      <Component id="spnMañana" min="-2" pref="138" max="-2" attributes="0"/>
+                                      <Component id="spiTarde" alignment="0" min="-2" pref="138" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
                               </Group>
@@ -80,9 +80,9 @@
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jLabel7" min="-2" pref="155" max="-2" attributes="0"/>
+                          <Component id="lblVaca" min="-2" pref="155" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="jblVaca" max="32767" attributes="0"/>
+                          <Component id="lblValorVaca" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
@@ -93,26 +93,26 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                  <Component id="jblTituloPanel" min="-2" pref="46" max="-2" attributes="0"/>
+                  <Component id="lblTituloPanel" min="-2" pref="46" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel7" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
-                      <Component id="jblVaca" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
+                      <Component id="lblVaca" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
+                      <Component id="lblValorVaca" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel6" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
-                      <Component id="jblFechaRegistro" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
+                      <Component id="lblFechaRegistro" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
+                      <Component id="lblValorFechaRegistro" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel2" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
-                      <Component id="spinMañana" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
+                      <Component id="lblMañana" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
+                      <Component id="spnMañana" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel3" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
-                      <Component id="spinTarde" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
+                      <Component id="lblTarde" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
+                      <Component id="spiTarde" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -125,7 +125,7 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="jblTituloPanel">
+        <Component class="javax.swing.JLabel" name="lblTituloPanel">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="36" style="1"/>
@@ -148,7 +148,7 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel6">
+        <Component class="javax.swing.JLabel" name="lblFechaRegistro">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="18" style="0"/>
@@ -159,7 +159,7 @@
             <Property name="text" type="java.lang.String" value="Fecha del registro:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel2">
+        <Component class="javax.swing.JLabel" name="lblMa&#xf1;ana">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="18" style="0"/>
@@ -170,7 +170,7 @@
             <Property name="text" type="java.lang.String" value="Ma&#xf1;ana:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel3">
+        <Component class="javax.swing.JLabel" name="lblTarde">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="18" style="0"/>
@@ -192,7 +192,7 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jblFechaRegistro">
+        <Component class="javax.swing.JLabel" name="lblValorFechaRegistro">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="20" style="0"/>
@@ -203,7 +203,17 @@
             <Property name="text" type="java.lang.String" value="4/3/23"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JSpinner" name="spinMa&#xf1;ana">
+        <Component class="javax.swing.JSpinner" name="spnMa&#xf1;ana">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="20" style="0"/>
+            </Property>
+            <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
+              <SpinnerModel initial="0" numberType="java.lang.Integer" stepSize="1" type="number"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JSpinner" name="spiTarde">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="20" style="0"/>
@@ -213,17 +223,7 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JSpinner" name="spinTarde">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Segoe UI" size="20" style="0"/>
-            </Property>
-            <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
-              <SpinnerModel initial="0" minimum="0" numberType="java.lang.Integer" stepSize="1" type="number"/>
-            </Property>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="jLabel7">
+        <Component class="javax.swing.JLabel" name="lblVaca">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="18" style="0"/>
@@ -234,7 +234,7 @@
             <Property name="text" type="java.lang.String" value="Vaca:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jblVaca">
+        <Component class="javax.swing.JLabel" name="lblValorVaca">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="20" style="0"/>
