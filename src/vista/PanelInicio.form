@@ -18,29 +18,29 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="backgrounf" max="32767" attributes="0"/>
+              <Component id="Background" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="backgrounf" max="32767" attributes="0"/>
+          <Component id="Background" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Container class="javax.swing.JPanel" name="backgrounf">
+    <Container class="javax.swing.JPanel" name="Background">
 
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="jPanel3" alignment="1" max="32767" attributes="0"/>
+              <Component id="pnlAlertas" alignment="1" max="32767" attributes="0"/>
               <Group type="102" attributes="0">
                   <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jPanel2" max="32767" attributes="0"/>
+                      <Component id="pnlEstadisticas" max="32767" attributes="0"/>
                       <Group type="102" attributes="0">
-                          <Component id="panelGrafico" min="-2" max="-2" attributes="0"/>
+                          <Component id="pnlGrafico" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="0" pref="16" max="32767" attributes="0"/>
                       </Group>
                   </Group>
@@ -50,18 +50,18 @@
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
-                  <Component id="jPanel2" max="32767" attributes="0"/>
+                  <Component id="pnlEstadisticas" max="32767" attributes="0"/>
                   <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                  <Component id="jPanel3" max="32767" attributes="0"/>
+                  <Component id="pnlAlertas" max="32767" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="panelGrafico" min="-2" max="-2" attributes="0"/>
+                  <Component id="pnlGrafico" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Container class="javax.swing.JPanel" name="jPanel2">
+        <Container class="javax.swing.JPanel" name="pnlEstadisticas">
 
           <Layout>
             <DimensionLayout dim="0">
@@ -69,23 +69,23 @@
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel1" max="32767" attributes="0"/>
-                          <Component id="jblRegistroTotalHoy" max="32767" attributes="0"/>
+                          <Component id="lblEstadistica1" max="32767" attributes="0"/>
+                          <Component id="lblRegistroTotalHoy" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel3" max="32767" attributes="0"/>
-                          <Component id="jblPromedioVacaHoy" max="32767" attributes="0"/>
+                          <Component id="lblEstadistica2" max="32767" attributes="0"/>
+                          <Component id="lblPromedioVacaHoy" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jblPromedio15Dias" max="32767" attributes="0"/>
-                          <Component id="jLabel6" max="32767" attributes="0"/>
+                          <Component id="lblPromedio15Dias" max="32767" attributes="0"/>
+                          <Component id="lblEstadistica3" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jblVacaMenorProduccion" max="32767" attributes="0"/>
-                          <Component id="jLabel7" max="32767" attributes="0"/>
+                          <Component id="lblVacaMenorProduccion" max="32767" attributes="0"/>
+                          <Component id="lblEstadistica4" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -97,26 +97,26 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
                               <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                              <Component id="jLabel3" max="32767" attributes="0"/>
+                              <Component id="lblEstadistica2" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jLabel6" alignment="3" max="32767" attributes="0"/>
-                                  <Component id="jLabel7" alignment="3" max="32767" attributes="0"/>
+                                  <Component id="lblEstadistica3" alignment="3" max="32767" attributes="0"/>
+                                  <Component id="lblEstadistica4" alignment="3" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jLabel1" max="32767" attributes="0"/>
+                              <Component id="lblEstadistica1" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="jblPromedio15Dias" pref="59" max="32767" attributes="0"/>
-                          <Component id="jblPromedioVacaHoy" alignment="0" max="32767" attributes="0"/>
-                          <Component id="jblRegistroTotalHoy" alignment="0" max="32767" attributes="0"/>
-                          <Component id="jblVacaMenorProduccion" max="32767" attributes="0"/>
+                          <Component id="lblPromedio15Dias" pref="59" max="32767" attributes="0"/>
+                          <Component id="lblPromedioVacaHoy" alignment="0" max="32767" attributes="0"/>
+                          <Component id="lblRegistroTotalHoy" alignment="0" max="32767" attributes="0"/>
+                          <Component id="lblVacaMenorProduccion" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
                   </Group>
@@ -124,7 +124,7 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="jLabel1">
+            <Component class="javax.swing.JLabel" name="lblEstadistica1">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="20" style="0"/>
@@ -133,7 +133,7 @@
                 <Property name="text" type="java.lang.String" value="Registro total de hoy"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jblRegistroTotalHoy">
+            <Component class="javax.swing.JLabel" name="lblRegistroTotalHoy">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="26" style="1"/>
@@ -142,7 +142,7 @@
                 <Property name="text" type="java.lang.String" value="56 L"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel3">
+            <Component class="javax.swing.JLabel" name="lblEstadistica2">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="20" style="0"/>
@@ -151,7 +151,7 @@
                 <Property name="text" type="java.lang.String" value="Promedio por vaca hoy"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jblPromedioVacaHoy">
+            <Component class="javax.swing.JLabel" name="lblPromedioVacaHoy">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="26" style="1"/>
@@ -160,7 +160,7 @@
                 <Property name="text" type="java.lang.String" value="4.5 L / Vaca"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jblPromedio15Dias">
+            <Component class="javax.swing.JLabel" name="lblPromedio15Dias">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="26" style="1"/>
@@ -169,7 +169,7 @@
                 <Property name="text" type="java.lang.String" value="53.6 L"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel6">
+            <Component class="javax.swing.JLabel" name="lblEstadistica3">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="20" style="0"/>
@@ -178,7 +178,7 @@
                 <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;center&gt;Producci&#xf3;n promedio&lt;br&gt;&#xfa;ltimos 15 d&#xed;as&lt;/center&gt;&lt;/html&gt;"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel7">
+            <Component class="javax.swing.JLabel" name="lblEstadistica4">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="20" style="0"/>
@@ -187,7 +187,7 @@
                 <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;center&gt;Vaca con menor&lt;br&gt;produccion hoy&lt;/center&gt;&lt;/html&gt;"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jblVacaMenorProduccion">
+            <Component class="javax.swing.JLabel" name="lblVacaMenorProduccion">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="26" style="1"/>
@@ -198,7 +198,7 @@
             </Component>
           </SubComponents>
         </Container>
-        <Container class="javax.swing.JPanel" name="jPanel3">
+        <Container class="javax.swing.JPanel" name="pnlAlertas">
 
           <Layout>
             <DimensionLayout dim="0">
@@ -208,7 +208,7 @@
                           <Component id="jScrollPane1" max="32767" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jblAlertas" max="32767" attributes="0"/>
+                              <Component id="lblTituloAlertas" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -218,7 +218,7 @@
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <Component id="jblAlertas" max="32767" attributes="0"/>
+                      <Component id="lblTituloAlertas" max="32767" attributes="0"/>
                       <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                       <Component id="jScrollPane1" pref="85" max="32767" attributes="0"/>
                   </Group>
@@ -233,7 +233,7 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JList" name="listAlertas">
+                <Component class="javax.swing.JList" name="lstAlertas">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Segoe UI" size="18" style="0"/>
@@ -253,7 +253,7 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Component class="javax.swing.JLabel" name="jblAlertas">
+            <Component class="javax.swing.JLabel" name="lblTituloAlertas">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="24" style="1"/>
@@ -267,7 +267,7 @@
             </Component>
           </SubComponents>
         </Container>
-        <Container class="javax.swing.JPanel" name="panelGrafico">
+        <Container class="javax.swing.JPanel" name="pnlGrafico">
 
           <Layout>
             <DimensionLayout dim="0">

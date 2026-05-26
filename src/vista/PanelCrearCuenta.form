@@ -40,7 +40,7 @@
               <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <Component id="panelIniciarSesion" max="32767" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
           </Group>
@@ -50,9 +50,9 @@
               <EmptySpace min="0" pref="897" max="32767" attributes="0"/>
               <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace min="-2" max="-2" attributes="0"/>
                       <Component id="panelIniciarSesion" max="32767" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
           </Group>
@@ -73,115 +73,133 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <EmptySpace min="70" pref="70" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="lblCrearCuenta" min="-2" pref="542" max="-2" attributes="0"/>
-                          <Component id="lblNombres" min="-2" pref="542" max="-2" attributes="0"/>
-                          <Component id="txtNombres" min="-2" pref="542" max="-2" attributes="0"/>
-                          <Component id="jSeparator1" min="-2" pref="542" max="-2" attributes="0"/>
-                          <Component id="mensajeNombres" min="-2" pref="540" max="-2" attributes="0"/>
-                          <Component id="jblUsuario" min="-2" pref="542" max="-2" attributes="0"/>
-                          <Component id="txtUsuario" min="-2" pref="542" max="-2" attributes="0"/>
-                          <Component id="jSeparator2" min="-2" pref="542" max="-2" attributes="0"/>
-                          <Component id="mensajeUsuario" min="-2" pref="540" max="-2" attributes="0"/>
-                          <Component id="jblCorreo" min="-2" pref="542" max="-2" attributes="0"/>
-                          <Component id="txtCorreo" min="-2" pref="542" max="-2" attributes="0"/>
-                          <Component id="jSeparator3" min="-2" pref="542" max="-2" attributes="0"/>
-                          <Component id="mensajeCorreo" min="-2" pref="540" max="-2" attributes="0"/>
-                          <Component id="jblNombreFinca" min="-2" pref="542" max="-2" attributes="0"/>
-                          <Component id="txtNombreFinca" min="-2" pref="542" max="-2" attributes="0"/>
-                          <Component id="jLabel1" min="-2" pref="540" max="-2" attributes="0"/>
-                          <Component id="jSeparator4" min="-2" pref="542" max="-2" attributes="0"/>
-                          <Component id="mensajeNombreDeLaFinca" min="-2" pref="540" max="-2" attributes="0"/>
-                          <Component id="jblUbicacion" min="-2" pref="542" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="lblTitulo" pref="0" max="32767" attributes="0"/>
+                          <Component id="lblNombresYApellidos" pref="0" max="32767" attributes="0"/>
+                          <Component id="txtNombres" pref="0" max="32767" attributes="0"/>
+                          <Component id="lblNombreUsuario" pref="0" max="32767" attributes="0"/>
+                          <Component id="txtNombreUsuario" pref="0" max="32767" attributes="0"/>
+                          <Component id="lblCorreoElectronico" pref="0" max="32767" attributes="0"/>
+                          <Component id="txtCorreo" pref="0" max="32767" attributes="0"/>
+                          <Component id="lblNombreFinca" pref="0" max="32767" attributes="0"/>
+                          <Component id="txtNombreFinca" pref="0" max="32767" attributes="0"/>
+                          <Component id="lblUbicacion" pref="0" max="32767" attributes="0"/>
+                          <Component id="lblContraseña" pref="0" max="32767" attributes="0"/>
+                          <Component id="pswContraseña" pref="0" max="32767" attributes="0"/>
                           <Group type="102" attributes="0">
-                              <Component id="jcbDepartamento" min="-2" pref="165" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                              <Component id="jcbMunicipio" max="32767" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="txtVereda" min="-2" pref="166" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="mensajeNombres" alignment="0" pref="0" max="32767" attributes="0"/>
+                                  <Component id="mensajeUsuario" alignment="0" pref="0" max="32767" attributes="0"/>
+                                  <Component id="mensajeCorreo" alignment="0" pref="0" max="32767" attributes="0"/>
+                                  <Component id="jLabel1" alignment="0" pref="0" max="32767" attributes="0"/>
+                                  <Component id="mensajeNombreDeLaFinca" alignment="0" pref="0" max="32767" attributes="0"/>
+                                  <Component id="mensajeUbicacion" alignment="0" pref="0" max="32767" attributes="0"/>
+                                  <Component id="mensajeContraseña" alignment="0" pref="0" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="2" pref="2" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="mensajeUbicacion" min="-2" pref="540" max="-2" attributes="0"/>
-                          <Component id="jbllContraseña" min="-2" pref="542" max="-2" attributes="0"/>
-                          <Component id="jpfContraseña" min="-2" pref="542" max="-2" attributes="0"/>
-                          <Component id="jSeparator5" min="-2" pref="542" max="-2" attributes="0"/>
-                          <Component id="mensajeContraseña" min="-2" pref="540" max="-2" attributes="0"/>
-                          <Component id="btnRegistrar" min="-2" pref="200" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="cmbDepartamento" min="-2" pref="165" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="cmbMunicipio" min="-2" pref="175" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="txtVereda" pref="172" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Component id="jSeparator1" min="-2" pref="542" max="-2" attributes="0"/>
+                                  <Component id="jSeparator2" min="-2" pref="542" max="-2" attributes="0"/>
+                                  <Component id="jSeparator3" min="-2" pref="542" max="-2" attributes="0"/>
+                                  <Component id="jSeparator4" min="-2" pref="542" max="-2" attributes="0"/>
+                                  <Component id="jSeparator5" min="-2" pref="542" max="-2" attributes="0"/>
+                                  <Component id="btnRegistrar" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
                       </Group>
+                      <EmptySpace min="-2" pref="566" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="lblCrearCuenta" min="-2" pref="55" max="-2" attributes="0"/>
-                      <EmptySpace min="30" pref="30" max="-2" attributes="0"/>
-                      <Component id="lblNombres" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="12" pref="12" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                      <Component id="lblTitulo" min="-2" pref="55" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                      <Component id="lblNombresYApellidos" min="-2" pref="25" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                       <Component id="txtNombres" min="-2" pref="35" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="jSeparator1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="8" pref="8" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                      <Component id="jSeparator1" min="-2" pref="3" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
                       <Component id="mensajeNombres" min="-2" pref="20" max="-2" attributes="0"/>
-                      <EmptySpace min="2" pref="2" max="-2" attributes="0"/>
-                      <Component id="jblUsuario" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="12" pref="12" max="-2" attributes="0"/>
-                      <Component id="txtUsuario" min="-2" pref="35" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="jSeparator2" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="7" pref="7" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                      <Component id="lblNombreUsuario" min="-2" pref="25" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                      <Component id="txtNombreUsuario" min="-2" pref="35" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                      <Component id="jSeparator2" min="-2" pref="3" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
                       <Component id="mensajeUsuario" min="-2" pref="20" max="-2" attributes="0"/>
-                      <EmptySpace min="3" pref="3" max="-2" attributes="0"/>
-                      <Component id="jblCorreo" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="12" pref="12" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
+                      <Component id="lblCorreoElectronico" min="-2" pref="25" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                       <Component id="txtCorreo" min="-2" pref="35" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="jSeparator3" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                      <Component id="jSeparator3" min="-2" pref="3" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
                       <Component id="mensajeCorreo" min="-2" pref="20" max="-2" attributes="0"/>
-                      <EmptySpace min="4" pref="4" max="-2" attributes="0"/>
-                      <Component id="jblNombreFinca" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+                      <Component id="lblNombreFinca" min="-2" pref="25" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <EmptySpace min="11" pref="11" max="-2" attributes="0"/>
+                              <EmptySpace pref="11" max="32767" attributes="0"/>
                               <Component id="txtNombreFinca" min="-2" pref="35" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="jLabel1" min="-2" pref="20" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="jSeparator4" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="5" pref="5" max="-2" attributes="0"/>
-                      <Component id="mensajeNombreDeLaFinca" min="-2" pref="20" max="-2" attributes="0"/>
-                      <EmptySpace min="5" pref="5" max="-2" attributes="0"/>
-                      <Component id="jblUbicacion" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="12" pref="12" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="txtVereda" min="-2" pref="56" max="-2" attributes="0"/>
-                          <Group type="103" alignment="1" groupAlignment="3" attributes="0">
-                              <Component id="jcbDepartamento" alignment="3" min="-2" pref="46" max="-2" attributes="0"/>
-                              <Component id="jcbMunicipio" alignment="3" min="-2" pref="46" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jLabel1" pref="20" max="32767" attributes="0"/>
+                              <EmptySpace min="26" pref="26" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace min="2" pref="2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                      <Component id="jSeparator4" min="-2" pref="3" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
+                      <Component id="mensajeNombreDeLaFinca" pref="20" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
+                      <Component id="lblUbicacion" min="-2" pref="25" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="txtVereda" min="-2" pref="56" max="-2" attributes="0"/>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="cmbDepartamento" alignment="3" min="-2" pref="46" max="-2" attributes="0"/>
+                                  <Component id="cmbMunicipio" alignment="3" min="-2" pref="46" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
                       <Component id="mensajeUbicacion" min="-2" pref="20" max="-2" attributes="0"/>
-                      <EmptySpace min="8" pref="8" max="-2" attributes="0"/>
-                      <Component id="jbllContraseña" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="12" pref="12" max="-2" attributes="0"/>
-                      <Component id="jpfContraseña" min="-2" pref="35" max="-2" attributes="0"/>
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="jSeparator5" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+                      <Component id="lblContraseña" min="-2" pref="25" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                      <Component id="pswContraseña" min="-2" pref="35" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                      <Component id="jSeparator5" min="-2" pref="3" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
                       <Component id="mensajeContraseña" min="-2" pref="20" max="-2" attributes="0"/>
-                      <EmptySpace min="9" pref="9" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
                       <Component id="btnRegistrar" min="-2" pref="70" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="lblCrearCuenta">
+            <Component class="javax.swing.JLabel" name="lblTitulo">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="32" style="1"/>
@@ -192,7 +210,7 @@
                 <Property name="text" type="java.lang.String" value="Crear una cuenta"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblNombres">
+            <Component class="javax.swing.JLabel" name="lblNombresYApellidos">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="18" style="1"/>
@@ -210,7 +228,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jblCorreo">
+            <Component class="javax.swing.JLabel" name="lblCorreoElectronico">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="18" style="1"/>
@@ -259,7 +277,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="txtUsuario">
+            <Component class="javax.swing.JTextField" name="txtNombreUsuario">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -276,7 +294,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jblUsuario">
+            <Component class="javax.swing.JLabel" name="lblNombreUsuario">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="18" style="1"/>
@@ -287,7 +305,7 @@
                 <Property name="text" type="java.lang.String" value="Nombre de usuario"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jblNombreFinca">
+            <Component class="javax.swing.JLabel" name="lblNombreFinca">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="18" style="1"/>
@@ -298,7 +316,7 @@
                 <Property name="text" type="java.lang.String" value="Nombre de la finca"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jblUbicacion">
+            <Component class="javax.swing.JLabel" name="lblUbicacion">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="18" style="1"/>
@@ -309,7 +327,7 @@
                 <Property name="text" type="java.lang.String" value="Ubicaci&#xf3;n"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jbllContrase&#xf1;a">
+            <Component class="javax.swing.JLabel" name="lblContrase&#xf1;a">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="18" style="1"/>
@@ -354,7 +372,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JPasswordField" name="jpfContrase&#xf1;a">
+            <Component class="javax.swing.JPasswordField" name="pswContrase&#xf1;a">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -490,7 +508,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JComboBox" name="jcbDepartamento">
+            <Component class="javax.swing.JComboBox" name="cmbDepartamento">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="18" style="0"/>
@@ -508,7 +526,7 @@
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JComboBox" name="jcbMunicipio">
+            <Component class="javax.swing.JComboBox" name="cmbMunicipio">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="18" style="0"/>

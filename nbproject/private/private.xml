@@ -3,11 +3,8 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/vista/ScreenManager.java</file>
-            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/controlador/ControladorPrincipal.java</file>
-            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/modelo/RegistroProduccion.java</file>
-            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/modelo/ProduccionDia.java</file>
-            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/vista/PanelInicio.java</file>
+            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/vista/PanelMostrarEstadisticas.java</file>
+            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/vista/PanelProduccion.java</file>
         </group>
     </open-files>
 </project-private>

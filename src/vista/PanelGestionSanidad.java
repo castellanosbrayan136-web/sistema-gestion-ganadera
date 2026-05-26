@@ -30,17 +30,17 @@ public class PanelGestionSanidad extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        bacground = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tablaSanidad = new javax.swing.JTable();
+        tabSanidad = new javax.swing.JTable();
         jblBuscarPorNombre = new javax.swing.JLabel();
-        jblSanidad = new javax.swing.JLabel();
+        lblSanidad = new javax.swing.JLabel();
         jblInstrucciones = new javax.swing.JLabel();
-        jcbAnimal = new javax.swing.JComboBox<>();
+        cmbVacas = new javax.swing.JComboBox<>();
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        bacground.setBackground(new java.awt.Color(255, 255, 255));
 
-        tablaSanidad.setModel(new javax.swing.table.DefaultTableModel(
+        tabSanidad.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -63,91 +63,95 @@ public class PanelGestionSanidad extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(tablaSanidad);
+        jScrollPane1.setViewportView(tabSanidad);
 
         jblBuscarPorNombre.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jblBuscarPorNombre.setForeground(new java.awt.Color(0, 0, 0));
         jblBuscarPorNombre.setText("Selecciona para ver el historial");
         jblBuscarPorNombre.setIconTextGap(10);
 
-        jblSanidad.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jblSanidad.setForeground(new java.awt.Color(0, 0, 0));
-        jblSanidad.setText("Sanidad");
+        lblSanidad.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        lblSanidad.setForeground(new java.awt.Color(0, 0, 0));
+        lblSanidad.setText("Sanidad");
 
         jblInstrucciones.setBackground(new java.awt.Color(51, 51, 51));
         jblInstrucciones.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jblInstrucciones.setForeground(new java.awt.Color(102, 102, 102));
         jblInstrucciones.setText("Doble clik sobre un registro para ver informacion completa o editar");
 
-        jcbAnimal.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jcbAnimal.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        cmbVacas.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        cmbVacas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout bacgroundLayout = new javax.swing.GroupLayout(bacground);
+        bacground.setLayout(bacgroundLayout);
+        bacgroundLayout.setHorizontalGroup(
+            bacgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(bacgroundLayout.createSequentialGroup()
                 .addGap(6, 6, 6)
-                .addComponent(jblSanidad, javax.swing.GroupLayout.PREFERRED_SIZE, 401, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(lblSanidad, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(447, 447, 447))
+            .addGroup(bacgroundLayout.createSequentialGroup()
                 .addGap(10, 10, 10)
-                .addComponent(jblBuscarPorNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(jblBuscarPorNombre, javax.swing.GroupLayout.DEFAULT_SIZE, 282, Short.MAX_VALUE)
+                .addGap(562, 562, 562))
+            .addGroup(bacgroundLayout.createSequentialGroup()
                 .addGap(10, 10, 10)
-                .addComponent(jcbAnimal, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(cmbVacas, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(624, Short.MAX_VALUE))
+            .addGroup(bacgroundLayout.createSequentialGroup()
                 .addGap(6, 6, 6)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 848, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 848, Short.MAX_VALUE))
+            .addGroup(bacgroundLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jblInstrucciones, javax.swing.GroupLayout.PREFERRED_SIZE, 455, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jblInstrucciones, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(393, 393, 393))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        bacgroundLayout.setVerticalGroup(
+            bacgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(bacgroundLayout.createSequentialGroup()
                 .addGap(6, 6, 6)
-                .addComponent(jblSanidad, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblSanidad, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jblInstrucciones)
                 .addGap(19, 19, 19)
                 .addComponent(jblBuscarPorNombre)
                 .addGap(10, 10, 10)
-                .addComponent(jcbAnimal, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(cmbVacas, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(14, 14, 14)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 532, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 532, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(bacground, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(bacground, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
     public JTable getTablaSanidad() {
-        return tablaSanidad;
+        return tabSanidad;
     }
 
     public Vaca getAnimal() {
-        return (Vaca) jcbAnimal.getSelectedItem();
+        return (Vaca) cmbVacas.getSelectedItem();
     }
 
     public JComboBox<Vaca> getJcbAnimal() {
-        return jcbAnimal;
+        return cmbVacas;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel bacground;
+    private javax.swing.JComboBox<Vaca> cmbVacas;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel jblBuscarPorNombre;
     private javax.swing.JLabel jblInstrucciones;
-    private javax.swing.JLabel jblSanidad;
-    private javax.swing.JComboBox<Vaca> jcbAnimal;
-    private javax.swing.JTable tablaSanidad;
+    private javax.swing.JLabel lblSanidad;
+    private javax.swing.JTable tabSanidad;
     // End of variables declaration//GEN-END:variables
 }

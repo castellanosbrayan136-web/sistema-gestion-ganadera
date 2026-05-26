@@ -5,7 +5,6 @@
 package vista;
 
 import javax.swing.JButton;
-import javax.swing.JLabel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
@@ -31,25 +30,25 @@ public class PanelIniciarSesion extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        panelIniciarSesion = new javax.swing.JPanel();
-        lblIniciarSesion = new javax.swing.JLabel();
+        background = new javax.swing.JPanel();
+        lblTitulo = new javax.swing.JLabel();
         lblUsuario = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
-        jLabel2 = new javax.swing.JLabel();
+        lblContraseña = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
-        jpfContraseña = new javax.swing.JPasswordField();
+        pwfContraseña = new javax.swing.JPasswordField();
         txtUsuario = new javax.swing.JTextField();
         lblLogo = new javax.swing.JLabel();
         btnEntrar = new javax.swing.JButton();
         mensajeContraseña = new javax.swing.JLabel();
         mensajeUsuario = new javax.swing.JLabel();
 
-        panelIniciarSesion.setBackground(new java.awt.Color(255, 255, 255));
-        panelIniciarSesion.setForeground(new java.awt.Color(245, 255, 255));
+        background.setBackground(new java.awt.Color(255, 255, 255));
+        background.setForeground(new java.awt.Color(245, 255, 255));
 
-        lblIniciarSesion.setFont(new java.awt.Font("Segoe UI", 1, 28)); // NOI18N
-        lblIniciarSesion.setForeground(new java.awt.Color(0, 0, 0));
-        lblIniciarSesion.setText("INICIAR SESIÓN");
+        lblTitulo.setFont(new java.awt.Font("Segoe UI", 1, 28)); // NOI18N
+        lblTitulo.setForeground(new java.awt.Color(0, 0, 0));
+        lblTitulo.setText("INICIAR SESIÓN");
 
         lblUsuario.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         lblUsuario.setForeground(new java.awt.Color(0, 0, 0));
@@ -57,17 +56,17 @@ public class PanelIniciarSesion extends javax.swing.JPanel {
 
         jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel2.setText("CONTRASEÑA");
+        lblContraseña.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lblContraseña.setForeground(new java.awt.Color(0, 0, 0));
+        lblContraseña.setText("CONTRASEÑA");
 
         jSeparator2.setForeground(new java.awt.Color(0, 0, 0));
 
-        jpfContraseña.setBackground(new java.awt.Color(255, 255, 255));
-        jpfContraseña.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jpfContraseña.setText("**************");
-        jpfContraseña.setBorder(null);
-        jpfContraseña.setCaretColor(new java.awt.Color(0, 0, 0));
+        pwfContraseña.setBackground(new java.awt.Color(255, 255, 255));
+        pwfContraseña.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        pwfContraseña.setText("**************");
+        pwfContraseña.setBorder(null);
+        pwfContraseña.setCaretColor(new java.awt.Color(0, 0, 0));
 
         txtUsuario.setBackground(new java.awt.Color(255, 255, 255));
         txtUsuario.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -93,32 +92,32 @@ public class PanelIniciarSesion extends javax.swing.JPanel {
         mensajeUsuario.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         mensajeUsuario.setForeground(new java.awt.Color(204, 0, 0));
 
-        javax.swing.GroupLayout panelIniciarSesionLayout = new javax.swing.GroupLayout(panelIniciarSesion);
-        panelIniciarSesion.setLayout(panelIniciarSesionLayout);
-        panelIniciarSesionLayout.setHorizontalGroup(
-            panelIniciarSesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelIniciarSesionLayout.createSequentialGroup()
+        javax.swing.GroupLayout backgroundLayout = new javax.swing.GroupLayout(background);
+        background.setLayout(backgroundLayout);
+        backgroundLayout.setHorizontalGroup(
+            backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(backgroundLayout.createSequentialGroup()
                 .addGap(70, 70, 70)
-                .addGroup(panelIniciarSesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblIniciarSesion, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 542, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 542, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(mensajeUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 540, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jpfContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 542, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pwfContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 542, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 542, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(mensajeContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 540, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnEntrar, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
-        panelIniciarSesionLayout.setVerticalGroup(
-            panelIniciarSesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelIniciarSesionLayout.createSequentialGroup()
+        backgroundLayout.setVerticalGroup(
+            backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(backgroundLayout.createSequentialGroup()
                 .addGap(50, 50, 50)
                 .addComponent(lblLogo)
                 .addGap(60, 60, 60)
-                .addComponent(lblIniciarSesion, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(70, 70, 70)
                 .addComponent(lblUsuario)
                 .addGap(30, 30, 30)
@@ -128,9 +127,9 @@ public class PanelIniciarSesion extends javax.swing.JPanel {
                 .addGap(9, 9, 9)
                 .addComponent(mensajeUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(31, 31, 31)
-                .addComponent(jLabel2)
+                .addComponent(lblContraseña)
                 .addGap(30, 30, 30)
-                .addComponent(jpfContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pwfContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(6, 6, 6)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(5, 5, 5)
@@ -143,12 +142,12 @@ public class PanelIniciarSesion extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelIniciarSesion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(background, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(panelIniciarSesion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(background, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(0, 0, 0))
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -156,9 +155,17 @@ public class PanelIniciarSesion extends javax.swing.JPanel {
     public JButton getBtnEntrar() {
         return btnEntrar;
     }
+    
+    public JPasswordField getJpfContraseña() {
+        return pwfContraseña;
+    }
+    
+    public JTextField getTxtUsuario() {
+        return txtUsuario;
+    }
 
     public String getContraseña() {
-        String contraseña = String.valueOf(jpfContraseña.getPassword());
+        String contraseña = String.valueOf(pwfContraseña.getPassword());
         return (verificarDatos(contraseña, "**************")) ? contraseña : null;
     }
 
@@ -167,20 +174,8 @@ public class PanelIniciarSesion extends javax.swing.JPanel {
         return (verificarDatos(usuario, "Ingrese su nombre de usuario")) ? usuario : null;
     }
     
-    private boolean verificarDatos(String texto, String mensaje) {
-        return texto != null && !texto.trim().isEmpty() && !texto.trim().equals(mensaje);
-    }
-
-    public JPasswordField getJpfContraseña() {
-        return jpfContraseña;
-    }
-
     public void setJpfContraseña(String jpfContraseña) {
-        this.jpfContraseña.setText(jpfContraseña);
-    }
-
-    public JTextField getTxtUsuario() {
-        return txtUsuario;
+        this.pwfContraseña.setText(jpfContraseña);
     }
 
     public void setTxtUsuario(String txtUsuario) {
@@ -195,25 +190,23 @@ public class PanelIniciarSesion extends javax.swing.JPanel {
         this.mensajeUsuario.setText(mensajeUsuario);
     }
     
-    
-
-    
-    
-    
+    private boolean verificarDatos(String texto, String mensaje) {
+        return texto != null && !texto.trim().isEmpty() && !texto.trim().equals(mensaje);
+    }
 
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel background;
     private javax.swing.JButton btnEntrar;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
-    private javax.swing.JPasswordField jpfContraseña;
-    private javax.swing.JLabel lblIniciarSesion;
+    private javax.swing.JLabel lblContraseña;
     private javax.swing.JLabel lblLogo;
+    private javax.swing.JLabel lblTitulo;
     private javax.swing.JLabel lblUsuario;
     private javax.swing.JLabel mensajeContraseña;
     private javax.swing.JLabel mensajeUsuario;
-    private javax.swing.JPanel panelIniciarSesion;
+    private javax.swing.JPasswordField pwfContraseña;
     private javax.swing.JTextField txtUsuario;
     // End of variables declaration//GEN-END:variables
 }

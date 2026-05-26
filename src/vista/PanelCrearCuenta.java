@@ -6,7 +6,6 @@ package vista;
 
 import javax.swing.JButton;
 import javax.swing.JComboBox;
-import javax.swing.JLabel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
@@ -34,21 +33,21 @@ public class PanelCrearCuenta extends javax.swing.JPanel {
 
         background = new javax.swing.JPanel();
         panelIniciarSesion = new javax.swing.JPanel();
-        lblCrearCuenta = new javax.swing.JLabel();
-        lblNombres = new javax.swing.JLabel();
+        lblTitulo = new javax.swing.JLabel();
+        lblNombresYApellidos = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
-        jblCorreo = new javax.swing.JLabel();
+        lblCorreoElectronico = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
         txtNombres = new javax.swing.JTextField();
         btnRegistrar = new javax.swing.JButton();
-        txtUsuario = new javax.swing.JTextField();
-        jblUsuario = new javax.swing.JLabel();
-        jblNombreFinca = new javax.swing.JLabel();
-        jblUbicacion = new javax.swing.JLabel();
-        jbllContraseña = new javax.swing.JLabel();
+        txtNombreUsuario = new javax.swing.JTextField();
+        lblNombreUsuario = new javax.swing.JLabel();
+        lblNombreFinca = new javax.swing.JLabel();
+        lblUbicacion = new javax.swing.JLabel();
+        lblContraseña = new javax.swing.JLabel();
         txtCorreo = new javax.swing.JTextField();
         txtNombreFinca = new javax.swing.JTextField();
-        jpfContraseña = new javax.swing.JPasswordField();
+        pswContraseña = new javax.swing.JPasswordField();
         jSeparator3 = new javax.swing.JSeparator();
         jSeparator4 = new javax.swing.JSeparator();
         jSeparator5 = new javax.swing.JSeparator();
@@ -60,27 +59,27 @@ public class PanelCrearCuenta extends javax.swing.JPanel {
         mensajeCorreo = new javax.swing.JLabel();
         mensajeNombreDeLaFinca = new javax.swing.JLabel();
         mensajeUbicacion = new javax.swing.JLabel();
-        jcbDepartamento = new javax.swing.JComboBox<>();
-        jcbMunicipio = new javax.swing.JComboBox<>();
+        cmbDepartamento = new javax.swing.JComboBox<>();
+        cmbMunicipio = new javax.swing.JComboBox<>();
 
         background.setBackground(new java.awt.Color(255, 255, 255));
 
         panelIniciarSesion.setBackground(new java.awt.Color(255, 255, 255));
         panelIniciarSesion.setForeground(new java.awt.Color(245, 255, 255));
 
-        lblCrearCuenta.setFont(new java.awt.Font("Segoe UI", 1, 32)); // NOI18N
-        lblCrearCuenta.setForeground(new java.awt.Color(0, 0, 0));
-        lblCrearCuenta.setText("Crear una cuenta");
+        lblTitulo.setFont(new java.awt.Font("Segoe UI", 1, 32)); // NOI18N
+        lblTitulo.setForeground(new java.awt.Color(0, 0, 0));
+        lblTitulo.setText("Crear una cuenta");
 
-        lblNombres.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        lblNombres.setForeground(new java.awt.Color(0, 0, 0));
-        lblNombres.setText("Nombres y apellidos");
+        lblNombresYApellidos.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lblNombresYApellidos.setForeground(new java.awt.Color(0, 0, 0));
+        lblNombresYApellidos.setText("Nombres y apellidos");
 
         jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
 
-        jblCorreo.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jblCorreo.setForeground(new java.awt.Color(0, 0, 0));
-        jblCorreo.setText("Corrreo electrónico");
+        lblCorreoElectronico.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lblCorreoElectronico.setForeground(new java.awt.Color(0, 0, 0));
+        lblCorreoElectronico.setText("Corrreo electrónico");
 
         jSeparator2.setForeground(new java.awt.Color(0, 0, 0));
 
@@ -95,27 +94,27 @@ public class PanelCrearCuenta extends javax.swing.JPanel {
         btnRegistrar.setText("REGISTRAR");
         btnRegistrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        txtUsuario.setBackground(new java.awt.Color(255, 255, 255));
-        txtUsuario.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        txtUsuario.setText("Nombre de usuario");
-        txtUsuario.setBorder(null);
-        txtUsuario.setCaretColor(new java.awt.Color(0, 0, 0));
+        txtNombreUsuario.setBackground(new java.awt.Color(255, 255, 255));
+        txtNombreUsuario.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txtNombreUsuario.setText("Nombre de usuario");
+        txtNombreUsuario.setBorder(null);
+        txtNombreUsuario.setCaretColor(new java.awt.Color(0, 0, 0));
 
-        jblUsuario.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jblUsuario.setForeground(new java.awt.Color(0, 0, 0));
-        jblUsuario.setText("Nombre de usuario");
+        lblNombreUsuario.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lblNombreUsuario.setForeground(new java.awt.Color(0, 0, 0));
+        lblNombreUsuario.setText("Nombre de usuario");
 
-        jblNombreFinca.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jblNombreFinca.setForeground(new java.awt.Color(0, 0, 0));
-        jblNombreFinca.setText("Nombre de la finca");
+        lblNombreFinca.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lblNombreFinca.setForeground(new java.awt.Color(0, 0, 0));
+        lblNombreFinca.setText("Nombre de la finca");
 
-        jblUbicacion.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jblUbicacion.setForeground(new java.awt.Color(0, 0, 0));
-        jblUbicacion.setText("Ubicación");
+        lblUbicacion.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lblUbicacion.setForeground(new java.awt.Color(0, 0, 0));
+        lblUbicacion.setText("Ubicación");
 
-        jbllContraseña.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jbllContraseña.setForeground(new java.awt.Color(0, 0, 0));
-        jbllContraseña.setText("Contraseña");
+        lblContraseña.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lblContraseña.setForeground(new java.awt.Color(0, 0, 0));
+        lblContraseña.setText("Contraseña");
 
         txtCorreo.setBackground(new java.awt.Color(255, 255, 255));
         txtCorreo.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -129,11 +128,11 @@ public class PanelCrearCuenta extends javax.swing.JPanel {
         txtNombreFinca.setBorder(null);
         txtNombreFinca.setCaretColor(new java.awt.Color(0, 0, 0));
 
-        jpfContraseña.setBackground(new java.awt.Color(255, 255, 255));
-        jpfContraseña.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jpfContraseña.setText("**************");
-        jpfContraseña.setBorder(null);
-        jpfContraseña.setCaretColor(new java.awt.Color(0, 0, 0));
+        pswContraseña.setBackground(new java.awt.Color(255, 255, 255));
+        pswContraseña.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        pswContraseña.setText("**************");
+        pswContraseña.setBorder(null);
+        pswContraseña.setCaretColor(new java.awt.Color(0, 0, 0));
 
         jSeparator3.setForeground(new java.awt.Color(0, 0, 0));
 
@@ -169,13 +168,13 @@ public class PanelCrearCuenta extends javax.swing.JPanel {
         mensajeUbicacion.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         mensajeUbicacion.setForeground(new java.awt.Color(204, 0, 0));
 
-        jcbDepartamento.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jcbDepartamento.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Departamento" }));
-        jcbDepartamento.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        cmbDepartamento.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        cmbDepartamento.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Departamento" }));
+        cmbDepartamento.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        jcbMunicipio.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jcbMunicipio.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Municipio" }));
-        jcbMunicipio.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        cmbMunicipio.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        cmbMunicipio.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Municipio" }));
+        cmbMunicipio.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         javax.swing.GroupLayout panelIniciarSesionLayout = new javax.swing.GroupLayout(panelIniciarSesion);
         panelIniciarSesion.setLayout(panelIniciarSesionLayout);
@@ -183,100 +182,112 @@ public class PanelCrearCuenta extends javax.swing.JPanel {
             panelIniciarSesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelIniciarSesionLayout.createSequentialGroup()
                 .addGap(70, 70, 70)
-                .addGroup(panelIniciarSesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(lblCrearCuenta, javax.swing.GroupLayout.PREFERRED_SIZE, 542, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblNombres, javax.swing.GroupLayout.PREFERRED_SIZE, 542, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtNombres, javax.swing.GroupLayout.PREFERRED_SIZE, 542, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 542, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(mensajeNombres, javax.swing.GroupLayout.PREFERRED_SIZE, 540, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jblUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 542, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 542, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 542, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(mensajeUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 540, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jblCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, 542, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, 542, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 542, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(mensajeCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, 540, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jblNombreFinca, javax.swing.GroupLayout.PREFERRED_SIZE, 542, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtNombreFinca, javax.swing.GroupLayout.PREFERRED_SIZE, 542, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 540, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 542, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(mensajeNombreDeLaFinca, javax.swing.GroupLayout.PREFERRED_SIZE, 540, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jblUbicacion, javax.swing.GroupLayout.PREFERRED_SIZE, 542, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(panelIniciarSesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(lblNombresYApellidos, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(txtNombres, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(lblNombreUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(txtNombreUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(lblCorreoElectronico, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(txtCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(lblNombreFinca, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(txtNombreFinca, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(lblUbicacion, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(lblContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(pswContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                     .addGroup(panelIniciarSesionLayout.createSequentialGroup()
-                        .addComponent(jcbDepartamento, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(26, 26, 26)
-                        .addComponent(jcbMunicipio, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(18, 18, 18)
-                        .addComponent(txtVereda, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(mensajeUbicacion, javax.swing.GroupLayout.PREFERRED_SIZE, 540, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jbllContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 542, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jpfContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 542, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 542, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(mensajeContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 540, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(panelIniciarSesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(mensajeNombres, javax.swing.GroupLayout.DEFAULT_SIZE, 0, Short.MAX_VALUE)
+                            .addComponent(mensajeUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, 0, Short.MAX_VALUE)
+                            .addComponent(mensajeCorreo, javax.swing.GroupLayout.DEFAULT_SIZE, 0, Short.MAX_VALUE)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 0, Short.MAX_VALUE)
+                            .addComponent(mensajeNombreDeLaFinca, javax.swing.GroupLayout.DEFAULT_SIZE, 0, Short.MAX_VALUE)
+                            .addComponent(mensajeUbicacion, javax.swing.GroupLayout.DEFAULT_SIZE, 0, Short.MAX_VALUE)
+                            .addComponent(mensajeContraseña, javax.swing.GroupLayout.DEFAULT_SIZE, 0, Short.MAX_VALUE))
+                        .addGap(2, 2, 2))
+                    .addGroup(panelIniciarSesionLayout.createSequentialGroup()
+                        .addGroup(panelIniciarSesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(panelIniciarSesionLayout.createSequentialGroup()
+                                .addComponent(cmbDepartamento, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(cmbMunicipio, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(txtVereda, javax.swing.GroupLayout.DEFAULT_SIZE, 172, Short.MAX_VALUE))
+                            .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 542, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 542, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 542, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 542, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 542, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addGap(566, 566, 566))
         );
         panelIniciarSesionLayout.setVerticalGroup(
             panelIniciarSesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelIniciarSesionLayout.createSequentialGroup()
                 .addGap(6, 6, 6)
-                .addComponent(lblCrearCuenta, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
-                .addComponent(lblNombres)
+                .addComponent(lblNombresYApellidos, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(12, 12, 12)
                 .addComponent(txtNombres, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(6, 6, 6)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 3, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(8, 8, 8)
                 .addComponent(mensajeNombres, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(2, 2, 2)
-                .addComponent(jblUsuario)
+                .addComponent(lblNombreUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(12, 12, 12)
-                .addComponent(txtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtNombreUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(6, 6, 6)
-                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 3, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(7, 7, 7)
                 .addComponent(mensajeUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(3, 3, 3)
-                .addComponent(jblCorreo)
+                .addComponent(lblCorreoElectronico, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(12, 12, 12)
                 .addComponent(txtCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(6, 6, 6)
-                .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 3, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(6, 6, 6)
                 .addComponent(mensajeCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(4, 4, 4)
-                .addComponent(jblNombreFinca)
+                .addComponent(lblNombreFinca, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(1, 1, 1)
                 .addGroup(panelIniciarSesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelIniciarSesionLayout.createSequentialGroup()
-                        .addGap(11, 11, 11)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
                         .addComponent(txtNombreFinca, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelIniciarSesionLayout.createSequentialGroup()
+                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 20, Short.MAX_VALUE)
+                        .addGap(26, 26, 26)))
                 .addGap(6, 6, 6)
-                .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 3, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(5, 5, 5)
-                .addComponent(mensajeNombreDeLaFinca, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(mensajeNombreDeLaFinca, javax.swing.GroupLayout.DEFAULT_SIZE, 20, Short.MAX_VALUE)
                 .addGap(5, 5, 5)
-                .addComponent(jblUbicacion)
+                .addComponent(lblUbicacion, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(12, 12, 12)
                 .addGroup(panelIniciarSesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txtVereda, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelIniciarSesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jcbDepartamento, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jcbMunicipio, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelIniciarSesionLayout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addGroup(panelIniciarSesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(cmbDepartamento, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cmbMunicipio, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(2, 2, 2)
                 .addComponent(mensajeUbicacion, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(8, 8, 8)
-                .addComponent(jbllContraseña)
+                .addComponent(lblContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(12, 12, 12)
-                .addComponent(jpfContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pswContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(6, 6, 6)
-                .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 3, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(1, 1, 1)
                 .addComponent(mensajeContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(9, 9, 9)
-                .addComponent(btnRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(btnRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(46, 46, 46))
         );
 
         javax.swing.GroupLayout backgroundLayout = new javax.swing.GroupLayout(background);
@@ -311,8 +322,8 @@ public class PanelCrearCuenta extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    public JPasswordField getJpfContraseña() {
-        return jpfContraseña;
+    public JPasswordField getPwsContraseña() {
+        return pswContraseña;
     }
 
     public JTextField getTxtCorreo() {
@@ -328,11 +339,23 @@ public class PanelCrearCuenta extends javax.swing.JPanel {
     }
 
     public JTextField getTxtUsuario() {
-        return txtUsuario;
+        return txtNombreUsuario;
     }
 
     public JTextField getTxtVereda() {
         return txtVereda;
+    }
+    
+    public JComboBox<String> getJcbDepartamento() {
+        return cmbDepartamento;
+    }
+
+    public JComboBox<String> getJcbMunicipio() {
+        return cmbMunicipio;
+    }
+    
+    public JButton getBtnRegistrar() {
+        return btnRegistrar;
     }
 
     public String getCorreo() {
@@ -351,12 +374,12 @@ public class PanelCrearCuenta extends javax.swing.JPanel {
     }
 
     public String getUsuario() {
-        String usuario = txtUsuario.getText();
+        String usuario = txtNombreUsuario.getText();
         return (verificarCamposDeTexto(usuario, "Nombre de usuario")) ? usuario.trim() : null;
     }
 
     public String getContraseña() {
-        String contraseña = String.valueOf(jpfContraseña.getPassword());
+        String contraseña = String.valueOf(pswContraseña.getPassword());
         return (verificarCamposDeTexto(contraseña, "**************")) ? contraseña.trim() : null;
     }
 
@@ -364,33 +387,17 @@ public class PanelCrearCuenta extends javax.swing.JPanel {
         String vereda = txtVereda.getText();
         return (verificarCamposDeTexto(vereda, "Vereda")) ? vereda.trim() : null;
     }
-    
-    public JComboBox<String> getJcbDepartamento() {
-        return jcbDepartamento;
-    }
-
-    public JComboBox<String> getJcbMunicipio() {
-        return jcbMunicipio;
-    }
 
     public void setJcbDepartamento(JComboBox<String> jcbDepartamento) {
-        this.jcbDepartamento = jcbDepartamento;
+        this.cmbDepartamento = jcbDepartamento;
     }
 
     public void setJcbMunicipio(JComboBox<String> jcbMunicipio) {
-        this.jcbMunicipio = jcbMunicipio;
-    }
-
-    public JButton getBtnRegistrar() {
-        return btnRegistrar;
-    }
-    
-    private boolean verificarCamposDeTexto(String campoDeTexto, String campoAValidar) {
-        return campoDeTexto != null && !campoDeTexto.trim().isEmpty() && !campoDeTexto.trim().equals(campoAValidar);
+        this.cmbMunicipio = jcbMunicipio;
     }
 
     public void setJpfContraseña(String texto) {
-        this.jpfContraseña.setText(texto);
+        this.pswContraseña.setText(texto);
     }
 
     public void setTxtCorreo(String texto) {
@@ -406,7 +413,7 @@ public class PanelCrearCuenta extends javax.swing.JPanel {
     }
 
     public void setTxtUsuario(String texto) {
-        this.txtUsuario.setText(texto);
+        this.txtNombreUsuario.setText(texto);
     }
 
     public void setTxtVereda(String texto) {
@@ -437,6 +444,9 @@ public class PanelCrearCuenta extends javax.swing.JPanel {
         this.mensajeUsuario.setText(mensajeUsuario);
     }
     
+    private boolean verificarCamposDeTexto(String campoDeTexto, String campoAValidar) {
+        return campoDeTexto != null && !campoDeTexto.trim().isEmpty() && !campoDeTexto.trim().equals(campoAValidar);
+    }
     
     
     
@@ -445,22 +455,21 @@ public class PanelCrearCuenta extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel background;
     private javax.swing.JButton btnRegistrar;
+    private javax.swing.JComboBox<String> cmbDepartamento;
+    private javax.swing.JComboBox<String> cmbMunicipio;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator5;
-    private javax.swing.JLabel jblCorreo;
-    private javax.swing.JLabel jblNombreFinca;
-    private javax.swing.JLabel jblUbicacion;
-    private javax.swing.JLabel jblUsuario;
-    private javax.swing.JLabel jbllContraseña;
-    private javax.swing.JComboBox<String> jcbDepartamento;
-    private javax.swing.JComboBox<String> jcbMunicipio;
-    private javax.swing.JPasswordField jpfContraseña;
-    private javax.swing.JLabel lblCrearCuenta;
-    private javax.swing.JLabel lblNombres;
+    private javax.swing.JLabel lblContraseña;
+    private javax.swing.JLabel lblCorreoElectronico;
+    private javax.swing.JLabel lblNombreFinca;
+    private javax.swing.JLabel lblNombreUsuario;
+    private javax.swing.JLabel lblNombresYApellidos;
+    private javax.swing.JLabel lblTitulo;
+    private javax.swing.JLabel lblUbicacion;
     private javax.swing.JLabel mensajeContraseña;
     private javax.swing.JLabel mensajeCorreo;
     private javax.swing.JLabel mensajeNombreDeLaFinca;
@@ -468,10 +477,11 @@ public class PanelCrearCuenta extends javax.swing.JPanel {
     private javax.swing.JLabel mensajeUbicacion;
     private javax.swing.JLabel mensajeUsuario;
     private javax.swing.JPanel panelIniciarSesion;
+    private javax.swing.JPasswordField pswContraseña;
     private javax.swing.JTextField txtCorreo;
     private javax.swing.JTextField txtNombreFinca;
+    private javax.swing.JTextField txtNombreUsuario;
     private javax.swing.JTextField txtNombres;
-    private javax.swing.JTextField txtUsuario;
     private javax.swing.JTextField txtVereda;
     // End of variables declaration//GEN-END:variables
 }

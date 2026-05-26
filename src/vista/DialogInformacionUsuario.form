@@ -23,17 +23,17 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
+          <Component id="background" alignment="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
+          <Component id="background" alignment="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Container class="javax.swing.JPanel" name="jPanel1">
+    <Container class="javax.swing.JPanel" name="background">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -52,51 +52,51 @@
                   <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <Component id="jLabel2" min="-2" pref="181" max="-2" attributes="0"/>
+                          <Component id="lblNombresApellidos" min="-2" pref="181" max="-2" attributes="0"/>
                           <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                          <Component id="lblNombresApellidos" min="-2" pref="364" max="-2" attributes="0"/>
+                          <Component id="lblValorNombresApellidos" min="-2" pref="364" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
-                          <Component id="jLabel3" min="-2" pref="181" max="-2" attributes="0"/>
+                          <Component id="lblUsuario" min="-2" pref="181" max="-2" attributes="0"/>
                           <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                          <Component id="lblUsuario" min="-2" pref="307" max="-2" attributes="0"/>
+                          <Component id="lblValorUsuario" min="-2" pref="307" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
-                          <Component id="jLabel4" min="-2" pref="181" max="-2" attributes="0"/>
+                          <Component id="lblCorreo" min="-2" pref="181" max="-2" attributes="0"/>
                           <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                          <Component id="lblCorreo" min="-2" pref="353" max="-2" attributes="0"/>
+                          <Component id="lblValorCorreo" min="-2" pref="353" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
-                          <Component id="jLabel5" min="-2" pref="181" max="-2" attributes="0"/>
+                          <Component id="lblFinca" min="-2" pref="181" max="-2" attributes="0"/>
                           <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                          <Component id="lblFinca" min="-2" pref="280" max="-2" attributes="0"/>
+                          <Component id="lblValorFinca" min="-2" pref="280" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
-                          <Component id="jLabel6" min="-2" pref="181" max="-2" attributes="0"/>
+                          <Component id="lblDepartamento" min="-2" pref="181" max="-2" attributes="0"/>
                           <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                          <Component id="lblDepartamento" min="-2" pref="212" max="-2" attributes="0"/>
+                          <Component id="lblValorDepartamento" min="-2" pref="212" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
-                          <Component id="jLabel7" min="-2" pref="181" max="-2" attributes="0"/>
+                          <Component id="lblMunicipio" min="-2" pref="181" max="-2" attributes="0"/>
                           <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                          <Component id="lblMunicipio" min="-2" pref="267" max="-2" attributes="0"/>
+                          <Component id="lblValorMunicipio" min="-2" pref="267" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
-                          <Component id="jLabel1" min="-2" pref="483" max="-2" attributes="0"/>
+                          <Component id="lblTitulo1" min="-2" pref="483" max="-2" attributes="0"/>
                       </Group>
                       <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                          <Component id="jLabel17" min="-2" pref="475" max="-2" attributes="0"/>
+                          <Component id="lblTitulo2" min="-2" pref="475" max="-2" attributes="0"/>
                           <Group type="102" attributes="0">
-                              <Component id="jLabel8" min="-2" pref="181" max="-2" attributes="0"/>
+                              <Component id="lblVereda" min="-2" pref="181" max="-2" attributes="0"/>
                               <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                              <Component id="lblVereda" min="-2" pref="327" max="-2" attributes="0"/>
+                              <Component id="lblValorVereda" min="-2" pref="327" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" attributes="0">
-                          <Component id="jLabel9" min="-2" pref="181" max="-2" attributes="0"/>
+                          <Component id="lblCabezasGanado" min="-2" pref="181" max="-2" attributes="0"/>
                           <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                          <Component id="lblCabezasDeGanado" min="-2" pref="353" max="-2" attributes="0"/>
+                          <Component id="lblValorCabezasDeGanado" min="-2" pref="353" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
@@ -107,66 +107,66 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblTitulo1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
-                          <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblNombresApellidos" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <Component id="lblNombresApellidos" min="-2" pref="25" max="-2" attributes="0"/>
+                      <Component id="lblValorNombresApellidos" min="-2" pref="25" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <EmptySpace min="2" pref="2" max="-2" attributes="0"/>
-                          <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblUsuario" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <Component id="lblUsuario" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblValorUsuario" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <EmptySpace min="2" pref="2" max="-2" attributes="0"/>
-                          <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblCorreo" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <Component id="lblCorreo" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblValorCorreo" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="2" pref="2" max="-2" attributes="0"/>
-                          <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblCabezasGanado" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <Component id="lblCabezasDeGanado" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblValorCabezasDeGanado" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="jLabel17" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblTitulo2" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <EmptySpace min="2" pref="2" max="-2" attributes="0"/>
-                          <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblFinca" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <Component id="lblFinca" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblValorFinca" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <EmptySpace min="4" pref="4" max="-2" attributes="0"/>
-                          <Component id="jLabel6" min="-2" pref="27" max="-2" attributes="0"/>
+                          <Component id="lblDepartamento" min="-2" pref="27" max="-2" attributes="0"/>
                       </Group>
-                      <Component id="lblDepartamento" min="-2" pref="32" max="-2" attributes="0"/>
+                      <Component id="lblValorDepartamento" min="-2" pref="32" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="lblMunicipio" min="-2" pref="32" max="-2" attributes="0"/>
-                      <Component id="jLabel7" min="-2" pref="31" max="-2" attributes="0"/>
+                      <Component id="lblValorMunicipio" min="-2" pref="32" max="-2" attributes="0"/>
+                      <Component id="lblMunicipio" min="-2" pref="31" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel8" min="-2" pref="24" max="-2" attributes="0"/>
-                      <Component id="lblVereda" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblVereda" min="-2" pref="24" max="-2" attributes="0"/>
+                      <Component id="lblValorVereda" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
@@ -174,7 +174,7 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="jLabel1">
+        <Component class="javax.swing.JLabel" name="lblTitulo1">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="28" style="1"/>
@@ -193,7 +193,7 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel2">
+        <Component class="javax.swing.JLabel" name="lblNombresApellidos">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="66" green="66" red="66" type="rgb"/>
@@ -208,7 +208,7 @@
             <Property name="text" type="java.lang.String" value="Nombres y apellidos:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel3">
+        <Component class="javax.swing.JLabel" name="lblUsuario">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="18" style="0"/>
@@ -220,7 +220,7 @@
             <Property name="text" type="java.lang.String" value="Nombre de usuario:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel4">
+        <Component class="javax.swing.JLabel" name="lblCorreo">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="18" style="0"/>
@@ -232,7 +232,7 @@
             <Property name="text" type="java.lang.String" value="Correo electr&#xf3;nico:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel5">
+        <Component class="javax.swing.JLabel" name="lblFinca">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="18" style="0"/>
@@ -244,7 +244,7 @@
             <Property name="text" type="java.lang.String" value="Nombre de la finca:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel6">
+        <Component class="javax.swing.JLabel" name="lblDepartamento">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="18" style="0"/>
@@ -256,7 +256,7 @@
             <Property name="text" type="java.lang.String" value="Departamento:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel7">
+        <Component class="javax.swing.JLabel" name="lblMunicipio">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="18" style="0"/>
@@ -268,7 +268,7 @@
             <Property name="text" type="java.lang.String" value="Municipio:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel8">
+        <Component class="javax.swing.JLabel" name="lblVereda">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="18" style="0"/>
@@ -280,7 +280,7 @@
             <Property name="text" type="java.lang.String" value="Vereda:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="lblNombresApellidos">
+        <Component class="javax.swing.JLabel" name="lblValorNombresApellidos">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI Semibold" size="20" style="0"/>
@@ -292,7 +292,7 @@
             <Property name="text" type="java.lang.String" value="Brayan Stiven Castellanos Diaz"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="lblUsuario">
+        <Component class="javax.swing.JLabel" name="lblValorUsuario">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI Semibold" size="20" style="0"/>
@@ -304,7 +304,7 @@
             <Property name="text" type="java.lang.String" value="Brayan C"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="lblFinca">
+        <Component class="javax.swing.JLabel" name="lblValorFinca">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI Semibold" size="20" style="0"/>
@@ -316,7 +316,7 @@
             <Property name="text" type="java.lang.String" value="Finca la hoyada"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="lblDepartamento">
+        <Component class="javax.swing.JLabel" name="lblValorDepartamento">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI Semibold" size="20" style="0"/>
@@ -328,7 +328,7 @@
             <Property name="text" type="java.lang.String" value="Santander"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="lblCorreo">
+        <Component class="javax.swing.JLabel" name="lblValorCorreo">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI Semibold" size="20" style="0"/>
@@ -340,7 +340,7 @@
             <Property name="text" type="java.lang.String" value="castellanosbrayan136@gmail.com"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="lblVereda">
+        <Component class="javax.swing.JLabel" name="lblValorVereda">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI Semibold" size="20" style="0"/>
@@ -352,7 +352,7 @@
             <Property name="text" type="java.lang.String" value="Buenavista"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="lblMunicipio">
+        <Component class="javax.swing.JLabel" name="lblValorMunicipio">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI Semibold" size="20" style="0"/>
@@ -364,7 +364,7 @@
             <Property name="text" type="java.lang.String" value="Malaga"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel17">
+        <Component class="javax.swing.JLabel" name="lblTitulo2">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="28" style="1"/>
@@ -383,7 +383,7 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="lblCabezasDeGanado">
+        <Component class="javax.swing.JLabel" name="lblValorCabezasDeGanado">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI Semibold" size="20" style="0"/>
@@ -395,7 +395,7 @@
             <Property name="text" type="java.lang.String" value="50"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel9">
+        <Component class="javax.swing.JLabel" name="lblCabezasGanado">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="18" style="0"/>

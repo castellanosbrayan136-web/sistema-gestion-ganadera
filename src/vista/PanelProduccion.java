@@ -30,19 +30,18 @@ public class PanelProduccion extends javax.swing.JPanel {
     private void initComponents() {
 
         background = new javax.swing.JPanel();
-        panelSideBar1 = new javax.swing.JPanel();
+        pnlSideBar = new javax.swing.JPanel();
         btnRegistrarProduccion = new javax.swing.JButton();
-        jblProduccion = new javax.swing.JLabel();
-        panelLinea = new javax.swing.JPanel();
+        lblTituloSideBar = new javax.swing.JLabel();
+        pnlLinea = new javax.swing.JPanel();
         btnGestionProduccion = new javax.swing.JButton();
         panelVacio = new javax.swing.JPanel();
 
         background.setBackground(new java.awt.Color(255, 255, 255));
 
-        panelSideBar1.setBackground(new java.awt.Color(35, 52, 78));
-        panelSideBar1.setForeground(new java.awt.Color(46, 125, 50));
-        panelSideBar1.setPreferredSize(new java.awt.Dimension(270, 892));
-        panelSideBar1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        pnlSideBar.setBackground(new java.awt.Color(35, 52, 78));
+        pnlSideBar.setForeground(new java.awt.Color(46, 125, 50));
+        pnlSideBar.setPreferredSize(new java.awt.Dimension(270, 892));
 
         btnRegistrarProduccion.setBackground(new java.awt.Color(55, 72, 95));
         btnRegistrarProduccion.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -54,31 +53,27 @@ public class PanelProduccion extends javax.swing.JPanel {
         btnRegistrarProduccion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnRegistrarProduccion.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         btnRegistrarProduccion.setIconTextGap(15);
-        panelSideBar1.add(btnRegistrarProduccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 250, 60));
 
-        jblProduccion.setFont(new java.awt.Font("Segoe UI", 1, 28)); // NOI18N
-        jblProduccion.setForeground(new java.awt.Color(255, 255, 255));
-        jblProduccion.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jblProduccion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/folder/icons8-registro-32 (1).png"))); // NOI18N
-        jblProduccion.setText("Producción");
-        jblProduccion.setIconTextGap(10);
-        panelSideBar1.add(jblProduccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 48, 200, 54));
+        lblTituloSideBar.setFont(new java.awt.Font("Segoe UI", 1, 28)); // NOI18N
+        lblTituloSideBar.setForeground(new java.awt.Color(255, 255, 255));
+        lblTituloSideBar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblTituloSideBar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/folder/icons8-registro-32 (1).png"))); // NOI18N
+        lblTituloSideBar.setText("Producción");
+        lblTituloSideBar.setIconTextGap(10);
 
-        panelLinea.setBackground(new java.awt.Color(245, 245, 245));
-        panelLinea.setPreferredSize(new java.awt.Dimension(0, 4));
+        pnlLinea.setBackground(new java.awt.Color(245, 245, 245));
+        pnlLinea.setPreferredSize(new java.awt.Dimension(0, 4));
 
-        javax.swing.GroupLayout panelLineaLayout = new javax.swing.GroupLayout(panelLinea);
-        panelLinea.setLayout(panelLineaLayout);
-        panelLineaLayout.setHorizontalGroup(
-            panelLineaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout pnlLineaLayout = new javax.swing.GroupLayout(pnlLinea);
+        pnlLinea.setLayout(pnlLineaLayout);
+        pnlLineaLayout.setHorizontalGroup(
+            pnlLineaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 200, Short.MAX_VALUE)
         );
-        panelLineaLayout.setVerticalGroup(
-            panelLineaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        pnlLineaLayout.setVerticalGroup(
+            pnlLineaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 3, Short.MAX_VALUE)
         );
-
-        panelSideBar1.add(panelLinea, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 120, 200, 3));
 
         btnGestionProduccion.setBackground(new java.awt.Color(55, 72, 95));
         btnGestionProduccion.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -90,7 +85,32 @@ public class PanelProduccion extends javax.swing.JPanel {
         btnGestionProduccion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnGestionProduccion.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         btnGestionProduccion.setIconTextGap(15);
-        panelSideBar1.add(btnGestionProduccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 260, 248, 60));
+
+        javax.swing.GroupLayout pnlSideBarLayout = new javax.swing.GroupLayout(pnlSideBar);
+        pnlSideBar.setLayout(pnlSideBarLayout);
+        pnlSideBarLayout.setHorizontalGroup(
+            pnlSideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(btnRegistrarProduccion, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(btnGestionProduccion, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(pnlSideBarLayout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addGroup(pnlSideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblTituloSideBar, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pnlLinea, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
+        );
+        pnlSideBarLayout.setVerticalGroup(
+            pnlSideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlSideBarLayout.createSequentialGroup()
+                .addGap(48, 48, 48)
+                .addComponent(lblTituloSideBar, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(pnlLinea, javax.swing.GroupLayout.PREFERRED_SIZE, 3, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(77, 77, 77)
+                .addComponent(btnRegistrarProduccion, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(btnGestionProduccion, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(419, Short.MAX_VALUE))
+        );
 
         panelVacio.setBackground(new java.awt.Color(102, 102, 102));
 
@@ -98,11 +118,11 @@ public class PanelProduccion extends javax.swing.JPanel {
         panelVacio.setLayout(panelVacioLayout);
         panelVacioLayout.setHorizontalGroup(
             panelVacioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 865, Short.MAX_VALUE)
+            .addGap(0, 888, Short.MAX_VALUE)
         );
         panelVacioLayout.setVerticalGroup(
             panelVacioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 729, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout backgroundLayout = new javax.swing.GroupLayout(background);
@@ -110,19 +130,18 @@ public class PanelProduccion extends javax.swing.JPanel {
         backgroundLayout.setHorizontalGroup(
             backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(backgroundLayout.createSequentialGroup()
-                .addComponent(panelSideBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pnlSideBar, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(panelVacio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(29, 29, 29))
+                .addContainerGap())
         );
         backgroundLayout.setVerticalGroup(
             backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(backgroundLayout.createSequentialGroup()
-                .addComponent(panelSideBar1, javax.swing.GroupLayout.DEFAULT_SIZE, 724, Short.MAX_VALUE)
-                .addGap(11, 11, 11))
-            .addGroup(backgroundLayout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, backgroundLayout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(panelVacio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
+            .addComponent(pnlSideBar, javax.swing.GroupLayout.DEFAULT_SIZE, 739, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -154,9 +173,9 @@ public class PanelProduccion extends javax.swing.JPanel {
     private javax.swing.JPanel background;
     private javax.swing.JButton btnGestionProduccion;
     private javax.swing.JButton btnRegistrarProduccion;
-    private javax.swing.JLabel jblProduccion;
-    private javax.swing.JPanel panelLinea;
-    private javax.swing.JPanel panelSideBar1;
+    private javax.swing.JLabel lblTituloSideBar;
     private javax.swing.JPanel panelVacio;
+    private javax.swing.JPanel pnlLinea;
+    private javax.swing.JPanel pnlSideBar;
     // End of variables declaration//GEN-END:variables
 }

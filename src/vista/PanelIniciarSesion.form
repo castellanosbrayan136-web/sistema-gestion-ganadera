@@ -16,20 +16,20 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="panelIniciarSesion" alignment="0" max="32767" attributes="0"/>
+          <Component id="background" alignment="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <Component id="panelIniciarSesion" max="32767" attributes="0"/>
+              <Component id="background" max="32767" attributes="0"/>
               <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Container class="javax.swing.JPanel" name="panelIniciarSesion">
+    <Container class="javax.swing.JPanel" name="background">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -46,13 +46,13 @@
                   <EmptySpace min="70" pref="70" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="lblLogo" min="-2" pref="197" max="-2" attributes="0"/>
-                      <Component id="lblIniciarSesion" min="-2" pref="256" max="-2" attributes="0"/>
+                      <Component id="lblTitulo" min="-2" pref="256" max="-2" attributes="0"/>
                       <Component id="lblUsuario" min="-2" pref="107" max="-2" attributes="0"/>
                       <Component id="txtUsuario" min="-2" pref="542" max="-2" attributes="0"/>
                       <Component id="jSeparator1" min="-2" pref="542" max="-2" attributes="0"/>
                       <Component id="mensajeUsuario" min="-2" pref="540" max="-2" attributes="0"/>
-                      <Component id="jLabel2" min="-2" pref="140" max="-2" attributes="0"/>
-                      <Component id="jpfContraseña" min="-2" pref="542" max="-2" attributes="0"/>
+                      <Component id="lblContraseña" min="-2" pref="140" max="-2" attributes="0"/>
+                      <Component id="pwfContraseña" min="-2" pref="542" max="-2" attributes="0"/>
                       <Component id="jSeparator2" min="-2" pref="542" max="-2" attributes="0"/>
                       <Component id="mensajeContraseña" min="-2" pref="540" max="-2" attributes="0"/>
                       <Component id="btnEntrar" min="-2" pref="200" max="-2" attributes="0"/>
@@ -66,7 +66,7 @@
                   <EmptySpace min="50" pref="50" max="-2" attributes="0"/>
                   <Component id="lblLogo" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="60" pref="60" max="-2" attributes="0"/>
-                  <Component id="lblIniciarSesion" min="-2" pref="55" max="-2" attributes="0"/>
+                  <Component id="lblTitulo" min="-2" pref="55" max="-2" attributes="0"/>
                   <EmptySpace min="70" pref="70" max="-2" attributes="0"/>
                   <Component id="lblUsuario" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="30" pref="30" max="-2" attributes="0"/>
@@ -76,9 +76,9 @@
                   <EmptySpace min="9" pref="9" max="-2" attributes="0"/>
                   <Component id="mensajeUsuario" min="-2" pref="20" max="-2" attributes="0"/>
                   <EmptySpace min="31" pref="31" max="-2" attributes="0"/>
-                  <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblContraseña" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="30" pref="30" max="-2" attributes="0"/>
-                  <Component id="jpfContraseña" min="-2" pref="33" max="-2" attributes="0"/>
+                  <Component id="pwfContraseña" min="-2" pref="33" max="-2" attributes="0"/>
                   <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                   <Component id="jSeparator2" min="-2" pref="10" max="-2" attributes="0"/>
                   <EmptySpace min="5" pref="5" max="-2" attributes="0"/>
@@ -90,7 +90,7 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="lblIniciarSesion">
+        <Component class="javax.swing.JLabel" name="lblTitulo">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="28" style="1"/>
@@ -119,7 +119,7 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel2">
+        <Component class="javax.swing.JLabel" name="lblContrase&#xf1;a">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="18" style="1"/>
@@ -137,7 +137,7 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JPasswordField" name="jpfContrase&#xf1;a">
+        <Component class="javax.swing.JPasswordField" name="pwfContrase&#xf1;a">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>

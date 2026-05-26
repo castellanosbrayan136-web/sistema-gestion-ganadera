@@ -30,21 +30,21 @@ public class PanelGestionarGanado extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        bacground = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tablaGanado = new javax.swing.JTable();
+        tabGanado = new javax.swing.JTable();
         txtFiltroPorNombre = new javax.swing.JTextField();
-        jblBuscarPorNombre = new javax.swing.JLabel();
-        jblGanado = new javax.swing.JLabel();
-        jblInstrucciones = new javax.swing.JLabel();
+        lblBuscarPorNombre = new javax.swing.JLabel();
+        lblTitulo = new javax.swing.JLabel();
+        lblInstrucciones = new javax.swing.JLabel();
         btnVerInformacion = new javax.swing.JButton();
         btnBuscar = new javax.swing.JButton();
         btnEditar = new javax.swing.JButton();
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setVerifyInputWhenFocusTarget(false);
+        bacground.setBackground(new java.awt.Color(255, 255, 255));
+        bacground.setVerifyInputWhenFocusTarget(false);
 
-        tablaGanado.setModel(new javax.swing.table.DefaultTableModel(
+        tabGanado.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -67,22 +67,22 @@ public class PanelGestionarGanado extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(tablaGanado);
+        jScrollPane1.setViewportView(tabGanado);
 
         txtFiltroPorNombre.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
-        jblBuscarPorNombre.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jblBuscarPorNombre.setForeground(new java.awt.Color(0, 0, 0));
-        jblBuscarPorNombre.setText("Buscar por nombre");
-        jblBuscarPorNombre.setIconTextGap(10);
+        lblBuscarPorNombre.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblBuscarPorNombre.setForeground(new java.awt.Color(0, 0, 0));
+        lblBuscarPorNombre.setText("Buscar por nombre");
+        lblBuscarPorNombre.setIconTextGap(10);
 
-        jblGanado.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jblGanado.setForeground(new java.awt.Color(0, 0, 0));
-        jblGanado.setText("Ganado");
+        lblTitulo.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        lblTitulo.setForeground(new java.awt.Color(0, 0, 0));
+        lblTitulo.setText("Ganado");
 
-        jblInstrucciones.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jblInstrucciones.setForeground(new java.awt.Color(0, 0, 0));
-        jblInstrucciones.setText("Da clik sobre un animal para ver informacion o editar");
+        lblInstrucciones.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblInstrucciones.setForeground(new java.awt.Color(102, 102, 102));
+        lblInstrucciones.setText("Da clik sobre un animal para ver informacion o editar");
 
         btnVerInformacion.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         btnVerInformacion.setText("Ver información");
@@ -96,21 +96,21 @@ public class PanelGestionarGanado extends javax.swing.JPanel {
         btnEditar.setText("Editar");
         btnEditar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout bacgroundLayout = new javax.swing.GroupLayout(bacground);
+        bacground.setLayout(bacgroundLayout);
+        bacgroundLayout.setHorizontalGroup(
+            bacgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(bacgroundLayout.createSequentialGroup()
                 .addGap(6, 6, 6)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(bacgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jblGanado, javax.swing.GroupLayout.PREFERRED_SIZE, 401, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jblInstrucciones, javax.swing.GroupLayout.PREFERRED_SIZE, 455, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jblBuscarPorNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(bacgroundLayout.createSequentialGroup()
+                        .addGroup(bacgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 401, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblInstrucciones, javax.swing.GroupLayout.PREFERRED_SIZE, 455, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(bacgroundLayout.createSequentialGroup()
+                                .addGroup(bacgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblBuscarPorNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(txtFiltroPorNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(12, 12, 12)
                                 .addComponent(btnBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -121,22 +121,22 @@ public class PanelGestionarGanado extends javax.swing.JPanel {
                         .addGap(0, 24, Short.MAX_VALUE)))
                 .addContainerGap())
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        bacgroundLayout.setVerticalGroup(
+            bacgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(bacgroundLayout.createSequentialGroup()
                 .addGap(6, 6, 6)
-                .addComponent(jblGanado, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(14, 14, 14)
-                .addComponent(jblInstrucciones)
+                .addComponent(lblInstrucciones)
                 .addGap(22, 22, 22)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jblBuscarPorNombre)
+                .addGroup(bacgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(bacgroundLayout.createSequentialGroup()
+                        .addComponent(lblBuscarPorNombre)
                         .addGap(6, 6, 6)
                         .addComponent(txtFiltroPorNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGroup(bacgroundLayout.createSequentialGroup()
                         .addGap(19, 19, 19)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(bacgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnEditar, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnVerInformacion, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))))
@@ -149,16 +149,16 @@ public class PanelGestionarGanado extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(bacground, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(bacground, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
     public JTable getTablaGanado() {
-        return tablaGanado;
+        return tabGanado;
     }
 
     public JTextField getTxtFiltroPorNombre() {
@@ -176,19 +176,17 @@ public class PanelGestionarGanado extends javax.swing.JPanel {
     public JButton getBtnVerInformacion() {
         return btnVerInformacion;
     }
-    
-    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel bacground;
     private javax.swing.JButton btnBuscar;
     private javax.swing.JButton btnEditar;
     private javax.swing.JButton btnVerInformacion;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel jblBuscarPorNombre;
-    private javax.swing.JLabel jblGanado;
-    private javax.swing.JLabel jblInstrucciones;
-    private javax.swing.JTable tablaGanado;
+    private javax.swing.JLabel lblBuscarPorNombre;
+    private javax.swing.JLabel lblInstrucciones;
+    private javax.swing.JLabel lblTitulo;
+    private javax.swing.JTable tabGanado;
     private javax.swing.JTextField txtFiltroPorNombre;
     // End of variables declaration//GEN-END:variables
 }

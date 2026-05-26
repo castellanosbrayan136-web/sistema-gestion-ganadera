@@ -32,8 +32,8 @@ public class PanelGanado extends javax.swing.JPanel {
         background = new javax.swing.JPanel();
         panelSideBar1 = new javax.swing.JPanel();
         btnRegistrarGanado = new javax.swing.JButton();
-        jblGanado = new javax.swing.JLabel();
-        panelLinea = new javax.swing.JPanel();
+        lblTituloSideBar = new javax.swing.JLabel();
+        pnlLinea = new javax.swing.JPanel();
         btnListaGanado = new javax.swing.JButton();
         panelVacio = new javax.swing.JPanel();
 
@@ -42,7 +42,6 @@ public class PanelGanado extends javax.swing.JPanel {
         panelSideBar1.setBackground(new java.awt.Color(35, 52, 78));
         panelSideBar1.setForeground(new java.awt.Color(46, 125, 50));
         panelSideBar1.setPreferredSize(new java.awt.Dimension(270, 892));
-        panelSideBar1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnRegistrarGanado.setBackground(new java.awt.Color(55, 72, 95));
         btnRegistrarGanado.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -54,31 +53,27 @@ public class PanelGanado extends javax.swing.JPanel {
         btnRegistrarGanado.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnRegistrarGanado.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         btnRegistrarGanado.setIconTextGap(15);
-        panelSideBar1.add(btnRegistrarGanado, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 250, 60));
 
-        jblGanado.setFont(new java.awt.Font("Segoe UI", 1, 28)); // NOI18N
-        jblGanado.setForeground(new java.awt.Color(255, 255, 255));
-        jblGanado.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jblGanado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/folder/icons8-vaca-70.png"))); // NOI18N
-        jblGanado.setText("Ganado");
-        jblGanado.setIconTextGap(10);
-        panelSideBar1.add(jblGanado, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 48, 200, 54));
+        lblTituloSideBar.setFont(new java.awt.Font("Segoe UI", 1, 28)); // NOI18N
+        lblTituloSideBar.setForeground(new java.awt.Color(255, 255, 255));
+        lblTituloSideBar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblTituloSideBar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/folder/icons8-vaca-70.png"))); // NOI18N
+        lblTituloSideBar.setText("Ganado");
+        lblTituloSideBar.setIconTextGap(10);
 
-        panelLinea.setBackground(new java.awt.Color(245, 245, 245));
-        panelLinea.setPreferredSize(new java.awt.Dimension(0, 4));
+        pnlLinea.setBackground(new java.awt.Color(245, 245, 245));
+        pnlLinea.setPreferredSize(new java.awt.Dimension(0, 4));
 
-        javax.swing.GroupLayout panelLineaLayout = new javax.swing.GroupLayout(panelLinea);
-        panelLinea.setLayout(panelLineaLayout);
-        panelLineaLayout.setHorizontalGroup(
-            panelLineaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout pnlLineaLayout = new javax.swing.GroupLayout(pnlLinea);
+        pnlLinea.setLayout(pnlLineaLayout);
+        pnlLineaLayout.setHorizontalGroup(
+            pnlLineaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 200, Short.MAX_VALUE)
         );
-        panelLineaLayout.setVerticalGroup(
-            panelLineaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        pnlLineaLayout.setVerticalGroup(
+            pnlLineaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 3, Short.MAX_VALUE)
         );
-
-        panelSideBar1.add(panelLinea, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 120, 200, 3));
 
         btnListaGanado.setBackground(new java.awt.Color(55, 72, 95));
         btnListaGanado.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -90,7 +85,35 @@ public class PanelGanado extends javax.swing.JPanel {
         btnListaGanado.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnListaGanado.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         btnListaGanado.setIconTextGap(15);
-        panelSideBar1.add(btnListaGanado, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 260, 248, 60));
+
+        javax.swing.GroupLayout panelSideBar1Layout = new javax.swing.GroupLayout(panelSideBar1);
+        panelSideBar1.setLayout(panelSideBar1Layout);
+        panelSideBar1Layout.setHorizontalGroup(
+            panelSideBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(btnRegistrarGanado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(panelSideBar1Layout.createSequentialGroup()
+                .addComponent(btnListaGanado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(2, 2, 2))
+            .addGroup(panelSideBar1Layout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addGroup(panelSideBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblTituloSideBar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pnlLinea, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(27, 27, 27))
+        );
+        panelSideBar1Layout.setVerticalGroup(
+            panelSideBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelSideBar1Layout.createSequentialGroup()
+                .addGap(48, 48, 48)
+                .addComponent(lblTituloSideBar, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(pnlLinea, javax.swing.GroupLayout.PREFERRED_SIZE, 3, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(77, 77, 77)
+                .addComponent(btnRegistrarGanado, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(btnListaGanado, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(450, Short.MAX_VALUE))
+        );
 
         panelVacio.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -118,11 +141,9 @@ public class PanelGanado extends javax.swing.JPanel {
         backgroundLayout.setVerticalGroup(
             backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(backgroundLayout.createSequentialGroup()
-                .addComponent(panelSideBar1, javax.swing.GroupLayout.DEFAULT_SIZE, 759, Short.MAX_VALUE)
-                .addGap(11, 11, 11))
-            .addGroup(backgroundLayout.createSequentialGroup()
                 .addComponent(panelVacio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
+            .addComponent(panelSideBar1, javax.swing.GroupLayout.DEFAULT_SIZE, 770, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -149,17 +170,14 @@ public class PanelGanado extends javax.swing.JPanel {
         return btnListaGanado;
     }
     
-    
-
-    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel background;
     private javax.swing.JButton btnListaGanado;
     private javax.swing.JButton btnRegistrarGanado;
-    private javax.swing.JLabel jblGanado;
-    private javax.swing.JPanel panelLinea;
+    private javax.swing.JLabel lblTituloSideBar;
     private javax.swing.JPanel panelSideBar1;
     private javax.swing.JPanel panelVacio;
+    private javax.swing.JPanel pnlLinea;
     // End of variables declaration//GEN-END:variables
 }
