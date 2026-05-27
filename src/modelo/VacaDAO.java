@@ -162,13 +162,27 @@ public class VacaDAO {
         return null;
     }
     
-    public boolean updateVaca(Vaca vaca) {
-        if (vaca == null) return false; 
-        
-        for (int i = 0 ; i < listaVacas.size() ; i++) {
-            if (listaVacas.get(i).getIdInterno().equals(vaca.getIdInterno())) {
-                listaVacas.set(i, vaca);
+    public boolean updateVaca(Vaca vacaActualizada, UUID idVaca) {
+
+        if (vacaActualizada == null) {
+            return false;
+        }
+
+        for (Vaca vaca : listaVacas) {
+
+            if (vaca.getIdInterno().equals(idVaca)) {
+
+                vaca.setIdentificador(vacaActualizada.getIdentificador());
+                vaca.setNombre(vacaActualizada.getNombre());
+                vaca.setFechaNacimiento(vacaActualizada.getFechaNacimiento());
+                vaca.setRazaPadre(vacaActualizada.getRazaPadre());
+                vaca.setRazaMadre(vacaActualizada.getRazaMadre());
+                vaca.setEstado(vacaActualizada.getEstado());
+                vaca.setPeso(vacaActualizada.getPeso());
+                vaca.setDescripcion(vacaActualizada.getDescripcion());
+
                 guardarDatos();
+
                 return true;
             }
         }

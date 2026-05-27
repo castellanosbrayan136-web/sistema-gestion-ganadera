@@ -326,7 +326,7 @@ public class DialogEdicionGanado extends javax.swing.JDialog {
         return null;
     }
 
-    public void setLblCodigoInterno(String codigoInterno) {
+    public void setLblIdentificador(String codigoInterno) {
         this.lblValorIdentificador.setText(codigoInterno);
     }
 

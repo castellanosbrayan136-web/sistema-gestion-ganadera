@@ -4,6 +4,7 @@ package controlador;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -14,41 +15,39 @@ import vista.DialogEdicionGanado;
 import vista.VistaPrincipal;
 
 
-public class ControdalorEdicionGanado implements ActionListener {
+public class ControladorEdicionGanado implements ActionListener {
     private final VistaPrincipal vistaPrincipal;
     private final DialogEdicionGanado dialogEdicionGanado;
     private final VacaDAO vacaDAO;
     private final Vaca vaca;
 
-    public ControdalorEdicionGanado(VistaPrincipal vistaPrincipal, DialogEdicionGanado dialogEdicionGanado, VacaDAO vacaDAO, Vaca vaca) {
+    public ControladorEdicionGanado(VistaPrincipal vistaPrincipal, DialogEdicionGanado dialogEdicionGanado, VacaDAO vacaDAO, Vaca vaca) {
         this.vistaPrincipal = vistaPrincipal;
         this.dialogEdicionGanado = dialogEdicionGanado;
         this.vacaDAO = vacaDAO;
         this.vaca = vaca;
-        activarEventos();
-        llenarDatos();
-        llenarCombos();
+        configurarEventos();
+        cargarDatosIniciales();
     }
     
-    public void activarEventos() {
+    public void configurarEventos() {
         dialogEdicionGanado.getBtnCancelar().addActionListener(this);
         dialogEdicionGanado.getBtnConfirmar().addActionListener(this);
     }
     
-    public void llenarDatos() {
-        
-        dialogEdicionGanado.setLblCodigoInterno(vaca.getCodigoInterno());
+    public void cargarDatosIniciales() {
+        dialogEdicionGanado.setLblIdentificador(vaca.getIdentificador());
         dialogEdicionGanado.setLblFechaNacimiento(vaca.getFechaNacimiento().toString());
         dialogEdicionGanado.setTxtNombre(vaca.getNombre());
-        dialogEdicionGanado.getJcbEstado().addItem(vaca.getEstado());
-        dialogEdicionGanado.getJcbRazaMadre().addItem(vaca.getRazaMadre());
-        dialogEdicionGanado.getJcbRazaPadre().addItem(vaca.getRazaPadre());
-        dialogEdicionGanado.setTxtNumeroIdentificador(vaca.getNumeroIdentificador());
+        dialogEdicionGanado.getCmbEstado().addItem(vaca.getEstado());
+        dialogEdicionGanado.getCmbRazaMadre().addItem(vaca.getRazaMadre());
+        dialogEdicionGanado.getCmbRazaPadre().addItem(vaca.getRazaPadre());
         dialogEdicionGanado.setTxtPeso(vaca.getPeso());
         dialogEdicionGanado.setTxtDescripcion(vaca.getDescripcion());
+        cargarCombos();
     }
     
-    public void llenarCombos() {
+    public void cargarCombos() {
         List<String> estados = new ArrayList<>(
             Arrays.asList(
                 "Activo",
@@ -64,30 +63,53 @@ public class ControdalorEdicionGanado implements ActionListener {
             if (estado.equals(vaca.getEstado())) {
                 continue;
             }
-            dialogEdicionGanado.getJcbEstado().addItem(estado);
+            dialogEdicionGanado.getCmbEstado().addItem(estado);
         }
         
-        for (String raza : vacaDAO.retornarListadoDeRazas()) {
+        for (String raza : vacaDAO.getListaRazas()) {
             if (raza.equals(vaca.getRazaMadre())) {
                 continue;
             }
-            dialogEdicionGanado.getJcbRazaMadre().addItem(raza);
+            dialogEdicionGanado.getCmbRazaMadre().addItem(raza);
         }
         
-        for (String raza : vacaDAO.retornarListadoDeRazas()) {
+        for (String raza : vacaDAO.getListaRazas()) {
             if (raza.equals(vaca.getRazaPadre())) {
                 continue;
             }
-            dialogEdicionGanado.getJcbRazaPadre().addItem(raza);
+            dialogEdicionGanado.getCmbRazaPadre().addItem(raza);
         }
     }
     
-    public Vaca leerDatosNuevos() {
-        return new Vaca(vaca.getCodigoInterno(),dialogEdicionGanado.getNombre(), vaca.getFechaNacimiento(), dialogEdicionGanado.getJcbRazaPadre().getSelectedItem().toString(), dialogEdicionGanado.getJcbRazaMadre().getSelectedItem().toString(), dialogEdicionGanado.getJcbEstado().getSelectedItem().toString(), dialogEdicionGanado.getDescripcion(), dialogEdicionGanado.getNumeroIdentificador(), Double.valueOf(dialogEdicionGanado.getPeso()), vaca.getDueño());
+    public Vaca construirNuevaVaca() {
+        String identificador = vaca.getIdentificador();
+        LocalDate fecha = vaca.getFechaNacimiento();
+        String nombre = dialogEdicionGanado.getNombre();
+        String razaPadre = dialogEdicionGanado.getRazaPadre();
+        String razaMadre = dialogEdicionGanado.getRazaMadre();
+        String estado = dialogEdicionGanado.getEstado();
+        Double peso = dialogEdicionGanado.getPeso();
+        String descripcion = dialogEdicionGanado.getDescripcion();
+
+        if (nombre == null || razaPadre == null || razaMadre == null
+                || estado == null || peso == null || descripcion == null) {
+
+            JOptionPane.showMessageDialog(dialogEdicionGanado,
+                    "Revise y complete correctamente los datos.");
+            return null;
+        }
+        
+        return new Vaca(identificador, nombre, fecha, razaPadre, razaMadre, estado, peso, descripcion, vaca.getIdPropietario());
     }
     
     public void editarDatos() {
-        if (vacaDAO.editarGanado(leerDatosNuevos())) {
+        Vaca nuevaVaca = construirNuevaVaca();
+        
+        if (nuevaVaca == null) {
+            return;
+        }
+        
+        if (vacaDAO.updateVaca(nuevaVaca, vaca.getIdInterno())) {
             JOptionPane.showMessageDialog(vistaPrincipal, "Se ha editado correctamente.");
             dialogEdicionGanado.dispose();
         } else {

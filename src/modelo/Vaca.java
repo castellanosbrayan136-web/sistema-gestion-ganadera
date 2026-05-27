@@ -36,7 +36,8 @@ public class Vaca {
         this.historialTratamientos = new ArrayList<>();
         this.registroProducciones = new ArrayList<>();
     }
-
+    
+    
     public UUID getIdInterno() {
         return idInterno;
     }

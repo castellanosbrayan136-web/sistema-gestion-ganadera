@@ -133,7 +133,7 @@ public class ScreenManager {
         dialogEdicionGanado.setLocationRelativeTo(vistaPrincipal);
         dialogEdicionGanado.setSize(590,775);
         
-        new controlador.ControdalorEdicionGanado(vistaPrincipal, dialogEdicionGanado, vacaDAO, vaca);
+        new controlador.ControladorEdicionGanado(vistaPrincipal, dialogEdicionGanado, vacaDAO, vaca);
         
         dialogEdicionGanado.setVisible(true);
     }

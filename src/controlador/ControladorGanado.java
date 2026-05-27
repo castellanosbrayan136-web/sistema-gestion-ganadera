@@ -12,9 +12,9 @@ import vista.VistaPrincipal;
 
 
 public class ControladorGanado implements ActionListener {
-    private PanelGanado panelGanado;
-    private Usuario usuario;
-    private VistaPrincipal vistaPrincipal;
+    private final PanelGanado panelGanado;
+    private final Usuario usuario;
+    private final VistaPrincipal vistaPrincipal;
 
     public ControladorGanado(PanelGanado panelGanado, Usuario usuario, VistaPrincipal vistaPrincipal) {
         this.panelGanado = panelGanado;
