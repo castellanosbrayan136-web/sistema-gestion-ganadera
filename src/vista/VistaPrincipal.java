@@ -33,32 +33,32 @@ public class VistaPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        bacgraund = new javax.swing.JPanel();
-        panelSideBar = new javax.swing.JPanel();
+        background = new javax.swing.JPanel();
+        pnlSideBar = new javax.swing.JPanel();
         btnFinanzas = new javax.swing.JButton();
         btnClientes = new javax.swing.JButton();
         btnProduccion = new javax.swing.JButton();
         btnInicio = new javax.swing.JButton();
         lblTituloSideBar = new javax.swing.JLabel();
-        panelLinea = new javax.swing.JPanel();
+        pnlLinea = new javax.swing.JPanel();
         btnSalir = new javax.swing.JButton();
         btnGanado = new javax.swing.JButton();
         btnReportes = new javax.swing.JButton();
         btnSanidad = new javax.swing.JButton();
-        panelHeader = new javax.swing.JPanel();
+        pnlHeader = new javax.swing.JPanel();
         lblFecha = new javax.swing.JLabel();
         lblUsuario = new javax.swing.JToggleButton();
         lblBienvenido = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
-        panelVacio4 = new javax.swing.JPanel();
+        pnlContenedor = new javax.swing.JPanel();
+        panelVacio = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        bacgraund.setBackground(new java.awt.Color(245, 245, 245));
+        background.setBackground(new java.awt.Color(245, 245, 245));
 
-        panelSideBar.setBackground(new java.awt.Color(24, 38, 63));
-        panelSideBar.setForeground(new java.awt.Color(46, 125, 50));
-        panelSideBar.setPreferredSize(new java.awt.Dimension(270, 892));
+        pnlSideBar.setBackground(new java.awt.Color(24, 38, 63));
+        pnlSideBar.setForeground(new java.awt.Color(46, 125, 50));
+        pnlSideBar.setPreferredSize(new java.awt.Dimension(270, 892));
 
         btnFinanzas.setBackground(new java.awt.Color(39, 51, 69));
         btnFinanzas.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -109,17 +109,17 @@ public class VistaPrincipal extends javax.swing.JFrame {
         lblTituloSideBar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTituloSideBar.setText("GanaDex");
 
-        panelLinea.setBackground(new java.awt.Color(245, 245, 245));
-        panelLinea.setPreferredSize(new java.awt.Dimension(0, 4));
+        pnlLinea.setBackground(new java.awt.Color(245, 245, 245));
+        pnlLinea.setPreferredSize(new java.awt.Dimension(0, 4));
 
-        javax.swing.GroupLayout panelLineaLayout = new javax.swing.GroupLayout(panelLinea);
-        panelLinea.setLayout(panelLineaLayout);
-        panelLineaLayout.setHorizontalGroup(
-            panelLineaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout pnlLineaLayout = new javax.swing.GroupLayout(pnlLinea);
+        pnlLinea.setLayout(pnlLineaLayout);
+        pnlLineaLayout.setHorizontalGroup(
+            pnlLineaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
         );
-        panelLineaLayout.setVerticalGroup(
-            panelLineaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        pnlLineaLayout.setVerticalGroup(
+            pnlLineaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 3, Short.MAX_VALUE)
         );
 
@@ -167,14 +167,14 @@ public class VistaPrincipal extends javax.swing.JFrame {
         btnSanidad.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         btnSanidad.setIconTextGap(15);
 
-        javax.swing.GroupLayout panelSideBarLayout = new javax.swing.GroupLayout(panelSideBar);
-        panelSideBar.setLayout(panelSideBarLayout);
-        panelSideBarLayout.setHorizontalGroup(
-            panelSideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout pnlSideBarLayout = new javax.swing.GroupLayout(pnlSideBar);
+        pnlSideBar.setLayout(pnlSideBarLayout);
+        pnlSideBarLayout.setHorizontalGroup(
+            pnlSideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(lblTituloSideBar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(panelSideBarLayout.createSequentialGroup()
+            .addGroup(pnlSideBarLayout.createSequentialGroup()
                 .addGap(50, 50, 50)
-                .addComponent(panelLinea, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+                .addComponent(pnlLinea, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
                 .addGap(50, 50, 50))
             .addComponent(btnInicio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(btnProduccion, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
@@ -185,17 +185,17 @@ public class VistaPrincipal extends javax.swing.JFrame {
             .addComponent(btnReportes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(btnSalir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
-        panelSideBarLayout.setVerticalGroup(
-            panelSideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelSideBarLayout.createSequentialGroup()
+        pnlSideBarLayout.setVerticalGroup(
+            pnlSideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlSideBarLayout.createSequentialGroup()
                 .addGap(60, 60, 60)
                 .addComponent(lblTituloSideBar, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(6, 6, 6)
-                .addComponent(panelLinea, javax.swing.GroupLayout.PREFERRED_SIZE, 3, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pnlLinea, javax.swing.GroupLayout.PREFERRED_SIZE, 3, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(60, 60, 60)
                 .addComponent(btnInicio, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(panelSideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelSideBarLayout.createSequentialGroup()
+                .addGroup(pnlSideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlSideBarLayout.createSequentialGroup()
                         .addGap(57, 57, 57)
                         .addComponent(btnProduccion, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(btnGanado, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -210,7 +210,7 @@ public class VistaPrincipal extends javax.swing.JFrame {
                 .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        panelHeader.setBackground(new java.awt.Color(97, 120, 148));
+        pnlHeader.setBackground(new java.awt.Color(97, 120, 148));
 
         lblFecha.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         lblFecha.setForeground(new java.awt.Color(255, 255, 255));
@@ -225,20 +225,20 @@ public class VistaPrincipal extends javax.swing.JFrame {
         lblUsuario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lblUsuario.setIconTextGap(12);
 
-        javax.swing.GroupLayout panelHeaderLayout = new javax.swing.GroupLayout(panelHeader);
-        panelHeader.setLayout(panelHeaderLayout);
-        panelHeaderLayout.setHorizontalGroup(
-            panelHeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelHeaderLayout.createSequentialGroup()
+        javax.swing.GroupLayout pnlHeaderLayout = new javax.swing.GroupLayout(pnlHeader);
+        pnlHeader.setLayout(pnlHeaderLayout);
+        pnlHeaderLayout.setHorizontalGroup(
+            pnlHeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlHeaderLayout.createSequentialGroup()
                 .addGap(40, 40, 40)
                 .addComponent(lblFecha, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(190, 190, 190)
                 .addComponent(lblUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        panelHeaderLayout.setVerticalGroup(
-            panelHeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        pnlHeaderLayout.setVerticalGroup(
+            pnlHeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(lblFecha, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGroup(panelHeaderLayout.createSequentialGroup()
+            .addGroup(pnlHeaderLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lblUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -248,71 +248,71 @@ public class VistaPrincipal extends javax.swing.JFrame {
         lblBienvenido.setForeground(new java.awt.Color(0, 0, 0));
         lblBienvenido.setText("Bienvenido!");
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        pnlContenedor.setBackground(new java.awt.Color(255, 255, 255));
 
-        javax.swing.GroupLayout panelVacio4Layout = new javax.swing.GroupLayout(panelVacio4);
-        panelVacio4.setLayout(panelVacio4Layout);
-        panelVacio4Layout.setHorizontalGroup(
-            panelVacio4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout panelVacioLayout = new javax.swing.GroupLayout(panelVacio);
+        panelVacio.setLayout(panelVacioLayout);
+        panelVacioLayout.setHorizontalGroup(
+            panelVacioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
         );
-        panelVacio4Layout.setVerticalGroup(
-            panelVacio4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        panelVacioLayout.setVerticalGroup(
+            panelVacioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout pnlContenedorLayout = new javax.swing.GroupLayout(pnlContenedor);
+        pnlContenedor.setLayout(pnlContenedorLayout);
+        pnlContenedorLayout.setHorizontalGroup(
+            pnlContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlContenedorLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(panelVacio4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(panelVacio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        pnlContenedorLayout.setVerticalGroup(
+            pnlContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlContenedorLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(panelVacio4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(panelVacio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        javax.swing.GroupLayout bacgraundLayout = new javax.swing.GroupLayout(bacgraund);
-        bacgraund.setLayout(bacgraundLayout);
-        bacgraundLayout.setHorizontalGroup(
-            bacgraundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(bacgraundLayout.createSequentialGroup()
-                .addComponent(panelSideBar, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(bacgraundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(bacgraundLayout.createSequentialGroup()
+        javax.swing.GroupLayout backgroundLayout = new javax.swing.GroupLayout(background);
+        background.setLayout(backgroundLayout);
+        backgroundLayout.setHorizontalGroup(
+            backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(backgroundLayout.createSequentialGroup()
+                .addComponent(pnlSideBar, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(backgroundLayout.createSequentialGroup()
                         .addGap(6, 6, 6)
                         .addComponent(lblBienvenido, javax.swing.GroupLayout.DEFAULT_SIZE, 215, Short.MAX_VALUE)
                         .addGap(919, 919, 919))
-                    .addComponent(panelHeader, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(pnlHeader, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pnlContenedor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
-        bacgraundLayout.setVerticalGroup(
-            bacgraundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelSideBar, javax.swing.GroupLayout.DEFAULT_SIZE, 900, Short.MAX_VALUE)
-            .addGroup(bacgraundLayout.createSequentialGroup()
+        backgroundLayout.setVerticalGroup(
+            backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(pnlSideBar, javax.swing.GroupLayout.DEFAULT_SIZE, 900, Short.MAX_VALUE)
+            .addGroup(backgroundLayout.createSequentialGroup()
                 .addGap(12, 12, 12)
                 .addComponent(lblBienvenido, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(12, 12, 12)
-                .addComponent(panelHeader, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pnlHeader, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(pnlContenedor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(bacgraund, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(background, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(bacgraund, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(background, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -342,15 +342,7 @@ public class VistaPrincipal extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> new VistaPrincipal().setVisible(true));
-    }
-
-    public JPanel getPanelSideBar() {
-        return panelSideBar;
-    }
-
-    public JPanel getBacgraund() {
-        return bacgraund;
-    }    
+    }  
 
     public JButton getBtnSanidad() {
         return btnSanidad;
@@ -389,7 +381,7 @@ public class VistaPrincipal extends javax.swing.JFrame {
     }
 
     public JPanel getPanelVacio() {
-        return panelVacio4;
+        return panelVacio;
     }
 
     public void setLblFecha(String diaDeLaSemana, String numeroDia, String mes, String año) {
@@ -403,7 +395,7 @@ public class VistaPrincipal extends javax.swing.JFrame {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel bacgraund;
+    private javax.swing.JPanel background;
     private javax.swing.JButton btnClientes;
     private javax.swing.JButton btnFinanzas;
     private javax.swing.JButton btnGanado;
@@ -412,18 +404,14 @@ public class VistaPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton btnReportes;
     private javax.swing.JButton btnSalir;
     private javax.swing.JButton btnSanidad;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblBienvenido;
     private javax.swing.JLabel lblFecha;
     private javax.swing.JLabel lblTituloSideBar;
     private javax.swing.JToggleButton lblUsuario;
-    private javax.swing.JPanel panelHeader;
-    private javax.swing.JPanel panelLinea;
-    private javax.swing.JPanel panelSideBar;
     private javax.swing.JPanel panelVacio;
-    private javax.swing.JPanel panelVacio1;
-    private javax.swing.JPanel panelVacio2;
-    private javax.swing.JPanel panelVacio3;
-    private javax.swing.JPanel panelVacio4;
+    private javax.swing.JPanel pnlContenedor;
+    private javax.swing.JPanel pnlHeader;
+    private javax.swing.JPanel pnlLinea;
+    private javax.swing.JPanel pnlSideBar;
     // End of variables declaration//GEN-END:variables
 }

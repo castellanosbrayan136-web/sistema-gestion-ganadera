@@ -23,17 +23,17 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="bacgraund" alignment="0" max="32767" attributes="0"/>
+          <Component id="background" alignment="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="bacgraund" alignment="1" max="32767" attributes="0"/>
+          <Component id="background" alignment="1" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Container class="javax.swing.JPanel" name="bacgraund">
+    <Container class="javax.swing.JPanel" name="background">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="f5" green="f5" red="f5" type="rgb"/>
@@ -44,35 +44,35 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
-                  <Component id="panelSideBar" min="-2" pref="300" max="-2" attributes="0"/>
+                  <Component id="pnlSideBar" min="-2" pref="300" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
                           <Component id="lblBienvenido" pref="215" max="32767" attributes="0"/>
                           <EmptySpace min="919" pref="919" max="-2" attributes="0"/>
                       </Group>
-                      <Component id="panelHeader" max="32767" attributes="0"/>
-                      <Component id="jPanel1" max="32767" attributes="0"/>
+                      <Component id="pnlHeader" max="32767" attributes="0"/>
+                      <Component id="pnlContenedor" max="32767" attributes="0"/>
                   </Group>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="panelSideBar" pref="900" max="32767" attributes="0"/>
+              <Component id="pnlSideBar" pref="900" max="32767" attributes="0"/>
               <Group type="102" attributes="0">
                   <EmptySpace min="12" pref="12" max="-2" attributes="0"/>
                   <Component id="lblBienvenido" min="-2" pref="26" max="-2" attributes="0"/>
                   <EmptySpace min="12" pref="12" max="-2" attributes="0"/>
-                  <Component id="panelHeader" min="-2" max="-2" attributes="0"/>
+                  <Component id="pnlHeader" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                  <Component id="jPanel1" max="32767" attributes="0"/>
+                  <Component id="pnlContenedor" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Container class="javax.swing.JPanel" name="panelSideBar">
+        <Container class="javax.swing.JPanel" name="pnlSideBar">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="3f" green="26" red="18" type="rgb"/>
@@ -91,7 +91,7 @@
                   <Component id="lblTituloSideBar" max="32767" attributes="0"/>
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
-                      <Component id="panelLinea" pref="200" max="32767" attributes="0"/>
+                      <Component id="pnlLinea" pref="200" max="32767" attributes="0"/>
                       <EmptySpace min="50" pref="50" max="-2" attributes="0"/>
                   </Group>
                   <Component id="btnInicio" max="32767" attributes="0"/>
@@ -110,7 +110,7 @@
                       <EmptySpace min="60" pref="60" max="-2" attributes="0"/>
                       <Component id="lblTituloSideBar" min="-2" pref="54" max="-2" attributes="0"/>
                       <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Component id="panelLinea" min="-2" pref="3" max="-2" attributes="0"/>
+                      <Component id="pnlLinea" min="-2" pref="3" max="-2" attributes="0"/>
                       <EmptySpace min="60" pref="60" max="-2" attributes="0"/>
                       <Component id="btnInicio" min="-2" pref="60" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -258,7 +258,7 @@
                 <Property name="text" type="java.lang.String" value="GanaDex"/>
               </Properties>
             </Component>
-            <Container class="javax.swing.JPanel" name="panelLinea">
+            <Container class="javax.swing.JPanel" name="pnlLinea">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="f5" green="f5" red="f5" type="rgb"/>
@@ -395,7 +395,7 @@
             </Component>
           </SubComponents>
         </Container>
-        <Container class="javax.swing.JPanel" name="panelHeader">
+        <Container class="javax.swing.JPanel" name="pnlHeader">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="94" green="78" red="61" type="rgb"/>
@@ -473,7 +473,7 @@
             <Property name="text" type="java.lang.String" value="Bienvenido!"/>
           </Properties>
         </Component>
-        <Container class="javax.swing.JPanel" name="jPanel1">
+        <Container class="javax.swing.JPanel" name="pnlContenedor">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -485,7 +485,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="panelVacio4" max="32767" attributes="0"/>
+                      <Component id="panelVacio" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -494,14 +494,14 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="panelVacio4" max="32767" attributes="0"/>
+                      <Component id="panelVacio" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Container class="javax.swing.JPanel" name="panelVacio4">
+            <Container class="javax.swing.JPanel" name="panelVacio">
 
               <Layout>
                 <DimensionLayout dim="0">

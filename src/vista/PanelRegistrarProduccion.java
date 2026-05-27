@@ -4,9 +4,9 @@
  */
 package vista;
 
+import java.time.LocalDate;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
-import javax.swing.JSpinner;
 import modelo.Vaca;
 
 /**
@@ -31,241 +31,290 @@ public class PanelRegistrarProduccion extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        panelRegistrarGanado = new javax.swing.JPanel();
-        jblTitle = new javax.swing.JLabel();
-        jblFechaTratamiento = new javax.swing.JLabel();
-        jblTipoDeTratamiento = new javax.swing.JLabel();
-        jblMensajeFecha = new javax.swing.JLabel();
-        jblMensajeRazas = new javax.swing.JLabel();
-        jblMensajeEstadoProduccion = new javax.swing.JLabel();
-        jcbAnimalAAplicar = new javax.swing.JComboBox<>();
-        jcbMes = new javax.swing.JComboBox<>();
-        jcbDia = new javax.swing.JComboBox<>();
-        jcbAño = new javax.swing.JComboBox<>();
-        jcbTipoTratamiento = new javax.swing.JComboBox<>();
+        background = new javax.swing.JPanel();
+        lblTitulo = new javax.swing.JLabel();
+        lblFecha = new javax.swing.JLabel();
+        lblJornada = new javax.swing.JLabel();
+        lblMensajeFecha = new javax.swing.JLabel();
+        lblMensajeJornada = new javax.swing.JLabel();
+        lblMensajeLitros = new javax.swing.JLabel();
+        cmbVacas = new javax.swing.JComboBox<>();
+        cmbMes = new javax.swing.JComboBox<>();
+        cmbDia = new javax.swing.JComboBox<>();
+        cmbAño = new javax.swing.JComboBox<>();
+        cmbJornada = new javax.swing.JComboBox<>();
         btnRegistrar = new javax.swing.JButton();
-        jblAnimalAAplicar = new javax.swing.JLabel();
-        jblMedicamento = new javax.swing.JLabel();
-        jblMensajeNombre1 = new javax.swing.JLabel();
-        spinLitros = new javax.swing.JSpinner();
-        jLabel1 = new javax.swing.JLabel();
+        lblVaca = new javax.swing.JLabel();
+        lblLitrosProducidos = new javax.swing.JLabel();
+        lblMensajeVaca = new javax.swing.JLabel();
+        spnLitros = new javax.swing.JSpinner();
+        lblImagen = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
-        panelRegistrarGanado.setBackground(new java.awt.Color(255, 255, 255));
+        background.setBackground(new java.awt.Color(255, 255, 255));
 
-        jblTitle.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jblTitle.setForeground(new java.awt.Color(0, 0, 0));
-        jblTitle.setText("Registro producción");
+        lblTitulo.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        lblTitulo.setForeground(new java.awt.Color(0, 0, 0));
+        lblTitulo.setText("Registro producción");
 
-        jblFechaTratamiento.setBackground(new java.awt.Color(0, 0, 0));
-        jblFechaTratamiento.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jblFechaTratamiento.setForeground(new java.awt.Color(0, 0, 0));
-        jblFechaTratamiento.setText("Fecha");
+        lblFecha.setBackground(new java.awt.Color(0, 0, 0));
+        lblFecha.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblFecha.setForeground(new java.awt.Color(0, 0, 0));
+        lblFecha.setText("Fecha");
 
-        jblTipoDeTratamiento.setBackground(new java.awt.Color(0, 0, 0));
-        jblTipoDeTratamiento.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jblTipoDeTratamiento.setForeground(new java.awt.Color(0, 0, 0));
-        jblTipoDeTratamiento.setText("Jornada");
+        lblJornada.setBackground(new java.awt.Color(0, 0, 0));
+        lblJornada.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblJornada.setForeground(new java.awt.Color(0, 0, 0));
+        lblJornada.setText("Jornada");
 
-        jblMensajeFecha.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jblMensajeFecha.setForeground(new java.awt.Color(204, 0, 51));
+        lblMensajeFecha.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lblMensajeFecha.setForeground(new java.awt.Color(204, 0, 51));
 
-        jblMensajeRazas.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jblMensajeRazas.setForeground(new java.awt.Color(204, 0, 51));
+        lblMensajeJornada.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lblMensajeJornada.setForeground(new java.awt.Color(204, 0, 51));
 
-        jblMensajeEstadoProduccion.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jblMensajeEstadoProduccion.setForeground(new java.awt.Color(204, 0, 51));
+        lblMensajeLitros.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lblMensajeLitros.setForeground(new java.awt.Color(204, 0, 51));
 
-        jcbAnimalAAplicar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jcbAnimalAAplicar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        cmbVacas.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        cmbVacas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        jcbMes.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jcbMes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Mes" }));
-        jcbMes.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        cmbMes.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        cmbMes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Mes" }));
+        cmbMes.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        jcbDia.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jcbDia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Día" }));
-        jcbDia.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        cmbDia.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        cmbDia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Día" }));
+        cmbDia.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        jcbAño.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jcbAño.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Año" }));
-        jcbAño.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jcbAño.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jcbAñoActionPerformed(evt);
-            }
-        });
+        cmbAño.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        cmbAño.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Año" }));
+        cmbAño.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        jcbTipoTratamiento.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jcbTipoTratamiento.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Mañana", "Tarde" }));
-        jcbTipoTratamiento.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jcbTipoTratamiento.setMaximumSize(new java.awt.Dimension(138, 50));
-        jcbTipoTratamiento.setMinimumSize(new java.awt.Dimension(137, 49));
+        cmbJornada.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        cmbJornada.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Jornada", "Mañana", "Tarde" }));
+        cmbJornada.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        cmbJornada.setMaximumSize(new java.awt.Dimension(138, 50));
+        cmbJornada.setMinimumSize(new java.awt.Dimension(137, 49));
 
         btnRegistrar.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         btnRegistrar.setText("REGISTRAR");
         btnRegistrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        jblAnimalAAplicar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jblAnimalAAplicar.setForeground(new java.awt.Color(0, 0, 0));
-        jblAnimalAAplicar.setText("Vaca:");
+        lblVaca.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblVaca.setForeground(new java.awt.Color(0, 0, 0));
+        lblVaca.setText("Vaca:");
 
-        jblMedicamento.setBackground(new java.awt.Color(0, 0, 0));
-        jblMedicamento.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jblMedicamento.setForeground(new java.awt.Color(0, 0, 0));
-        jblMedicamento.setText("Litros producidos");
+        lblLitrosProducidos.setBackground(new java.awt.Color(0, 0, 0));
+        lblLitrosProducidos.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblLitrosProducidos.setForeground(new java.awt.Color(0, 0, 0));
+        lblLitrosProducidos.setText("Litros producidos");
 
-        jblMensajeNombre1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jblMensajeNombre1.setForeground(new java.awt.Color(204, 0, 51));
+        lblMensajeVaca.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lblMensajeVaca.setForeground(new java.awt.Color(204, 0, 51));
 
-        spinLitros.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
+        spnLitros.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
 
-        javax.swing.GroupLayout panelRegistrarGanadoLayout = new javax.swing.GroupLayout(panelRegistrarGanado);
-        panelRegistrarGanado.setLayout(panelRegistrarGanadoLayout);
-        panelRegistrarGanadoLayout.setHorizontalGroup(
-            panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelRegistrarGanadoLayout.createSequentialGroup()
+        javax.swing.GroupLayout backgroundLayout = new javax.swing.GroupLayout(background);
+        background.setLayout(backgroundLayout);
+        backgroundLayout.setHorizontalGroup(
+            backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(backgroundLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelRegistrarGanadoLayout.createSequentialGroup()
-                        .addComponent(jcbAño, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(backgroundLayout.createSequentialGroup()
+                        .addComponent(cmbAño, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jcbMes, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(cmbMes, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jcbDia, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jblMensajeFecha, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jblTipoDeTratamiento, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jblMensajeRazas, javax.swing.GroupLayout.PREFERRED_SIZE, 322, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jblMedicamento, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jblMensajeEstadoProduccion, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(cmbDia, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblMensajeFecha, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblJornada, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblMensajeJornada, javax.swing.GroupLayout.PREFERRED_SIZE, 322, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblLitrosProducidos, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblMensajeLitros, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(panelRegistrarGanadoLayout.createSequentialGroup()
+                    .addGroup(backgroundLayout.createSequentialGroup()
                         .addGap(6, 6, 6)
-                        .addComponent(jblAnimalAAplicar, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jcbTipoTratamiento, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(spinLitros, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jblTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 415, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jcbAnimalAAplicar, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jblFechaTratamiento, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 314, Short.MAX_VALUE)
-                        .addComponent(jblMensajeNombre1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(lblVaca, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(spnLitros, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 415, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cmbVacas, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(lblFecha, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 314, Short.MAX_VALUE)
+                        .addComponent(lblMensajeVaca, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGap(72, 72, 72))
+            .addGroup(backgroundLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(cmbJornada, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        panelRegistrarGanadoLayout.setVerticalGroup(
-            panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelRegistrarGanadoLayout.createSequentialGroup()
+        backgroundLayout.setVerticalGroup(
+            backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(backgroundLayout.createSequentialGroup()
                 .addGap(18, 18, 18)
-                .addComponent(jblTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jblAnimalAAplicar, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblVaca, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(9, 9, 9)
-                .addComponent(jcbAnimalAAplicar, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(cmbVacas, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jblMensajeNombre1, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblMensajeVaca, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jblFechaTratamiento)
+                .addComponent(lblFecha)
                 .addGap(23, 23, 23)
-                .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jcbAño, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jcbMes, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jcbDia, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(cmbAño, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cmbMes, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cmbDia, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(6, 6, 6)
-                .addComponent(jblMensajeFecha, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblMensajeFecha, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jblTipoDeTratamiento)
+                .addComponent(lblJornada)
                 .addGap(6, 6, 6)
-                .addComponent(jcbTipoTratamiento, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(cmbJornada, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(6, 6, 6)
-                .addComponent(jblMensajeRazas, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblMensajeJornada, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jblMedicamento)
+                .addComponent(lblLitrosProducidos)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(spinLitros, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(spnLitros, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jblMensajeEstadoProduccion, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblMensajeLitros, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btnRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(43, Short.MAX_VALUE))
         );
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/folder/diseno-logotipo-farmer-vector_410429-3889.jpg"))); // NOI18N
+        lblImagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/folder/ChatGPT Image 26 may 2026, 14_10_43 (1).png"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addComponent(panelRegistrarGanado, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 131, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 399, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap()
+                .addComponent(background, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(lblImagen, javax.swing.GroupLayout.DEFAULT_SIZE, 517, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(30, 30, 30)
-                .addComponent(panelRegistrarGanado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(background, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(52, 52, 52))
             .addGroup(layout.createSequentialGroup()
-                .addGap(161, 161, 161)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 401, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(65, 65, 65)
+                .addComponent(lblImagen)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jcbAñoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbAñoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jcbAñoActionPerformed
 
     public JButton getBtnRegistrar() {
         return btnRegistrar;
     }
 
-    public JComboBox<Vaca> getJcbAnimal() {
-        return jcbAnimalAAplicar;
+    public JComboBox<String> getCmbAño() {
+        return cmbAño;
     }
 
-    public JComboBox<String> getJcbAño() {
-        return jcbAño;
+    public JComboBox<String> getCmbDia() {
+        return cmbDia;
     }
 
-    public JComboBox<String> getJcbDia() {
-        return jcbDia;
+    public JComboBox<String> getCmbJornada() {
+        return cmbJornada;
     }
 
-    public JComboBox<String> getJcbJornada() {
-        return jcbTipoTratamiento;
+    public JComboBox<String> getCmbMes() {
+        return cmbMes;
     }
 
-    public JComboBox<String> getJcbMes() {
-        return jcbMes;
+    public JComboBox<Vaca> getCmbVacas() {
+        return cmbVacas;
     }
 
     public Integer getLitros() {
-        return (Integer) spinLitros.getValue();
+        return (Integer) spnLitros.getValue();
+    }
+    
+    public Vaca getVaca() {
+        return (Vaca) cmbVacas.getSelectedItem();
+    }
+    
+    private int getAño() {
+        return convertirAInt((String) cmbAño.getSelectedItem());
+    }
+    
+    private int getMes() {
+        return cmbMes.getSelectedIndex();
+    }
+    
+    private int getDia() {
+        return convertirAInt((String) cmbDia.getSelectedItem());
+    }
+    
+    public LocalDate getFecha() {
+        int año = getAño();
+        int mes = getMes();
+        int dia = getDia();
+        
+        if (año != -1 && mes != 0 && dia != -1) {
+            return LocalDate.of(año, mes, dia);
+        }
+        return null;
+    }
+    
+    public String getJornada() {
+        String fecha = (String) cmbJornada.getSelectedItem();
+        return (!fecha.equals("Jornada")) ? fecha : null;
+    }
+    
+    private int convertirAInt(String texto) {
+        try {
+            return Integer.parseInt(texto);
+        } catch (NumberFormatException ex) {
+            return -1;
+        }
     }
 
-    
+    public void setLblMensajeFecha(String mensajeFecha) {
+        this.lblMensajeFecha.setText(mensajeFecha);
+    }
+
+    public void setLblMensajeJornada(String mensajeJornada) {
+        this.lblMensajeJornada.setText(mensajeJornada);
+    }
+
+    public void setLblMensajeLitros(String mensajeLitros) {
+        this.lblMensajeLitros.setText(mensajeLitros);
+    }
+
+    public void setLblMensajeVaca(String mensajeVaca) {
+        this.lblMensajeVaca.setText(mensajeVaca);
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel background;
     private javax.swing.JButton btnRegistrar;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jblAnimalAAplicar;
-    private javax.swing.JLabel jblFechaTratamiento;
-    private javax.swing.JLabel jblMedicamento;
-    private javax.swing.JLabel jblMensajeEstadoProduccion;
-    private javax.swing.JLabel jblMensajeFecha;
-    private javax.swing.JLabel jblMensajeNombre1;
-    private javax.swing.JLabel jblMensajeRazas;
-    private javax.swing.JLabel jblTipoDeTratamiento;
-    private javax.swing.JLabel jblTitle;
-    private javax.swing.JComboBox<Vaca> jcbAnimalAAplicar;
-    private javax.swing.JComboBox<String> jcbAño;
-    private javax.swing.JComboBox<String> jcbDia;
-    private javax.swing.JComboBox<String> jcbMes;
-    private javax.swing.JComboBox<String> jcbTipoTratamiento;
-    private javax.swing.JPanel panelRegistrarGanado;
-    private javax.swing.JSpinner spinLitros;
+    private javax.swing.JComboBox<String> cmbAño;
+    private javax.swing.JComboBox<String> cmbDia;
+    private javax.swing.JComboBox<String> cmbJornada;
+    private javax.swing.JComboBox<String> cmbMes;
+    private javax.swing.JComboBox<Vaca> cmbVacas;
+    private javax.swing.JLabel lblFecha;
+    private javax.swing.JLabel lblImagen;
+    private javax.swing.JLabel lblJornada;
+    private javax.swing.JLabel lblLitrosProducidos;
+    private javax.swing.JLabel lblMensajeFecha;
+    private javax.swing.JLabel lblMensajeJornada;
+    private javax.swing.JLabel lblMensajeLitros;
+    private javax.swing.JLabel lblMensajeVaca;
+    private javax.swing.JLabel lblTitulo;
+    private javax.swing.JLabel lblVaca;
+    private javax.swing.JSpinner spnLitros;
     // End of variables declaration//GEN-END:variables
 }

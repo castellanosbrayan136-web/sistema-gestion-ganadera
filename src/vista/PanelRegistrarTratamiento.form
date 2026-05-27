@@ -16,17 +16,17 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="panelRegistrarGanado" alignment="0" max="32767" attributes="0"/>
+          <Component id="background" alignment="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="panelRegistrarGanado" alignment="0" max="32767" attributes="0"/>
+          <Component id="background" alignment="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Container class="javax.swing.JPanel" name="panelRegistrarGanado">
+    <Container class="javax.swing.JPanel" name="background">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="f5" green="f5" red="f5" type="rgb"/>
@@ -38,57 +38,54 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jblId" min="-2" pref="316" max="-2" attributes="0"/>
                       <Group type="102" attributes="0">
-                          <Component id="txtId" min="-2" pref="316" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="243" max="-2" attributes="0"/>
+                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                          <Component id="lblTitulo" min="-2" pref="634" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Component id="lblAnimalAplicar" min="-2" pref="300" max="-2" attributes="0"/>
+                          <EmptySpace min="259" pref="259" max="-2" attributes="0"/>
+                          <Component id="lblDosis" min="-2" pref="205" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Component id="cmbVacas" min="-2" pref="260" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="299" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="txtDosis" min="-2" pref="205" max="-2" attributes="0"/>
-                              <Component id="jblDosis" alignment="0" min="-2" pref="205" max="-2" attributes="0"/>
+                              <Component id="lblMensajeDosis" min="-2" pref="316" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                  </Group>
-                  <EmptySpace max="32767" attributes="0"/>
-              </Group>
-              <Group type="102" alignment="0" attributes="0">
-                  <Group type="103" groupAlignment="1" attributes="0">
-                      <Component id="jblObservaciones" alignment="1" min="-2" pref="302" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jblMensajeNombre" min="-2" pref="316" max="-2" attributes="0"/>
-                          <Group type="102" attributes="0">
-                              <Component id="jcbAño" min="-2" pref="95" max="-2" attributes="0"/>
-                              <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
-                              <Component id="jcbMes" min="-2" pref="92" max="-2" attributes="0"/>
-                              <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
-                              <Component id="jcbDia" min="-2" pref="98" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="jblMensajeFecha" min="-2" pref="316" max="-2" attributes="0"/>
-                          <Component id="jblTipoDeTratamiento" min="-2" pref="300" max="-2" attributes="0"/>
-                          <Component id="jblMensajeRazas" min="-2" pref="322" max="-2" attributes="0"/>
-                          <Component id="jblMedicamento" min="-2" pref="300" max="-2" attributes="0"/>
-                          <Component id="txtMedicamento" min="-2" pref="316" max="-2" attributes="0"/>
-                          <Component id="jblMensajeEstadoProduccion" min="-2" pref="316" max="-2" attributes="0"/>
-                          <Component id="btnRegistrar" min="-2" pref="200" max="-2" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jblTitle" min="-2" pref="634" max="-2" attributes="0"/>
-                                  <Component id="jblAnimalAAplicar" min="-2" pref="310" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jcbAnimalAAplicar" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
-                                  <Component id="jblMensajeNombre1" alignment="0" min="-2" pref="314" max="-2" attributes="0"/>
-                                  <Component id="jblFechaTratamiento" alignment="0" min="-2" pref="487" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
-                              <Component id="jScrollPane1" min="-2" pref="302" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="jcbTipoTratamiento" alignment="0" min="-2" pref="192" max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <Component id="lblIdTratamiento" min="-2" pref="316" max="-2" attributes="0"/>
+                          <EmptySpace min="243" pref="243" max="-2" attributes="0"/>
+                          <Component id="lblObservaciones" min="-2" pref="302" max="-2" attributes="0"/>
                       </Group>
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="txtIdentificador" min="-2" pref="316" max="-2" attributes="0"/>
+                              <Component id="lblMensajeIdTratamiento" min="-2" pref="316" max="-2" attributes="0"/>
+                              <Component id="lblFecha" min="-2" pref="487" max="-2" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <Component id="cmbAño" min="-2" pref="95" max="-2" attributes="0"/>
+                                  <EmptySpace min="15" pref="15" max="-2" attributes="0"/>
+                                  <Component id="cmbMes" min="-2" pref="92" max="-2" attributes="0"/>
+                                  <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
+                                  <Component id="cmbDia" min="-2" pref="98" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace min="72" pref="72" max="-2" attributes="0"/>
+                          <Component id="jScrollPane1" min="-2" pref="302" max="-2" attributes="0"/>
+                      </Group>
+                      <Component id="lblMensajeFecha" min="-2" pref="316" max="-2" attributes="0"/>
+                      <Component id="lblTipoTratamiento" min="-2" pref="300" max="-2" attributes="0"/>
+                      <Component id="lblMensajeTratamientos" min="-2" pref="322" max="-2" attributes="0"/>
+                      <Component id="lblMedicamento" min="-2" pref="300" max="-2" attributes="0"/>
+                      <Component id="txtMedicamento" min="-2" pref="316" max="-2" attributes="0"/>
+                      <Component id="lblMensajeMedicamento" min="-2" pref="316" max="-2" attributes="0"/>
+                      <Component id="btnRegistrar" min="-2" pref="200" max="-2" attributes="0"/>
+                      <Component id="cmbTratamientos" alignment="0" min="-2" pref="260" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="0" pref="123" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="109" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -96,64 +93,78 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                  <Component id="jblTitle" min="-2" pref="46" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jblId" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
-                      <Component id="jblDosis" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
+                  <Component id="lblTitulo" min="-2" pref="46" max="-2" attributes="0"/>
+                  <EmptySpace min="28" pref="28" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="lblAnimalAplicar" min="-2" pref="19" max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="2" pref="2" max="-2" attributes="0"/>
+                          <Component id="lblDosis" min="-2" pref="19" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
                   <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="txtId" alignment="3" min="-2" pref="46" max="-2" attributes="0"/>
-                      <Component id="txtDosis" alignment="3" min="-2" pref="46" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="4" pref="4" max="-2" attributes="0"/>
-                  <Component id="jblMensajeNombre" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jblAnimalAAplicar" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
-                      <Component id="jblObservaciones" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <Component id="jcbAnimalAAplicar" min="-2" pref="50" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jblMensajeNombre1" min="-2" pref="16" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jblFechaTratamiento" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="3" pref="3" max="-2" attributes="0"/>
+                          <Component id="cmbVacas" min="-2" pref="50" max="-2" attributes="0"/>
                       </Group>
-                      <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <Component id="txtDosis" min="-2" pref="46" max="-2" attributes="0"/>
+                          <EmptySpace min="4" pref="4" max="-2" attributes="0"/>
+                          <Component id="lblMensajeDosis" min="-2" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
-                  <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                  <EmptySpace min="9" pref="9" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jcbAño" min="-2" pref="45" max="-2" attributes="0"/>
-                      <Component id="jcbMes" min="-2" pref="45" max="-2" attributes="0"/>
-                      <Component id="jcbDia" min="-2" pref="45" max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="8" pref="8" max="-2" attributes="0"/>
+                          <Component id="lblIdTratamiento" min="-2" pref="19" max="-2" attributes="0"/>
+                      </Group>
+                      <Component id="lblObservaciones" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                  <Component id="jblMensajeFecha" min="-2" pref="16" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" max="-2" attributes="0"/>
-                  <Component id="jblTipoDeTratamiento" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                  <Component id="jcbTipoTratamiento" min="-2" pref="50" max="-2" attributes="0"/>
-                  <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                  <Component id="jblMensajeRazas" min="-2" pref="16" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" max="-2" attributes="0"/>
-                  <Component id="jblMedicamento" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                  <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Component id="txtIdentificador" min="-2" pref="46" max="-2" attributes="0"/>
+                          <EmptySpace min="4" pref="4" max="-2" attributes="0"/>
+                          <Component id="lblMensajeIdTratamiento" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="4" pref="4" max="-2" attributes="0"/>
+                          <Component id="lblFecha" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="5" pref="5" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="cmbAño" min="-2" pref="45" max="-2" attributes="0"/>
+                              <Component id="cmbMes" min="-2" pref="45" max="-2" attributes="0"/>
+                              <Component id="cmbDia" min="-2" pref="45" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="3" pref="3" max="-2" attributes="0"/>
+                          <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace min="5" pref="5" max="-2" attributes="0"/>
+                  <Component id="lblMensajeFecha" min="-2" pref="16" max="-2" attributes="0"/>
+                  <EmptySpace min="24" pref="24" max="-2" attributes="0"/>
+                  <Component id="lblTipoTratamiento" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="5" pref="5" max="-2" attributes="0"/>
+                  <Component id="cmbTratamientos" min="-2" pref="50" max="-2" attributes="0"/>
+                  <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="lblMensajeTratamientos" min="-2" pref="16" max="-2" attributes="0"/>
+                      <Component id="lblMedicamento" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="5" pref="5" max="-2" attributes="0"/>
                   <Component id="txtMedicamento" min="-2" pref="46" max="-2" attributes="0"/>
-                  <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                  <Component id="jblMensajeEstadoProduccion" min="-2" pref="16" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="4" pref="4" max="-2" attributes="0"/>
+                  <Component id="lblMensajeMedicamento" min="-2" pref="16" max="-2" attributes="0"/>
+                  <EmptySpace min="34" pref="34" max="-2" attributes="0"/>
                   <Component id="btnRegistrar" min="-2" pref="70" max="-2" attributes="0"/>
-                  <EmptySpace pref="20" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="jblTitle">
+        <Component class="javax.swing.JLabel" name="lblTitulo">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="36" style="1"/>
@@ -164,7 +175,7 @@
             <Property name="text" type="java.lang.String" value="Registro veterinario"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jblFechaTratamiento">
+        <Component class="javax.swing.JLabel" name="lblFecha">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="0" type="rgb"/>
@@ -175,10 +186,10 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Fecha del tratamiento"/>
+            <Property name="text" type="java.lang.String" value="Fecha"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jblTipoDeTratamiento">
+        <Component class="javax.swing.JLabel" name="lblTipoTratamiento">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="0" type="rgb"/>
@@ -189,10 +200,10 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Tipo de tratamiento"/>
+            <Property name="text" type="java.lang.String" value="Tratamiento"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jblMensajeNombre">
+        <Component class="javax.swing.JLabel" name="lblMensajeIdTratamiento">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="12" style="1"/>
@@ -203,7 +214,7 @@
             <Property name="text" type="java.lang.String" value="&#xa;"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jblMensajeFecha">
+        <Component class="javax.swing.JLabel" name="lblMensajeFecha">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="12" style="1"/>
@@ -213,7 +224,7 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jblMensajeRazas">
+        <Component class="javax.swing.JLabel" name="lblMensajeTratamientos">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="12" style="1"/>
@@ -223,7 +234,7 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jblMensajeEstadoProduccion">
+        <Component class="javax.swing.JLabel" name="lblMensajeMedicamento">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="12" style="1"/>
@@ -233,7 +244,7 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JComboBox" name="jcbAnimalAAplicar">
+        <Component class="javax.swing.JComboBox" name="cmbVacas">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="18" style="0"/>
@@ -249,7 +260,7 @@
             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;Vaca&gt;"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JComboBox" name="jcbMes">
+        <Component class="javax.swing.JComboBox" name="cmbMes">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="18" style="0"/>
@@ -267,7 +278,7 @@
             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JComboBox" name="jcbDia">
+        <Component class="javax.swing.JComboBox" name="cmbDia">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="18" style="0"/>
@@ -285,7 +296,7 @@
             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JComboBox" name="jcbA&#xf1;o">
+        <Component class="javax.swing.JComboBox" name="cmbA&#xf1;o">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="18" style="0"/>
@@ -300,35 +311,36 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jcbA&#xf1;oActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cmbA&#xf1;oActionPerformed"/>
           </Events>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JComboBox" name="jcbTipoTratamiento">
+        <Component class="javax.swing.JComboBox" name="cmbTratamientos">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="18" style="0"/>
             </Property>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="16">
-                <StringItem index="0" value="VACUNACION"/>
-                <StringItem index="1" value="DESPARASITACION"/>
-                <StringItem index="2" value="DESGARRAPATIZACION"/>
-                <StringItem index="3" value="VITAMINIZACION"/>
-                <StringItem index="4" value="ANTIBIOTICO"/>
-                <StringItem index="5" value="TRATAMIENTO RESPIRATORIO"/>
-                <StringItem index="6" value="TRATAMIENTO DIGESTIVO"/>
-                <StringItem index="7" value="CURACION HERIDAS"/>
-                <StringItem index="8" value="CONTROL FIEBRE"/>
-                <StringItem index="9" value="CONTROL MASTITIS"/>
-                <StringItem index="10" value="SUPLEMENTACION MINERAL"/>
-                <StringItem index="11" value="CONTROL PARASITOS"/>
-                <StringItem index="12" value="INSEMINACION"/>
-                <StringItem index="13" value="CONTROL REPRODUCTIVO"/>
-                <StringItem index="14" value="REVISION VETERINARIA"/>
-                <StringItem index="15" value="CIRUGIA"/>
+              <StringArray count="17">
+                <StringItem index="0" value="Tratamiento"/>
+                <StringItem index="1" value="Vacunaci&#xf3;n"/>
+                <StringItem index="2" value="Desparasitaci&#xf3;n"/>
+                <StringItem index="3" value="Desgarrapatizaci&#xf3;n"/>
+                <StringItem index="4" value="Vitaminizaci&#xf3;n"/>
+                <StringItem index="5" value="Antibi&#xf3;tico"/>
+                <StringItem index="6" value="Tratamiento respiratorio"/>
+                <StringItem index="7" value="Tratamiento digestivo"/>
+                <StringItem index="8" value="Curaci&#xf3;n de heridas"/>
+                <StringItem index="9" value="Control de fiebre"/>
+                <StringItem index="10" value="Control de mastitis"/>
+                <StringItem index="11" value="Suplementaci&#xf3;n mineral"/>
+                <StringItem index="12" value="Control de par&#xe1;sitos"/>
+                <StringItem index="13" value="Inseminaci&#xf3;n"/>
+                <StringItem index="14" value="Control reproductivo"/>
+                <StringItem index="15" value="Revisi&#xf3;n veterinaria"/>
+                <StringItem index="16" value="Cirug&#xed;a"/>
               </StringArray>
             </Property>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
@@ -356,7 +368,7 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jblAnimalAAplicar">
+        <Component class="javax.swing.JLabel" name="lblAnimalAplicar">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="18" style="0"/>
@@ -367,7 +379,7 @@
             <Property name="text" type="java.lang.String" value="Animal a aplicar"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jblDosis">
+        <Component class="javax.swing.JLabel" name="lblDosis">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="18" style="0"/>
@@ -392,7 +404,7 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jblObservaciones">
+        <Component class="javax.swing.JLabel" name="lblObservaciones">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="18" style="0"/>
@@ -403,7 +415,7 @@
             <Property name="text" type="java.lang.String" value="Observaciones"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jblMedicamento">
+        <Component class="javax.swing.JLabel" name="lblMedicamento">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="0" type="rgb"/>
@@ -424,7 +436,7 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JTextArea" name="txtObservaciones">
+            <Component class="javax.swing.JTextArea" name="txtAreaObservaciones">
               <Properties>
                 <Property name="columns" type="int" value="20"/>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -435,7 +447,7 @@
             </Component>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JLabel" name="jblId">
+        <Component class="javax.swing.JLabel" name="lblIdTratamiento">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="18" style="0"/>
@@ -446,14 +458,14 @@
             <Property name="text" type="java.lang.String" value="Id del tratamiento"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtId">
+        <Component class="javax.swing.JTextField" name="txtIdentificador">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="20" style="0"/>
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jblMensajeNombre1">
+        <Component class="javax.swing.JLabel" name="lblMensajeDosis">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="12" style="1"/>
@@ -461,6 +473,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="33" green="0" red="cc" type="rgb"/>
             </Property>
+            <Property name="text" type="java.lang.String" value="&#xa;"/>
           </Properties>
         </Component>
       </SubComponents>

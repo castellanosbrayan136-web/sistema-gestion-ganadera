@@ -4,9 +4,9 @@
  */
 package vista;
 
+import java.time.LocalDate;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
-import javax.swing.JTextField;
 import modelo.Vaca;
 
 /**
@@ -31,310 +31,381 @@ public class PanelRegistrarTratamiento extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        panelRegistrarGanado = new javax.swing.JPanel();
-        jblTitle = new javax.swing.JLabel();
-        jblFechaTratamiento = new javax.swing.JLabel();
-        jblTipoDeTratamiento = new javax.swing.JLabel();
-        jblMensajeNombre = new javax.swing.JLabel();
-        jblMensajeFecha = new javax.swing.JLabel();
-        jblMensajeRazas = new javax.swing.JLabel();
-        jblMensajeEstadoProduccion = new javax.swing.JLabel();
-        jcbAnimalAAplicar = new javax.swing.JComboBox<>();
-        jcbMes = new javax.swing.JComboBox<>();
-        jcbDia = new javax.swing.JComboBox<>();
-        jcbAño = new javax.swing.JComboBox<>();
-        jcbTipoTratamiento = new javax.swing.JComboBox<>();
+        background = new javax.swing.JPanel();
+        lblTitulo = new javax.swing.JLabel();
+        lblFecha = new javax.swing.JLabel();
+        lblTipoTratamiento = new javax.swing.JLabel();
+        lblMensajeIdTratamiento = new javax.swing.JLabel();
+        lblMensajeFecha = new javax.swing.JLabel();
+        lblMensajeTratamientos = new javax.swing.JLabel();
+        lblMensajeMedicamento = new javax.swing.JLabel();
+        cmbVacas = new javax.swing.JComboBox<>();
+        cmbMes = new javax.swing.JComboBox<>();
+        cmbDia = new javax.swing.JComboBox<>();
+        cmbAño = new javax.swing.JComboBox<>();
+        cmbTratamientos = new javax.swing.JComboBox<>();
         btnRegistrar = new javax.swing.JButton();
-        jblAnimalAAplicar = new javax.swing.JLabel();
-        jblDosis = new javax.swing.JLabel();
+        lblAnimalAplicar = new javax.swing.JLabel();
+        lblDosis = new javax.swing.JLabel();
         txtMedicamento = new javax.swing.JTextField();
         txtDosis = new javax.swing.JTextField();
-        jblObservaciones = new javax.swing.JLabel();
-        jblMedicamento = new javax.swing.JLabel();
+        lblObservaciones = new javax.swing.JLabel();
+        lblMedicamento = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        txtObservaciones = new javax.swing.JTextArea();
-        jblId = new javax.swing.JLabel();
-        txtId = new javax.swing.JTextField();
-        jblMensajeNombre1 = new javax.swing.JLabel();
+        txtAreaObservaciones = new javax.swing.JTextArea();
+        lblIdTratamiento = new javax.swing.JLabel();
+        txtIdentificador = new javax.swing.JTextField();
+        lblMensajeDosis = new javax.swing.JLabel();
 
-        panelRegistrarGanado.setBackground(new java.awt.Color(245, 245, 245));
+        background.setBackground(new java.awt.Color(245, 245, 245));
 
-        jblTitle.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jblTitle.setForeground(new java.awt.Color(0, 0, 0));
-        jblTitle.setText("Registro veterinario");
+        lblTitulo.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        lblTitulo.setForeground(new java.awt.Color(0, 0, 0));
+        lblTitulo.setText("Registro veterinario");
 
-        jblFechaTratamiento.setBackground(new java.awt.Color(0, 0, 0));
-        jblFechaTratamiento.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jblFechaTratamiento.setForeground(new java.awt.Color(0, 0, 0));
-        jblFechaTratamiento.setText("Fecha del tratamiento");
+        lblFecha.setBackground(new java.awt.Color(0, 0, 0));
+        lblFecha.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblFecha.setForeground(new java.awt.Color(0, 0, 0));
+        lblFecha.setText("Fecha");
 
-        jblTipoDeTratamiento.setBackground(new java.awt.Color(0, 0, 0));
-        jblTipoDeTratamiento.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jblTipoDeTratamiento.setForeground(new java.awt.Color(0, 0, 0));
-        jblTipoDeTratamiento.setText("Tipo de tratamiento");
+        lblTipoTratamiento.setBackground(new java.awt.Color(0, 0, 0));
+        lblTipoTratamiento.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblTipoTratamiento.setForeground(new java.awt.Color(0, 0, 0));
+        lblTipoTratamiento.setText("Tratamiento");
 
-        jblMensajeNombre.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jblMensajeNombre.setForeground(new java.awt.Color(204, 0, 51));
-        jblMensajeNombre.setText("\n");
+        lblMensajeIdTratamiento.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lblMensajeIdTratamiento.setForeground(new java.awt.Color(204, 0, 51));
+        lblMensajeIdTratamiento.setText("\n");
 
-        jblMensajeFecha.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jblMensajeFecha.setForeground(new java.awt.Color(204, 0, 51));
+        lblMensajeFecha.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lblMensajeFecha.setForeground(new java.awt.Color(204, 0, 51));
 
-        jblMensajeRazas.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jblMensajeRazas.setForeground(new java.awt.Color(204, 0, 51));
+        lblMensajeTratamientos.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lblMensajeTratamientos.setForeground(new java.awt.Color(204, 0, 51));
 
-        jblMensajeEstadoProduccion.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jblMensajeEstadoProduccion.setForeground(new java.awt.Color(204, 0, 51));
+        lblMensajeMedicamento.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lblMensajeMedicamento.setForeground(new java.awt.Color(204, 0, 51));
 
-        jcbAnimalAAplicar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jcbAnimalAAplicar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        cmbVacas.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        cmbVacas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        jcbMes.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jcbMes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Mes" }));
-        jcbMes.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        cmbMes.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        cmbMes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Mes" }));
+        cmbMes.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        jcbDia.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jcbDia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Día" }));
-        jcbDia.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        cmbDia.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        cmbDia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Día" }));
+        cmbDia.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        jcbAño.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jcbAño.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Año" }));
-        jcbAño.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jcbAño.addActionListener(new java.awt.event.ActionListener() {
+        cmbAño.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        cmbAño.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Año" }));
+        cmbAño.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        cmbAño.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jcbAñoActionPerformed(evt);
+                cmbAñoActionPerformed(evt);
             }
         });
 
-        jcbTipoTratamiento.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jcbTipoTratamiento.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "VACUNACION", "DESPARASITACION", "DESGARRAPATIZACION", "VITAMINIZACION", "ANTIBIOTICO", "TRATAMIENTO RESPIRATORIO", "TRATAMIENTO DIGESTIVO", "CURACION HERIDAS", "CONTROL FIEBRE", "CONTROL MASTITIS", "SUPLEMENTACION MINERAL", "CONTROL PARASITOS", "INSEMINACION", "CONTROL REPRODUCTIVO", "REVISION VETERINARIA", "CIRUGIA" }));
-        jcbTipoTratamiento.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jcbTipoTratamiento.setMaximumSize(new java.awt.Dimension(138, 50));
-        jcbTipoTratamiento.setMinimumSize(new java.awt.Dimension(137, 49));
+        cmbTratamientos.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        cmbTratamientos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tratamiento", "Vacunación", "Desparasitación", "Desgarrapatización", "Vitaminización", "Antibiótico", "Tratamiento respiratorio", "Tratamiento digestivo", "Curación de heridas", "Control de fiebre", "Control de mastitis", "Suplementación mineral", "Control de parásitos", "Inseminación", "Control reproductivo", "Revisión veterinaria", "Cirugía" }));
+        cmbTratamientos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        cmbTratamientos.setMaximumSize(new java.awt.Dimension(138, 50));
+        cmbTratamientos.setMinimumSize(new java.awt.Dimension(137, 49));
 
         btnRegistrar.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         btnRegistrar.setText("REGISTRAR");
         btnRegistrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        jblAnimalAAplicar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jblAnimalAAplicar.setForeground(new java.awt.Color(0, 0, 0));
-        jblAnimalAAplicar.setText("Animal a aplicar");
+        lblAnimalAplicar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblAnimalAplicar.setForeground(new java.awt.Color(0, 0, 0));
+        lblAnimalAplicar.setText("Animal a aplicar");
 
-        jblDosis.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jblDosis.setForeground(new java.awt.Color(0, 0, 0));
-        jblDosis.setText("Dosis");
+        lblDosis.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblDosis.setForeground(new java.awt.Color(0, 0, 0));
+        lblDosis.setText("Dosis");
 
         txtMedicamento.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
 
         txtDosis.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
 
-        jblObservaciones.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jblObservaciones.setForeground(new java.awt.Color(0, 0, 0));
-        jblObservaciones.setText("Observaciones");
+        lblObservaciones.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblObservaciones.setForeground(new java.awt.Color(0, 0, 0));
+        lblObservaciones.setText("Observaciones");
 
-        jblMedicamento.setBackground(new java.awt.Color(0, 0, 0));
-        jblMedicamento.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jblMedicamento.setForeground(new java.awt.Color(0, 0, 0));
-        jblMedicamento.setText("Medicamento");
+        lblMedicamento.setBackground(new java.awt.Color(0, 0, 0));
+        lblMedicamento.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblMedicamento.setForeground(new java.awt.Color(0, 0, 0));
+        lblMedicamento.setText("Medicamento");
 
-        txtObservaciones.setColumns(20);
-        txtObservaciones.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        txtObservaciones.setRows(5);
-        jScrollPane1.setViewportView(txtObservaciones);
+        txtAreaObservaciones.setColumns(20);
+        txtAreaObservaciones.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        txtAreaObservaciones.setRows(5);
+        jScrollPane1.setViewportView(txtAreaObservaciones);
 
-        jblId.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jblId.setForeground(new java.awt.Color(0, 0, 0));
-        jblId.setText("Id del tratamiento");
+        lblIdTratamiento.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblIdTratamiento.setForeground(new java.awt.Color(0, 0, 0));
+        lblIdTratamiento.setText("Id del tratamiento");
 
-        txtId.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
+        txtIdentificador.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
 
-        jblMensajeNombre1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jblMensajeNombre1.setForeground(new java.awt.Color(204, 0, 51));
+        lblMensajeDosis.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lblMensajeDosis.setForeground(new java.awt.Color(204, 0, 51));
+        lblMensajeDosis.setText("\n");
 
-        javax.swing.GroupLayout panelRegistrarGanadoLayout = new javax.swing.GroupLayout(panelRegistrarGanado);
-        panelRegistrarGanado.setLayout(panelRegistrarGanadoLayout);
-        panelRegistrarGanadoLayout.setHorizontalGroup(
-            panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelRegistrarGanadoLayout.createSequentialGroup()
-                .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jblId, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(panelRegistrarGanadoLayout.createSequentialGroup()
-                        .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(243, 243, 243)
-                        .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout backgroundLayout = new javax.swing.GroupLayout(background);
+        background.setLayout(backgroundLayout);
+        backgroundLayout.setHorizontalGroup(
+            backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(backgroundLayout.createSequentialGroup()
+                .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(backgroundLayout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(lblTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 634, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(backgroundLayout.createSequentialGroup()
+                        .addComponent(lblAnimalAplicar, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(259, 259, 259)
+                        .addComponent(lblDosis, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(backgroundLayout.createSequentialGroup()
+                        .addComponent(cmbVacas, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(299, 299, 299)
+                        .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtDosis, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jblDosis, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(panelRegistrarGanadoLayout.createSequentialGroup()
-                .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jblObservaciones, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jblMensajeNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(panelRegistrarGanadoLayout.createSequentialGroup()
-                            .addComponent(jcbAño, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(18, 18, 18)
-                            .addComponent(jcbMes, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(18, 18, 18)
-                            .addComponent(jcbDia, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(jblMensajeFecha, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jblTipoDeTratamiento, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jblMensajeRazas, javax.swing.GroupLayout.PREFERRED_SIZE, 322, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jblMedicamento, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(txtMedicamento, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jblMensajeEstadoProduccion, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(btnRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(panelRegistrarGanadoLayout.createSequentialGroup()
-                            .addGap(6, 6, 6)
-                            .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jblTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 634, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jblAnimalAAplicar, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGroup(panelRegistrarGanadoLayout.createSequentialGroup()
-                            .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jcbAnimalAAplicar, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jblMensajeNombre1, javax.swing.GroupLayout.PREFERRED_SIZE, 314, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jblFechaTratamiento, javax.swing.GroupLayout.PREFERRED_SIZE, 487, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGap(72, 72, 72)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(jcbTipoTratamiento, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 123, Short.MAX_VALUE))
+                            .addComponent(lblMensajeDosis, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(backgroundLayout.createSequentialGroup()
+                        .addComponent(lblIdTratamiento, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(243, 243, 243)
+                        .addComponent(lblObservaciones, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(backgroundLayout.createSequentialGroup()
+                        .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtIdentificador, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblMensajeIdTratamiento, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblFecha, javax.swing.GroupLayout.PREFERRED_SIZE, 487, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(backgroundLayout.createSequentialGroup()
+                                .addComponent(cmbAño, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(15, 15, 15)
+                                .addComponent(cmbMes, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(cmbDia, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(72, 72, 72)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblMensajeFecha, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblTipoTratamiento, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblMensajeTratamientos, javax.swing.GroupLayout.PREFERRED_SIZE, 322, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblMedicamento, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtMedicamento, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblMensajeMedicamento, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cmbTratamientos, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(109, 109, 109))
         );
-        panelRegistrarGanadoLayout.setVerticalGroup(
-            panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelRegistrarGanadoLayout.createSequentialGroup()
+        backgroundLayout.setVerticalGroup(
+            backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(backgroundLayout.createSequentialGroup()
                 .addGap(6, 6, 6)
-                .addComponent(jblTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jblId, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jblDosis, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(lblTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28)
+                .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblAnimalAplicar, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(backgroundLayout.createSequentialGroup()
+                        .addGap(2, 2, 2)
+                        .addComponent(lblDosis, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(6, 6, 6)
-                .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtDosis, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(4, 4, 4)
-                .addComponent(jblMensajeNombre)
+                .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(backgroundLayout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addComponent(cmbVacas, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(backgroundLayout.createSequentialGroup()
+                        .addComponent(txtDosis, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(4, 4, 4)
+                        .addComponent(lblMensajeDosis)))
                 .addGap(9, 9, 9)
-                .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jblAnimalAAplicar, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jblObservaciones))
-                .addGap(6, 6, 6)
-                .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelRegistrarGanadoLayout.createSequentialGroup()
-                        .addComponent(jcbAnimalAAplicar, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jblMensajeNombre1, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jblFechaTratamiento))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(6, 6, 6)
-                .addGroup(panelRegistrarGanadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jcbAño, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jcbMes, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jcbDia, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(6, 6, 6)
-                .addComponent(jblMensajeFecha, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jblTipoDeTratamiento)
-                .addGap(6, 6, 6)
-                .addComponent(jcbTipoTratamiento, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(6, 6, 6)
-                .addComponent(jblMensajeRazas, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jblMedicamento)
-                .addGap(10, 10, 10)
+                .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(backgroundLayout.createSequentialGroup()
+                        .addGap(8, 8, 8)
+                        .addComponent(lblIdTratamiento, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblObservaciones))
+                .addGap(1, 1, 1)
+                .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(backgroundLayout.createSequentialGroup()
+                        .addComponent(txtIdentificador, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(4, 4, 4)
+                        .addComponent(lblMensajeIdTratamiento)
+                        .addGap(4, 4, 4)
+                        .addComponent(lblFecha)
+                        .addGap(5, 5, 5)
+                        .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(cmbAño, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cmbMes, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cmbDia, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(backgroundLayout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(5, 5, 5)
+                .addComponent(lblMensajeFecha, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(24, 24, 24)
+                .addComponent(lblTipoTratamiento)
+                .addGap(5, 5, 5)
+                .addComponent(cmbTratamientos, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20)
+                .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblMensajeTratamientos, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblMedicamento))
+                .addGap(5, 5, 5)
                 .addComponent(txtMedicamento, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(6, 6, 6)
-                .addComponent(jblMensajeEstadoProduccion, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(btnRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addGap(4, 4, 4)
+                .addComponent(lblMensajeMedicamento, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(34, 34, 34)
+                .addComponent(btnRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelRegistrarGanado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(background, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelRegistrarGanado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(background, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jcbAñoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbAñoActionPerformed
+    private void cmbAñoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbAñoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jcbAñoActionPerformed
-
-    public Vaca getAnimalAAplicar() {
-        return (Vaca) jcbAnimalAAplicar.getSelectedItem();
-    }
-
-    public JComboBox<String> getJcbAño() {
-        return jcbAño;
-    }
-
-    public JComboBox<String> getJcbDia() {
-        return jcbDia;
-    }
-
-    public JComboBox<String> getJcbMes() {
-        return jcbMes;
-    }
-
-    public String getTipoTratamiento() {
-        return jcbTipoTratamiento.getSelectedItem().toString();
-    }
-
-    public String getDosis() {
-        return txtDosis.getText();
-    }
-
-    public String getMedicamento() {
-        return txtMedicamento.getText();
-    }
-
-    public String getObservaciones() {
-        return txtObservaciones.getText();
-    }
-
-    public JComboBox<Vaca> getJcbAnimalAAplicar() {
-        return jcbAnimalAAplicar;
-    }
+    }//GEN-LAST:event_cmbAñoActionPerformed
 
     public JButton getBtnRegistrar() {
         return btnRegistrar;
     }
 
-    public String getId() {
-        return txtId.getText();
+    public JComboBox<String> getCmbAño() {
+        return cmbAño;
+    }
+
+    public JComboBox<String> getCmbDia() {
+        return cmbDia;
+    }
+
+    public JComboBox<String> getCmbMes() {
+        return cmbMes;
+    }
+
+    public JComboBox<String> getCmbTratamientos() {
+        return cmbTratamientos;
+    }
+
+    public JComboBox<Vaca> getCmbVacas() {
+        return cmbVacas;
+    }
+
+    public Vaca getVaca() {
+        return (Vaca) cmbVacas.getSelectedItem();
+    }
+    
+    public String getIdentificador() {
+        String identificador = txtIdentificador.getText();
+        return (validarCampos(identificador)) ? identificador : null;
+    }
+    
+    private int getAño() {
+        return convertirAInt((String) cmbAño.getSelectedItem());
+    }
+    
+    private int getMes() {
+        return cmbMes.getSelectedIndex();
+    }
+    
+    private int getDia() {
+        return convertirAInt((String) cmbDia.getSelectedItem());
+    }
+    
+    public LocalDate getFecha() {
+        int año = getAño();
+        int mes = getMes();
+        int dia = getDia();
+        
+        if (año != -1 && mes != 0 && dia != -1) {
+            return LocalDate.of(año, mes, dia);
+        }
+        return null;
+    }
+    
+    public String getTratamiento() {
+        String tratamiento = (String) cmbTratamientos.getSelectedItem();
+        return (!tratamiento.equals("Tratamiento")) ? tratamiento : null;
+    }
+    
+    private boolean validarCampos(String texto) {
+        return (texto != null && !texto.trim().isEmpty());
+    }
+    
+    public String getMedicamento() {
+        String medicamento = txtMedicamento.getText();
+        return (validarCampos(medicamento)) ? medicamento : null;
+    }
+    
+    public String getDosis() {
+        String dosis = txtDosis.getText();
+        return (validarCampos(dosis)) ? dosis : null;
+    }
+    
+    public String getObservaciones() {
+        String observaciones = txtAreaObservaciones.getText();
+        return (validarCampos(observaciones)) ? observaciones : "Sin observaciones";
+    }
+
+    public void setLblMensajeDosis(String mensajeDosis) {
+        this.lblMensajeDosis.setText(mensajeDosis);
+    }
+
+    public void setLblMensajeFecha(String mensajeFecha) {
+        this.lblMensajeFecha.setText(mensajeFecha);
+    }
+
+    public void setLblMensajeIdTratamiento(String mensajeIdTratamiento) {
+        this.lblMensajeIdTratamiento.setText(mensajeIdTratamiento);
+    }
+
+    public void setLblMensajeMedicamento(String mensajeMedicamento) {
+        this.lblMensajeMedicamento.setText(mensajeMedicamento);
+    }
+
+    public void setLblMensajeTratamientos(String mensajeTratamientos) {
+        this.lblMensajeTratamientos.setText(mensajeTratamientos);
+    }
+     private int convertirAInt(String texto) {
+        try {
+            return Integer.parseInt(texto);
+        } catch (NumberFormatException ex) {
+            return -1;
+        }
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel background;
     private javax.swing.JButton btnRegistrar;
+    private javax.swing.JComboBox<String> cmbAño;
+    private javax.swing.JComboBox<String> cmbDia;
+    private javax.swing.JComboBox<String> cmbMes;
+    private javax.swing.JComboBox<String> cmbTratamientos;
+    private javax.swing.JComboBox<Vaca> cmbVacas;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel jblAnimalAAplicar;
-    private javax.swing.JLabel jblDosis;
-    private javax.swing.JLabel jblFechaTratamiento;
-    private javax.swing.JLabel jblId;
-    private javax.swing.JLabel jblMedicamento;
-    private javax.swing.JLabel jblMensajeEstadoProduccion;
-    private javax.swing.JLabel jblMensajeFecha;
-    private javax.swing.JLabel jblMensajeNombre;
-    private javax.swing.JLabel jblMensajeNombre1;
-    private javax.swing.JLabel jblMensajeRazas;
-    private javax.swing.JLabel jblObservaciones;
-    private javax.swing.JLabel jblTipoDeTratamiento;
-    private javax.swing.JLabel jblTitle;
-    private javax.swing.JComboBox<Vaca> jcbAnimalAAplicar;
-    private javax.swing.JComboBox<String> jcbAño;
-    private javax.swing.JComboBox<String> jcbDia;
-    private javax.swing.JComboBox<String> jcbMes;
-    private javax.swing.JComboBox<String> jcbTipoTratamiento;
-    private javax.swing.JPanel panelRegistrarGanado;
+    private javax.swing.JLabel lblAnimalAplicar;
+    private javax.swing.JLabel lblDosis;
+    private javax.swing.JLabel lblFecha;
+    private javax.swing.JLabel lblIdTratamiento;
+    private javax.swing.JLabel lblMedicamento;
+    private javax.swing.JLabel lblMensajeDosis;
+    private javax.swing.JLabel lblMensajeFecha;
+    private javax.swing.JLabel lblMensajeIdTratamiento;
+    private javax.swing.JLabel lblMensajeMedicamento;
+    private javax.swing.JLabel lblMensajeTratamientos;
+    private javax.swing.JLabel lblObservaciones;
+    private javax.swing.JLabel lblTipoTratamiento;
+    private javax.swing.JLabel lblTitulo;
+    private javax.swing.JTextArea txtAreaObservaciones;
     private javax.swing.JTextField txtDosis;
-    private javax.swing.JTextField txtId;
+    private javax.swing.JTextField txtIdentificador;
     private javax.swing.JTextField txtMedicamento;
-    private javax.swing.JTextArea txtObservaciones;
     // End of variables declaration//GEN-END:variables
 }
