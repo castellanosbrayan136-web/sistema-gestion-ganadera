@@ -7,6 +7,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import modelo.Departamento;
@@ -94,6 +95,7 @@ public class ControladorCrearCuenta implements ActionListener, MouseListener {
         
         if (usuarioDAO.registrar(nuevoUsuario)) {
             JOptionPane.showMessageDialog(panelCrearCuenta, "Usuario creado correctamente.");
+            reiniciarFormulario();
         }
     }
     
@@ -129,6 +131,29 @@ public class ControladorCrearCuenta implements ActionListener, MouseListener {
             panelCrearCuenta.setPwsContraseña("**************");
             panelCrearCuenta.getPwsContraseña().setForeground(grisClaro);
         }
+    }
+    
+    public void reiniciarFormulario() {
+        Color grisClaro = new Color(204, 204, 204);
+        cargarDatosInciales();
+
+        panelCrearCuenta.setTxtCorreo("Correo electrónico");
+        panelCrearCuenta.getTxtCorreo().setForeground(grisClaro);
+
+        panelCrearCuenta.setTxtNombreFinca("Nombre de la finca");
+        panelCrearCuenta.getTxtNombreFinca().setForeground(grisClaro);
+
+        panelCrearCuenta.setTxtNombres("Nombres y apellidos");
+        panelCrearCuenta.getTxtNombres().setForeground(grisClaro);
+
+        panelCrearCuenta.setTxtUsuario("Nombre de usuario");
+        panelCrearCuenta.getTxtUsuario().setForeground(grisClaro);
+
+        panelCrearCuenta.setTxtVereda("Vereda");
+        panelCrearCuenta.getTxtVereda().setForeground(grisClaro);
+
+        panelCrearCuenta.setPwsContraseña("**************");
+        panelCrearCuenta.getPwsContraseña().setForeground(grisClaro);
     }
     
     public Usuario verificarYRetornarDatos() {
@@ -198,6 +223,8 @@ public class ControladorCrearCuenta implements ActionListener, MouseListener {
     }
     
     public void cargarCbmDepartamentos() {
+        JComboBox cmbDepartamentos = panelCrearCuenta.getJcbDepartamento();
+        configCmb(cmbDepartamentos, "Departamento");
         for (Departamento departamento : departamentoDAO.retornarDepartamentos() ) {
             panelCrearCuenta.getJcbDepartamento().addItem(departamento.getDepartamento());
         }
@@ -208,8 +235,7 @@ public class ControladorCrearCuenta implements ActionListener, MouseListener {
         
         for (Departamento departamento : departamentoDAO.retornarDepartamentos()) {
             if (departamento.getDepartamento().equals(departamentoSeleccionado)) {
-                panelCrearCuenta.getJcbMunicipio().removeAllItems();
-                panelCrearCuenta.getJcbMunicipio().addItem("Municipio");
+                configCmb(panelCrearCuenta.getJcbMunicipio(), "Municipio");
                 for (String municipio : departamento.getMunicipios()) {
                     panelCrearCuenta.getJcbMunicipio().addItem(municipio);
                 }
@@ -220,6 +246,11 @@ public class ControladorCrearCuenta implements ActionListener, MouseListener {
     private void configTextField(JTextField txt) {
         txt.setText("");
         txt.setForeground(Color.BLACK);
+    }
+    
+    private void configCmb(JComboBox cmb, String item) {
+        cmb.removeAllItems();
+        cmb.addItem(item);
     }
     
     //Murio aprox 5:10pm - 5:20pm del dia jueves 14 de mayo del año 2026

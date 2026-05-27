@@ -17,19 +17,19 @@ import vista.VistaAutenticacion;
 
 
 public class ControladorIniciarSesion implements ActionListener {
-    private UsuarioDAO usuarioDAO;
-    private PanelIniciarSesion panelIniciarSesion;
-    private VistaAutenticacion vistaAutenticacion;
+    private final UsuarioDAO usuarioDAO;
+    private final PanelIniciarSesion panelIniciarSesion;
+    private final VistaAutenticacion vistaAutenticacion;
 
     public ControladorIniciarSesion(UsuarioDAO usuarioDAO, PanelIniciarSesion panelIniciarSesion, VistaAutenticacion vistaAutenticacion) {
         this.usuarioDAO = usuarioDAO;
         this.panelIniciarSesion = panelIniciarSesion;
         this.vistaAutenticacion = vistaAutenticacion;
         
-        activarEventos();
+        configurarEventos();
     }
     
-    public void activarEventos() {
+    public void configurarEventos() {
         panelIniciarSesion.getBtnEntrar().addActionListener(this);
         eventoTxtNombreUsurio();
         eventoTxtContraseña();

@@ -9,6 +9,8 @@ import java.time.Month;
 import java.time.YearMonth;
 import java.time.format.TextStyle;
 import java.util.Locale;
+import java.util.UUID;
+import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
 import modelo.Usuario;
 import modelo.Vaca;
@@ -17,121 +19,163 @@ import vista.PanelRegistrarGanado;
 
 
 public class ControladorRegistrarGanado implements ActionListener {
-    private Usuario usuario;
-    private PanelRegistrarGanado panelRegistrarGanado;
-    private VacaDAO vacaDAO;
+    private final Usuario usuario;
+    private final PanelRegistrarGanado panelRegistrarGanado;
+    private final VacaDAO vacaDAO;
 
     public ControladorRegistrarGanado(PanelRegistrarGanado panelRegistrarGanado, VacaDAO vacaDAO, Usuario usuario) {
         this.panelRegistrarGanado = panelRegistrarGanado;
         this.vacaDAO = vacaDAO;
         this.usuario = usuario;
-        llenarJlables();
-        activarEventos();
+        cargarDatosIniciales();
+        configurarEventos();
     }
     
-    public void llenarJlables() {
-        llenarJlabelRazas();
-        llenarJlabeslsFechas();
-        
+    private void cargarDatosIniciales() {
+        llenarCmbRazas();
+        llenarCmbAños();
+        llenarCmbMeses();
+        llenarCmbDias();
     }
     
-    public void activarEventos() {
+    private void configurarEventos() {
         panelRegistrarGanado.getJcbAño().addActionListener(this);
         panelRegistrarGanado.getJcbMes().addActionListener(this);
         panelRegistrarGanado.getBtnRegistrar().addActionListener(this);
     }
     
-    public void llenarJlabelRazas() {
-        panelRegistrarGanado.getJcbRazaMadre().removeAllItems();
-        panelRegistrarGanado.getJcbRazaPadre().removeAllItems();
-        panelRegistrarGanado.getJcbRazaMadre().addItem("Raza madre");
-        panelRegistrarGanado.getJcbRazaPadre().addItem("Raza padre");
-        for (String raza : vacaDAO.retornarListadoDeRazas()) {
+    private void llenarCmbRazas() {
+        configCmb(panelRegistrarGanado.getJcbRazaMadre(), "Raza madre");
+        configCmb(panelRegistrarGanado.getJcbRazaPadre(), "Raza padre");
+        
+        for (String raza : vacaDAO.getListaRazas()) {
             panelRegistrarGanado.getJcbRazaMadre().addItem(raza);
             panelRegistrarGanado.getJcbRazaPadre().addItem(raza);
         }
     }
     
-    public void llenarJlabeslsFechas() {
+    private void llenarCmbMeses() {
         for (Month mes : Month.values()) {
-            String mesEspañol = mes.getDisplayName(TextStyle.FULL, new Locale("es", "ES"));
-            panelRegistrarGanado.getJcbMes().addItem(mesEspañol);
+            String mesEnEspañol = mes.getDisplayName(TextStyle.FULL, new Locale("es", "ES"));
+            panelRegistrarGanado.getJcbMes().addItem(mesEnEspañol);
         }
-        
+    }
+    
+    public void llenarCmbAños() {
         int añoActual = LocalDate.now().getYear();
         
-        for (int i = añoActual ; i >= 1950 ; i--) {
+        for (int i = añoActual ; i >= 1990 ; i--) {
             panelRegistrarGanado.getJcbAño().addItem(String.valueOf(i));
         }
     }
     
-    public void llenarDiasDelMes() {
-        panelRegistrarGanado.getJcbDia().removeAllItems();
-        panelRegistrarGanado.getJcbDia().addItem("Día");
+    public void llenarCmbDias() {
+        configCmb(panelRegistrarGanado.getJcbDia(), "Dia");
+        LocalDate fecha = panelRegistrarGanado.getFecha();
         
-        int año;
-        
-        try {
-            año = Integer.parseInt(String.valueOf(panelRegistrarGanado.getJcbAño().getSelectedItem()));
-        } catch (NumberFormatException e) {
+        if (fecha == null) {
             return;
         }
-        int mes = panelRegistrarGanado.getJcbMes().getSelectedIndex();
         
-        if (mes == 0) {
-            panelRegistrarGanado.getJcbDia().removeAllItems();
-            panelRegistrarGanado.getJcbDia().addItem("Día");
-            return;
-        }
+        int año = fecha.getYear();
+        int mes = fecha.getMonthValue();
         
         YearMonth yearMonth = YearMonth.of(año, mes);
+        int diasMes = yearMonth.lengthOfMonth();
         
-        int cantidadDias = yearMonth.lengthOfMonth();
-        
-        for (int i = 1; i <= cantidadDias; i++) {
+        for (int i = 1; i <= diasMes; i++) {
             panelRegistrarGanado.getJcbDia().addItem(String.valueOf(i));
         }
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getSource() == panelRegistrarGanado.getJcbAño()) {
-            llenarDiasDelMes();
-        } else if (e.getSource() == panelRegistrarGanado.getJcbMes()) {
-            llenarDiasDelMes();
-        } else if (e.getSource() == panelRegistrarGanado.getBtnRegistrar()) {
+        if (e.getSource() == panelRegistrarGanado.getJcbAño() || e.getSource() == panelRegistrarGanado.getJcbMes()) {
+            llenarCmbDias();
+        }  else if (e.getSource() == panelRegistrarGanado.getBtnRegistrar()) {
             registrar();
         }
     }
     
     public void registrar() {
-        if (vacaDAO.registrar(leerDatos())) {
+        if (vacaDAO.addVaca(construirVaca())) {
             JOptionPane.showMessageDialog(panelRegistrarGanado, "Registro completado.");
+            reiniciarFormulario();
         } else {
             JOptionPane.showMessageDialog(panelRegistrarGanado, "Error al registrar, completa los datos.");
         }
-        
     }
     
-    public Vaca leerDatos() {
-        int year = Integer.parseInt(panelRegistrarGanado.getJcbAño().getSelectedItem().toString());
-        int mes = panelRegistrarGanado.getJcbMes().getSelectedIndex();
-        int dia = Integer.parseInt(panelRegistrarGanado.getJcbDia().getSelectedItem().toString());
-        
-        LocalDate fecha = LocalDate.of(year, mes, dia);
-        
-        String descripcion = panelRegistrarGanado.getDescripcion();
-        String numeroIdentificador = panelRegistrarGanado.getNumeroIdentificacion();
+    public Vaca construirVaca() {
+        String identificador = panelRegistrarGanado.getIdentificador();
+        String nombre = panelRegistrarGanado.getNombre();
+        LocalDate fecha = panelRegistrarGanado.getFecha();
+        String razaPadre = panelRegistrarGanado.getRazaPadre();
+        String razaMadre = panelRegistrarGanado.getRazaMadre();
+        String estado = panelRegistrarGanado.getEstado();
         Double peso = panelRegistrarGanado.getPeso();
+        String descripcion = panelRegistrarGanado.getDescripcion();
+        UUID idPropietario = usuario.getIdInterno();
         
-        if (descripcion == null) {
-            descripcion = "No hay descripcion.";
+        int contador = 0;
+        
+        if (identificador == null) {
+            panelRegistrarGanado.setLblMensajeIdentificador("Ingresa un identificador.");
+            contador++;
+        } else {
+            panelRegistrarGanado.setLblMensajeIdentificador("");
         }
         
-        if (numeroIdentificador == null) {
-            numeroIdentificador = "No se registro numero identificador.";
+        if (nombre == null) {
+            panelRegistrarGanado.setLblMensajeNombre("Ingresa un nombre");
+            contador++;
+        } else {
+            panelRegistrarGanado.setLblMensajeNombre("");
         }
         
-        return new Vaca(panelRegistrarGanado.getNombre() ,fecha , panelRegistrarGanado.getJcbRazaPadre().getSelectedItem().toString(), panelRegistrarGanado.getJcbRazaMadre().getSelectedItem().toString(), panelRegistrarGanado.getJcbEstado().getSelectedItem().toString(), descripcion, numeroIdentificador, peso, usuario.getNombreDeUsuario());
+        if (fecha == null) {
+            panelRegistrarGanado.setLblMensajeFecha("Completa la fecha");
+            contador++;
+        } else {
+            panelRegistrarGanado.setLblMensajeFecha("");
+        }
+        
+        if (razaMadre == null) {
+            panelRegistrarGanado.setLblMensajeRazaMadre("Ingresa un raza");
+            contador++;
+        } else {
+            panelRegistrarGanado.setLblMensajeRazaMadre("");
+        }
+        
+        if (razaPadre == null) {
+            panelRegistrarGanado.setLblMensajeRazaPadre("Ingresa un raza");
+            contador++;
+        } else {
+            panelRegistrarGanado.setLblMensajeRazaPadre("");
+        }
+        
+        if (estado == null) {
+            panelRegistrarGanado.setLblMensajeEstado("Ingresa un estado");
+            contador++;
+        } else {
+            panelRegistrarGanado.setLblMensajeEstado("");
+        }
+        
+        if (contador == 0) {
+            return new Vaca(identificador, nombre, fecha, razaPadre, razaMadre, estado, peso, descripcion, idPropietario);
+        }
+        
+        return null;
+    }
+    
+    
+    private void configCmb(JComboBox cmb, String item) {
+        cmb.removeAllItems();
+        cmb.addItem(item);
+    }
+    
+    private void reiniciarFormulario() {
+        panelRegistrarGanado.reiniciarFormulario();
+        llenarCmbDias();
     }
 }

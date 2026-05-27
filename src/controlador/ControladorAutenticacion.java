@@ -10,7 +10,7 @@ import vista.VistaAutenticacion;
 
 
 public class ControladorAutenticacion implements ActionListener{
-    private VistaAutenticacion vistaAutenticacion;
+    private final VistaAutenticacion vistaAutenticacion;
 
     public ControladorAutenticacion(VistaAutenticacion vistaAutenticacion) {
         this.vistaAutenticacion = vistaAutenticacion;

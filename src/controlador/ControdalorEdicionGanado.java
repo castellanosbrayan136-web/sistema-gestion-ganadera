@@ -15,10 +15,10 @@ import vista.VistaPrincipal;
 
 
 public class ControdalorEdicionGanado implements ActionListener {
-    private VistaPrincipal vistaPrincipal;
-    private DialogEdicionGanado dialogEdicionGanado;
-    private VacaDAO vacaDAO;
-    private Vaca vaca;
+    private final VistaPrincipal vistaPrincipal;
+    private final DialogEdicionGanado dialogEdicionGanado;
+    private final VacaDAO vacaDAO;
+    private final Vaca vaca;
 
     public ControdalorEdicionGanado(VistaPrincipal vistaPrincipal, DialogEdicionGanado dialogEdicionGanado, VacaDAO vacaDAO, Vaca vaca) {
         this.vistaPrincipal = vistaPrincipal;

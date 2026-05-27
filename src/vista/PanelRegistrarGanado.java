@@ -366,7 +366,7 @@ public class PanelRegistrarGanado extends javax.swing.JPanel {
 
     public String getDescripcion() {
         String descripcion = txtAreaDescripcion.getText();
-        return (validarCampos(descripcion)) ? descripcion : null;
+        return (validarCampos(descripcion)) ? descripcion : "No se registro descripción";
     }
 
     public String getNombre() {
@@ -374,9 +374,9 @@ public class PanelRegistrarGanado extends javax.swing.JPanel {
         return (validarCampos(nombre)) ? nombre : null;
     }
 
-    public String getIdentificacion() {
-        String numeroIdentificacion = txtIdentificador.getText();
-        return (validarCampos(numeroIdentificacion)) ? numeroIdentificacion : null;
+    public String getIdentificador() {
+        String identificador = txtIdentificador.getText();
+            return (validarCampos(identificador)) ? identificador : null;
     }
 
     public Double getPeso() {
@@ -464,6 +464,22 @@ public class PanelRegistrarGanado extends javax.swing.JPanel {
 
     public void setLblMensajeRazaPadre(String mensajeRazaPadre) {
         this.lblMensajeRazaPadre.setText(mensajeRazaPadre);
+    }
+    
+    public void reiniciarFormulario() {
+        txtAreaDescripcion.setText("");
+        txtIdentificador.setText("");
+        txtNombre.setText("");
+        txtPeso.setText("");
+
+        cmbRazaMadre.setSelectedIndex(0);
+        cmbRazaPadre.setSelectedIndex(0);
+
+        cmbEstado.setSelectedIndex(0);
+
+        cmbAño.setSelectedIndex(0);
+
+        cmbMes.setSelectedIndex(0);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
