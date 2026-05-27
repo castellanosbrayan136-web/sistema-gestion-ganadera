@@ -8,6 +8,7 @@ import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
+import modelo.Ubicacion;
 
 /**
  *
@@ -387,7 +388,28 @@ public class PanelCrearCuenta extends javax.swing.JPanel {
         String vereda = txtVereda.getText();
         return (verificarCamposDeTexto(vereda, "Vereda")) ? vereda.trim() : null;
     }
-
+    
+    private String getDepartamento() {
+        String departamento = (String) cmbDepartamento.getSelectedItem();
+        return (!departamento.equals("Departamento")) ? departamento : null;
+    }
+    
+    private String getMunicipio() {
+        String municipio = (String) cmbMunicipio.getSelectedItem();
+        return (!municipio.equals("Municipio")) ? municipio : null;
+    }
+    
+    public Ubicacion getUbicacion() {
+        String municipio = getMunicipio();
+        String departamento = getDepartamento();
+        String vereda = getVereda();
+        
+        if (municipio != null && departamento != null && vereda != null) {
+            return new Ubicacion(departamento, municipio, vereda);
+        } 
+        return null;
+    }
+    
     public void setJcbDepartamento(JComboBox<String> jcbDepartamento) {
         this.cmbDepartamento = jcbDepartamento;
     }
@@ -396,7 +418,7 @@ public class PanelCrearCuenta extends javax.swing.JPanel {
         this.cmbMunicipio = jcbMunicipio;
     }
 
-    public void setJpfContraseña(String texto) {
+    public void setPwsContraseña(String texto) {
         this.pswContraseña.setText(texto);
     }
 
@@ -446,7 +468,7 @@ public class PanelCrearCuenta extends javax.swing.JPanel {
     
     private boolean verificarCamposDeTexto(String campoDeTexto, String campoAValidar) {
         return campoDeTexto != null && !campoDeTexto.trim().isEmpty() && !campoDeTexto.trim().equals(campoAValidar);
-    }
+    } 
     
     
     

@@ -5,11 +5,10 @@ package controlador;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.util.ArrayList;
-import java.util.List;
+import java.awt.event.MouseListener;
 import javax.swing.JOptionPane;
+import javax.swing.JTextField;
 import modelo.Departamento;
 import modelo.DepartamentoDAO;
 import modelo.Ubicacion;
@@ -18,32 +17,34 @@ import modelo.UsuarioDAO;
 import vista.PanelCrearCuenta;
 
 
-public class ControladorCrearCuenta implements ActionListener {
+public class ControladorCrearCuenta implements ActionListener, MouseListener {
     private final PanelCrearCuenta panelCrearCuenta;
     private final UsuarioDAO usuarioDAO;
-    private DepartamentoDAO departamentoDAO;
+    private final DepartamentoDAO departamentoDAO;
 
     public ControladorCrearCuenta(PanelCrearCuenta panelCrearCuenta, UsuarioDAO usuarioDAO, DepartamentoDAO departamentoDAO) {
         this.panelCrearCuenta = panelCrearCuenta;
         this.usuarioDAO = usuarioDAO;
         this.departamentoDAO = departamentoDAO;
-        activarEventos();
-        llenarJcomboBoxDepartamentos();
+        configurarEventos();
+        cargarDatosInciales();
     }
     
-    public void eventoBotones() {
+    public void configurarEventos() {
         panelCrearCuenta.getBtnRegistrar().addActionListener(this);
         panelCrearCuenta.getJcbDepartamento().addActionListener(this);
+        
+        panelCrearCuenta.getTxtNombres().addMouseListener(this);
+        panelCrearCuenta.getTxtCorreo().addMouseListener(this);
+        panelCrearCuenta.getTxtNombreFinca().addMouseListener(this);
+        panelCrearCuenta.getTxtUsuario().addMouseListener(this);
+        panelCrearCuenta.getTxtVereda().addMouseListener(this);
+        panelCrearCuenta.getPwsContraseña().addMouseListener(this);
     }
     
-    public void activarEventos() {
-        eventoBotones();
-        eventoTxtNombres();
-        eventoTxtUsuario();
-        eventoTxtCorreo();
-        eventoTxtNombreFinca();
-        eventoTxtVereda();
-        eventoTxtContraseña();
+    public void cargarDatosInciales() {
+        cargarCbmDepartamentos();
+        CargarCbmMunicipios();
     }
     
     @Override
@@ -51,94 +52,43 @@ public class ControladorCrearCuenta implements ActionListener {
         if (e.getSource() == panelCrearCuenta.getBtnRegistrar()) {
             registrar();
         } else if (e.getSource() == panelCrearCuenta.getJcbDepartamento()) {
-            llenarJcomboBoxMunicipios();
+            CargarCbmMunicipios();
         }
     }
     
-    public void eventoTxtNombres() {
-        panelCrearCuenta.getTxtNombres().addMouseListener(new MouseAdapter() {
-            @Override
-            public void mousePressed(MouseEvent e) {
-                reiniciarCaposDeTexto();
-                if (panelCrearCuenta.getNombres() != null) {
-                    return;
-                }
-                panelCrearCuenta.setTxtNombres("");
-                panelCrearCuenta.getTxtNombres().setForeground(Color.black);
-            }
-        });
+    @Override
+    public void mousePressed(MouseEvent e) {
+        Object source = e.getSource();
+        if (source == panelCrearCuenta.getTxtNombres()) {
+            reestablecerPlaceHolder();
+            if (panelCrearCuenta.getNombres() != null) return;
+            configTextField(panelCrearCuenta.getTxtNombres());
+            
+        } else if (source == panelCrearCuenta.getTxtCorreo()) {
+            reestablecerPlaceHolder();
+            if (panelCrearCuenta.getCorreo ()!= null) return;
+            configTextField(panelCrearCuenta.getTxtCorreo());
+            
+        } else if (source == panelCrearCuenta.getTxtUsuario()) {
+                reestablecerPlaceHolder();
+                if (panelCrearCuenta.getUsuario() != null) return;
+                configTextField(panelCrearCuenta.getTxtUsuario());
+        } else if (source == panelCrearCuenta.getPwsContraseña()) {
+            reestablecerPlaceHolder();
+            if (panelCrearCuenta.getContraseña() != null) return;
+            configTextField(panelCrearCuenta.getPwsContraseña());
+            
+        } else if (source == panelCrearCuenta.getTxtVereda()) {
+            reestablecerPlaceHolder();
+            if (panelCrearCuenta.getVereda() != null) return;
+            configTextField(panelCrearCuenta.getTxtVereda());
+            
+        } else if (source == panelCrearCuenta.getTxtNombreFinca()) {
+            reestablecerPlaceHolder();
+            if (panelCrearCuenta.getNombreFinca() != null) return;
+            configTextField(panelCrearCuenta.getTxtNombreFinca());
+        }
     }
-    
-    public void eventoTxtCorreo() {
-        panelCrearCuenta.getTxtCorreo().addMouseListener(new MouseAdapter() {
-            @Override
-            public void mousePressed(MouseEvent e) {
-                reiniciarCaposDeTexto();
-                if (panelCrearCuenta.getCorreo ()!= null) {
-                    return;
-                }
-                panelCrearCuenta.setTxtCorreo("");
-                panelCrearCuenta.getTxtCorreo().setForeground(Color.black);
-            }
-        });
-    }
-    
-    public void eventoTxtUsuario() {
-        panelCrearCuenta.getTxtUsuario().addMouseListener(new MouseAdapter() {
-            @Override
-            public void mousePressed(MouseEvent e) {
-                reiniciarCaposDeTexto();
-                if (panelCrearCuenta.getUsuario() != null) {
-                    return;
-                }
-                panelCrearCuenta.setTxtUsuario("");
-                panelCrearCuenta.getTxtUsuario().setForeground(Color.black);
-            }
-        });
-    }
-    
-    public void eventoTxtContraseña() {
-        panelCrearCuenta.getJpfContraseña().addMouseListener(new MouseAdapter() {
-            @Override
-            public void mousePressed(MouseEvent e) {
-                reiniciarCaposDeTexto();
-                if (panelCrearCuenta.getContraseña() != null) {
-                    return;
-                }
-                panelCrearCuenta.setJpfContraseña("");
-                panelCrearCuenta.getJpfContraseña().setForeground(Color.black);
-            }
-        });
-    }
-    
-    public void eventoTxtVereda() {
-        panelCrearCuenta.getTxtVereda().addMouseListener(new MouseAdapter() {
-            @Override
-            public void mousePressed(MouseEvent e) {
-                reiniciarCaposDeTexto();
-                if (panelCrearCuenta.getVereda() != null) {
-                    return;
-                }
-                panelCrearCuenta.setTxtVereda("");
-                panelCrearCuenta.getTxtVereda().setForeground(Color.black);
-            }
-        });
-    }
-    
-    public void eventoTxtNombreFinca() {
-        panelCrearCuenta.getTxtNombreFinca().addMouseListener(new MouseAdapter() {
-            @Override
-            public void mousePressed(MouseEvent e) {
-                reiniciarCaposDeTexto();
-                if (panelCrearCuenta.getNombreFinca() != null) {
-                    return;
-                }
-                panelCrearCuenta.setTxtNombreFinca("");
-                panelCrearCuenta.getTxtNombreFinca().setForeground(Color.black);
-            }
-        });
-    }
-    
     public void registrar() {
         Usuario nuevoUsuario = verificarYRetornarDatos();
         
@@ -147,7 +97,7 @@ public class ControladorCrearCuenta implements ActionListener {
         }
     }
     
-    public void reiniciarCaposDeTexto() {
+    public void reestablecerPlaceHolder() {
         Color grisClaro = new Color(204,204,204);
         
         if (panelCrearCuenta.getCorreo() == null) {
@@ -176,8 +126,8 @@ public class ControladorCrearCuenta implements ActionListener {
         }
         
         if (panelCrearCuenta.getContraseña() == null) {
-            panelCrearCuenta.setJpfContraseña("**************");
-            panelCrearCuenta.getJpfContraseña().setForeground(grisClaro);
+            panelCrearCuenta.setPwsContraseña("**************");
+            panelCrearCuenta.getPwsContraseña().setForeground(grisClaro);
         }
     }
     
@@ -186,43 +136,74 @@ public class ControladorCrearCuenta implements ActionListener {
         String nombreDeUsuario = panelCrearCuenta.getUsuario();
         String correoElectronico = panelCrearCuenta.getCorreo();
         String nombreDeLaFinca = panelCrearCuenta.getNombreFinca();
-        String departamento = panelCrearCuenta.getJcbDepartamento().getSelectedItem().toString();
-        String municipio = panelCrearCuenta.getJcbMunicipio().getSelectedItem().toString();
-        String vereda = panelCrearCuenta.getVereda();
-        Ubicacion ubicacion = new Ubicacion(departamento, municipio, vereda);
+        Ubicacion ubicacion = panelCrearCuenta.getUbicacion();
         String contraseña = panelCrearCuenta.getContraseña();
+        
+        int contador = 0;
         
         if (nombresYApellidos == null) {
             panelCrearCuenta.setMensajeNombres("Ingresa nombres y apellidos");
-            return null;
-        } else if (nombreDeUsuario == null) {
-            panelCrearCuenta.setMensajeUsuario("Ingresa un usuario");
-            return null;
-        } else if (correoElectronico == null) {
-            panelCrearCuenta.setMensajeCorreo("Ingresa un correo electrónico");
-            return null;
-        } else if (nombreDeLaFinca == null) {
-            panelCrearCuenta.setMensajeNombreDeLaFinca("Ingresa el nombre de la finca");
-            return null;
-        } else if (vereda == null) {
-            panelCrearCuenta.setMensajeUbicacion("Completa la ubicación");
-            return null;
-        } else if (contraseña == null) {
-            panelCrearCuenta.setMensajeContraseña("Ingresa una contraseña");
-            return null;
+            contador++;
         } else {
+            panelCrearCuenta.setMensajeNombres("");
+        }
+        
+        if (nombreDeUsuario == null) {
+            panelCrearCuenta.setMensajeUsuario("Ingresa un usuario");
+            contador++;
+        } else {
+            panelCrearCuenta.setMensajeUsuario("");
+        }
+        
+        if (usuarioDAO.verificarNombreEnUso(nombreDeUsuario)) {
+            panelCrearCuenta.setMensajeUsuario("Este nombre ya esta en uso");
+            contador++;
+        } else {
+            panelCrearCuenta.setMensajeUsuario("");
+        }
+        
+        if (correoElectronico == null) {
+            panelCrearCuenta.setMensajeCorreo("Ingresa un correo electrónico");
+            contador++;
+        } else {
+            panelCrearCuenta.setMensajeCorreo("");
+        }
+        
+        if (nombreDeLaFinca == null) {
+            panelCrearCuenta.setMensajeNombreDeLaFinca("Ingresa el nombre de la finca");
+            contador++;
+        } else {
+            panelCrearCuenta.setMensajeNombreDeLaFinca("");
+        }
+        
+        if (ubicacion == null) {
+            panelCrearCuenta.setMensajeUbicacion("Completa la ubicación");
+            contador++;
+        } else {
+            panelCrearCuenta.setMensajeUbicacion("");
+        }
+        
+        if (contraseña == null) {
+            panelCrearCuenta.setMensajeContraseña("Ingresa una contraseña");
+            contador++;
+        } else {
+            panelCrearCuenta.setMensajeContraseña("");
+        }
+        
+        if (contador == 0) {
             return new Usuario(nombresYApellidos, nombreDeUsuario, correoElectronico, nombreDeLaFinca, ubicacion, contraseña);
         }
+        
+        return null;
     }
     
-    public void llenarJcomboBoxDepartamentos() {
+    public void cargarCbmDepartamentos() {
         for (Departamento departamento : departamentoDAO.retornarDepartamentos() ) {
             panelCrearCuenta.getJcbDepartamento().addItem(departamento.getDepartamento());
         }
-        llenarJcomboBoxMunicipios();
     }
     
-    public void llenarJcomboBoxMunicipios() {
+    public void CargarCbmMunicipios() {
         String departamentoSeleccionado = panelCrearCuenta.getJcbDepartamento().getSelectedItem().toString();
         
         for (Departamento departamento : departamentoDAO.retornarDepartamentos()) {
@@ -236,5 +217,26 @@ public class ControladorCrearCuenta implements ActionListener {
         }
     }
     
+    private void configTextField(JTextField txt) {
+        txt.setText("");
+        txt.setForeground(Color.BLACK);
+    }
+    
     //Murio aprox 5:10pm - 5:20pm del dia jueves 14 de mayo del año 2026
+    
+    @Override
+    public void mouseClicked(MouseEvent e) {
+    }
+    
+    @Override
+    public void mouseReleased(MouseEvent e) {
+    }
+
+    @Override
+    public void mouseEntered(MouseEvent e) {
+    }
+
+    @Override
+    public void mouseExited(MouseEvent e) {
+    }
 }

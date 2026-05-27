@@ -32,36 +32,36 @@ public class VistaAutenticacion extends javax.swing.JFrame {
     private void initComponents() {
 
         background = new javax.swing.JPanel();
-        sideBar = new javax.swing.JPanel();
-        lblTitulo = new javax.swing.JLabel();
-        panelLinea = new javax.swing.JPanel();
+        pnlSideVar = new javax.swing.JPanel();
+        lblTituloSideVar = new javax.swing.JLabel();
+        pblLinea = new javax.swing.JPanel();
         btnIniciarSesion = new javax.swing.JButton();
         btnCrearCuenta = new javax.swing.JButton();
         btnSalir = new javax.swing.JButton();
-        panelIntercambiable = new javax.swing.JPanel();
+        panelVacio = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         background.setBackground(new java.awt.Color(245, 245, 245));
 
-        sideBar.setBackground(new java.awt.Color(27, 37, 55));
+        pnlSideVar.setBackground(new java.awt.Color(27, 37, 55));
 
-        lblTitulo.setFont(new java.awt.Font("Segoe UI", 1, 28)); // NOI18N
-        lblTitulo.setForeground(new java.awt.Color(255, 255, 255));
-        lblTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblTitulo.setText("GanaDex");
+        lblTituloSideVar.setFont(new java.awt.Font("Segoe UI", 1, 28)); // NOI18N
+        lblTituloSideVar.setForeground(new java.awt.Color(255, 255, 255));
+        lblTituloSideVar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblTituloSideVar.setText("GanaDex");
 
-        panelLinea.setBackground(new java.awt.Color(245, 245, 245));
-        panelLinea.setPreferredSize(new java.awt.Dimension(0, 4));
+        pblLinea.setBackground(new java.awt.Color(245, 245, 245));
+        pblLinea.setPreferredSize(new java.awt.Dimension(0, 4));
 
-        javax.swing.GroupLayout panelLineaLayout = new javax.swing.GroupLayout(panelLinea);
-        panelLinea.setLayout(panelLineaLayout);
-        panelLineaLayout.setHorizontalGroup(
-            panelLineaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout pblLineaLayout = new javax.swing.GroupLayout(pblLinea);
+        pblLinea.setLayout(pblLineaLayout);
+        pblLineaLayout.setHorizontalGroup(
+            pblLineaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
         );
-        panelLineaLayout.setVerticalGroup(
-            panelLineaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        pblLineaLayout.setVerticalGroup(
+            pblLineaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 3, Short.MAX_VALUE)
         );
 
@@ -98,26 +98,26 @@ public class VistaAutenticacion extends javax.swing.JFrame {
         btnSalir.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         btnSalir.setIconTextGap(20);
 
-        javax.swing.GroupLayout sideBarLayout = new javax.swing.GroupLayout(sideBar);
-        sideBar.setLayout(sideBarLayout);
-        sideBarLayout.setHorizontalGroup(
-            sideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblTitulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(sideBarLayout.createSequentialGroup()
+        javax.swing.GroupLayout pnlSideVarLayout = new javax.swing.GroupLayout(pnlSideVar);
+        pnlSideVar.setLayout(pnlSideVarLayout);
+        pnlSideVarLayout.setHorizontalGroup(
+            pnlSideVarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lblTituloSideVar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(pnlSideVarLayout.createSequentialGroup()
                 .addGap(56, 56, 56)
-                .addComponent(panelLinea, javax.swing.GroupLayout.DEFAULT_SIZE, 192, Short.MAX_VALUE)
+                .addComponent(pblLinea, javax.swing.GroupLayout.DEFAULT_SIZE, 192, Short.MAX_VALUE)
                 .addGap(52, 52, 52))
             .addComponent(btnIniciarSesion, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
             .addComponent(btnCrearCuenta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(btnSalir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
-        sideBarLayout.setVerticalGroup(
-            sideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(sideBarLayout.createSequentialGroup()
+        pnlSideVarLayout.setVerticalGroup(
+            pnlSideVarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlSideVarLayout.createSequentialGroup()
                 .addGap(60, 60, 60)
-                .addComponent(lblTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblTituloSideVar, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(panelLinea, javax.swing.GroupLayout.PREFERRED_SIZE, 3, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pblLinea, javax.swing.GroupLayout.PREFERRED_SIZE, 3, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(80, 80, 80)
                 .addComponent(btnIniciarSesion, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(78, 78, 78)
@@ -127,17 +127,17 @@ public class VistaAutenticacion extends javax.swing.JFrame {
                 .addGap(94, 94, 94))
         );
 
-        panelIntercambiable.setBackground(new java.awt.Color(255, 255, 255));
-        panelIntercambiable.setForeground(new java.awt.Color(245, 255, 255));
+        panelVacio.setBackground(new java.awt.Color(255, 255, 255));
+        panelVacio.setForeground(new java.awt.Color(245, 255, 255));
 
-        javax.swing.GroupLayout panelIntercambiableLayout = new javax.swing.GroupLayout(panelIntercambiable);
-        panelIntercambiable.setLayout(panelIntercambiableLayout);
-        panelIntercambiableLayout.setHorizontalGroup(
-            panelIntercambiableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout panelVacioLayout = new javax.swing.GroupLayout(panelVacio);
+        panelVacio.setLayout(panelVacioLayout);
+        panelVacioLayout.setHorizontalGroup(
+            panelVacioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 1128, Short.MAX_VALUE)
         );
-        panelIntercambiableLayout.setVerticalGroup(
-            panelIntercambiableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        panelVacioLayout.setVerticalGroup(
+            panelVacioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
@@ -146,17 +146,17 @@ public class VistaAutenticacion extends javax.swing.JFrame {
         backgroundLayout.setHorizontalGroup(
             backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(backgroundLayout.createSequentialGroup()
-                .addComponent(sideBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pnlSideVar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(panelIntercambiable, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(panelVacio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         backgroundLayout.setVerticalGroup(
             backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(sideBar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(pnlSideVar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(backgroundLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(panelIntercambiable, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(panelVacio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -214,7 +214,7 @@ public class VistaAutenticacion extends javax.swing.JFrame {
     }
 
     public JPanel getPanelIntercambiable() {
-        return panelIntercambiable;
+        return panelVacio;
     }
     
     
@@ -224,9 +224,9 @@ public class VistaAutenticacion extends javax.swing.JFrame {
     private javax.swing.JButton btnCrearCuenta;
     private javax.swing.JButton btnIniciarSesion;
     private javax.swing.JButton btnSalir;
-    private javax.swing.JLabel lblTitulo;
-    private javax.swing.JPanel panelIntercambiable;
-    private javax.swing.JPanel panelLinea;
-    private javax.swing.JPanel sideBar;
+    private javax.swing.JLabel lblTituloSideVar;
+    private javax.swing.JPanel panelVacio;
+    private javax.swing.JPanel pblLinea;
+    private javax.swing.JPanel pnlSideVar;
     // End of variables declaration//GEN-END:variables
 }

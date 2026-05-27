@@ -61,6 +61,15 @@ public class UsuarioDAO {
         return true;
     }
     
+    public boolean verificarNombreEnUso(String nombreUsuario) {
+        for (Usuario usuario : usuarios) {
+            if (usuario.getNombreDeUsuario().equals(nombreUsuario)) {
+                return true;
+            }
+        }
+        return false;
+    }
+    
     public Usuario verificarUsuario(String nombreUsuario, String contraseña) {
         for (Usuario usuario : usuarios) {
             if (usuario.getContraseña().equals(contraseña) && usuario.getNombreDeUsuario().equals(nombreUsuario)) {
