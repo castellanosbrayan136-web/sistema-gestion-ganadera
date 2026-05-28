@@ -19,9 +19,9 @@ import vista.PanelRegistrarTratamiento;
 
 public class ControladorRegistrarTratamiento implements ActionListener {
     
-    private PanelRegistrarTratamiento panelRegistrarTratamiento;
-    private VacaDAO vacaDAO;
-    private Usuario usuario;
+    private final PanelRegistrarTratamiento panelRegistrarTratamiento;
+    private final VacaDAO vacaDAO;
+    private final Usuario usuario;
 
     public ControladorRegistrarTratamiento(PanelRegistrarTratamiento panelRegistrarTratamiento, VacaDAO vacaDAO, Usuario usuario) {
         this.panelRegistrarTratamiento = panelRegistrarTratamiento;

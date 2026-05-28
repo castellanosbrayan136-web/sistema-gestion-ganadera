@@ -9,6 +9,7 @@ import java.time.Month;
 import java.time.YearMonth;
 import java.time.format.TextStyle;
 import java.util.Locale;
+import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
 import modelo.Produccion;
 import modelo.Usuario;
@@ -26,25 +27,76 @@ public class ControladorRegistroProduccion implements ActionListener {
         this.panelRegistroProduccion = panelRegistroProduccion;
         this.vacaDAO = vacaDAO;
         this.usuario = usuario;
-        activarEventos();
-        llenarCombos();
+        configurarEventos();
+        cargarDatosIniciales();
     }
 
-    private void activarEventos() {
+    private void configurarEventos() {
         panelRegistroProduccion.getBtnRegistrar().addActionListener(this);
-        panelRegistroProduccion.getJcbAño().addActionListener(this);
-        panelRegistroProduccion.getJcbMes().addActionListener(this);
+        panelRegistroProduccion.getCmbAño().addActionListener(this);
+        panelRegistroProduccion.getCmbMes().addActionListener(this);
     }
     
-    private void llenarCombos() {
-        llenarAñosYMeses();
-        llenarComboVacas();
+    private void cargarDatosIniciales() {
+        cargarCmbAños();
+        cargarCmbDias();
+        cargarCmbMeses();
+        cargarComboVacas();
+    }
+    
+    private void cargarComboVacas() {
+        for (Vaca vaca : vacaDAO.getVacasPorIdPropietario(usuario.getIdInterno())) {
+            panelRegistroProduccion.getCmbVacas().addItem(vaca);
+        }
+    }
+    
+    private void cargarCmbMeses() {
+        for (Month mes : Month.values()) {
+            String mesEnEspañol = mes.getDisplayName(TextStyle.FULL, new Locale("es", "ES"));
+            panelRegistroProduccion.getCmbMes().addItem(mesEnEspañol);
+        }
+    }
+    
+    public void cargarCmbAños() {
+        int añoActual = LocalDate.now().getYear();
+        
+        for (int i = añoActual ; i >= 2020 ; i--) {
+            panelRegistroProduccion.getCmbAño().addItem(String.valueOf(i));
+        }
+    }
+    
+    public void cargarCmbDias() {
+        configCmb(panelRegistroProduccion.getCmbDia(), "Dia");
+        LocalDate fecha = panelRegistroProduccion.getFecha();
+        
+        if (fecha == null) {
+            return;
+        }
+        
+        int año = fecha.getYear();
+        int mes = fecha.getMonthValue();
+        
+        YearMonth yearMonth = YearMonth.of(año, mes);
+        int diasMes = yearMonth.lengthOfMonth();
+        
+        for (int i = 1; i <= diasMes; i++) {
+            panelRegistroProduccion.getCmbDia().addItem(String.valueOf(i));
+        }
+    }
+    
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == panelRegistroProduccion.getBtnRegistrar()) {
+            registrarProduccion();
+        } else if (e.getSource() == panelRegistroProduccion.getCmbAño() || e.getSource() == panelRegistroProduccion.getCmbMes()) {
+            cargarCmbDias();
+        } 
     }
     
     private Produccion verificarProduccion() {
-        LocalDate fecha = leerFechaSeleccionada();
+        LocalDate fecha = panelRegistroProduccion.getFecha();
         
-        Produccion produccion = vacaDAO.retornarRegistroProduccionPorFecha(leerVacaSeleccionada(), fecha);
+        Produccion produccion = vacaDAO.getProduccionPorFecha(panelRegistroProduccion.getVaca().getIdInterno(), fecha);
         
         if (produccion == null) {
             return new Produccion(fecha);
@@ -52,94 +104,26 @@ public class ControladorRegistroProduccion implements ActionListener {
             return produccion;
         }
     }
-    
-    private LocalDate leerFechaSeleccionada() {
-        return LocalDate.of(
-    Integer.parseInt(panelRegistroProduccion.getJcbAño().getSelectedItem().toString()),
-    panelRegistroProduccion.getJcbMes().getSelectedIndex(),
-    Integer.parseInt(panelRegistroProduccion.getJcbDia().getSelectedItem().toString())
-);
-    }
-    
-    private String leerJornadaSeleccionada() {
-        return (String) panelRegistroProduccion.getJcbJornada().getSelectedItem();
-    }
-    
-    private Integer leerLitrosIngresados() {
-        return panelRegistroProduccion.getLitros();
-    }
-    
-    private void llenarComboVacas() {
-        for (Vaca vaca : vacaDAO.retornarListaVacasPorUsuario(usuario.getNombreDeUsuario())) {
-            panelRegistroProduccion.getJcbAnimal().addItem(vaca);
-        }
-    }
-    
-    private void llenarAñosYMeses() {
-        for (Month mes : Month.values()) {
-            String mesEspañol = mes.getDisplayName(TextStyle.FULL, new Locale("es", "ES"));
-            panelRegistroProduccion.getJcbMes().addItem(mesEspañol);
-        }
         
-        int añoActual = LocalDate.now().getYear();
-        
-        for (int i = añoActual ; i >= 2025 ; i--) {
-            panelRegistroProduccion.getJcbAño().addItem(String.valueOf(i));
-        }
-    }
-        
-    private Vaca leerVacaSeleccionada() {
-        return (Vaca) panelRegistroProduccion.getJcbAnimal().getSelectedItem();
-    }
-    
-        private void llenarDiasDelMes() {
-        panelRegistroProduccion.getJcbDia().removeAllItems();
-        panelRegistroProduccion.getJcbDia().addItem("Día");
-        
-        int año;
-        
-        try {
-            año = Integer.parseInt((String) panelRegistroProduccion.getJcbAño().getSelectedItem());
-        } catch (NumberFormatException e) {
-            return;
-        }
-        int mes = panelRegistroProduccion.getJcbMes().getSelectedIndex();
-        
-        if (mes == 0) {
-            panelRegistroProduccion.getJcbDia().removeAllItems();
-            panelRegistroProduccion.getJcbDia().addItem("Día");
-            return;
-        }
-        
-        YearMonth yearMonth = YearMonth.of(año, mes);
-        
-        int cantidadDias = yearMonth.lengthOfMonth();
-        
-        for (int i = 1; i <= cantidadDias; i++) {
-            panelRegistroProduccion.getJcbDia().addItem(String.valueOf(i));
-        }
-    }
-        
-        private void mostrarMensaje() {
+    private void mostrarMensaje() {
             JOptionPane.showMessageDialog(panelRegistroProduccion, "Registro exitoso.");
         }
         
     private void registrarProduccion() {
-        Vaca vacaARealizarRegistro = leerVacaSeleccionada();
-        LocalDate fecha = leerFechaSeleccionada();
-        String jornada = leerJornadaSeleccionada();
-        Integer litros = leerLitrosIngresados();
+        Vaca vaca = panelRegistroProduccion.getVaca();
+        String jornada = panelRegistroProduccion.getJornada();
+        Integer litros = panelRegistroProduccion.getLitros();
         
         Produccion produccion = verificarProduccion();
         
         if (jornada.equals("Mañana")) {
            if (produccion.getLitrosTarde() == null && produccion.getLitrosMañana() == null) {
                 produccion.setLitrosMañana(litros);
-                vacaDAO.registrarProduccion(produccion, vacaARealizarRegistro);
+                vacaDAO.addProduccion(produccion, vaca.getIdInterno());
                 mostrarMensaje();
             } else if (produccion.getLitrosTarde() != null && produccion.getLitrosMañana() == null) {
                produccion.setLitrosMañana(litros);
-               vacaDAO.editarProduccion(vacaARealizarRegistro, produccion);
+               vacaDAO.updateProduccion(vaca.getIdInterno(), produccion);
                mostrarMensaje();
            } else {
                 JOptionPane.showMessageDialog(panelRegistroProduccion, "Ya hiciste registro para la manana de este dia.");
@@ -149,11 +133,11 @@ public class ControladorRegistroProduccion implements ActionListener {
         if (jornada.equals("Tarde")) {
             if (produccion.getLitrosTarde() == null && produccion.getLitrosMañana() == null) {
                 produccion.setLitrosTarde(litros);
-                vacaDAO.registrarProduccion(produccion, vacaARealizarRegistro);
+                vacaDAO.addProduccion(produccion, vaca.getIdInterno());
                 mostrarMensaje();
             } else if (produccion.getLitrosTarde() == null && produccion.getLitrosMañana() != null) {
                 produccion.setLitrosTarde(litros);
-                vacaDAO.editarProduccion(vacaARealizarRegistro, produccion);
+                vacaDAO.updateProduccion(vaca.getIdInterno(), produccion);
                 mostrarMensaje();
             } else {
                 JOptionPane.showMessageDialog(panelRegistroProduccion, "Ya hiciste registro para la tarde de este dia.");
@@ -161,14 +145,8 @@ public class ControladorRegistroProduccion implements ActionListener {
         }
     }
     
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        if (e.getSource() == panelRegistroProduccion.getBtnRegistrar()) {
-            registrarProduccion();
-        } else if (e.getSource() == panelRegistroProduccion.getJcbAño()) {
-            llenarDiasDelMes();
-        } else if (e.getSource() == panelRegistroProduccion.getJcbMes()) {
-            llenarDiasDelMes();
-        }
+    private void configCmb(JComboBox cmb, String item) {
+        cmb.removeAllItems();
+        cmb.addItem(item);
     }
 }
