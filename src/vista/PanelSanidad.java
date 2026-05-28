@@ -42,7 +42,6 @@ public class PanelSanidad extends javax.swing.JPanel {
         pnlSideBar1.setBackground(new java.awt.Color(35, 52, 78));
         pnlSideBar1.setForeground(new java.awt.Color(46, 125, 50));
         pnlSideBar1.setPreferredSize(new java.awt.Dimension(270, 892));
-        pnlSideBar1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnRegistrarTratamiento.setBackground(new java.awt.Color(55, 72, 95));
         btnRegistrarTratamiento.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -54,7 +53,6 @@ public class PanelSanidad extends javax.swing.JPanel {
         btnRegistrarTratamiento.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnRegistrarTratamiento.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         btnRegistrarTratamiento.setIconTextGap(15);
-        pnlSideBar1.add(btnRegistrarTratamiento, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 250, 60));
 
         lblTituloSideVar.setFont(new java.awt.Font("Segoe UI", 1, 28)); // NOI18N
         lblTituloSideVar.setForeground(new java.awt.Color(255, 255, 255));
@@ -62,7 +60,6 @@ public class PanelSanidad extends javax.swing.JPanel {
         lblTituloSideVar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/folder/icons8-vacuna-32.png"))); // NOI18N
         lblTituloSideVar.setText("Sanidad");
         lblTituloSideVar.setIconTextGap(10);
-        pnlSideBar1.add(lblTituloSideVar, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 48, 200, 54));
 
         pblLinea.setBackground(new java.awt.Color(245, 245, 245));
         pblLinea.setPreferredSize(new java.awt.Dimension(0, 4));
@@ -71,14 +68,12 @@ public class PanelSanidad extends javax.swing.JPanel {
         pblLinea.setLayout(pblLineaLayout);
         pblLineaLayout.setHorizontalGroup(
             pblLineaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 200, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
         pblLineaLayout.setVerticalGroup(
             pblLineaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 3, Short.MAX_VALUE)
         );
-
-        pnlSideBar1.add(pblLinea, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 120, 200, 3));
 
         btnHistorialSanitario.setBackground(new java.awt.Color(55, 72, 95));
         btnHistorialSanitario.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -90,7 +85,35 @@ public class PanelSanidad extends javax.swing.JPanel {
         btnHistorialSanitario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnHistorialSanitario.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         btnHistorialSanitario.setIconTextGap(15);
-        pnlSideBar1.add(btnHistorialSanitario, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 260, 248, 60));
+
+        javax.swing.GroupLayout pnlSideBar1Layout = new javax.swing.GroupLayout(pnlSideBar1);
+        pnlSideBar1.setLayout(pnlSideBar1Layout);
+        pnlSideBar1Layout.setHorizontalGroup(
+            pnlSideBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(btnRegistrarTratamiento, javax.swing.GroupLayout.DEFAULT_SIZE, 249, Short.MAX_VALUE)
+            .addGroup(pnlSideBar1Layout.createSequentialGroup()
+                .addComponent(btnHistorialSanitario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(1, 1, 1))
+            .addGroup(pnlSideBar1Layout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addGroup(pnlSideBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblTituloSideVar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pblLinea, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE))
+                .addGap(27, 27, 27))
+        );
+        pnlSideBar1Layout.setVerticalGroup(
+            pnlSideBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlSideBar1Layout.createSequentialGroup()
+                .addGap(48, 48, 48)
+                .addComponent(lblTituloSideVar, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(pblLinea, javax.swing.GroupLayout.PREFERRED_SIZE, 3, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(77, 77, 77)
+                .addComponent(btnRegistrarTratamiento, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(btnHistorialSanitario, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(485, Short.MAX_VALUE))
+        );
 
         panelVacio.setBackground(new java.awt.Color(102, 102, 102));
 
@@ -98,7 +121,7 @@ public class PanelSanidad extends javax.swing.JPanel {
         panelVacio.setLayout(panelVacioLayout);
         panelVacioLayout.setHorizontalGroup(
             panelVacioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 864, Short.MAX_VALUE)
+            .addGap(0, 887, Short.MAX_VALUE)
         );
         panelVacioLayout.setVerticalGroup(
             panelVacioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -113,16 +136,15 @@ public class PanelSanidad extends javax.swing.JPanel {
                 .addComponent(pnlSideBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(panelVacio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(29, 29, 29))
+                .addContainerGap())
         );
         backgroundLayout.setVerticalGroup(
             backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(backgroundLayout.createSequentialGroup()
-                .addComponent(pnlSideBar1, javax.swing.GroupLayout.DEFAULT_SIZE, 796, Short.MAX_VALUE)
-                .addGap(11, 11, 11))
-            .addGroup(backgroundLayout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(panelVacio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
+            .addComponent(pnlSideBar1, javax.swing.GroupLayout.DEFAULT_SIZE, 805, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -130,14 +152,14 @@ public class PanelSanidad extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(background, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addComponent(background, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(0, 0, 0))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(background, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addComponent(background, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(0, 0, 0))
         );
     }// </editor-fold>//GEN-END:initComponents
 

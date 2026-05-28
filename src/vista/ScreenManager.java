@@ -20,7 +20,9 @@ import controlador.ControladorRegistrarTratamiento;
 import controlador.ControladorRegistroProduccion;
 import controlador.ControladorSanidad;
 import java.awt.BorderLayout;
+import java.awt.Dimension;
 import javax.swing.JPanel;
+import javax.swing.border.Border;
 import modelo.DepartamentoDAO;
 import modelo.Produccion;
 import modelo.TratamientoVeterinario;
@@ -101,7 +103,7 @@ public class ScreenManager {
         
         new ControladorRegistrarGanado(panelRegistrarGanado, vacaDAO, usuario);
         
-        cambiarPaneles(panelGanado.getPanelVacio(), panelRegistrarGanado, 860, 764);
+        cambiarPaneles(panelGanado.getPanelVacio(), panelRegistrarGanado, 859, 740);
     }
     
     public static void cambiarAPanelListaGanado(PanelGanado panelGanado, Usuario usuario, VistaPrincipal vistaPrincipal) {
@@ -109,7 +111,7 @@ public class ScreenManager {
         
         new ControladorGestionarGanado(panelListaGanado, vacaDAO, usuario, vistaPrincipal);
         
-        cambiarPaneles(panelGanado.getPanelVacio(), panelListaGanado, 860, 764);
+        cambiarPaneles(panelGanado.getPanelVacio(), panelListaGanado, 859, 740);
     }
     
     public static void cambiarAPanelSanidad(VistaPrincipal vistaPrincipal, Usuario usuario) {
@@ -125,7 +127,7 @@ public class ScreenManager {
         
         new ControladorRegistrarTratamiento(panelRegistrarTratamiento, vacaDAO, usuario);
         
-        cambiarPaneles(panelSanidad.getPanelVacio(), panelRegistrarTratamiento, 860, 764);
+        cambiarPaneles(panelSanidad.getPanelVacio(), panelRegistrarTratamiento, 859, 740);
     }
     
     public static void abrirDialogEdicionGanado(VistaPrincipal vistaPrincipal, Vaca vaca) {
@@ -153,7 +155,7 @@ public class ScreenManager {
         
         new ControladorGestionSanidad(panelGestionSanidad, usuario, vacaDAO, vistaPrincipal);
         
-        cambiarPaneles(panelSanidad.getPanelVacio(), panelGestionSanidad, 860, 764);
+        cambiarPaneles(panelSanidad.getPanelVacio(), panelGestionSanidad, 859, 740);
     }
     
     public static void abrirDialogEdicionTratamiento(VistaPrincipal vistaPrincipal, Vaca vaca, TratamientoVeterinario tratamiento) {
@@ -178,7 +180,7 @@ public class ScreenManager {
         
         new ControladorRegistroProduccion(panelRegistrarProduccion, vacaDAO, usuario);
         
-        cambiarPaneles(panelProduccion.getPanelVacio(), panelRegistrarProduccion, 860, 764);
+        cambiarPaneles(panelProduccion.getPanelVacio(), panelRegistrarProduccion, 859, 740);
     }
     
     public static void cambiarAPanelGestionProduccion(VistaPrincipal vistaPrincipal, Usuario usuario, PanelProduccion panelProduccion) {
@@ -186,7 +188,7 @@ public class ScreenManager {
         
         new ControladorGestionProduccion(vistaPrincipal, panelGestionProduccion, usuario, vacaDAO);
         
-        cambiarPaneles(panelProduccion.getPanelVacio(), panelGestionProduccion, 860, 764);
+        cambiarPaneles(panelProduccion.getPanelVacio(), panelGestionProduccion, 859, 740);
     }
     
     public static void abrirDialogEdicionProduccion(VistaPrincipal vistaPrincipal, Produccion registroProduccion, Vaca vaca) {
@@ -200,11 +202,15 @@ public class ScreenManager {
     }
     
     public static void cambiarPaneles(JPanel panelVacio, JPanel panelAIntercambiar, int ancho, int largo) {
-        panelAIntercambiar.setSize(ancho,largo);
+        panelAIntercambiar.setSize(ancho, largo);
+        panelAIntercambiar.setPreferredSize(new Dimension(ancho, largo));
         panelAIntercambiar.setLocation(0, 0);
-        
+
         panelVacio.removeAll();
+        panelVacio.setLayout(new BorderLayout());
+
         panelVacio.add(panelAIntercambiar, BorderLayout.CENTER);
+
         panelVacio.revalidate();
         panelVacio.repaint();
     }

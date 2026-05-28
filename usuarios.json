@@ -11,5 +11,18 @@
       "vereda": "Buenavista"
     },
     "contraseña": "wow123"
+  },
+  {
+    "idInterno": "f7490cc4-80f0-4686-b05a-78422c7b009d",
+    "nombresYApellidos": "f",
+    "nombreDeUsuario": "f",
+    "correoElectronico": "f",
+    "nombreDeLafinca": "f",
+    "ubicacion": {
+      "departamento": "Chocó",
+      "municipio": "El Carmen del Darién",
+      "vereda": "f"
+    },
+    "contraseña": "f"
   }
 ]

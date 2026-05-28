@@ -16,7 +16,7 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="background" alignment="0" max="32767" attributes="0"/>
+          <Component id="background" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
@@ -38,54 +38,61 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                          <Component id="lblTitulo" min="-2" pref="634" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <Component id="lblAnimalAplicar" min="-2" pref="300" max="-2" attributes="0"/>
-                          <EmptySpace min="259" pref="259" max="-2" attributes="0"/>
-                          <Component id="lblDosis" min="-2" pref="205" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <Component id="cmbVacas" min="-2" pref="260" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="299" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="txtDosis" min="-2" pref="205" max="-2" attributes="0"/>
-                              <Component id="lblMensajeDosis" min="-2" pref="316" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <Component id="lblIdTratamiento" min="-2" pref="316" max="-2" attributes="0"/>
-                          <EmptySpace min="243" pref="243" max="-2" attributes="0"/>
-                          <Component id="lblObservaciones" min="-2" pref="302" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="txtIdentificador" min="-2" pref="316" max="-2" attributes="0"/>
-                              <Component id="lblMensajeIdTratamiento" min="-2" pref="316" max="-2" attributes="0"/>
-                              <Component id="lblFecha" min="-2" pref="487" max="-2" attributes="0"/>
-                              <Group type="102" attributes="0">
-                                  <Component id="cmbAño" min="-2" pref="95" max="-2" attributes="0"/>
-                                  <EmptySpace min="15" pref="15" max="-2" attributes="0"/>
-                                  <Component id="cmbMes" min="-2" pref="92" max="-2" attributes="0"/>
-                                  <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
-                                  <Component id="cmbDia" min="-2" pref="98" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                      <Component id="lblIdTratamiento" max="32767" attributes="0"/>
+                                      <Component id="lblMensajeTratamientos" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="lblTipoTratamiento" alignment="0" max="32767" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="cmbAño" min="-2" pref="95" max="-2" attributes="0"/>
+                                          <EmptySpace min="15" pref="15" max="-2" attributes="0"/>
+                                          <Component id="cmbMes" min="-2" pref="92" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                          <Component id="cmbDia" pref="96" max="32767" attributes="0"/>
+                                      </Group>
+                                      <Component id="lblFecha" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="lblMensajeIdTratamiento" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="lblMensajeFecha" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="cmbVacas" alignment="0" min="-2" pref="231" max="-2" attributes="0"/>
+                                      <Component id="txtIdentificador" alignment="0" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Component id="lblAnimalAplicar" alignment="0" min="-2" pref="300" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="174" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="lblDosis" min="-2" pref="205" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                              <Component id="lblObservaciones" max="32767" attributes="0"/>
+                                              <Component id="jScrollPane1" pref="313" max="32767" attributes="0"/>
+                                          </Group>
+                                          <Component id="txtDosis" min="-2" pref="317" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Component id="lblMensajeDosis" max="32767" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace min="72" pref="72" max="-2" attributes="0"/>
-                          <Component id="jScrollPane1" min="-2" pref="302" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="btnRegistrar" min="-2" pref="200" max="-2" attributes="0"/>
+                                  <Component id="cmbTratamientos" alignment="0" min="-2" pref="260" max="-2" attributes="0"/>
+                                  <Component id="lblMedicamento" alignment="0" min="-2" pref="316" max="-2" attributes="0"/>
+                                  <Component id="txtMedicamento" alignment="0" min="-2" pref="316" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="lblTitulo" min="-2" pref="350" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
                       </Group>
-                      <Component id="lblMensajeFecha" min="-2" pref="316" max="-2" attributes="0"/>
-                      <Component id="lblTipoTratamiento" min="-2" pref="300" max="-2" attributes="0"/>
-                      <Component id="lblMensajeTratamientos" min="-2" pref="322" max="-2" attributes="0"/>
-                      <Component id="lblMedicamento" min="-2" pref="300" max="-2" attributes="0"/>
-                      <Component id="txtMedicamento" min="-2" pref="316" max="-2" attributes="0"/>
                       <Component id="lblMensajeMedicamento" min="-2" pref="316" max="-2" attributes="0"/>
-                      <Component id="btnRegistrar" min="-2" pref="200" max="-2" attributes="0"/>
-                      <Component id="cmbTratamientos" alignment="0" min="-2" pref="260" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="109" max="-2" attributes="0"/>
+                  <EmptySpace pref="52" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -95,35 +102,25 @@
                   <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                   <Component id="lblTitulo" min="-2" pref="46" max="-2" attributes="0"/>
                   <EmptySpace min="28" pref="28" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="lblAnimalAplicar" min="-2" pref="19" max="-2" attributes="0"/>
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="2" pref="2" max="-2" attributes="0"/>
-                          <Component id="lblDosis" min="-2" pref="19" max="-2" attributes="0"/>
-                      </Group>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="lblAnimalAplicar" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
+                      <Component id="lblDosis" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <EmptySpace min="3" pref="3" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
                           <Component id="cmbVacas" min="-2" pref="50" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
                           <Component id="txtDosis" min="-2" pref="46" max="-2" attributes="0"/>
-                          <EmptySpace min="4" pref="4" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
                           <Component id="lblMensajeDosis" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace min="9" pref="9" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="8" pref="8" max="-2" attributes="0"/>
-                          <Component id="lblIdTratamiento" min="-2" pref="19" max="-2" attributes="0"/>
-                      </Group>
-                      <Component id="lblObservaciones" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="lblIdTratamiento" min="-2" pref="22" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
                       <Group type="102" attributes="0">
                           <Component id="txtIdentificador" min="-2" pref="46" max="-2" attributes="0"/>
                           <EmptySpace min="4" pref="4" max="-2" attributes="0"/>
@@ -138,23 +135,24 @@
                           </Group>
                       </Group>
                       <Group type="102" attributes="0">
-                          <EmptySpace min="3" pref="3" max="-2" attributes="0"/>
+                          <Component id="lblObservaciones" min="-2" pref="19" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
                           <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace min="5" pref="5" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
                   <Component id="lblMensajeFecha" min="-2" pref="16" max="-2" attributes="0"/>
-                  <EmptySpace min="24" pref="24" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
                   <Component id="lblTipoTratamiento" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="5" pref="5" max="-2" attributes="0"/>
                   <Component id="cmbTratamientos" min="-2" pref="50" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="lblMensajeTratamientos" min="-2" pref="16" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
                   <Component id="lblMedicamento" min="-2" pref="25" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
                   <Component id="txtMedicamento" min="-2" pref="46" max="-2" attributes="0"/>
-                  <EmptySpace min="4" pref="4" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
                   <Component id="lblMensajeMedicamento" min="-2" pref="16" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="btnRegistrar" min="-2" pref="70" max="-2" attributes="0"/>

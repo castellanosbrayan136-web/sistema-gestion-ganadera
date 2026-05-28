@@ -92,19 +92,17 @@ public class PanelGestionSanidad extends javax.swing.JPanel {
                 .addGap(447, 447, 447))
             .addGroup(bacgroundLayout.createSequentialGroup()
                 .addGap(10, 10, 10)
-                .addComponent(jblBuscarPorNombre, javax.swing.GroupLayout.DEFAULT_SIZE, 282, Short.MAX_VALUE)
+                .addComponent(jblBuscarPorNombre, javax.swing.GroupLayout.DEFAULT_SIZE, 287, Short.MAX_VALUE)
                 .addGap(562, 562, 562))
-            .addGroup(bacgroundLayout.createSequentialGroup()
-                .addGap(10, 10, 10)
-                .addComponent(cmbVacas, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(624, Short.MAX_VALUE))
-            .addGroup(bacgroundLayout.createSequentialGroup()
-                .addGap(6, 6, 6)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 848, Short.MAX_VALUE))
             .addGroup(bacgroundLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jblInstrucciones, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(393, 393, 393))
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addGroup(bacgroundLayout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addComponent(cmbVacas, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         bacgroundLayout.setVerticalGroup(
             bacgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -117,8 +115,8 @@ public class PanelGestionSanidad extends javax.swing.JPanel {
                 .addComponent(jblBuscarPorNombre)
                 .addGap(10, 10, 10)
                 .addComponent(cmbVacas, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(14, 14, 14)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 532, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 535, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);

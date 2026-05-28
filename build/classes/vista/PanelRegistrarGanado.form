@@ -16,7 +16,7 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="panelRegistrarGanado" min="-2" max="-2" attributes="0"/>
+          <Component id="panelRegistrarGanado" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
@@ -36,54 +36,51 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" attributes="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="1" attributes="0">
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="lblMensajeRazaMadre" alignment="0" min="-2" pref="322" max="-2" attributes="0"/>
+                      <Component id="lblNombre" alignment="0" max="32767" attributes="0"/>
+                      <Component id="lblDatosObligatorios" alignment="1" pref="323" max="32767" attributes="0"/>
+                      <Component id="btnRegistrar" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
+                      <Component id="lblRazaMadre" alignment="0" max="32767" attributes="0"/>
+                      <Component id="lblMensajeFecha" alignment="0" max="32767" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="lblTituloPanel" min="-2" max="-2" attributes="0"/>
+                          <Component id="cmbAño" min="-2" pref="95" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="cmbMes" min="-2" pref="98" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="cmbDia" min="-2" pref="98" max="-2" attributes="0"/>
                       </Group>
-                      <Group type="102" alignment="1" attributes="0">
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="lblMensajeRazaMadre" alignment="0" min="-2" pref="322" max="-2" attributes="0"/>
-                              <Component id="lblNombre" alignment="0" max="32767" attributes="0"/>
-                              <Component id="lblDatosObligatorios" alignment="1" pref="323" max="32767" attributes="0"/>
-                              <Component id="btnRegistrar" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
-                              <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                  <Component id="lblRazaMadre" alignment="0" pref="321" max="32767" attributes="0"/>
-                                  <Component id="lblMensajeFecha" alignment="0" max="32767" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="cmbAño" min="-2" pref="95" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="cmbMes" min="-2" pref="98" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="cmbDia" min="-2" pref="98" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <Component id="lblFechaNacimiento" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblRazaPadre" min="-2" pref="148" max="-2" attributes="0"/>
-                              <Component id="lblMensajeRazaPadre" min="-2" pref="322" max="-2" attributes="0"/>
-                              <Component id="lblIdentificador" min="-2" pref="316" max="-2" attributes="0"/>
-                              <Component id="txtIdentificador" min="-2" pref="320" max="-2" attributes="0"/>
-                              <Component id="txtNombre" max="32767" attributes="0"/>
-                              <Component id="cmbRazaMadre" alignment="0" min="-2" pref="220" max="-2" attributes="0"/>
-                              <Component id="cmbRazaPadre" alignment="0" min="-2" pref="220" max="-2" attributes="0"/>
-                              <Component id="lblMensajeIdentificador" min="-2" pref="320" max="-2" attributes="0"/>
-                              <Component id="lblMensajeNombre" max="32767" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="unrelated" pref="210" max="32767" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="lblMensajeEstado" min="-2" pref="316" max="-2" attributes="0"/>
-                              <Component id="lblDescripcion" alignment="0" min="-2" pref="251" max="-2" attributes="0"/>
-                              <Component id="jScrollPane1" min="-2" pref="316" max="-2" attributes="0"/>
-                              <Component id="txtPeso" min="-2" pref="316" max="-2" attributes="0"/>
-                              <Component id="lblPeso" min="-2" pref="251" max="-2" attributes="0"/>
-                              <Component id="lblEstado" min="-2" pref="300" max="-2" attributes="0"/>
-                              <Component id="lblDatosOpcionales" min="-2" pref="316" max="-2" attributes="0"/>
-                              <Component id="cmbEstado" alignment="0" min="-2" pref="220" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
+                      <Component id="lblFechaNacimiento" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblRazaPadre" min="-2" pref="148" max="-2" attributes="0"/>
+                      <Component id="lblMensajeRazaPadre" min="-2" pref="322" max="-2" attributes="0"/>
+                      <Component id="lblIdentificador" min="-2" pref="316" max="-2" attributes="0"/>
+                      <Component id="txtIdentificador" min="-2" pref="320" max="-2" attributes="0"/>
+                      <Component id="txtNombre" max="32767" attributes="0"/>
+                      <Component id="cmbRazaMadre" alignment="0" min="-2" pref="220" max="-2" attributes="0"/>
+                      <Component id="cmbRazaPadre" alignment="0" min="-2" pref="220" max="-2" attributes="0"/>
+                      <Component id="lblMensajeIdentificador" min="-2" pref="320" max="-2" attributes="0"/>
+                      <Component id="lblMensajeNombre" max="32767" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+                  <EmptySpace pref="157" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="lblEstado" min="-2" pref="300" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="79" max="-2" attributes="0"/>
+                      </Group>
+                      <Component id="cmbEstado" min="-2" pref="220" max="-2" attributes="0"/>
+                      <Component id="lblDatosOpcionales" min="-2" pref="316" max="-2" attributes="0"/>
+                      <Component id="lblMensajeEstado" min="-2" pref="316" max="-2" attributes="0"/>
+                      <Component id="lblPeso" min="-2" pref="251" max="-2" attributes="0"/>
+                      <Component id="txtPeso" min="-2" pref="320" max="-2" attributes="0"/>
+                      <Component id="lblDescripcion" min="-2" pref="251" max="-2" attributes="0"/>
+                      <Component id="jScrollPane1" alignment="0" min="-2" pref="320" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="lblTituloPanel" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -114,7 +111,7 @@
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="lblMensajeIdentificador" min="-2" pref="16" max="-2" attributes="0"/>
                               </Group>
-                              <Group type="102" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="lblMensajeEstado" min="-2" pref="16" max="-2" attributes="0"/>
                               </Group>
@@ -132,13 +129,13 @@
                       </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
                       <Group type="102" attributes="0">
                           <Component id="txtPeso" min="-2" pref="46" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="lblDescripcion" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jScrollPane1" min="-2" pref="147" max="-2" attributes="0"/>
+                          <Component id="jScrollPane1" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
                           <Component id="lblMensajeNombre" min="-2" pref="16" max="-2" attributes="0"/>
@@ -158,16 +155,16 @@
                           <Component id="cmbRazaMadre" min="-2" pref="50" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="lblMensajeRazaMadre" min="-2" pref="16" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="lblRazaPadre" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="cmbRazaPadre" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="lblMensajeRazaPadre" min="-2" pref="16" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnRegistrar" min="-2" pref="70" max="-2" attributes="0"/>
                       </Group>
                   </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="lblRazaPadre" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="cmbRazaPadre" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="lblMensajeRazaPadre" min="-2" pref="16" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnRegistrar" min="-2" pref="70" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
