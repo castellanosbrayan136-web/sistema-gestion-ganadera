@@ -62,14 +62,13 @@ public class ControladorRegistrarTratamiento implements ActionListener {
     
     public void cargarCmbDias() {
         configCmb(panelRegistrarTratamiento.getCmbDia(), "Dia");
-        LocalDate fecha = panelRegistrarTratamiento.getFecha();
         
-        if (fecha == null) {
+        int año = panelRegistrarTratamiento.getAño();
+        int mes = panelRegistrarTratamiento.getMes();
+        
+        if (año == -1 || mes == 0) {
             return;
         }
-        
-        int año = fecha.getYear();
-        int mes = fecha.getMonthValue();
         
         YearMonth yearMonth = YearMonth.of(año, mes);
         int diasMes = yearMonth.lengthOfMonth();
@@ -96,6 +95,10 @@ public class ControladorRegistrarTratamiento implements ActionListener {
     }
     
     public void registrarTratamiento() {
+        if (construirTratamientoVeterinario() == null) {
+            return;
+        }
+        
         if (vacaDAO.addTratamiento(panelRegistrarTratamiento.getVaca(), construirTratamientoVeterinario())) {
             JOptionPane.showMessageDialog(panelRegistrarTratamiento, "Registro exitoso.");
         } 

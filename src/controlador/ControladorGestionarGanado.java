@@ -81,7 +81,7 @@ public class ControladorGestionarGanado implements KeyListener, ActionListener {
         // Distribucion proporcional columnas
         tabla.getColumnModel().getColumn(0).setPreferredWidth(60);   // Codigo
         tabla.getColumnModel().getColumn(1).setPreferredWidth(180);  // Nombre
-        tabla.getColumnModel().getColumn(2).setPreferredWidth(70);   // Edad
+        tabla.getColumnModel().getColumn(2).setPreferredWidth(180);   // Edad
         tabla.getColumnModel().getColumn(3).setPreferredWidth(260);  // Raza
         tabla.getColumnModel().getColumn(4).setPreferredWidth(140);  // Estado
         

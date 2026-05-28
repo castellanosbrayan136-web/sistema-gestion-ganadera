@@ -245,11 +245,11 @@ public class PanelRegistrarProduccion extends javax.swing.JPanel {
         return (Vaca) cmbVacas.getSelectedItem();
     }
     
-    private int getAño() {
+    public int getAño() {
         return convertirAInt((String) cmbAño.getSelectedItem());
     }
     
-    private int getMes() {
+    public int getMes() {
         return cmbMes.getSelectedIndex();
     }
     

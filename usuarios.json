@@ -1,62 +1,15 @@
 [
   {
+    "idInterno": "f5a2f3e2-aaac-44df-bb6f-bd45e09f43fa",
     "nombresYApellidos": "Brayan Stiven Castellanos Diaz",
-    "nombreDeUsuario": "Brayan C",
+    "nombreDeUsuario": "Brayan Castellanos",
     "correoElectronico": "castellanosbrayan136@gmail.com",
-    "nombreDeLafinca": "Fica la Hoyada",
+    "nombreDeLafinca": "Finca la Hoyada",
     "ubicacion": {
       "departamento": "Santander",
       "municipio": "Málaga",
       "vereda": "Buenavista"
     },
     "contraseña": "wow123"
-  },
-  {
-    "nombresYApellidos": "dfsa",
-    "nombreDeUsuario": "fdsa",
-    "correoElectronico": "fasd",
-    "nombreDeLafinca": "fdsa",
-    "ubicacion": {
-      "departamento": "Departamento",
-      "municipio": "Municipio",
-      "vereda": "asfd"
-    },
-    "contraseña": "fdsa"
-  },
-  {
-    "nombresYApellidos": "f",
-    "nombreDeUsuario": "f",
-    "correoElectronico": "f",
-    "nombreDeLafinca": "f",
-    "ubicacion": {
-      "departamento": "Amazonas",
-      "municipio": "Puerto Nariño",
-      "vereda": "f"
-    },
-    "contraseña": "f"
-  },
-  {
-    "nombresYApellidos": "Brayan C",
-    "nombreDeUsuario": "Brayan C",
-    "correoElectronico": "fasd",
-    "nombreDeLafinca": "fads",
-    "ubicacion": {
-      "departamento": "Departamento",
-      "municipio": "Municipio",
-      "vereda": "fasd"
-    },
-    "contraseña": "fdsa"
-  },
-  {
-    "nombresYApellidos": "h",
-    "nombreDeUsuario": "h",
-    "correoElectronico": "h",
-    "nombreDeLafinca": "h",
-    "ubicacion": {
-      "departamento": "Chocó",
-      "municipio": "Cértegui",
-      "vereda": "fds"
-    },
-    "contraseña": "h"
   }
 ]

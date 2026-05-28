@@ -71,14 +71,13 @@ public class ControladorRegistrarGanado implements ActionListener {
     
     public void llenarCmbDias() {
         configCmb(panelRegistrarGanado.getJcbDia(), "Dia");
-        LocalDate fecha = panelRegistrarGanado.getFecha();
         
-        if (fecha == null) {
+        int año = panelRegistrarGanado.getAño();
+        int mes = panelRegistrarGanado.getMes();
+        
+        if (año == -1 || mes == 0) {
             return;
         }
-        
-        int año = fecha.getYear();
-        int mes = fecha.getMonthValue();
         
         YearMonth yearMonth = YearMonth.of(año, mes);
         int diasMes = yearMonth.lengthOfMonth();

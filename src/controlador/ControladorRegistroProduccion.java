@@ -68,14 +68,13 @@ public class ControladorRegistroProduccion implements ActionListener {
     
     public void cargarCmbDias() {
         configCmb(panelRegistroProduccion.getCmbDia(), "Dia");
-        LocalDate fecha = panelRegistroProduccion.getFecha();
         
-        if (fecha == null) {
+        int año = panelRegistroProduccion.getAño();
+        int mes = panelRegistroProduccion.getMes();
+        
+        if (año == -1 || mes == 0) {
             return;
         }
-        
-        int año = fecha.getYear();
-        int mes = fecha.getMonthValue();
         
         YearMonth yearMonth = YearMonth.of(año, mes);
         int diasMes = yearMonth.lengthOfMonth();

@@ -176,11 +176,7 @@ public class ControladorCrearCuenta implements ActionListener, MouseListener {
         if (nombreDeUsuario == null) {
             panelCrearCuenta.setMensajeUsuario("Ingresa un usuario");
             contador++;
-        } else {
-            panelCrearCuenta.setMensajeUsuario("");
-        }
-        
-        if (usuarioDAO.verificarNombreEnUso(nombreDeUsuario)) {
+        } else if (usuarioDAO.verificarNombreEnUso(nombreDeUsuario)) {
             panelCrearCuenta.setMensajeUsuario("Este nombre ya esta en uso");
             contador++;
         } else {
@@ -231,7 +227,11 @@ public class ControladorCrearCuenta implements ActionListener, MouseListener {
     }
     
     public void CargarCbmMunicipios() {
-        String departamentoSeleccionado = panelCrearCuenta.getJcbDepartamento().getSelectedItem().toString();
+        String departamentoSeleccionado = panelCrearCuenta.getDepartamento();
+        
+        if (departamentoSeleccionado == null) {
+            return;
+        }
         
         for (Departamento departamento : departamentoDAO.retornarDepartamentos()) {
             if (departamento.getDepartamento().equals(departamentoSeleccionado)) {

@@ -92,7 +92,7 @@ public class ControladorEdicionGanado implements ActionListener {
         String descripcion = dialogEdicionGanado.getDescripcion();
 
         if (nombre == null || razaPadre == null || razaMadre == null
-                || estado == null || peso == null || descripcion == null) {
+                || estado == null) {
 
             JOptionPane.showMessageDialog(dialogEdicionGanado,
                     "Revise y complete correctamente los datos.");

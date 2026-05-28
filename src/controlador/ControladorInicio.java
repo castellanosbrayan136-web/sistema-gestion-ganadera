@@ -99,7 +99,8 @@ public class ControladorInicio {
         DefaultCategoryDataset datos = new DefaultCategoryDataset();
         
         for (ProduccionDia produccionDia : produccionesUltimos15Dias()) {
-            datos.setValue(produccionDia.getLitrosTotales(), "Produccion", produccionDia.getFecha());
+            String dia = String.valueOf(produccionDia.getFecha().getDayOfMonth());
+            datos.setValue(produccionDia.getLitrosTotales(), "Produccion", dia);
         }
         
         JFreeChart grafica = ChartFactory.createLineChart(

@@ -1,64 +1,86 @@
 [
   {
-    "codigoInterno": "001",
-    "nombre": "Julieta",
+    "idInterno": "ba476c13-170b-4106-87d5-6b8b617c1bf2",
+    "identificador": "#001",
+    "nombre": "Princesa",
     "fechaNacimiento": {
-      "year": 2023,
-      "month": 5,
-      "day": 5
+      "year": 2018,
+      "month": 6,
+      "day": 21
     },
-    "razaPadre": "Jersey",
-    "razaMadre": "Jersey",
+    "razaPadre": "Holstein",
+    "razaMadre": "Criollo",
     "estado": "Produciendo",
-    "descripcion": "No hay descripcion.",
-    "numeroIdentificador": "No se registro numero identificador.",
-    "dueño": "f",
-    "historialTratamientos": [],
+    "descripcion": "No se registro descripción",
+    "idPropietario": "f5a2f3e2-aaac-44df-bb6f-bd45e09f43fa",
+    "historialTratamientos": [
+      null,
+      null,
+      null
+    ],
     "registroProducciones": [
       {
         "fecha": {
           "year": 2026,
           "month": 5,
-          "day": 24
+          "day": 16
+        },
+        "litrosMañana": 7,
+        "litrosTarde": 4
+      },
+      {
+        "fecha": {
+          "year": 2026,
+          "month": 5,
+          "day": 17
+        },
+        "litrosMañana": 8,
+        "litrosTarde": 5
+      },
+      {
+        "fecha": {
+          "year": 2026,
+          "month": 5,
+          "day": 18
+        },
+        "litrosMañana": 6,
+        "litrosTarde": 5
+      },
+      {
+        "fecha": {
+          "year": 2026,
+          "month": 5,
+          "day": 19
         },
         "litrosMañana": 10,
+        "litrosTarde": 7
+      },
+      {
+        "fecha": {
+          "year": 2026,
+          "month": 5,
+          "day": 20
+        },
+        "litrosMañana": 6,
+        "litrosTarde": 5
+      },
+      {
+        "fecha": {
+          "year": 2026,
+          "month": 5,
+          "day": 21
+        },
+        "litrosMañana": 9,
         "litrosTarde": 8
       },
       {
         "fecha": {
           "year": 2026,
           "month": 5,
-          "day": 14
+          "day": 22
         },
-        "litrosMañana": 10,
-        "litrosTarde": 10
-      },
-      {
-        "fecha": {
-          "year": 2026,
-          "month": 5,
-          "day": 13
-        },
-        "litrosMañana": 10,
+        "litrosMañana": 7,
         "litrosTarde": 6
-      },
-      {
-        "fecha": {
-          "year": 2026,
-          "month": 5,
-          "day": 12
-        },
-        "litrosMañana": 13,
-        "litrosTarde": 10
-      },
-      {
-        "fecha": {
-          "year": 2026,
-          "month": 1,
-          "day": 2
-        },
-        "litrosMañana": 34,
-        "litrosTarde": 3
       },
       {
         "fecha": {
@@ -66,7 +88,17 @@
           "month": 5,
           "day": 23
         },
-        "litrosMañana": 12
+        "litrosMañana": 8,
+        "litrosTarde": 5
+      },
+      {
+        "fecha": {
+          "year": 2026,
+          "month": 5,
+          "day": 24
+        },
+        "litrosMañana": 9,
+        "litrosTarde": 5
       },
       {
         "fecha": {
@@ -74,54 +106,305 @@
           "month": 5,
           "day": 25
         },
-        "litrosMañana": 16,
-        "litrosTarde": 9
+        "litrosMañana": 7,
+        "litrosTarde": 5
+      },
+      {
+        "fecha": {
+          "year": 2026,
+          "month": 5,
+          "day": 26
+        },
+        "litrosMañana": 10,
+        "litrosTarde": 5
+      },
+      {
+        "fecha": {
+          "year": 2026,
+          "month": 5,
+          "day": 27
+        },
+        "litrosMañana": 8,
+        "litrosTarde": 6
+      },
+      {
+        "fecha": {
+          "year": 2026,
+          "month": 5,
+          "day": 28
+        },
+        "litrosMañana": 10,
+        "litrosTarde": 7
       }
     ]
   },
   {
-    "codigoInterno": "002",
-    "nombre": "Panela",
+    "idInterno": "40a381e5-0114-4e77-93cb-1a1f2b7e5366",
+    "identificador": "#002",
+    "nombre": "Pamela",
     "fechaNacimiento": {
-      "year": 2023,
-      "month": 3,
-      "day": 4
+      "year": 2018,
+      "month": 8,
+      "day": 24
     },
-    "razaPadre": "Pardo Suizo",
-    "razaMadre": "Brangus",
+    "razaPadre": "Ayrshire",
+    "razaMadre": "Jersey",
     "estado": "Produciendo",
-    "descripcion": "No hay descripcion.",
-    "numeroIdentificador": "No se registro numero identificador.",
-    "dueño": "f",
+    "descripcion": "Vaca roja",
+    "idPropietario": "f5a2f3e2-aaac-44df-bb6f-bd45e09f43fa",
     "historialTratamientos": [],
     "registroProducciones": [
       {
         "fecha": {
           "year": 2026,
           "month": 5,
+          "day": 16
+        },
+        "litrosMañana": 6,
+        "litrosTarde": 3
+      },
+      {
+        "fecha": {
+          "year": 2026,
+          "month": 5,
+          "day": 17
+        },
+        "litrosMañana": 7,
+        "litrosTarde": 4
+      },
+      {
+        "fecha": {
+          "year": 2026,
+          "month": 5,
+          "day": 18
+        },
+        "litrosMañana": 6,
+        "litrosTarde": 4
+      },
+      {
+        "fecha": {
+          "year": 2026,
+          "month": 5,
+          "day": 19
+        },
+        "litrosMañana": 7,
+        "litrosTarde": 4
+      },
+      {
+        "fecha": {
+          "year": 2026,
+          "month": 5,
+          "day": 20
+        },
+        "litrosMañana": 7,
+        "litrosTarde": 6
+      },
+      {
+        "fecha": {
+          "year": 2026,
+          "month": 5,
+          "day": 21
+        },
+        "litrosMañana": 7,
+        "litrosTarde": 5
+      },
+      {
+        "fecha": {
+          "year": 2026,
+          "month": 5,
+          "day": 22
+        },
+        "litrosMañana": 6,
+        "litrosTarde": 5
+      },
+      {
+        "fecha": {
+          "year": 2026,
+          "month": 5,
+          "day": 23
+        },
+        "litrosMañana": 6,
+        "litrosTarde": 5
+      },
+      {
+        "fecha": {
+          "year": 2026,
+          "month": 5,
+          "day": 24
+        },
+        "litrosMañana": 7,
+        "litrosTarde": 4
+      },
+      {
+        "fecha": {
+          "year": 2026,
+          "month": 5,
           "day": 25
         },
-        "litrosMañana": 0,
-        "litrosTarde": 0
+        "litrosMañana": 7,
+        "litrosTarde": 6
+      },
+      {
+        "fecha": {
+          "year": 2026,
+          "month": 5,
+          "day": 26
+        },
+        "litrosMañana": 6,
+        "litrosTarde": 3
+      },
+      {
+        "fecha": {
+          "year": 2026,
+          "month": 5,
+          "day": 27
+        },
+        "litrosMañana": 6,
+        "litrosTarde": 4
+      },
+      {
+        "fecha": {
+          "year": 2026,
+          "month": 5,
+          "day": 28
+        },
+        "litrosMañana": 6,
+        "litrosTarde": 4
       }
     ]
   },
   {
-    "codigoInterno": "003",
-    "nombre": "Lolala",
+    "idInterno": "0517c38b-4352-4dde-a436-aea4737ab578",
+    "identificador": "#003",
+    "nombre": "Pirinola",
     "fechaNacimiento": {
       "year": 2022,
-      "month": 4,
-      "day": 3
+      "month": 7,
+      "day": 20
     },
-    "razaPadre": "Jersey",
-    "razaMadre": "Jersey",
+    "razaPadre": "Holstein",
+    "razaMadre": "Ayrshire",
     "estado": "Produciendo",
-    "descripcion": "No hay descripcion.",
-    "numeroIdentificador": "#213",
-    "peso": 400.0,
-    "dueño": "f",
+    "descripcion": "Vaca negra y alta",
+    "idPropietario": "f5a2f3e2-aaac-44df-bb6f-bd45e09f43fa",
     "historialTratamientos": [],
-    "registroProducciones": []
+    "registroProducciones": [
+      {
+        "fecha": {
+          "year": 2026,
+          "month": 5,
+          "day": 16
+        },
+        "litrosMañana": 5,
+        "litrosTarde": 4
+      },
+      {
+        "fecha": {
+          "year": 2026,
+          "month": 5,
+          "day": 28
+        },
+        "litrosMañana": 5,
+        "litrosTarde": 4
+      },
+      {
+        "fecha": {
+          "year": 2026,
+          "month": 5,
+          "day": 17
+        },
+        "litrosMañana": 6,
+        "litrosTarde": 4
+      },
+      {
+        "fecha": {
+          "year": 2026,
+          "month": 5,
+          "day": 18
+        },
+        "litrosMañana": 5
+      },
+      {
+        "fecha": {
+          "year": 2026,
+          "month": 5,
+          "day": 19
+        },
+        "litrosMañana": 6,
+        "litrosTarde": 4
+      },
+      {
+        "fecha": {
+          "year": 2026,
+          "month": 5,
+          "day": 20
+        },
+        "litrosMañana": 4,
+        "litrosTarde": 4
+      },
+      {
+        "fecha": {
+          "year": 2026,
+          "month": 5,
+          "day": 21
+        },
+        "litrosMañana": 5,
+        "litrosTarde": 4
+      },
+      {
+        "fecha": {
+          "year": 2026,
+          "month": 5,
+          "day": 22
+        },
+        "litrosMañana": 5,
+        "litrosTarde": 4
+      },
+      {
+        "fecha": {
+          "year": 2026,
+          "month": 5,
+          "day": 23
+        },
+        "litrosMañana": 7,
+        "litrosTarde": 5
+      },
+      {
+        "fecha": {
+          "year": 2026,
+          "month": 5,
+          "day": 24
+        },
+        "litrosMañana": 5,
+        "litrosTarde": 5
+      },
+      {
+        "fecha": {
+          "year": 2026,
+          "month": 5,
+          "day": 25
+        },
+        "litrosMañana": 4,
+        "litrosTarde": 2
+      },
+      {
+        "fecha": {
+          "year": 2026,
+          "month": 5,
+          "day": 26
+        },
+        "litrosMañana": 4,
+        "litrosTarde": 4
+      },
+      {
+        "fecha": {
+          "year": 2026,
+          "month": 5,
+          "day": 27
+        },
+        "litrosMañana": 6,
+        "litrosTarde": 5
+      }
+    ]
   }
 ]
