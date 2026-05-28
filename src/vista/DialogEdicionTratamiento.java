@@ -142,8 +142,8 @@ public class DialogEdicionTratamiento extends javax.swing.JDialog {
                         .addComponent(lblValorFecha, javax.swing.GroupLayout.PREFERRED_SIZE, 326, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(brackgroundLayout.createSequentialGroup()
                         .addComponent(lblTratamiento, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(6, 6, 6)
-                        .addComponent(cmbTratamiento, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(cmbTratamiento, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(brackgroundLayout.createSequentialGroup()
                         .addComponent(lblMedicamento, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(6, 6, 6)
@@ -291,7 +291,12 @@ public class DialogEdicionTratamiento extends javax.swing.JDialog {
         }
         return null;
     }
-
+    
+    public String getTratamiento() {
+        return (String) cmbTratamiento.getSelectedItem();
+    }
+    
+    
     public void setLblFechaTratamiento(String fechaTratamiento) {
         this.lblValorFecha.setText(fechaTratamiento);
     }

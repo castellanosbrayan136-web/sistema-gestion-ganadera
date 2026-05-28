@@ -2,8 +2,8 @@ package modelo;
 
 //@autor: Brayan C
 
+import com.formdev.flatlaf.json.Json;
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 import java.io.File;
 import java.io.FileReader;
@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.io.Reader;
 import java.io.Writer;
 import java.lang.reflect.Type;
+import java.util.AbstractList;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,35 +24,38 @@ public class UsuarioDAO {
 
     public UsuarioDAO() {
         this.ruta = "usuarios.json";
-        this.gson = new GsonBuilder().setPrettyPrinting().create();
+        this.gson = new Gson().newBuilder().setPrettyPrinting().create();
         this.usuarios = cargarDatos();
     }
     
     private List<Usuario> cargarDatos() {
-        File archivo = new File(ruta);
+        File file = new File(ruta);
         
-        if (!archivo.exists()) {
+        if (!file.exists()) {
             return new ArrayList<>();
         }
         
-        try (Reader lector = new FileReader(archivo)) {
-            Type tipoDeLista = new TypeToken<List<Usuario>>(){}.getType();
-            List<Usuario> listaUsuarios = gson.fromJson(lector, tipoDeLista);
+        try (Reader reader = new FileReader(file)) {
+            Type tipoLista = new TypeToken<List<Usuario>>(){}.getType();
+            List<Usuario> lista = gson.fromJson(reader, tipoLista);
             
-            return (listaUsuarios != null) ? listaUsuarios : new ArrayList<>();
+            return (lista != null) ? lista : new ArrayList<>();
+            
         } catch (IOException ex) {
             return new ArrayList<>();
         }
     }
     
     private void guardarDatos() {
-        File archivo = new File(ruta);
-        try (Writer escritor = new FileWriter(archivo)) {
-            gson.toJson(usuarios , escritor);
+        try (Writer writer = new FileWriter(ruta)) {
+            gson.toJson(usuarios, writer);
         } catch (IOException ex) {
             System.err.println("Error al guardar los datos: " + ex.getMessage());
         }
     }
+    
+    
+    
     
     public boolean registrar(Usuario usuario) {
         if (usuario == null) return false;

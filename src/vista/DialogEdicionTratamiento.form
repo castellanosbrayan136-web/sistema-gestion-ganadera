@@ -66,8 +66,8 @@
                       </Group>
                       <Group type="102" attributes="0">
                           <Component id="lblTratamiento" min="-2" pref="187" max="-2" attributes="0"/>
-                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                          <Component id="cmbTratamiento" min="-2" pref="186" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="cmbTratamiento" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
                           <Component id="lblMedicamento" min="-2" pref="187" max="-2" attributes="0"/>

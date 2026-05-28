@@ -4,6 +4,7 @@ package controlador;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -11,34 +12,39 @@ import javax.swing.JOptionPane;
 import modelo.TratamientoVeterinario;
 import modelo.Vaca;
 import modelo.VacaDAO;
-import vista.DialogEdicionGanado;
 import vista.DialogEdicionTratamiento;
 
 
 public class ControladorEdicionTratamiento implements ActionListener {
-    private DialogEdicionTratamiento dialogEdicionTratamiento;
-    private TratamientoVeterinario tratamiento;
-    private Vaca vacaAEditarTratamiento;
-    private VacaDAO vacaDAO;
+    private final DialogEdicionTratamiento dialogEdicionTratamiento;
+    private final TratamientoVeterinario tratamiento;
+    private final Vaca vaca;
+    private final VacaDAO vacaDAO;
     
 
-    public ControladorEdicionTratamiento(DialogEdicionTratamiento dialogEdicionTratamiento, TratamientoVeterinario tratamiento, VacaDAO vacaDAO, Vaca vacaAEditarTratamiento) {
+    public ControladorEdicionTratamiento(DialogEdicionTratamiento dialogEdicionTratamiento, TratamientoVeterinario tratamiento, VacaDAO vacaDAO, Vaca vaca) {
         this.dialogEdicionTratamiento = dialogEdicionTratamiento;
         this.tratamiento = tratamiento;
         this.vacaDAO = vacaDAO;
-        this.vacaAEditarTratamiento = vacaAEditarTratamiento;
+        this.vaca = vaca;
         llenarDatos();
-        activarEventos();
+        configurarEventos();
     }
     
-    public void activarEventos() {
+    public void configurarEventos() {
         dialogEdicionTratamiento.getBtnGuardar().addActionListener(this);
         dialogEdicionTratamiento.getBtnEliminar().addActionListener(this);
         dialogEdicionTratamiento.getBtnCancelar().addActionListener(this);
     }
     
     public void editarTratamiento() {
-        if (vacaDAO.editarTratamiento(vacaAEditarTratamiento, leerDatos())) {
+        TratamientoVeterinario tratamientoActualizado = construirTratamientoVeterinario();
+        
+        if (tratamientoActualizado == null) {
+            return;
+        }
+        
+        if (vacaDAO.updateTratamiento(tratamientoActualizado, vaca.getIdInterno())) {
             JOptionPane.showMessageDialog(dialogEdicionTratamiento, "Editado correctamente.");
             dialogEdicionTratamiento.dispose();
         } else {
@@ -63,7 +69,7 @@ public class ControladorEdicionTratamiento implements ActionListener {
             }
         }
         
-        if (vacaDAO.eliminarRegistroTratamiento(vacaAEditarTratamiento, tratamiento.getId())) {
+        if (vacaDAO.deleteTratamientoPorId(vaca.getIdInterno(), tratamiento.getIdInterno())) {
             JOptionPane.showMessageDialog(dialogEdicionTratamiento, "Registro eliminado.");
             dialogEdicionTratamiento.dispose();
         } else {
@@ -73,8 +79,8 @@ public class ControladorEdicionTratamiento implements ActionListener {
     }
     
     public void llenarDatos() {
-        dialogEdicionTratamiento.setJblId(tratamiento.getId());
-        dialogEdicionTratamiento.setJblFechaTratamiento(tratamiento.getFecha().toString());
+        dialogEdicionTratamiento.setLblId(tratamiento.getIdentificador());
+        dialogEdicionTratamiento.setLblFechaTratamiento(tratamiento.getFecha().toString());
         dialogEdicionTratamiento.setTxtMedicamento(tratamiento.getMedicamento());
         dialogEdicionTratamiento.setTxtDosis(tratamiento.getDosis());
         dialogEdicionTratamiento.setTxtObservaciones(tratamiento.getObservaciones());
@@ -84,25 +90,26 @@ public class ControladorEdicionTratamiento implements ActionListener {
     
     public void llenarComboTratamiento() {
         List<String> tratamientos = new ArrayList<>(
-    Arrays.asList(
-        "VACUNACION",
-        "DESPARASITACION",
-        "DESGARRAPATIZACION",
-        "VITAMINIZACION",
-        "ANTIBIOTICO",
-        "TRATAMIENTO RESPIRATORIO",
-        "TRATAMIENTO DIGESTIVO",
-        "CURACION HERIDAS",
-        "CONTROL FIEBRE",
-        "CONTROL MASTITIS",
-        "SUPLEMENTACION MINERAL",
-        "CONTROL PARASITOS",
-        "INSEMINACION",
-        "CONTROL REPRODUCTIVO",
-        "REVISION VETERINARIA",
-        "CIRUGIA"
-    )
-);
+            Arrays.asList(
+                "Vacunación",
+                "Desparasitación",
+                "Desgarrapatización",
+                "Vitaminización",
+                "Antibiótico",
+                "Tratamiento respiratorio",
+                "Tratamiento digestivo",
+                "Curación de heridas",
+                "Control de fiebre",
+                "Control de mastitis",
+                "Suplementación mineral",
+                "Control de parásitos",
+                "Inseminación",
+                "Control reproductivo",
+                "Revisión veterinaria",
+                "Cirugía"
+            )
+        );
+        
         for (String tipoTratamiento : tratamientos) {
             if (tipoTratamiento.equals(tratamiento.getTipo())) {
                 continue;
@@ -111,8 +118,35 @@ public class ControladorEdicionTratamiento implements ActionListener {
         }
     }
     
-    public TratamientoVeterinario leerDatos() {
-        return new TratamientoVeterinario((String) dialogEdicionTratamiento.getJcbTratamiento().getSelectedItem(), dialogEdicionTratamiento.getMedicamento(), dialogEdicionTratamiento.getDosis(), tratamiento.getFecha(), dialogEdicionTratamiento.getObservaciones(), tratamiento.getId());
+    public TratamientoVeterinario construirTratamientoVeterinario() {
+
+        String tipo = dialogEdicionTratamiento.getTratamiento();
+        String medicamento = dialogEdicionTratamiento.getMedicamento();
+        String dosis = dialogEdicionTratamiento.getDosis();
+        String observaciones = dialogEdicionTratamiento.getObservaciones();
+
+        LocalDate fecha = tratamiento.getFecha();
+        String identificador = tratamiento.getIdentificador();
+
+        if (tipo == null || medicamento == null
+                || dosis == null || observaciones == null) {
+
+            JOptionPane.showMessageDialog(
+                    dialogEdicionTratamiento,
+                    "Revise y complete correctamente los datos."
+            );
+
+            return null;
+        }
+
+        return new TratamientoVeterinario(
+                tipo,
+                medicamento,
+                dosis,
+                fecha,
+                observaciones,
+                identificador
+        );
     }
 
     @Override
@@ -125,5 +159,4 @@ public class ControladorEdicionTratamiento implements ActionListener {
             dialogEdicionTratamiento.dispose();
         }
     }
-    
 }

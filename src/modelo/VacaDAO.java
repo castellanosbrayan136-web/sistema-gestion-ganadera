@@ -132,20 +132,35 @@ public class VacaDAO {
         return false;
     }
     
-    public boolean updateTratamiento(Vaca vacaAEditar, TratamientoVeterinario tratamientoAEditar) {
-        if (vacaAEditar == null || tratamientoAEditar == null) return false;
-        
+    public boolean updateTratamiento(TratamientoVeterinario tratamientoActualizado, UUID idVaca) {
+
+        if (tratamientoActualizado == null) {
+            return false;
+        }
+
         for (Vaca vaca : listaVacas) {
-            if (vaca.getIdInterno().equals(vacaAEditar.getIdInterno())) {
-                for (int i = 0 ; i < vaca.getHistorialTratamientos().size() ; i++) {
-                    if (vaca.getHistorialTratamientos().get(i).getIdInterno().equals(tratamientoAEditar.getIdInterno())) {
-                        vaca.getHistorialTratamientos().set(i, tratamientoAEditar);
+
+            if (vaca.getIdInterno().equals(idVaca)) {
+
+                for (TratamientoVeterinario tratamiento : vaca.getHistorialTratamientos()) {
+
+                    if (tratamiento.getIdInterno().equals(tratamientoActualizado.getIdInterno())) {
+
+                        tratamiento.setIdentificador(tratamientoActualizado.getIdentificador());
+                        tratamiento.setTipo(tratamientoActualizado.getTipo());
+                        tratamiento.setMedicamento(tratamientoActualizado.getMedicamento());
+                        tratamiento.setDosis(tratamientoActualizado.getDosis());
+                        tratamiento.setFecha(tratamientoActualizado.getFecha());
+                        tratamiento.setObservaciones(tratamientoActualizado.getObservaciones());
+
                         guardarDatos();
+
                         return true;
                     }
                 }
             }
         }
+
         return false;
     }
     
