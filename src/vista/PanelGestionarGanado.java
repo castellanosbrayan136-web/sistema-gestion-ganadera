@@ -49,14 +49,14 @@ public class PanelGestionarGanado extends javax.swing.JPanel {
 
             },
             new String [] {
-                "Codigo", "Nombre", "Edad(años)", "Raza", "Estado"
+                "Codigo", "Nombre", "Edad(años)", "Raza", "Estado", "UUID oculto"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class
+                java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false
+                false, false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -163,6 +163,10 @@ public class PanelGestionarGanado extends javax.swing.JPanel {
 
     public JTextField getTxtFiltroPorNombre() {
         return txtFiltroPorNombre;
+    }
+    
+    public String getNombreAFiltrar() {
+        return this.txtFiltroPorNombre.getText();
     }
 
     public JButton getBtnBuscar() {

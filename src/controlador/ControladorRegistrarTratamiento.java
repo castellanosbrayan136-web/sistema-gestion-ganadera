@@ -9,6 +9,7 @@ import java.time.Month;
 import java.time.YearMonth;
 import java.time.format.TextStyle;
 import java.util.Locale;
+import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
 import modelo.TratamientoVeterinario;
 import modelo.Usuario;
@@ -27,85 +28,61 @@ public class ControladorRegistrarTratamiento implements ActionListener {
         this.panelRegistrarTratamiento = panelRegistrarTratamiento;
         this.vacaDAO = vacaDAO;
         this.usuario = usuario;
-        llenarCombos();
-        activarEventos();
+        cargarDatosIniciales();
+        configurarEventos();
     }
      
-    public void registrarTratamiento() {
-        System.out.println(panelRegistrarTratamiento.getAnimalAAplicar());
-        if (vacaDAO.registrarTratamiento(panelRegistrarTratamiento.getAnimalAAplicar() , leerDatos())) {
-            JOptionPane.showMessageDialog(panelRegistrarTratamiento, "Registro exitoso.");
-        } else {
-            JOptionPane.showMessageDialog(panelRegistrarTratamiento, "Error al registrar.");
-        }
-    }
-    
-    public void activarEventos() {
+    public void configurarEventos() {
         panelRegistrarTratamiento.getBtnRegistrar().addActionListener(this);
-        panelRegistrarTratamiento.getJcbMes().addActionListener(this);
-        panelRegistrarTratamiento.getJcbAño().addActionListener(this);
+        panelRegistrarTratamiento.getCmbMes().addActionListener(this);
+        panelRegistrarTratamiento.getCmbAño().addActionListener(this);
     }
     
-    public void llenarCombos() {
-        llenarAñosYMeses();
-        llenarAnimalAAplicar();
-    }
-    public TratamientoVeterinario leerDatos() {
-        int year = Integer.parseInt(panelRegistrarTratamiento.getJcbAño().getSelectedItem().toString());
-        int mes =  panelRegistrarTratamiento.getJcbMes().getSelectedIndex();
-        int dia = Integer.parseInt(panelRegistrarTratamiento.getJcbDia().getSelectedItem().toString());
-        
-        LocalDate fecha = LocalDate.of(year, mes, dia);
-        
-        return new TratamientoVeterinario(panelRegistrarTratamiento.getTipoTratamiento(), panelRegistrarTratamiento.getMedicamento(), panelRegistrarTratamiento.getDosis(), fecha, panelRegistrarTratamiento.getObservaciones(), panelRegistrarTratamiento.getId());
+    public void cargarDatosIniciales() {
+        cargarCmbAños();
+        cargarCmbDias();
+        cargarCmbMeses(); 
+        cargarComboVacas();
     }
 
-    public void llenarAñosYMeses() {
+    private void cargarCmbMeses() {
         for (Month mes : Month.values()) {
-            String mesEspañol = mes.getDisplayName(TextStyle.FULL, new Locale("es", "ES"));
-            panelRegistrarTratamiento.getJcbMes().addItem(mesEspañol);
+            String mesEnEspañol = mes.getDisplayName(TextStyle.FULL, new Locale("es", "ES"));
+            panelRegistrarTratamiento.getCmbMes().addItem(mesEnEspañol);
         }
-        
+    }
+    
+    public void cargarCmbAños() {
         int añoActual = LocalDate.now().getYear();
         
-        for (int i = añoActual ; i >= 1950 ; i--) {
-            panelRegistrarTratamiento.getJcbAño().addItem(String.valueOf(i));
+        for (int i = añoActual ; i >= 2020 ; i--) {
+            panelRegistrarTratamiento.getCmbAño().addItem(String.valueOf(i));
         }
     }
     
-    public void llenarDiasDelMes() {
-        panelRegistrarTratamiento.getJcbDia().removeAllItems();
-        panelRegistrarTratamiento.getJcbDia().addItem("Día");
+    public void cargarCmbDias() {
+        configCmb(panelRegistrarTratamiento.getCmbDia(), "Dia");
+        LocalDate fecha = panelRegistrarTratamiento.getFecha();
         
-        int año;
-        
-        try {
-            año = Integer.parseInt(String.valueOf(panelRegistrarTratamiento.getJcbAño().getSelectedItem()));
-        } catch (NumberFormatException e) {
+        if (fecha == null) {
             return;
         }
-        int mes = panelRegistrarTratamiento.getJcbMes().getSelectedIndex();
         
-        if (mes == 0) {
-            panelRegistrarTratamiento.getJcbDia().removeAllItems();
-            panelRegistrarTratamiento.getJcbDia().addItem("Día");
-            return;
-        }
+        int año = fecha.getYear();
+        int mes = fecha.getMonthValue();
         
         YearMonth yearMonth = YearMonth.of(año, mes);
+        int diasMes = yearMonth.lengthOfMonth();
         
-        int cantidadDias = yearMonth.lengthOfMonth();
-        
-        for (int i = 1; i <= cantidadDias; i++) {
-            panelRegistrarTratamiento.getJcbDia().addItem(String.valueOf(i));
+        for (int i = 1; i <= diasMes; i++) {
+            panelRegistrarTratamiento.getCmbDia().addItem(String.valueOf(i));
         }
     }
     
-    public void llenarAnimalAAplicar() {
-        panelRegistrarTratamiento.getJcbAnimalAAplicar().removeAllItems();
-        
-        for (Vaca vaca : vacaDAO.retornarListaVacasPorUsuario(usuario.getNombreDeUsuario())) {
-            panelRegistrarTratamiento.getJcbAnimalAAplicar().addItem(vaca);
+    private void cargarComboVacas() {
+        panelRegistrarTratamiento.getCmbVacas().removeAllItems();
+        for (Vaca vaca : vacaDAO.getVacasPorIdPropietario(usuario.getIdInterno())) {
+            panelRegistrarTratamiento.getCmbVacas().addItem(vaca);
         }
     }
         
@@ -113,9 +90,80 @@ public class ControladorRegistrarTratamiento implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == panelRegistrarTratamiento.getBtnRegistrar()) {
             registrarTratamiento();
-        } else if (e.getSource() == panelRegistrarTratamiento.getJcbAño() || e.getSource() == panelRegistrarTratamiento.getJcbMes()) {
-            llenarDiasDelMes();
+        } else if (e.getSource() == panelRegistrarTratamiento.getCmbAño() || e.getSource() == panelRegistrarTratamiento.getCmbMes()) {
+            cargarCmbDias();
         } 
     }
     
+    public void registrarTratamiento() {
+        if (vacaDAO.addTratamiento(panelRegistrarTratamiento.getVaca(), construirTratamientoVeterinario())) {
+            JOptionPane.showMessageDialog(panelRegistrarTratamiento, "Registro exitoso.");
+        } 
+    }
+    
+    
+    public TratamientoVeterinario construirTratamientoVeterinario() {
+
+        String tratamiento = panelRegistrarTratamiento.getTratamiento();
+        String medicamento = panelRegistrarTratamiento.getMedicamento();
+        String dosis = panelRegistrarTratamiento.getDosis();
+        LocalDate fecha = panelRegistrarTratamiento.getFecha();
+        String observaciones = panelRegistrarTratamiento.getObservaciones(); // opcional
+        String identificador = panelRegistrarTratamiento.getIdentificador();
+
+        int contador = 0;
+
+        if (tratamiento == null) {
+            panelRegistrarTratamiento.setLblMensajeTratamientos("Ingresa un tratamiento");
+            contador++;
+        } else {
+            panelRegistrarTratamiento.setLblMensajeTratamientos("");
+        }
+
+        if (medicamento == null) {
+            panelRegistrarTratamiento.setLblMensajeMedicamento("Ingresa un medicamento");
+            contador++;
+        } else {
+            panelRegistrarTratamiento.setLblMensajeMedicamento("");
+        }
+
+        if (dosis == null) {
+            panelRegistrarTratamiento.setLblMensajeDosis("Ingresa la dosis");
+            contador++;
+        } else {
+            panelRegistrarTratamiento.setLblMensajeDosis("");
+        }
+
+        if (fecha == null) {
+            panelRegistrarTratamiento.setLblMensajeFecha("Ingresa la fecha");
+            contador++;
+        } else {
+            panelRegistrarTratamiento.setLblMensajeFecha("");
+        }
+
+        if (identificador == null) {
+            panelRegistrarTratamiento.setLblMensajeIdTratamiento("Ingresa el identificador");
+            contador++;
+        } else {
+            panelRegistrarTratamiento.setLblMensajeIdTratamiento("");
+        }
+
+        if (contador == 0) {
+            return new TratamientoVeterinario(
+                tratamiento,
+                medicamento,
+                dosis,
+                fecha,
+                observaciones,
+                identificador
+            );
+        }
+
+        return null;
+    }
+    
+    private void configCmb(JComboBox cmb, String item) {
+        cmb.removeAllItems();
+        cmb.addItem(item);
+    }
 }

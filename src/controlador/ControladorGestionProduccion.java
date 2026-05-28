@@ -10,6 +10,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.time.LocalDate;
+import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.SwingConstants;
 import javax.swing.table.DefaultTableCellRenderer;
@@ -25,10 +26,10 @@ import vista.VistaPrincipal;
 
 
 public class ControladorGestionProduccion implements ActionListener, MouseListener{
-    private VistaPrincipal vistaPrincipal;
-    private PanelGestionProduccion panelGestionProduccion;
-    private Usuario usuario;
-    private VacaDAO vacaDAO;
+    private final VistaPrincipal vistaPrincipal;
+    private final PanelGestionProduccion panelGestionProduccion;
+    private final Usuario usuario;
+    private final VacaDAO vacaDAO;
 
     public ControladorGestionProduccion(VistaPrincipal vistaPrincipal, PanelGestionProduccion panelGestionProduccion, Usuario usuario, VacaDAO vacaDAO) {
         this.vistaPrincipal = vistaPrincipal;
@@ -36,8 +37,7 @@ public class ControladorGestionProduccion implements ActionListener, MouseListen
         this.usuario = usuario;
         this.vacaDAO = vacaDAO;
         activarEventos();
-        llenarComboGanado();
-        configurarTabla();
+        cargarDatosIniciales();
     }
     
     public void activarEventos() {
@@ -45,8 +45,14 @@ public class ControladorGestionProduccion implements ActionListener, MouseListen
         panelGestionProduccion.getTablaProduccion().addMouseListener(this);
     }
     
-    public void llenarComboGanado() {
-        for (Vaca vaca : vacaDAO.retornarListaVacasPorUsuario(usuario.getNombreDeUsuario())) {
+    public void cargarDatosIniciales() {
+        configurarTabla();
+        cargarComboGanado();
+    }
+    
+    public void cargarComboGanado() {
+        panelGestionProduccion.getJcbAnimal().removeAllItems();
+        for (Vaca vaca : vacaDAO.getVacasPorIdPropietario(usuario.getIdInterno())) {
             panelGestionProduccion.getJcbAnimal().addItem(vaca);
         }
     }
@@ -76,10 +82,10 @@ public class ControladorGestionProduccion implements ActionListener, MouseListen
         tabla.setAutoResizeMode(JTable.AUTO_RESIZE_ALL_COLUMNS);
 
         // Distribucion proporcional columnas
-        tabla.getColumnModel().getColumn(0).setPreferredWidth(120);   // Id
-        tabla.getColumnModel().getColumn(1).setPreferredWidth(120);  // Tratamiento
-        tabla.getColumnModel().getColumn(2).setPreferredWidth(120);   // Medicamento
-        tabla.getColumnModel().getColumn(3).setPreferredWidth(120);  // Dosis
+        tabla.getColumnModel().getColumn(0).setPreferredWidth(120);   
+        tabla.getColumnModel().getColumn(1).setPreferredWidth(120);  
+        tabla.getColumnModel().getColumn(2).setPreferredWidth(120);   
+        tabla.getColumnModel().getColumn(3).setPreferredWidth(120);
 
         // Fuente
         tabla.setFont(new Font("Segoe UI", Font.PLAIN, 14));
@@ -112,18 +118,19 @@ public class ControladorGestionProduccion implements ActionListener, MouseListen
         tabla.setFocusable(false);
     }
     
-    public Vaca retornarVacaSeleccionada() {
-        return (Vaca) panelGestionProduccion.getJcbAnimal().getSelectedItem();
-    }
-    
     public void llenarTabla() {
         DefaultTableModel modeloTabla = (DefaultTableModel) panelGestionProduccion.getTablaProduccion().getModel();
+        Vaca vaca = panelGestionProduccion.getVaca();
+        
+        if (vaca == null) {
+            return;
+        }
         
         modeloTabla.setRowCount(0);
         
         Object[] fila = new Object[4];
         
-        for (Produccion produccion : retornarVacaSeleccionada().getRegistroProducciones()) {
+        for (Produccion produccion : vaca.getRegistroProducciones()) {
             int litrosManana = produccion.getLitrosMañana() != null ? produccion.getLitrosMañana() : 0;
             int litrosTarde = produccion.getLitrosTarde() != null ? produccion.getLitrosTarde() : 0;
             
@@ -140,9 +147,24 @@ public class ControladorGestionProduccion implements ActionListener, MouseListen
         
         int filaSeleccionada = tabla.getSelectedRow();
         
+        if (filaSeleccionada == -1) {
+            return null;
+        }
+        
         LocalDate fechaSeleccionada = LocalDate.parse(tabla.getValueAt(filaSeleccionada, 0).toString());
         
-        return vacaDAO.retornarRegistroProduccionPorFecha((Vaca) panelGestionProduccion.getJcbAnimal().getSelectedItem(), fechaSeleccionada);
+        return vacaDAO.getProduccionPorFecha(panelGestionProduccion.getVaca().getIdInterno(), fechaSeleccionada);
+    }
+    
+    public void editarProduccion() {
+        Produccion produccion = obtenerRegistroProduccionSeleccionado();
+        
+        if (produccion == null) {
+            JOptionPane.showMessageDialog(vistaPrincipal, "selecciona un elemento de la tabla");
+            return;
+        }
+        Vaca vaca = panelGestionProduccion.getVaca();
+        ScreenManager.abrirDialogEdicionProduccion(vistaPrincipal, produccion, vaca);
     }
 
     @Override
@@ -159,7 +181,7 @@ public class ControladorGestionProduccion implements ActionListener, MouseListen
     @Override
     public void mousePressed(MouseEvent e) {
         if (e.getClickCount() == 2) {
-            ScreenManager.abrirDialogEdicionProduccion(vistaPrincipal, obtenerRegistroProduccionSeleccionado(), retornarVacaSeleccionada());
+            editarProduccion();
         }
     }
 

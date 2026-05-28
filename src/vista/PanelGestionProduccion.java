@@ -136,6 +136,10 @@ public class PanelGestionProduccion extends javax.swing.JPanel {
     public JComboBox<Vaca> getJcbAnimal() {
         return cmbVacas;
     }
+    
+    public Vaca getVaca() {
+        return (Vaca) cmbVacas.getSelectedItem();
+    }
 
     public JTable getTablaProduccion() {
         return tabProduccion;

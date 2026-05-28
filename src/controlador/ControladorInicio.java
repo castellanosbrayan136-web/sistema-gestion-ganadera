@@ -24,9 +24,9 @@ import vista.PanelInicio;
 
 
 public class ControladorInicio {
-    private PanelInicio panelInicio;
-    private Usuario usuario;
-    private VacaDAO vacaDAO;
+    private final PanelInicio panelInicio;
+    private final Usuario usuario;
+    private final VacaDAO vacaDAO;
     private final List<String> alertas;
 
     public ControladorInicio(PanelInicio panelInicio, Usuario usuario, VacaDAO vacaDAO) {
@@ -49,7 +49,7 @@ public class ControladorInicio {
     public List<ProduccionDia> produccionesUltimos15Dias() {
         Map<LocalDate, Integer> produccionPorDia = new HashMap<>();
 
-        for (Vaca vaca : vacaDAO.retornarListaVacasPorUsuario(usuario.getNombreDeUsuario())) {
+        for (Vaca vaca : vacaDAO.getVacasPorIdPropietario(usuario.getIdInterno())) {
 
             for (Produccion produccion : vaca.getRegistroProducciones()) {
                 
@@ -125,9 +125,9 @@ public class ControladorInicio {
         Vaca vacaMenorProduccion = null;
         int menorProduccion = Integer.MAX_VALUE;
         
-        for (Vaca vaca : vacaDAO.retornarListaVacasPorUsuario(usuario.getNombreDeUsuario())) {
+        for (Vaca vaca : vacaDAO.getVacasPorIdPropietario(usuario.getIdInterno())) {
 
-        Produccion produccionHoy = vacaDAO.retornarRegistroProduccionPorFecha(vaca, fechaHoy);
+        Produccion produccionHoy = vacaDAO.getProduccionPorFecha(vaca.getIdInterno(), fechaHoy);
 
         if (produccionHoy == null) {
             continue;
@@ -169,8 +169,8 @@ public class ControladorInicio {
         LocalDate fechaHoy = LocalDate.now();
         List<Integer> produccionPorVacaHoy = new ArrayList<>();
         
-        for (Vaca vaca : vacaDAO.retornarListaVacasPorUsuario(usuario.getNombreDeUsuario())) {
-            Produccion produccionHoy = vacaDAO.retornarRegistroProduccionPorFecha(vaca, fechaHoy);
+        for (Vaca vaca : vacaDAO.getVacasPorIdPropietario(usuario.getIdInterno())) {
+            Produccion produccionHoy = vacaDAO.getProduccionPorFecha(vaca.getIdInterno(), fechaHoy);
             
             if (produccionHoy == null) {
                 continue;
@@ -203,8 +203,8 @@ public class ControladorInicio {
         LocalDate fechaHoy = LocalDate.now();
         int acumulador = 0;
         
-        for (Vaca vaca : vacaDAO.retornarListaVacasPorUsuario(usuario.getNombreDeUsuario())) {
-            Produccion produccionHoy = vacaDAO.retornarRegistroProduccionPorFecha(vaca, fechaHoy);
+        for (Vaca vaca : vacaDAO.getVacasPorIdPropietario(usuario.getIdInterno())) {
+            Produccion produccionHoy = vacaDAO.getProduccionPorFecha(vaca.getIdInterno(), fechaHoy);
             
             if (produccionHoy == null) {
                 continue;
@@ -231,8 +231,8 @@ public class ControladorInicio {
     
     public void alertasRegistrosHoy() {
         LocalDate fechaHoy = LocalDate.now();
-        for (Vaca vaca : vacaDAO.retornarListaVacasPorUsuario(usuario.getNombreDeUsuario())) {
-            Produccion produccionHoy = vacaDAO.retornarRegistroProduccionPorFecha(vaca, fechaHoy);
+        for (Vaca vaca : vacaDAO.getVacasPorIdPropietario(usuario.getIdInterno())) {
+            Produccion produccionHoy = vacaDAO.getProduccionPorFecha(vaca.getIdInterno(), fechaHoy);
             if (produccionHoy == null) {
                 String alerta = "No has hecho registro hoy para: " + vaca;
                 alertas.add(alerta);

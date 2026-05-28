@@ -34,7 +34,7 @@ public class ControladorInformacionUsuario {
     public int numeroDeCabezasDeGanado() {
         int contador = 0;
     
-        for (Vaca vaca : vacaDAO.retornarListaVacasPorUsuario(usuario.getNombreDeUsuario())) {
+        for (Vaca vaca : vacaDAO.getVacasPorIdPropietario(usuario.getIdInterno())) {
             contador++;
         }
         return contador;

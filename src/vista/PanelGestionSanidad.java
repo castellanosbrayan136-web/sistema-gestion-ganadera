@@ -45,14 +45,14 @@ public class PanelGestionSanidad extends javax.swing.JPanel {
 
             },
             new String [] {
-                "Id ", "Tratamiento", "Medicamento", "Dosis", "Fecha"
+                "Id ", "Tratamiento", "Medicamento", "Dosis", "Fecha", "UUID oculto"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false
+                false, false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -137,9 +137,11 @@ public class PanelGestionSanidad extends javax.swing.JPanel {
         return tabSanidad;
     }
 
-    public Vaca getAnimal() {
+    public Vaca getVaca() {
         return (Vaca) cmbVacas.getSelectedItem();
     }
+    
+    
 
     public JComboBox<Vaca> getJcbAnimal() {
         return cmbVacas;

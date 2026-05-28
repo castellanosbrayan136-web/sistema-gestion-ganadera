@@ -9,6 +9,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.util.UUID;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.SwingConstants;
@@ -25,23 +26,21 @@ import vista.VistaPrincipal;
 
 
 public class ControladorGestionSanidad implements ActionListener, MouseListener {
-    private VistaPrincipal vistaPrincipal;
-    private PanelGestionSanidad panelGestionSanidad;
-    private Usuario usuario;
-    private VacaDAO vacaDAO;
+    private final VistaPrincipal vistaPrincipal;
+    private final PanelGestionSanidad panelGestionSanidad;
+    private final Usuario usuario;
+    private final VacaDAO vacaDAO;
 
     public ControladorGestionSanidad(PanelGestionSanidad panelGestionSanidad,Usuario usuario, VacaDAO vacaDAO, VistaPrincipal vistaPrincipal) {
         this.panelGestionSanidad = panelGestionSanidad;
         this.usuario = usuario;
         this.vacaDAO = vacaDAO;
         this.vistaPrincipal = vistaPrincipal;
-        llenarComboGanado();
-        llenarTablaTratamientos();
-        activarEventos();
-        configurarTabla();
+        cargarDatosIniciales();
+        configurarEventos();
     }
     
-    public TratamientoVeterinario retornarTratamientoSeleccionado() {
+    public TratamientoVeterinario getTratamientoSeleccionado() {
         DefaultTableModel modeloTabla = (DefaultTableModel) panelGestionSanidad.getTablaSanidad().getModel();
         
         int filaSeleccionada = panelGestionSanidad.getTablaSanidad().getSelectedRow();
@@ -50,14 +49,20 @@ public class ControladorGestionSanidad implements ActionListener, MouseListener 
             return null;
         }
         
-        String idTratamientoSeleccionado = (String) panelGestionSanidad.getTablaSanidad().getValueAt(filaSeleccionada, 0);
+        UUID idTratamiento = UUID.fromString(modeloTabla.getValueAt(filaSeleccionada, 5).toString());
         
-        return vacaDAO.retorntarTratamientoPorIdYVaca((Vaca) panelGestionSanidad.getJcbAnimal().getSelectedItem(), idTratamientoSeleccionado);
+        return vacaDAO.getTratamientoDeVacaPorId(panelGestionSanidad.getVaca().getIdInterno(), idTratamiento);
     }
     
-    public void activarEventos() {
+    public void configurarEventos() {
         panelGestionSanidad.getJcbAnimal().addActionListener(this);
         panelGestionSanidad.getTablaSanidad().addMouseListener(this);
+    }
+    
+    public void cargarDatosIniciales() {
+        configurarTabla();
+        llenarTablaTratamientos();
+        llenarComboGanado();
     }
     
         public void configurarTabla() {
@@ -90,6 +95,12 @@ public class ControladorGestionSanidad implements ActionListener, MouseListener 
         tabla.getColumnModel().getColumn(2).setPreferredWidth(180);   // Medicamento
         tabla.getColumnModel().getColumn(3).setPreferredWidth(140);  // Dosis
         tabla.getColumnModel().getColumn(4).setPreferredWidth(120);  // Fecha
+        
+        tabla.getColumnModel().getColumn(5).setMinWidth(0);
+        tabla.getColumnModel().getColumn(5).setMaxWidth(0);
+        tabla.getColumnModel().getColumn(5).setWidth(0);
+        tabla.getColumnModel().getColumn(5).setPreferredWidth(0);
+        tabla.getColumnModel().getColumn(5).setResizable(false);
 
         // Fuente
         tabla.setFont(new Font("Segoe UI", Font.PLAIN, 14));
@@ -128,25 +139,42 @@ public class ControladorGestionSanidad implements ActionListener, MouseListener 
         
         modeloTabla.setRowCount(0);
         
-        Object[] fila = new Object[5];
+        Object[] fila = new Object[6];
         
-        Vaca vaca = panelGestionSanidad.getAnimal();
+        Vaca vaca = panelGestionSanidad.getVaca();
+        
+        if (vaca == null) {
+            return;
+        }
         
         for (TratamientoVeterinario tratamiento : vaca.getHistorialTratamientos()) {
-            fila[0] = tratamiento.getId();
+            fila[0] = tratamiento.getIdentificador();
             fila[1] = tratamiento.getTipo();
             fila[2] = tratamiento.getMedicamento();
             fila[3] = tratamiento.getDosis();
             fila[4] = tratamiento.getFecha();
+            fila[5] = tratamiento.getIdInterno();
             modeloTabla.addRow(fila);
         }
     }
     
     public void llenarComboGanado() {
         panelGestionSanidad.getJcbAnimal().removeAllItems();
-        for (Vaca vaca : vacaDAO.retornarListaVacasPorUsuario(usuario.getNombreDeUsuario())) {
+        for (Vaca vaca : vacaDAO.getVacasPorIdPropietario(usuario.getIdInterno())) {
             panelGestionSanidad.getJcbAnimal().addItem(vaca);
         }
+    }
+    
+    public void editarTratamiento() {
+        TratamientoVeterinario tratamiento = getTratamientoSeleccionado();
+        
+        if (tratamiento == null) {
+            JOptionPane.showMessageDialog(panelGestionSanidad, "Selecciona un tratamiento en la tabla");
+            return;
+        }
+        
+        ScreenManager.abrirDialogEdicionTratamiento(vistaPrincipal, panelGestionSanidad.getVaca(), tratamiento);
+        llenarTablaTratamientos();
     }
 
     @Override
@@ -163,12 +191,7 @@ public class ControladorGestionSanidad implements ActionListener, MouseListener 
     @Override
     public void mousePressed(MouseEvent e) {
         if (e.getClickCount() == 2) {
-            if (retornarTratamientoSeleccionado() == null) {
-                JOptionPane.showMessageDialog(vistaPrincipal, "Slecciona una fila.");
-                return;
-            }
-            ScreenManager.abrirDialogEdicionTratamiento(vistaPrincipal,(Vaca) panelGestionSanidad.getJcbAnimal().getSelectedItem(), retornarTratamientoSeleccionado());
-            llenarTablaTratamientos();
+            editarTratamiento();
         }
     }
 

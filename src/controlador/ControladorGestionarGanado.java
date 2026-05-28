@@ -9,9 +9,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
 import java.time.LocalDate;
+import java.time.Period;
+import java.util.UUID;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.SwingConstants;
@@ -27,26 +27,31 @@ import vista.VistaPrincipal;
 
 
 public class ControladorGestionarGanado implements KeyListener, ActionListener {
-    private PanelGestionarGanado panelListaGanado;
-    private VistaPrincipal vistaPrincipal;
-    private VacaDAO vacaDAO;
-    private Usuario usuario;
+    private final PanelGestionarGanado panelListaGanado;
+    private final VistaPrincipal vistaPrincipal;
+    private final VacaDAO vacaDAO;
+    private final Usuario usuario;
 
     public ControladorGestionarGanado(PanelGestionarGanado panelListaGanado, VacaDAO vacaDAO, Usuario usuario, VistaPrincipal vistaPrincipal) {
         this.panelListaGanado = panelListaGanado;
         this.vacaDAO = vacaDAO;
         this.usuario = usuario;
         this.vistaPrincipal = vistaPrincipal;
-        configurarTabla();
-        llenarTabla();
-        activarEventos();
+        cargarDatosIniciales();
+        configurarEventos();
     }
     
-    public void activarEventos() {
+    public void configurarEventos() {
         panelListaGanado.getTxtFiltroPorNombre().addKeyListener(this);
+        
         panelListaGanado.getBtnBuscar().addActionListener(this);
         panelListaGanado.getBtnEditar().addActionListener(this);
         panelListaGanado.getBtnVerInformacion().addActionListener(this);
+    }
+    
+    public void cargarDatosIniciales() {
+        configurarTabla();
+        llenarTabla();
     }
     
     public void configurarTabla() {
@@ -79,6 +84,13 @@ public class ControladorGestionarGanado implements KeyListener, ActionListener {
         tabla.getColumnModel().getColumn(2).setPreferredWidth(70);   // Edad
         tabla.getColumnModel().getColumn(3).setPreferredWidth(260);  // Raza
         tabla.getColumnModel().getColumn(4).setPreferredWidth(140);  // Estado
+        
+        // UUID oculto
+        tabla.getColumnModel().getColumn(5).setMinWidth(0);
+        tabla.getColumnModel().getColumn(5).setMaxWidth(0);
+        tabla.getColumnModel().getColumn(5).setWidth(0);
+        tabla.getColumnModel().getColumn(5).setPreferredWidth(0);
+        tabla.getColumnModel().getColumn(5).setResizable(false);
 
         // Fuente
         tabla.setFont(new Font("Segoe UI", Font.PLAIN, 14));
@@ -117,26 +129,31 @@ public class ControladorGestionarGanado implements KeyListener, ActionListener {
         
         modeloTabla.setRowCount(0);
         
-        Object[] fila = new Object[5];
+        Object[] fila = new Object[6];
         
-        for (Vaca vaca : vacaDAO.retornarListaVacasPorUsuario(usuario.getNombreDeUsuario())) {
+        for (Vaca vaca : vacaDAO.getVacasPorIdPropietario(usuario.getIdInterno())) {
             if (vaca.getEstado().equals("Enfermo") || vaca.getEstado().equals("Vendido")) {
                 continue;
             }
             
-            int edad = LocalDate.now().getYear() - vaca.getFechaNacimiento().getYear();
+            Period periodo = Period.between(vaca.getFechaNacimiento(), LocalDate.now());
+
+            String edad = periodo.getYears() + " años y " + periodo.getMonths() + " meses";
+            
+            
             String raza = vaca.getRazaMadre() + " " + vaca.getRazaPadre();
-            fila[0] = vaca.getCodigoInterno();
+            fila[0] = vaca.getIdentificador();
             fila[1] = vaca.getNombre();
             fila[2] = edad;
             fila[3] = raza;
             fila[4] = vaca.getEstado();
+            fila[5] = vaca.getIdInterno();
             modeloTabla.addRow(fila);
         }
     }
     
     public void filtrarTablaPorNombreVaca() {
-        String nombreVaca = panelListaGanado.getTxtFiltroPorNombre().getText();
+        String nombreVaca = panelListaGanado.getNombreAFiltrar();
         
         if (nombreVaca == null || nombreVaca.trim().isEmpty()) {
             llenarTabla();
@@ -147,22 +164,23 @@ public class ControladorGestionarGanado implements KeyListener, ActionListener {
         
         modeloTabla.setRowCount(0);
         
-        Object[] fila = new Object[5];
+        Object[] fila = new Object[6];
         
-        for (Vaca vaca : vacaDAO.filtrarVacasPorCoincidencia(usuario.getNombreDeUsuario(), nombreVaca)) {
+        for (Vaca vaca : vacaDAO.filtrarVacasPorCoincidencia(usuario.getIdInterno(), nombreVaca)) {
             int edad = LocalDate.now().getYear() - vaca.getFechaNacimiento().getYear();
             String raza = vaca.getRazaMadre() + " " + vaca.getRazaPadre();
-            fila[0] = vaca.getCodigoInterno();
+            fila[0] = vaca.getIdentificador();
             fila[1] = vaca.getNombre();
             fila[2] = edad;
             fila[3] = raza;
             fila[4] = vaca.getEstado();
+            fila[5] = vaca.getIdInterno();
             modeloTabla.addRow(fila);
         }
     }
     
     public void mostrarInformacion() {
-        JOptionPane.showMessageDialog(null, llenarInformacion());
+        JOptionPane.showMessageDialog(vistaPrincipal, llenarInformacion());
     }
     
     public Vaca retornarVacaSeleccionada() {
@@ -174,9 +192,9 @@ public class ControladorGestionarGanado implements KeyListener, ActionListener {
             return null;
         }
         
-        String codigoVaca = modeloTabla.getValueAt(row, 0).toString();
+        UUID idVaca = UUID.fromString(modeloTabla.getValueAt(row, 5).toString());
         
-        return vacaDAO.buscarVacaPorCodigoYpropietario(codigoVaca, usuario.getNombreDeUsuario());
+        return vacaDAO.getVacaPorId(idVaca, usuario.getIdInterno());
         
     }
     
@@ -188,15 +206,11 @@ public class ControladorGestionarGanado implements KeyListener, ActionListener {
         }
 
         String informacion = "=======INFORMACIÓN==========";
-        
+
         Double peso = vaca.getPeso();
-        String pesoString = String.valueOf(peso);
+        String pesoString = (peso == null) ? "No se registro peso." : String.valueOf(peso);
         
-        if (peso == null) {
-            pesoString = "No se registro peso.";
-        }
-        
-        informacion += "\nCodigo: " + vaca.getCodigoInterno() + 
+        informacion += "\nId: " + vaca.getIdentificador()+ 
                 "\nNombre: " + vaca.getNombre() +
                 "\nFecha de nacimiento: " +
                 vaca.getFechaNacimiento().getDayOfMonth() + 
@@ -204,9 +218,8 @@ public class ControladorGestionarGanado implements KeyListener, ActionListener {
                 "/" + vaca.getFechaNacimiento().getYear() +
                 "\nRaza: " + vaca.getRazaMadre() + " x " + vaca.getRazaPadre() + 
                 "\nEstado: " + vaca.getEstado() +
-                "\nNumero de indentificacion: " + vaca.getNumeroIdentificador() +
                 "\nPeso(Kg): " + pesoString +
-                "\nDescripcion: " + vaca.getDescripcion();
+                "\nDescripcion: \n" + vaca.getDescripcion();
         return informacion;
         
     }

@@ -45,6 +45,7 @@ public class ControladorRegistroProduccion implements ActionListener {
     }
     
     private void cargarComboVacas() {
+        panelRegistroProduccion.getCmbVacas().removeAllItems();
         for (Vaca vaca : vacaDAO.getVacasPorIdPropietario(usuario.getIdInterno())) {
             panelRegistroProduccion.getCmbVacas().addItem(vaca);
         }
@@ -96,6 +97,13 @@ public class ControladorRegistroProduccion implements ActionListener {
     private Produccion verificarProduccion() {
         LocalDate fecha = panelRegistroProduccion.getFecha();
         
+        if (fecha == null) {
+            panelRegistroProduccion.setLblMensajeFecha("Complete la fecha");
+            return null;
+        } else {
+           panelRegistroProduccion.setLblMensajeFecha(""); 
+        }
+        
         Produccion produccion = vacaDAO.getProduccionPorFecha(panelRegistroProduccion.getVaca().getIdInterno(), fecha);
         
         if (produccion == null) {
@@ -114,7 +122,32 @@ public class ControladorRegistroProduccion implements ActionListener {
         String jornada = panelRegistroProduccion.getJornada();
         Integer litros = panelRegistroProduccion.getLitros();
         
+        if (vaca == null) {
+            panelRegistroProduccion.setLblMensajeVaca("No tienes vacas registradas.");
+            return;
+        } else {
+            panelRegistroProduccion.setLblMensajeVaca("");
+        }
+        
+        if (jornada == null) {
+            panelRegistroProduccion.setLblMensajeJornada("Selecciona una jornada");
+            return;
+        } else {
+            panelRegistroProduccion.setLblMensajeJornada("");
+        }
+        
+        if (litros == null) {
+            panelRegistroProduccion.setLblMensajeLitros("Selecciona una cantidad valida.");
+            return;
+        } else {
+            panelRegistroProduccion.setLblMensajeLitros("");
+        }
+        
         Produccion produccion = verificarProduccion();
+        
+        if (produccion == null) {
+            return;
+        }
         
         if (jornada.equals("Mañana")) {
            if (produccion.getLitrosTarde() == null && produccion.getLitrosMañana() == null) {
