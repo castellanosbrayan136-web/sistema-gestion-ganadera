@@ -3,26 +3,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/controlador/ControladorCrearCuenta.java</file>
-            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/vista/PanelCrearCuenta.java</file>
-            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/vista/PanelRegistrarGanado.java</file>
-            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/controlador/ControladorRegistrarGanado.java</file>
-            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/controlador/ControladorGestionarGanado.java</file>
-            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/vista/DialogEdicionGanado.java</file>
-            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/controlador/ControladorEdicionGanado.java</file>
-            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/modelo/Vaca.java</file>
-            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/controlador/ControladorRegistroProduccion.java</file>
-            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/vista/PanelRegistrarProduccion.java</file>
-            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/controlador/ControladorRegistrarTratamiento.java</file>
-            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/vista/PanelRegistrarTratamiento.java</file>
-            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/controlador/ControladorInicio.java</file>
-            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/vista/PanelProduccion.java</file>
+            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/controlador/ControladorHistorialGeneral.java</file>
+            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/controlador/ControladorGestionProduccion.java</file>
+            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/modelo/Produccion.java</file>
+            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/modelo/VacaDAO.java</file>
+            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/modelo/ProduccionDia.java</file>
             <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/vista/ScreenManager.java</file>
-            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/vista/PanelGestionProduccion.java</file>
-            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/vista/PanelInicio.java</file>
-            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/vista/PanelGestionarGanado.java</file>
-            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/vista/PanelSanidad.java</file>
-            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/vista/PanelGestionSanidad.java</file>
+            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/controlador/ControladorProduccion.java</file>
+            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/vista/PanelProduccion.java</file>
+            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/controlador/ControladorGestionSanidad.java</file>
+            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/controlador/ControladorInicio.java</file>
+            <file>file:/C:/Users/caste/Documents/SistemaGestionLechera/src/vista/PanelRegistrarGanado.java</file>
         </group>
     </open-files>
 </project-private>

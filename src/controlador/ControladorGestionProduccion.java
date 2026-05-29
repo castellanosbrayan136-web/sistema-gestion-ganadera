@@ -10,6 +10,9 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.SwingConstants;
@@ -57,7 +60,7 @@ public class ControladorGestionProduccion implements ActionListener, MouseListen
         }
     }
     
-        public void configurarTabla() {
+    public void configurarTabla() {
 
         JTable tabla = panelGestionProduccion.getTablaProduccion();
 
@@ -129,8 +132,11 @@ public class ControladorGestionProduccion implements ActionListener, MouseListen
         modeloTabla.setRowCount(0);
         
         Object[] fila = new Object[4];
+        List<Produccion> producciones = new ArrayList<>(vaca.getRegistroProducciones());
         
-        for (Produccion produccion : vaca.getRegistroProducciones()) {
+        Collections.reverse(producciones);
+        
+        for (Produccion produccion : producciones) {
             int litrosManana = produccion.getLitrosMañana() != null ? produccion.getLitrosMañana() : 0;
             int litrosTarde = produccion.getLitrosTarde() != null ? produccion.getLitrosTarde() : 0;
             

@@ -43,7 +43,7 @@ public class ControladorCrearCuenta implements ActionListener, MouseListener {
         panelCrearCuenta.getPwsContraseña().addMouseListener(this);
     }
     
-    public void cargarDatosInciales() {
+    private void cargarDatosInciales() {
         cargarCbmDepartamentos();
         CargarCbmMunicipios();
     }
@@ -90,7 +90,7 @@ public class ControladorCrearCuenta implements ActionListener, MouseListener {
             configTextField(panelCrearCuenta.getTxtNombreFinca());
         }
     }
-    public void registrar() {
+    private void registrar() {
         Usuario nuevoUsuario = verificarYRetornarDatos();
         
         if (usuarioDAO.registrar(nuevoUsuario)) {
@@ -99,7 +99,7 @@ public class ControladorCrearCuenta implements ActionListener, MouseListener {
         }
     }
     
-    public void reestablecerPlaceHolder() {
+    private void reestablecerPlaceHolder() {
         Color grisClaro = new Color(204,204,204);
         
         if (panelCrearCuenta.getCorreo() == null) {
@@ -133,7 +133,7 @@ public class ControladorCrearCuenta implements ActionListener, MouseListener {
         }
     }
     
-    public void reiniciarFormulario() {
+    private void reiniciarFormulario() {
         Color grisClaro = new Color(204, 204, 204);
         cargarDatosInciales();
 
@@ -156,7 +156,7 @@ public class ControladorCrearCuenta implements ActionListener, MouseListener {
         panelCrearCuenta.getPwsContraseña().setForeground(grisClaro);
     }
     
-    public Usuario verificarYRetornarDatos() {
+    private Usuario verificarYRetornarDatos() {
         String nombresYApellidos = panelCrearCuenta.getNombres();
         String nombreDeUsuario = panelCrearCuenta.getUsuario();
         String correoElectronico = panelCrearCuenta.getCorreo();
@@ -218,7 +218,7 @@ public class ControladorCrearCuenta implements ActionListener, MouseListener {
         return null;
     }
     
-    public void cargarCbmDepartamentos() {
+    private void cargarCbmDepartamentos() {
         JComboBox cmbDepartamentos = panelCrearCuenta.getJcbDepartamento();
         configCmb(cmbDepartamentos, "Departamento");
         for (Departamento departamento : departamentoDAO.retornarDepartamentos() ) {
@@ -226,7 +226,7 @@ public class ControladorCrearCuenta implements ActionListener, MouseListener {
         }
     }
     
-    public void CargarCbmMunicipios() {
+    private void CargarCbmMunicipios() {
         String departamentoSeleccionado = panelCrearCuenta.getDepartamento();
         
         if (departamentoSeleccionado == null) {

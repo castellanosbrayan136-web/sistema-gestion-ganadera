@@ -406,5 +406,56 @@
         "litrosTarde": 5
       }
     ]
+  },
+  {
+    "idInterno": "54526d79-b748-45f9-ad32-df3187823a83",
+    "identificador": "1",
+    "nombre": "1",
+    "fechaNacimiento": {
+      "year": 2014,
+      "month": 11,
+      "day": 12
+    },
+    "razaPadre": "Angus",
+    "razaMadre": "Nelore",
+    "estado": "Enfermo",
+    "descripcion": "No se registro descripción",
+    "idPropietario": "f7490cc4-80f0-4686-b05a-78422c7b009d",
+    "historialTratamientos": [],
+    "registroProducciones": []
+  },
+  {
+    "idInterno": "5f069051-afea-4d76-be2a-1c8ca8d00434",
+    "identificador": "2",
+    "nombre": "2",
+    "fechaNacimiento": {
+      "year": 2015,
+      "month": 10,
+      "day": 10
+    },
+    "razaPadre": "Simmental",
+    "razaMadre": "Nelore",
+    "estado": "Enfermo",
+    "descripcion": "No se registro descripción",
+    "idPropietario": "f7490cc4-80f0-4686-b05a-78422c7b009d",
+    "historialTratamientos": [],
+    "registroProducciones": []
+  },
+  {
+    "idInterno": "b9ce9e14-90cf-4b19-a77c-e63486b9e1ae",
+    "identificador": "3",
+    "nombre": "3",
+    "fechaNacimiento": {
+      "year": 2013,
+      "month": 9,
+      "day": 12
+    },
+    "razaPadre": "Gyr",
+    "razaMadre": "Charolais",
+    "estado": "Desarrollo",
+    "descripcion": "No se registro descripción",
+    "idPropietario": "f7490cc4-80f0-4686-b05a-78422c7b009d",
+    "historialTratamientos": [],
+    "registroProducciones": []
   }
 ]

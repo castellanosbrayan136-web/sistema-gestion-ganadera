@@ -45,6 +45,4 @@ public class Produccion {
             this.litrosTarde = litrosTarde;
         }
     }
-    
-    
 }

@@ -44,6 +44,7 @@ public class ControladorInicio {
         promedioProduccionPorVacaHoy();
         totalLitrosProducidosHoy();
         alertasRegistrosHoy();
+        alertaVacasEnfermas();
         llenarAlertas();
     }
     public List<ProduccionDia> produccionesUltimos15Dias() {
@@ -245,5 +246,16 @@ public class ControladorInicio {
                 alertas.add(alerta);
             }
         }
+    }
+    
+    public void alertaVacasEnfermas() {
+        int contador = 0;
+        for (Vaca vaca : vacaDAO.getVacasPorIdPropietario(usuario.getIdInterno())) {
+            if (vaca.getEstado().equals("Enfermo")) {
+                contador++;
+            }
+        }
+        String alerta = "Tienes " + contador + " vacas enfermas.";
+        alertas.add(alerta);
     }
 }

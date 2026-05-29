@@ -28,6 +28,7 @@ public class ControladorProduccion implements ActionListener {
     public void activarEventos() {
         panelProduccion.getBtnGestionProduccion().addActionListener(this);
         panelProduccion.getBtnRegistrarProduccion().addActionListener(this);
+        panelProduccion.getBtnHistorialGeneral().addActionListener(this);
     }
 
     @Override
@@ -41,6 +42,10 @@ public class ControladorProduccion implements ActionListener {
             reiniciarColoresDeBotones();
             panelProduccion.getBtnGestionProduccion().setBackground(botonActivo);
             ScreenManager.cambiarAPanelGestionProduccion(vistaPrincipal, usuario, panelProduccion);
+        } else if (e.getSource() == panelProduccion.getBtnHistorialGeneral()) {
+            reiniciarColoresDeBotones();
+            panelProduccion.getBtnHistorialGeneral().setBackground(botonActivo);
+            ScreenManager.cambiarAPanelHistorialGeneral(usuario, panelProduccion);
         }
     }
     
@@ -48,5 +53,6 @@ public class ControladorProduccion implements ActionListener {
     Color azulGris = new Color(55, 72, 95);
     panelProduccion.getBtnGestionProduccion().setBackground(azulGris);
     panelProduccion.getBtnRegistrarProduccion().setBackground(azulGris);
+    panelProduccion.getBtnHistorialGeneral().setBackground(azulGris);
     }
 }

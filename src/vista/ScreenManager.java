@@ -11,6 +11,7 @@ import controlador.ControladorGestionProduccion;
 import controlador.ControladorGestionSanidad;
 import controlador.ControladorIniciarSesion;
 import controlador.ControladorGestionarGanado;
+import controlador.ControladorHistorialGeneral;
 import controlador.ControladorInformacionUsuario;
 import controlador.ControladorInicio;
 import controlador.ControladorPrincipal;
@@ -201,6 +202,13 @@ public class ScreenManager {
         dialogEdicionProduccion.setVisible(true);
     }
     
+    public static void cambiarAPanelHistorialGeneral(Usuario usuario, PanelProduccion panelProduccion) {
+        PanelHistorialGeneral panelHistorialGeneral = new PanelHistorialGeneral();
+        
+        new ControladorHistorialGeneral(panelHistorialGeneral, vacaDAO, usuario);
+        
+        cambiarPaneles(panelProduccion.getPanelVacio(), panelHistorialGeneral,859, 740);
+    }
     public static void cambiarPaneles(JPanel panelVacio, JPanel panelAIntercambiar, int ancho, int largo) {
         panelAIntercambiar.setSize(ancho, largo);
         panelAIntercambiar.setPreferredSize(new Dimension(ancho, largo));

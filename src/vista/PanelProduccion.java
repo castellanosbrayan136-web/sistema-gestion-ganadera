@@ -35,6 +35,7 @@ public class PanelProduccion extends javax.swing.JPanel {
         lblTituloSideBar = new javax.swing.JLabel();
         pnlLinea = new javax.swing.JPanel();
         btnGestionProduccion = new javax.swing.JButton();
+        btnHistorialGeneral = new javax.swing.JButton();
         content = new javax.swing.JPanel();
 
         setBackground(new java.awt.Color(255, 255, 0));
@@ -88,6 +89,17 @@ public class PanelProduccion extends javax.swing.JPanel {
         btnGestionProduccion.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         btnGestionProduccion.setIconTextGap(15);
 
+        btnHistorialGeneral.setBackground(new java.awt.Color(55, 72, 95));
+        btnHistorialGeneral.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnHistorialGeneral.setForeground(new java.awt.Color(255, 255, 255));
+        btnHistorialGeneral.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/folder/icons8-ganadería-32.png"))); // NOI18N
+        btnHistorialGeneral.setText("Historial general");
+        btnHistorialGeneral.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
+        btnHistorialGeneral.setBorderPainted(false);
+        btnHistorialGeneral.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnHistorialGeneral.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btnHistorialGeneral.setIconTextGap(15);
+
         javax.swing.GroupLayout pnlSideBarLayout = new javax.swing.GroupLayout(pnlSideBar);
         pnlSideBar.setLayout(pnlSideBarLayout);
         pnlSideBarLayout.setHorizontalGroup(
@@ -100,6 +112,7 @@ public class PanelProduccion extends javax.swing.JPanel {
                     .addComponent(lblTituloSideBar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(pnlLinea, javax.swing.GroupLayout.DEFAULT_SIZE, 199, Short.MAX_VALUE))
                 .addGap(28, 28, 28))
+            .addComponent(btnHistorialGeneral, javax.swing.GroupLayout.DEFAULT_SIZE, 249, Short.MAX_VALUE)
         );
         pnlSideBarLayout.setVerticalGroup(
             pnlSideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -112,7 +125,9 @@ public class PanelProduccion extends javax.swing.JPanel {
                 .addComponent(btnRegistrarProduccion, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(btnGestionProduccion, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(432, Short.MAX_VALUE))
+                .addGap(0, 0, 0)
+                .addComponent(btnHistorialGeneral, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(372, Short.MAX_VALUE))
         );
 
         content.setBackground(new java.awt.Color(102, 102, 102));
@@ -167,6 +182,10 @@ public class PanelProduccion extends javax.swing.JPanel {
         return btnRegistrarProduccion;
     }
 
+    public JButton getBtnHistorialGeneral() {
+        return btnHistorialGeneral;
+    }
+    
     public JPanel getPanelVacio() {
         return content;
     }
@@ -175,13 +194,10 @@ public class PanelProduccion extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Background;
     private javax.swing.JButton btnGestionProduccion;
+    private javax.swing.JButton btnHistorialGeneral;
     private javax.swing.JButton btnRegistrarProduccion;
     private javax.swing.JPanel content;
     private javax.swing.JLabel lblTituloSideBar;
-    private javax.swing.JPanel panelVacio;
-    private javax.swing.JPanel panelVacio1;
-    private javax.swing.JPanel panelVacio2;
-    private javax.swing.JPanel panelVacio3;
     private javax.swing.JPanel pnlLinea;
     private javax.swing.JPanel pnlSideBar;
     // End of variables declaration//GEN-END:variables

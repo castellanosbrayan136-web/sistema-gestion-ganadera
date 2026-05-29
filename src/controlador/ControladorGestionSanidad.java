@@ -9,6 +9,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.UUID;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
@@ -147,7 +150,11 @@ public class ControladorGestionSanidad implements ActionListener, MouseListener 
             return;
         }
         
-        for (TratamientoVeterinario tratamiento : vaca.getHistorialTratamientos()) {
+        List<TratamientoVeterinario> lista =  new ArrayList<>(vaca.getHistorialTratamientos());
+        
+        Collections.reverse(lista);
+        
+        for (TratamientoVeterinario tratamiento : lista) {
             fila[0] = tratamiento.getIdentificador();
             fila[1] = tratamiento.getTipo();
             fila[2] = tratamiento.getMedicamento();

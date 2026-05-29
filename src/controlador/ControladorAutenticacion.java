@@ -19,7 +19,7 @@ public class ControladorAutenticacion implements ActionListener{
         activarBotones();
     }
     
-    public void activarBotones() {
+    private void activarBotones() {
         vistaAutenticacion.getBtnIniciarSesion().addActionListener(this);
         vistaAutenticacion.getBtnCrearCuenta().addActionListener(this);
         vistaAutenticacion.getBtnSalir().addActionListener(this);
@@ -41,7 +41,7 @@ public class ControladorAutenticacion implements ActionListener{
         }
     }
     
-    public void reiniciarColorDeBoton() {
+    private void reiniciarColorDeBoton() {
         Color azulGris = new Color(39, 51, 69);
         vistaAutenticacion.getBtnCrearCuenta().setBackground(azulGris);
         vistaAutenticacion.getBtnIniciarSesion().setBackground(azulGris);
