@@ -68,11 +68,9 @@ El sistema busca centralizar información relacionada con la producción, la sal
 ## 🛠 Tecnologías utilizadas
 
 * Java
-* Maven
 * Programación Orientada a Objetos (POO)
 * Swing (Interfaz gráfica)
-* JDBC
-* Base de datos relacional
+* Persistencia en JSON
 * Git y GitHub
 
 ---
@@ -84,12 +82,6 @@ El sistema busca centralizar información relacionada con la producción, la sal
 * Reducir el uso de registros manuales.
 * Facilitar la toma de decisiones mediante información organizada.
 * Aplicar buenas prácticas de desarrollo de software.
-
----
-
-## 📸 Capturas de pantalla
-
-Próximamente se agregarán capturas de las diferentes funcionalidades del sistema.
 
 ---
 
