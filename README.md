@@ -1,4 +1,5 @@
-# 🐄 GanaDex
+# <img width="80" height="80" alt="silhouette-black-cow-head-logo-design-graphic-symbol-icon-illustration-creative-idea-vector (1)" src="https://github.com/user-attachments/assets/fe70611e-156a-4564-afa3-1c57c7d9f41f" />
+ GanaDex
 
 ## Sistema de Gestión Ganadera
 
