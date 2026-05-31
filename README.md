@@ -1,7 +1,10 @@
-# <img width="80" height="80" alt="silhouette-black-cow-head-logo-design-graphic-symbol-icon-illustration-creative-idea-vector (1)" src="https://github.com/user-attachments/assets/fe70611e-156a-4564-afa3-1c57c7d9f41f" />
- GanaDex
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/fe70611e-156a-4564-afa3-1c57c7d9f41f" width="120" alt="Logo GanaDex">
+</p>
 
-## Sistema de Gestión Ganadera
+<h1 align="center">GanaDex</h1>
+
+<h3 align="center">Sistema de Gestión Ganadera</h3>
 
 GanaDex es una aplicación desarrollada en **Java** orientada a la administración y control de fincas ganaderas. Su objetivo es facilitar la gestión de la información del ganado, la producción, la salud animal y los recursos de la finca mediante una plataforma centralizada y fácil de usar.
 
