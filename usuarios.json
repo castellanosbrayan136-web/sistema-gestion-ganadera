@@ -24,5 +24,18 @@
       "vereda": "f"
     },
     "contraseña": "f"
+  },
+  {
+    "idInterno": "409a6c77-a4f4-4c22-bf4b-ff763a7c5bf7",
+    "nombresYApellidos": "Ever gerardo",
+    "nombreDeUsuario": "Ever1234",
+    "correoElectronico": "n",
+    "nombreDeLafinca": "San rafael",
+    "ubicacion": {
+      "departamento": "Chocó",
+      "municipio": "Bajo Baudó",
+      "vereda": "Tequia"
+    },
+    "contraseña": "123456"
   }
 ]

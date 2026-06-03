@@ -234,16 +234,18 @@ public class ControladorInicio {
     public void alertasRegistrosHoy() {
         LocalDate fechaHoy = LocalDate.now();
         for (Vaca vaca : vacaDAO.getVacasPorIdPropietario(usuario.getIdInterno())) {
-            Produccion produccionHoy = vacaDAO.getProduccionPorFecha(vaca.getIdInterno(), fechaHoy);
-            if (produccionHoy == null) {
-                String alerta = "No has hecho registro hoy para: " + vaca;
-                alertas.add(alerta);
-                continue;
-            }
-            
-            if (produccionHoy.getLitrosMañana() == null || produccionHoy.getLitrosTarde() == null) {
-                String alerta = "No has completado el registro de produccion hoy para: " + vaca;
-                alertas.add(alerta);
+            if ("Produciendo".equals(vaca.getEstado())) {
+                Produccion produccionHoy = vacaDAO.getProduccionPorFecha(vaca.getIdInterno(), fechaHoy);
+                if (produccionHoy == null) {
+                    String alerta = "No has hecho registro hoy para: " + vaca;
+                    alertas.add(alerta);
+                    continue;
+                }
+
+                if (produccionHoy.getLitrosMañana() == null || produccionHoy.getLitrosTarde() == null) {
+                    String alerta = "No has completado el registro de produccion hoy para: " + vaca;
+                    alertas.add(alerta);
+                }
             }
         }
     }
@@ -255,7 +257,9 @@ public class ControladorInicio {
                 contador++;
             }
         }
-        String alerta = "Tienes " + contador + " vacas enfermas.";
-        alertas.add(alerta);
+        if (contador > 0) {
+            String alerta = "Tienes " + contador + " vacas enfermas.";
+            alertas.add(alerta);
+        }
     }
 }

@@ -132,9 +132,6 @@ public class ControladorGestionarGanado implements KeyListener, ActionListener {
         Object[] fila = new Object[6];
         
         for (Vaca vaca : vacaDAO.getVacasPorIdPropietario(usuario.getIdInterno())) {
-            if (vaca.getEstado().equals("Enfermo") || vaca.getEstado().equals("Vendido")) {
-                continue;
-            }
             
             Period periodo = Period.between(vaca.getFechaNacimiento(), LocalDate.now());
 

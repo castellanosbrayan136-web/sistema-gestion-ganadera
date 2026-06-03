@@ -16,7 +16,46 @@
     "historialTratamientos": [
       null,
       null,
-      null
+      null,
+      {
+        "idInterno": "2e270ceb-9e32-457e-9945-8e40132c6777",
+        "identificador": "#4532",
+        "tipo": "Control reproductivo",
+        "medicamento": "ninguno",
+        "dosis": "n",
+        "fecha": {
+          "year": 2022,
+          "month": 1,
+          "day": 17
+        },
+        "observaciones": "LLevada al toro"
+      },
+      {
+        "idInterno": "74d04155-11ed-49dc-82e3-1988cbfb2b18",
+        "identificador": "#4231",
+        "tipo": "Control reproductivo",
+        "medicamento": "n",
+        "dosis": "n",
+        "fecha": {
+          "year": 2022,
+          "month": 1,
+          "day": 15
+        },
+        "observaciones": "LLevada al toro"
+      },
+      {
+        "idInterno": "01fa266f-a030-4169-9c19-1634a1caa966",
+        "identificador": "#4231",
+        "tipo": "Control reproductivo",
+        "medicamento": "n",
+        "dosis": "n",
+        "fecha": {
+          "year": 2022,
+          "month": 1,
+          "day": 15
+        },
+        "observaciones": "LLevada al toro"
+      }
     ],
     "registroProducciones": [
       {
@@ -135,6 +174,14 @@
         },
         "litrosMañana": 10,
         "litrosTarde": 7
+      },
+      {
+        "fecha": {
+          "year": 2026,
+          "month": 5,
+          "day": 29
+        },
+        "litrosMañana": 8
       }
     ]
   },
@@ -152,7 +199,34 @@
     "estado": "Produciendo",
     "descripcion": "Vaca roja",
     "idPropietario": "f5a2f3e2-aaac-44df-bb6f-bd45e09f43fa",
-    "historialTratamientos": [],
+    "historialTratamientos": [
+      {
+        "idInterno": "bef95c9b-211c-4d5f-a47f-b44dc84be24b",
+        "identificador": "#5454",
+        "tipo": "Control reproductivo",
+        "medicamento": "ninguno",
+        "dosis": "ninguno",
+        "fecha": {
+          "year": 2021,
+          "month": 8,
+          "day": 8
+        },
+        "observaciones": "LLevada al toro"
+      },
+      {
+        "idInterno": "b61dc151-468e-47a9-9a0c-047ebed38ea1",
+        "identificador": "#6123",
+        "tipo": "Control reproductivo",
+        "medicamento": "n",
+        "dosis": "n",
+        "fecha": {
+          "year": 2024,
+          "month": 3,
+          "day": 11
+        },
+        "observaciones": "LLevada al toro"
+      }
+    ],
     "registroProducciones": [
       {
         "fecha": {
@@ -270,6 +344,14 @@
         },
         "litrosMañana": 6,
         "litrosTarde": 4
+      },
+      {
+        "fecha": {
+          "year": 2026,
+          "month": 5,
+          "day": 29
+        },
+        "litrosMañana": 6
       }
     ]
   },
@@ -287,7 +369,34 @@
     "estado": "Produciendo",
     "descripcion": "Vaca negra y alta",
     "idPropietario": "f5a2f3e2-aaac-44df-bb6f-bd45e09f43fa",
-    "historialTratamientos": [],
+    "historialTratamientos": [
+      {
+        "idInterno": "dc350ec1-e22b-4225-8604-1bbfdedb9046",
+        "identificador": "#312",
+        "tipo": "Control reproductivo",
+        "medicamento": "ninguno",
+        "dosis": "ninguno",
+        "fecha": {
+          "year": 2026,
+          "month": 5,
+          "day": 20
+        },
+        "observaciones": "Se llevo al toro"
+      },
+      {
+        "idInterno": "5b4f41eb-1cea-4802-b396-0dad106d544b",
+        "identificador": "#76321",
+        "tipo": "Control reproductivo",
+        "medicamento": "n",
+        "dosis": "n",
+        "fecha": {
+          "year": 2025,
+          "month": 3,
+          "day": 27
+        },
+        "observaciones": "Estuvo con el toro"
+      }
+    ],
     "registroProducciones": [
       {
         "fecha": {
@@ -404,6 +513,14 @@
         },
         "litrosMañana": 6,
         "litrosTarde": 5
+      },
+      {
+        "fecha": {
+          "year": 2026,
+          "month": 5,
+          "day": 29
+        },
+        "litrosMañana": 5
       }
     ]
   },
@@ -455,6 +572,212 @@
     "estado": "Desarrollo",
     "descripcion": "No se registro descripción",
     "idPropietario": "f7490cc4-80f0-4686-b05a-78422c7b009d",
+    "historialTratamientos": [],
+    "registroProducciones": []
+  },
+  {
+    "idInterno": "370f0790-d3be-4c7e-a501-e42a91914675",
+    "identificador": "#004",
+    "nombre": "Julia",
+    "fechaNacimiento": {
+      "year": 2019,
+      "month": 7,
+      "day": 7
+    },
+    "razaPadre": "Jersey",
+    "razaMadre": "Jersey",
+    "estado": "Vendido",
+    "descripcion": "Vaca cafe con rayas negras, pequeña\nHija de Viqui\nVendida junto a Caramelo\nVendida a Rodrigo",
+    "idPropietario": "f5a2f3e2-aaac-44df-bb6f-bd45e09f43fa",
+    "historialTratamientos": [
+      {
+        "idInterno": "b8f08b26-5ca6-46e4-a909-8e50e7aee976",
+        "identificador": "#5343",
+        "tipo": "Control reproductivo",
+        "medicamento": "ninguno",
+        "dosis": "ninguno",
+        "fecha": {
+          "year": 2022,
+          "month": 9,
+          "day": 15
+        },
+        "observaciones": "LLevada al toro"
+      }
+    ],
+    "registroProducciones": []
+  },
+  {
+    "idInterno": "271efe4a-a3b7-4f54-bd04-f10909e75c3c",
+    "identificador": "#004",
+    "nombre": "Perla",
+    "fechaNacimiento": {
+      "year": 2023,
+      "month": 11,
+      "day": 18
+    },
+    "razaPadre": "Criollo",
+    "razaMadre": "Criollo",
+    "estado": "Vendido",
+    "descripcion": "No se registro descripción",
+    "idPropietario": "f5a2f3e2-aaac-44df-bb6f-bd45e09f43fa",
+    "historialTratamientos": [],
+    "registroProducciones": []
+  },
+  {
+    "idInterno": "4e278d10-5318-45cd-9d85-c8c1998048b0",
+    "identificador": "#005",
+    "nombre": "Estrellita",
+    "fechaNacimiento": {
+      "year": 2018,
+      "month": 11,
+      "day": 3
+    },
+    "razaPadre": "Criollo",
+    "razaMadre": "Criollo",
+    "estado": "Vendido",
+    "descripcion": "Vaca amarilla y mechuda",
+    "idPropietario": "f5a2f3e2-aaac-44df-bb6f-bd45e09f43fa",
+    "historialTratamientos": [
+      {
+        "idInterno": "caed5777-00fd-4ae9-9d06-d9a9cff0e8b2",
+        "identificador": "#4893",
+        "tipo": "Control reproductivo",
+        "medicamento": "ninguno",
+        "dosis": "ninguna",
+        "fecha": {
+          "year": 2023,
+          "month": 2,
+          "day": 9
+        },
+        "observaciones": "LLevada al toro"
+      }
+    ],
+    "registroProducciones": []
+  },
+  {
+    "idInterno": "8cb4766c-ffca-4968-9838-e963eace835b",
+    "identificador": "#006",
+    "nombre": "Morita",
+    "fechaNacimiento": {
+      "year": 2020,
+      "month": 2,
+      "day": 20
+    },
+    "razaPadre": "Criollo",
+    "razaMadre": "Criollo",
+    "estado": "Vendido",
+    "descripcion": "No se registro descripción",
+    "idPropietario": "f5a2f3e2-aaac-44df-bb6f-bd45e09f43fa",
+    "historialTratamientos": [],
+    "registroProducciones": []
+  },
+  {
+    "idInterno": "c41d359e-cec4-459b-a08f-77bef301520b",
+    "identificador": "#007",
+    "nombre": "Caramelo",
+    "fechaNacimiento": {
+      "year": 2021,
+      "month": 11,
+      "day": 12
+    },
+    "razaPadre": "Criollo",
+    "razaMadre": "Criollo",
+    "estado": "Muerto",
+    "descripcion": "Vaca amarilla hija de Julieta, se vendio y murio",
+    "idPropietario": "f5a2f3e2-aaac-44df-bb6f-bd45e09f43fa",
+    "historialTratamientos": [],
+    "registroProducciones": []
+  },
+  {
+    "idInterno": "637d4bf3-e8ef-4879-ad54-e9ffc5aaab14",
+    "identificador": "#008",
+    "nombre": "Lunita",
+    "fechaNacimiento": {
+      "year": 2025,
+      "month": 3,
+      "day": 15
+    },
+    "razaPadre": "Criollo",
+    "razaMadre": "Criollo",
+    "estado": "Desarrollo",
+    "descripcion": "Ultima hija de alondra",
+    "idPropietario": "f5a2f3e2-aaac-44df-bb6f-bd45e09f43fa",
+    "historialTratamientos": [],
+    "registroProducciones": []
+  },
+  {
+    "idInterno": "65cd53bb-cbb8-41e8-a4b8-be16433242f5",
+    "identificador": "#009",
+    "nombre": "Pandita",
+    "fechaNacimiento": {
+      "year": 2024,
+      "month": 10,
+      "day": 22
+    },
+    "razaPadre": "Jersey",
+    "razaMadre": "Jersey",
+    "estado": "Desarrollo",
+    "descripcion": "Hija de Julia\nmanchas cafes en los hojos",
+    "idPropietario": "f5a2f3e2-aaac-44df-bb6f-bd45e09f43fa",
+    "historialTratamientos": [],
+    "registroProducciones": []
+  },
+  {
+    "idInterno": "b6390de5-7326-401b-9e8b-3329ab6ee9a6",
+    "identificador": "#876",
+    "nombre": "Lola",
+    "fechaNacimiento": {
+      "year": 2019,
+      "month": 7,
+      "day": 13
+    },
+    "razaPadre": "Holstein",
+    "razaMadre": "Criollo",
+    "estado": "Enfermo",
+    "peso": 245.0,
+    "descripcion": "Vaca negra",
+    "idPropietario": "409a6c77-a4f4-4c22-bf4b-ff763a7c5bf7",
+    "historialTratamientos": [
+      {
+        "idInterno": "dbfcad46-7055-4fa4-bf98-a052fda80cf1",
+        "identificador": "3456",
+        "tipo": "Vacunación",
+        "medicamento": "fjkdsl",
+        "dosis": "100ml",
+        "fecha": {
+          "year": 2026,
+          "month": 5,
+          "day": 8
+        },
+        "observaciones": "Sin observaciones"
+      }
+    ],
+    "registroProducciones": [
+      {
+        "fecha": {
+          "year": 2026,
+          "month": 5,
+          "day": 29
+        },
+        "litrosMañana": 3,
+        "litrosTarde": 2
+      }
+    ]
+  },
+  {
+    "idInterno": "39679a79-e546-4d86-acae-9579b298fe7b",
+    "identificador": "#010",
+    "nombre": "Negra",
+    "fechaNacimiento": {
+      "year": 2024,
+      "month": 10,
+      "day": 31
+    },
+    "razaPadre": "Jersey",
+    "razaMadre": "Jersey",
+    "estado": "Desarrollo",
+    "descripcion": "Color negro\nEs hija de Caramelo\nEsta junto a Pandita hija de Julieta\n",
+    "idPropietario": "f5a2f3e2-aaac-44df-bb6f-bd45e09f43fa",
     "historialTratamientos": [],
     "registroProducciones": []
   }

@@ -10,5 +10,4 @@ public class Main {
         FlatGradiantoDeepOceanIJTheme.setup();
         ScreenManager.abrirVistaAutenticacion();
     }
-
 }

@@ -42,7 +42,7 @@ public class VacaDAO {
     }
     
     private List<Vaca> cargarDatos() {
-        File archivo = new File(ruta);
+        File archivo = new File(this.ruta);
         
         if (!archivo.exists()) {
             return new ArrayList<>();
@@ -98,7 +98,7 @@ public class VacaDAO {
     }
     
     public List<String> getListaRazas() {
-        return listaRazas;
+        return this.listaRazas;
     }
     
     public List<Vaca> filtrarVacasPorCoincidencia(UUID idUsuario, String nombreVaca) {
